@@ -9,6 +9,32 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Sunland News - Saint Lucie County",
   description: "A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People—delivered 5 days a week.",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/images/apple-icon.png',
+  },
+  openGraph: {
+    title: "Sunland News - Saint Lucie County",
+    description: "A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People—delivered 5 days a week.",
+    url: 'https://sunlandnews.com',
+    siteName: 'Sunland News',
+    images: [
+      {
+        url: '/images/share-sunland.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sunland News - Saint Lucie County',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Sunland News - Saint Lucie County",
+    description: "A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People—delivered 5 days a week.",
+    images: ['/images/share-sunland.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
