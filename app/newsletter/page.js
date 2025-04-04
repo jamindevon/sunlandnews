@@ -7,18 +7,40 @@ export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email) return;
     
     setSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setSubmitting(false);
+    setError('');
+    
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          source: 'newsletter_page',
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to subscribe. Please try again.');
+      }
+      
       setSubscribed(true);
       setEmail('');
-    }, 1000);
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -97,8 +119,8 @@ export default function Newsletter() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-500 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="font-bold text-lg text-green-800 mb-2">Thanks for subscribing!</h3>
-              <p className="text-green-700">Check your inbox for a confirmation email.</p>
+              <h3 className="font-bold text-lg text-green-800 mb-2">You're all set!</h3>
+              <p className="text-green-700">Check your inbox for our welcome email.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-2">
@@ -120,6 +142,11 @@ export default function Newsletter() {
                 {submitting ? "Processing..." : "Subscribe"}
               </button>
             </form>
+          )}
+          {error && (
+            <div className="mt-3 text-red-600 text-sm">
+              {error}
+            </div>
           )}
           <p className="text-gray-500 text-sm mt-3">
             We respect your privacy. Unsubscribe at any time.

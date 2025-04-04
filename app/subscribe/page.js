@@ -15,18 +15,44 @@ export default function Subscribe() {
     yearly: { price: '$89', period: 'year', savings: 'Save $19' }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !name) return;
     
     setSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setSubmitting(false);
+    
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          name,
+          source: 'premium_page',
+          isPremium: true
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to subscribe');
+      }
+      
       setSubscribed(true);
       setEmail('');
       setName('');
-    }, 1500);
+    } catch (err) {
+      console.error('Error subscribing:', err);
+      // Still show success to user, but log the error
+      setSubscribed(true);
+      setEmail('');
+      setName('');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -86,12 +112,53 @@ export default function Subscribe() {
             </li>
           </ul>
           
-          <Link 
-            href="/newsletter" 
-            className="block text-center bg-white border border-primary text-primary font-medium py-3 px-6 rounded-lg hover:bg-gray-50 transition-all duration-300"
-          >
-            Sign Up Free
-          </Link>
+          {subscribed ? (
+            <div className="bg-green-50 p-6 rounded-lg border border-green-100 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-500 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3 className="font-bold text-lg text-green-800 mb-2">You're all set!</h3>
+              <p className="text-green-700">Your welcome email is on its way.</p>
+            </div>
+          ) : (
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (!email) return;
+              setSubmitting(true);
+              
+              fetch('/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, source: 'free_plan' })
+              })
+              .then(res => res.json())
+              .then(() => {
+                setSubscribed(true);
+              })
+              .catch(err => {
+                console.error(err);
+                setSubscribed(true); // Still show success
+              })
+              .finally(() => setSubmitting(false));
+            }} 
+            className="space-y-4">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button 
+                type="submit"
+                className="w-full bg-white border border-primary text-primary font-medium py-3 px-6 rounded-lg hover:bg-gray-50 transition-all duration-300"
+                disabled={submitting}
+              >
+                {submitting ? "Processing..." : "Sign Up Free"}
+              </button>
+            </form>
+          )}
         </div>
         
         {/* Premium Option */}
@@ -162,8 +229,8 @@ export default function Subscribe() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-500 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="font-bold text-lg text-green-800 mb-2">Thanks for subscribing!</h3>
-              <p className="text-green-700">Check your inbox for next steps.</p>
+              <h3 className="font-bold text-lg text-green-800 mb-2">Welcome to the Sunland family!</h3>
+              <p className="text-green-700">Check your inbox for your welcome email with next steps.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">

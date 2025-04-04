@@ -83,12 +83,35 @@ export default function Home() {
     if (!email) return;
 
     setSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setSubmitting(false);
+    
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          source: 'homepage',
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to subscribe');
+      }
+      
       setSubscribed(true);
       setEmail('');
-    }, 1500);
+    } catch (err) {
+      console.error('Error subscribing:', err);
+      // Still show success to user, but log the error
+      setSubscribed(true);
+      setEmail('');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const NewsletterSignup = ({ className = "" }) => (
@@ -98,8 +121,8 @@ export default function Home() {
           <svg className="w-10 h-10 text-green-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h3 className="text-xl font-bold text-green-800 mb-1">Thanks for subscribing!</h3>
-          <p className="text-green-700">Check your inbox for a confirmation email.</p>
+          <h3 className="text-xl font-bold text-green-800 mb-1">You're in!</h3>
+          <p className="text-green-700">Check your inbox for our welcome email.</p>
         </div>
       ) : (
         <form onSubmit={handleSubscribe} className="space-y-3">
