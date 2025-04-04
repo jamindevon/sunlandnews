@@ -1,25 +1,16 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+// This is a server component
 import Link from 'next/link';
 
+// Set revalidation
+export const revalidate = 3600; // revalidate every hour
+
+// Metadata for the page
+export const metadata = {
+  title: 'Sunland Products | Tools and Services for St. Lucie County',
+  description: 'Discover our suite of products and tools designed to help you live a more connected local life in St. Lucie County.',
+};
+
 export default function Products() {
-  const [activeTab, setActiveTab] = useState('all');
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const products = [
     {
       id: 1,
@@ -64,9 +55,13 @@ export default function Products() {
     }
   ];
 
-  const filteredProducts = activeTab === 'all' 
-    ? products 
-    : products.filter(product => product.category === activeTab);
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'food', name: 'Food' },
+    { id: 'events', name: 'Events' },
+    { id: 'business', name: 'Business' },
+    { id: 'news', name: 'News' }
+  ];
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -97,123 +92,13 @@ export default function Products() {
         </div>
       </div>
       
-      {/* Category Tabs */}
+      {/* Products Grid */}
       <div className="bg-gradient-to-br from-blue-50 via-white to-orange-50 rounded-2xl p-6 md:p-8 mb-16 shadow-lg animate-fade-in-up">
         <h2 className="text-3xl font-bold mb-6 md:mb-8 text-center">Our Products</h2>
         
-        {/* Desktop Tabs */}
-        <div className="hidden md:flex justify-center mb-8">
-          <div className="inline-flex rounded-lg shadow-sm border border-gray-200 overflow-hidden" role="group">
-            <button
-              onClick={() => setActiveTab('all')}
-              className={`px-6 py-3 text-sm font-medium transition-all duration-200 ${
-                activeTab === 'all' 
-                  ? 'bg-primary text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              All
-            </button>
-            <button
-              onClick={() => setActiveTab('food')}
-              className={`px-6 py-3 text-sm font-medium border-l border-gray-200 transition-all duration-200 ${
-                activeTab === 'food' 
-                  ? 'bg-primary text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              Food
-            </button>
-            <button
-              onClick={() => setActiveTab('events')}
-              className={`px-6 py-3 text-sm font-medium border-l border-gray-200 transition-all duration-200 ${
-                activeTab === 'events' 
-                  ? 'bg-primary text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              Events
-            </button>
-            <button
-              onClick={() => setActiveTab('business')}
-              className={`px-6 py-3 text-sm font-medium border-l border-gray-200 transition-all duration-200 ${
-                activeTab === 'business' 
-                  ? 'bg-primary text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              Business
-            </button>
-            <button
-              onClick={() => setActiveTab('news')}
-              className={`px-6 py-3 text-sm font-medium border-l border-gray-200 transition-all duration-200 ${
-                activeTab === 'news' 
-                  ? 'bg-primary text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              News
-            </button>
-          </div>
-        </div>
-        
-        {/* Mobile Filter Pills */}
-        <div className="md:hidden flex flex-wrap justify-center gap-2 mb-6">
-          <button
-            onClick={() => setActiveTab('all')}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-              activeTab === 'all' 
-                ? 'bg-primary text-white shadow-md' 
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
-            }`}
-          >
-            All
-          </button>
-          <button
-            onClick={() => setActiveTab('food')}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-              activeTab === 'food' 
-                ? 'bg-primary text-white shadow-md' 
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
-            }`}
-          >
-            Food
-          </button>
-          <button
-            onClick={() => setActiveTab('events')}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-              activeTab === 'events' 
-                ? 'bg-primary text-white shadow-md' 
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
-            }`}
-          >
-            Events
-          </button>
-          <button
-            onClick={() => setActiveTab('business')}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-              activeTab === 'business' 
-                ? 'bg-primary text-white shadow-md' 
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
-            }`}
-          >
-            Business
-          </button>
-          <button
-            onClick={() => setActiveTab('news')}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-              activeTab === 'news' 
-                ? 'bg-primary text-white shadow-md' 
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
-            }`}
-          >
-            News
-          </button>
-        </div>
-        
-        {/* Products Grid */}
+        {/* Grid showing all products */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {filteredProducts.map((product, index) => (
+          {products.map((product, index) => (
             <div 
               key={product.id} 
               className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up"
@@ -248,31 +133,29 @@ export default function Products() {
                     </Link>
                   )
                 ) : (
-                  <button
-                    className="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-1 duration-300 text-sm md:text-base"
-                    disabled
-                  >
+                  <div className="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 bg-gray-200 text-gray-700 font-medium rounded-lg text-sm md:text-base">
                     Coming Soon
-                  </button>
+                  </div>
                 )}
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Custom Solutions */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center animate-fade-in-up">
-        <h2 className="text-3xl font-bold mb-4">Need a custom solution?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-700">
-          We offer custom solutions for local businesses and organizations. Contact us to learn more about how we can help you connect with the St. Lucie community.
+      
+      {/* CTA Section */}
+      <div className="bg-primary rounded-2xl p-8 md:p-10 text-white text-center animate-fade-in-up">
+        <h2 className="text-3xl font-bold mb-4">Interested in our products?</h2>
+        <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          We're constantly developing new tools and services for the St. Lucie County community. 
+          Sign up for our newsletter to be the first to know about our newest offerings.
         </p>
         <Link
-          href="/contact"
-          className="inline-flex items-center px-8 py-4 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-1 duration-300"
+          href="/subscribe"
+          className="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-all shadow-md hover:shadow-xl transform hover:-translate-y-1 duration-300"
         >
-          Get in Touch
-          <svg className="w-4 h-4 ml-2 transform transition-transform group-hover:translate-x-1 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          Subscribe Now
+          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </Link>

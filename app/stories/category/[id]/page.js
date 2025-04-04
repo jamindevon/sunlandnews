@@ -3,6 +3,9 @@ import Image from 'next/image';
 import { createClient } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 
+// Enable revalidation
+export const revalidate = 60; // Revalidate every 60 seconds
+
 // Define the Sanity configuration
 const client = createClient({
   projectId: 'oj0fldpz',

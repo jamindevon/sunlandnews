@@ -69,6 +69,9 @@ function formatDate(dateString) {
   return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
+// Enable more frequent revalidation for post content
+export const revalidate = 30; // Revalidate every 30 seconds
+
 export async function generateStaticParams() {
   const slugs = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
@@ -152,16 +155,16 @@ export default async function Post({ params }) {
       {/* Categories */}
       {post.categories && post.categories.length > 0 && (
         <div className="mb-6">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 mb-1">
             Posted in:
-            <span className="flex space-x-2 mt-1">
-              {post.categories.map((category) => (
-                <span key={category} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                  {category}
-                </span>
-              ))}
-            </span>
           </p>
+          <div className="flex flex-wrap gap-2">
+            {post.categories.map((category) => (
+              <span key={category} className="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">
+                {category}
+              </span>
+            ))}
+          </div>
         </div>
       )}
       

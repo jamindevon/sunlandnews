@@ -4,6 +4,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
+// Set revalidation for the entire site
+export const revalidate = 60; // revalidate every 60 seconds
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

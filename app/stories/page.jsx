@@ -10,8 +10,10 @@ function formatDate(dateString) {
   return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
+export const revalidate = 60; // Revalidate the page every 60 seconds (1 minute)
+
 export const metadata = {
-  title: 'Stories | Sunland News',
+  title: 'Latest Stories | Sunland News',
   description: 'The freshest stories from St. Lucie County',
 };
 
@@ -46,20 +48,27 @@ export default async function Stories() {
       <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="text-center">
           {/* Hero Section */}
-          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-200 via-primary/30 to-blue-100 w-full h-full flex items-center justify-center">
-              <div className="text-center px-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                  Sunland Stories
-                </h1>
-                <p className="text-xl text-gray-700">
-                  Stories and updates from St. Lucie County
-                </p>
-              </div>
+          <section className="relative bg-gradient-to-r from-orange-200 via-primary/30 to-blue-100 rounded-2xl overflow-hidden mb-12 shadow-md p-10 md:p-16">
+            <div className="flex flex-col items-center justify-center text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="text-orange-500 mr-3">+</span>
+                From the Garden: Latest Stories
+              </h1>
+              <p className="text-xl text-gray-700 mb-2">
+                The freshest stories from St. Lucie County
+              </p>
             </div>
-          </div>
-          <p className="text-gray-600 mb-8">The freshest stories from St. Lucie County</p>
-          <p className="text-gray-600">No stories found. Check back soon for new content!</p>
+          </section>
+          <Link 
+            href="/stories"
+            className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
+          >
+            Browse All Stories
+            <svg className="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+          <p className="text-gray-600 mt-8">No stories found. Check back soon for new content!</p>
         </div>
       </div>
     );
@@ -68,22 +77,19 @@ export default async function Stories() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       {/* Hero Section */}
-      <div className="mb-16">
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-200 via-primary/30 to-blue-100 w-full h-full flex items-center justify-center">
-            <div className="text-center px-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Sunland Stories
-              </h1>
-              <p className="text-xl text-gray-700">
-                Stories and updates from St. Lucie County
-              </p>
-            </div>
-          </div>
+      <section className="relative bg-gradient-to-r from-orange-200 via-primary/30 to-blue-100 rounded-2xl overflow-hidden mb-12 shadow-md p-10 md:p-16">
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 flex items-center">
+            <span className="text-orange-500 mr-3">+</span>
+            From the Garden: Latest Stories
+          </h1>
+          <p className="text-xl text-gray-700 mb-2">
+            The freshest stories from St. Lucie County
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Categories Filter */}
+      {/* Category Filter */}
       <div className="mb-8">
         <h2 className="font-medium text-gray-700 mb-3">Filter by Category:</h2>
         <div className="flex overflow-x-auto pb-2 md:pb-0 md:flex-wrap gap-2 scrollbar-hide">
@@ -107,7 +113,7 @@ export default async function Stories() {
       </div>
 
       {/* Posts Display */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (
           <div key={post._id} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
             <Link href={`/post/${post.slug.current}`}>
@@ -161,6 +167,19 @@ export default async function Stories() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Browse All button */}
+      <div className="mt-12 text-center">
+        <Link 
+          href="/stories"
+          className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
+        >
+          Browse All Stories
+          <svg className="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </Link>
       </div>
     </div>
   );

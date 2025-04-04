@@ -140,7 +140,7 @@ export default function Home() {
               disabled={submitting}
               className={`px-6 py-3 rounded-lg font-medium text-white ${
                 submitting ? 'bg-gray-400' : 'bg-primary hover:bg-primary/90'
-              } transition-all shadow-md hover:shadow-lg whitespace-nowrap hover:-translate-y-1 duration-300`}
+              } transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300`}
             >
               {submitting ? 'Signing Up...' : 'Subscribe Free'}
             </button>
@@ -197,7 +197,7 @@ export default function Home() {
             >
               <Link
                 href="/subscribe"
-                className="flex items-center px-6 py-3 bg-gradient-to-r from-primary to-primary/90 text-white font-medium rounded-lg hover:from-primary/90 hover:to-primary transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
+                className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
@@ -280,72 +280,29 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Featured Content */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-blue-50 rounded-3xl my-16 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2 animate-fade-in-up">🌱 From the Garden: Latest Stories</h2>
-          <p className="text-center text-gray-600 mb-10 animate-fade-in-up" style={{animationDelay: '0.1s'}}>The freshest stories from St. Lucie County</p>
-          
-          {loading ? (
-            <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      {/* From the Garden - Stories Link */}
+      <section className="py-16 my-16">
+        <div className="relative h-auto rounded-2xl overflow-hidden mb-8">
+          <div className="bg-gradient-to-r from-orange-200 via-primary/30 to-blue-100 p-10 md:p-16 flex items-center justify-center">
+            <div className="text-center px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                <span className="text-orange-500 mr-3">+</span>
+                From the Garden: Latest Stories
+              </h2>
+              <p className="text-xl text-gray-700 mb-6">
+                The freshest stories from St. Lucie County
+              </p>
+              <Link 
+                href="/stories"
+                className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
+                prefetch={true}
+              >
+                Browse All Stories
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
             </div>
-          ) : error ? (
-            <div className="text-center text-gray-600 py-20">
-              <p>{error}</p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
-              {latestPosts.slice(0, 2).map((post, index) => (
-                <Link 
-                  key={post._id || post.id} 
-                  href={post.slug && post.slug.current 
-                    ? `/stories/${post.slug.current}` 
-                    : `/stories/${post._id || post.id}`}
-                  className="group block bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow animate-fade-in-up"
-                  style={{animationDelay: `${0.2 + index * 0.1}s`}}
-                >
-                  <div className="h-64 bg-gray-200 relative overflow-hidden">
-                    {post.mainImage ? (
-                      <Image
-                        src={urlFor(post.mainImage).width(800).height(600).url()}
-                        alt={post.title?.rendered || 'Story image'}
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                        <span className="text-white text-opacity-80 text-lg">No image available</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 
-                      className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors"
-                      dangerouslySetInnerHTML={{ __html: post.title?.rendered || 'Untitled Post' }}
-                    ></h3>
-                    <div 
-                      className="text-gray-600 line-clamp-3"
-                      dangerouslySetInnerHTML={{ __html: post.excerpt?.rendered || 'No excerpt available' }}
-                    ></div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
-          
-          <div className="text-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-            <Link 
-              href="/stories"
-              className="inline-flex items-center px-6 py-3 bg-white border border-gray-300 text-gray-800 font-medium rounded-lg hover:bg-gray-50 transition-all shadow-sm hover:shadow-md hover:-translate-y-1 duration-300"
-              prefetch={true}
-            >
-              Browse All Stories
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </Link>
           </div>
         </div>
       </section>
@@ -379,7 +336,7 @@ export default function Home() {
           </p>
           <Link 
             href="/vision" 
-            className="inline-flex items-center px-6 py-3 bg-white border border-primary text-primary font-medium rounded-lg hover:bg-primary/5 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300 animate-fade-in-up"
+            className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300 animate-fade-in-up"
             style={{animationDelay: '0.2s'}}
           >
             Explore the Vision

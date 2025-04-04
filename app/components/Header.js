@@ -103,7 +103,7 @@ export default function Header() {
           </div>
           
           <button 
-            className="md:hidden flex flex-col space-y-1.5 p-2"
+            className="md:hidden flex flex-col space-y-1.5 p-2 relative z-[60]"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -112,7 +112,7 @@ export default function Header() {
             <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
           </button>
           
-          <nav className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent z-20 shadow-lg md:shadow-none transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 max-h-[80vh] overflow-y-auto' : 'opacity-0 max-h-0 md:opacity-100 md:max-h-none overflow-hidden md:overflow-visible'}`}>
+          <nav className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent z-50 shadow-lg md:shadow-none transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 max-h-[80vh] overflow-y-auto' : 'opacity-0 max-h-0 md:opacity-100 md:max-h-none overflow-hidden md:overflow-visible'}`}>
             <ul className="flex flex-col md:flex-row md:items-center py-4 md:py-0 px-4 md:px-0">
               {/* About Dropdown */}
               <li ref={aboutRef} className="py-2 md:py-0 md:px-4 relative">
@@ -162,7 +162,7 @@ export default function Header() {
                   </button>
                   
                   {aboutDropdownOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-30" onClick={(e) => e.stopPropagation()}>
+                    <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50" onClick={(e) => e.stopPropagation()}>
                       <Link 
                         href="/about"
                         className={`block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary ${pathname === '/about' ? 'text-primary' : ''}`}
@@ -228,7 +228,7 @@ export default function Header() {
                   </button>
                   
                   {newsDropdownOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-30" onClick={(e) => e.stopPropagation()}>
+                    <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50" onClick={(e) => e.stopPropagation()}>
                       <Link 
                         href="/stories"
                         className={`block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary ${pathname === '/stories' ? 'text-primary' : ''}`}
@@ -289,7 +289,7 @@ export default function Header() {
                   </button>
                   
                   {resourcesDropdownOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-30" onClick={(e) => e.stopPropagation()}>
+                    <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50" onClick={(e) => e.stopPropagation()}>
                       <a 
                         href="https://events.sunland.news" 
                         target="_blank" 

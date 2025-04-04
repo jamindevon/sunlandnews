@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "node scripts/populate-sample-posts.js",
-    "clean-start": "rm -rf .next && next dev"
+    "clean-start": "rm -rf .next && next dev",
+    "revalidate": "node scripts/revalidate.js"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
