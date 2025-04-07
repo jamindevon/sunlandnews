@@ -19,6 +19,28 @@ const staticNewsletterData = {
   author: "Sunland News Team"
 };
 
+// Sample archive data
+const staticArchiveData = {
+  title: "Sunland Newsletter Archive",
+  description: "Past editions of our newsletter",
+  items: [
+    {
+      title: "Spring Updates from St. Lucie County",
+      description: "Community events and local news from March",
+      link: "/newsletter/archive/march-2024",
+      publishDate: "2024-03-15T12:00:00Z",
+      author: "Sunland News Team"
+    },
+    {
+      title: "February Highlights",
+      description: "Local stories and upcoming events",
+      link: "/newsletter/archive/february-2024",
+      publishDate: "2024-02-15T12:00:00Z",
+      author: "Sunland News Team"
+    }
+  ]
+};
+
 // Export functions that use the static data
 export const fetchLatestNewsletter = async () => {
   try {
@@ -27,6 +49,17 @@ export const fetchLatestNewsletter = async () => {
     return staticNewsletterData;
   } catch (error) {
     console.error('Error fetching latest newsletter:', error);
+    return null;
+  }
+};
+
+export const fetchNewsletterFeed = async () => {
+  try {
+    console.log('Fetching newsletter feed (static version)');
+    // Return the static archive data
+    return staticArchiveData;
+  } catch (error) {
+    console.error('Error fetching newsletter feed:', error);
     return null;
   }
 };

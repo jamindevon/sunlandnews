@@ -166,11 +166,11 @@ export default function Home() {
               <span className="text-primary">Hyperlocal news</span> for St. Lucie County
             </h1>
             <div 
-              className="h-12 mb-6 overflow-hidden"
+              className="h-16 md:h-20 mb-6 overflow-hidden"
               ref={headlinesRef}
             >
               <p 
-                className="text-xl md:text-2xl text-gray-700 animate-slide-up opacity-0" 
+                className="text-xl md:text-2xl text-gray-700 animate-slide-up opacity-0 py-2" 
                 style={{ 
                   animationDelay: '0.3s', 
                   animationFillMode: 'forwards',
