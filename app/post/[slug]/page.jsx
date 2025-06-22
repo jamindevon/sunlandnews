@@ -4,6 +4,42 @@ import { PortableText } from '@portabletext/react';
 import groq from 'groq';
 import { client, urlFor } from '../../../lib/sanityClient';
 
+// Social sharing component
+function ShareButton({ platform, url, title }) {
+  const shareUrls = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+    reddit: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+  };
+
+  const platformStyles = {
+    facebook: 'bg-blue-600 hover:bg-blue-700 text-white',
+    twitter: 'bg-sky-500 hover:bg-sky-600 text-white',
+    linkedin: 'bg-blue-700 hover:bg-blue-800 text-white',
+    reddit: 'bg-orange-600 hover:bg-orange-700 text-white',
+  };
+
+  const platformIcons = {
+    facebook: 'f',
+    twitter: '🐦',
+    linkedin: 'in',
+    reddit: 'r',
+  };
+
+  return (
+    <a
+      href={shareUrls[platform]}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${platformStyles[platform]} px-4 py-2 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2`}
+    >
+      <span className="font-bold">{platformIcons[platform]}</span>
+      {platform.charAt(0).toUpperCase() + platform.slice(1)}
+    </a>
+  );
+}
+
 // Custom components for the PortableText renderer
 const ptComponents = {
   types: {
@@ -88,14 +124,76 @@ export async function generateMetadata({ params }) {
   const post = await client.fetch(
     groq`*[_type == "post" && slug.current == $slug][0]{
       title,
-      excerpt
+      excerpt,
+      mainImage,
+      publishedAt,
+      "authorName": author->name
     }`,
     { slug }
   );
   
+  if (!post) {
+    return {
+      title: 'Post Not Found - Sunland News',
+      description: 'The requested story could not be found.',
+    };
+  }
+
+  const title = `${post.title} - Sunland News`;
+  const description = post.excerpt || `Read this story from Sunland News about ${post.title}`;
+  const imageUrl = post.mainImage 
+    ? urlFor(post.mainImage).width(1200).height(630).url()
+    : 'https://sunlandnews.com/images/share-sunland.png'; // fallback image
+  const url = `https://sunlandnews.com/post/${slug}`;
+  
   return {
-    title: post?.title || 'Post',
-    description: post?.excerpt || 'Post details',
+    title,
+    description,
+    authors: post.authorName ? [{ name: post.authorName }] : undefined,
+    publishedTime: post.publishedAt,
+    
+    // Open Graph tags for Facebook, LinkedIn, etc.
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: 'Sunland News',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        }
+      ],
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: post.authorName ? [post.authorName] : undefined,
+    },
+    
+    // Twitter Card tags
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
+      creator: '@sunlandnews', // Update with your actual Twitter handle
+      site: '@sunlandnews',
+    },
+    
+    // Additional meta tags
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 
@@ -186,8 +284,33 @@ export default async function Post({ params }) {
         <PortableText value={post.body} components={ptComponents} />
       </div>
       
-      {/* Navigation */}
+      {/* Social Sharing */}
       <div className="mt-12 border-t pt-6">
+        <h3 className="text-lg font-semibold mb-4">Share this story</h3>
+        <div className="flex flex-wrap gap-3 mb-6">
+          <ShareButton
+            platform="facebook"
+            url={`https://sunlandnews.com/post/${slug}`}
+            title={post.title}
+          />
+          <ShareButton
+            platform="twitter"
+            url={`https://sunlandnews.com/post/${slug}`}
+            title={post.title}
+          />
+          <ShareButton
+            platform="linkedin"
+            url={`https://sunlandnews.com/post/${slug}`}
+            title={post.title}
+          />
+          <ShareButton
+            platform="reddit"
+            url={`https://sunlandnews.com/post/${slug}`}
+            title={post.title}
+          />
+        </div>
+        
+        {/* Navigation */}
         <Link 
           href="/stories"
           className="text-blue-500 hover:underline flex items-center"

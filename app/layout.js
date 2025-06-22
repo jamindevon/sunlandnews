@@ -10,6 +10,7 @@ export const revalidate = 60; // revalidate every 60 seconds
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL('https://sunlandnews.com'),
   title: "Sunland News - Saint Lucie County",
   description: "A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People—delivered 5 days a week.",
   icons: {
