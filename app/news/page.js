@@ -32,11 +32,30 @@ async function getRecentStories() {
   }
 }
 
+async function getCategories() {
+  try {
+    const categories = await client.fetch(
+      groq`*[_type == "category"] | order(title asc) {
+        _id,
+        title,
+        description
+      }`
+    );
+    return categories || [];
+  } catch (error) {
+    console.error('Error fetching categories:', error);
+    return [];
+  }
+}
+
 // Enable revalidation
 export const revalidate = 300; // 5 minutes
 
 export default async function NewsPage() {
-  const recentStories = await getRecentStories();
+  const [recentStories, categories] = await Promise.all([
+    getRecentStories(),
+    getCategories()
+  ]);
 
   return (
     <div className="min-h-screen">
@@ -149,25 +168,50 @@ export default async function NewsPage() {
         </div>
 
         {/* Categories */}
-        <section className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse by Category</h2>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { name: 'Local News', icon: '📰', href: '/stories/category/news', color: 'bg-blue-100 text-blue-700' },
-              { name: 'Food & Dining', icon: '🍽️', href: '/stories/category/food', color: 'bg-orange-100 text-orange-700' },
-              { name: 'Events', icon: '🎉', href: '/stories/category/events', color: 'bg-purple-100 text-purple-700' },
-              { name: 'Community', icon: '🏘️', href: '/stories/category/community', color: 'bg-green-100 text-green-700' }
-            ].map((category) => (
-              <Link key={category.name} href={category.href}>
-                <div className={`${category.color} rounded-2xl p-6 text-center hover:scale-105 transition-transform group cursor-pointer`}>
-                  <div className="text-3xl mb-3">{category.icon}</div>
-                  <h3 className="font-semibold group-hover:underline">{category.name}</h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+        {categories.length > 0 && (
+          <section className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse by Category</h2>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              {categories.slice(0, 8).map((category, index) => {
+                // Assign colors dynamically based on index
+                const colors = [
+                  'bg-blue-100 text-blue-700',
+                  'bg-orange-100 text-orange-700', 
+                  'bg-purple-100 text-purple-700',
+                  'bg-green-100 text-green-700',
+                  'bg-red-100 text-red-700',
+                  'bg-yellow-100 text-yellow-700',
+                  'bg-pink-100 text-pink-700',
+                  'bg-indigo-100 text-indigo-700'
+                ];
+                
+                // Assign icons based on category title
+                const getIcon = (title) => {
+                  const titleLower = title.toLowerCase();
+                  if (titleLower.includes('news')) return '📰';
+                  if (titleLower.includes('food') || titleLower.includes('dining')) return '🍽️';
+                  if (titleLower.includes('event')) return '🎉';
+                  if (titleLower.includes('community')) return '🏘️';
+                  if (titleLower.includes('garden')) return '🌱';
+                  if (titleLower.includes('work') || titleLower.includes('business')) return '🛠️';
+                  if (titleLower.includes('culture') || titleLower.includes('life')) return '🌀';
+                  if (titleLower.includes('interview')) return '🗣️';
+                  return '📋'; // Default icon
+                };
+                
+                return (
+                  <Link key={category._id} href={`/stories/category/${category._id}`}>
+                    <div className={`${colors[index % colors.length]} rounded-2xl p-6 text-center hover:scale-105 transition-transform group cursor-pointer`}>
+                      <div className="text-3xl mb-3">{getIcon(category.title)}</div>
+                      <h3 className="font-semibold group-hover:underline">{category.title}</h3>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="mt-16 bg-gradient-to-r from-primary/10 to-blue-100 rounded-2xl p-8 text-center">
