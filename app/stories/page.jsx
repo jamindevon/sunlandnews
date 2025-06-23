@@ -59,15 +59,6 @@ export default async function Stories() {
               </p>
             </div>
           </section>
-          <Link 
-            href="/stories"
-            className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
-          >
-            Browse All Stories
-            <svg className="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
           <p className="text-gray-600 mt-8">No stories found. Check back soon for new content!</p>
         </div>
       </div>
@@ -169,18 +160,7 @@ export default async function Stories() {
         ))}
       </div>
 
-      {/* Browse All button */}
-      <div className="mt-12 text-center">
-        <Link 
-          href="/stories"
-          className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
-        >
-          Browse All Stories
-          <svg className="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </Link>
-      </div>
+
     </div>
   );
 } 
