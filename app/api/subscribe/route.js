@@ -27,9 +27,12 @@ export async function POST(request) {
         email: email,
         name: name || '',
         referring_site: 'sunlandnews.com',
-        custom_fields: {
-          premium_member: isPremium ? 'Yes' : 'No',
-        },
+        custom_fields: [
+          {
+            name: 'premium_member',
+            value: isPremium ? 'Yes' : 'No'
+          }
+        ],
         utm_source: 'website',
         utm_campaign: 'sunland_signup',
         utm_medium: source || 'direct',
