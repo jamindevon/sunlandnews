@@ -150,8 +150,8 @@ export default function Home() {
               },
               {
                 title: 'Play',
-                icon: '🌞',
-                description: 'Recreation, sports, beaches, and ways to enjoy the Florida lifestyle.',
+                icon: '🛠️',
+                description: 'Tools to help you navigate the county - what to do, where to eat, and how to make the most of local life.',
                 color: 'bg-green-100 text-green-700'
               }
             ].map((item, index) => (

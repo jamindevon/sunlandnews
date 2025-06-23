@@ -10,8 +10,8 @@ export default function Subscribe() {
   const [subscribed, setSubscribed] = useState(false);
 
   const plans = {
-    monthly: { price: '$7', period: 'month', savings: '' },
-    yearly: { price: '$70', period: 'year', savings: 'Save $14' }
+    monthly: { price: '$9', period: 'month', savings: '' },
+    yearly: { price: '$79', period: 'year', savings: 'Save $29' }
   };
 
   const handleSubscribe = async (e) => {
@@ -121,11 +121,11 @@ export default function Subscribe() {
           )}
         </div>
 
-        {/* Premium Support */}
+        {/* People Pass */}
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           <div className="text-center mb-8">
-            <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full font-medium text-sm mb-2">SUPPORT US</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Premium Support</h2>
+            <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full font-medium text-sm mb-2">PREMIUM</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">People Pass</h2>
             <div className="flex justify-center gap-4 mb-4">
               <button
                 onClick={() => setSelectedPlan('monthly')}
@@ -162,29 +162,35 @@ export default function Subscribe() {
               <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
+              <span>10% off everything Sunland</span>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Exclusive content & early access</span>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Monthly politics & crime newsletter</span>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
               <span>Support local journalism</span>
-            </li>
-            <li className="flex items-center">
-              <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Help us grow and improve</span>
-            </li>
-            <li className="flex items-center">
-              <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Cancel anytime</span>
             </li>
           </ul>
 
           <a
-            href="https://buymeacoffee.com/sunland"
+            href="https://buymeacoffee.com/sunland/membership"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full px-8 py-4 bg-primary text-white text-center font-medium rounded-lg hover:bg-primary/90 transition-colors"
           >
-            Support {selectedPlan === 'monthly' ? 'Monthly' : 'Yearly'}
+            Get People Pass
           </a>
         </div>
       </div>

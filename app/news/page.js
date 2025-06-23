@@ -133,15 +133,17 @@ export default async function NewsPage() {
               <p className="text-gray-600 mb-6">
                 Access our complete archive of daily newsletters covering St. Lucie County news, events, and community stories.
               </p>
-              <Link 
-                href="/newsletter/archive"
+              <a 
+                href="https://newsletter.sunlandnews.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors"
               >
                 View Archive
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </section>
         </div>
