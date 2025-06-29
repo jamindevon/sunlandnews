@@ -24,34 +24,19 @@ export default function ThankYouPage() {
         {/* Video Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Placeholder Video Component */}
-            <div className="bg-gray-900 rounded-lg aspect-video mb-8 flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-lg opacity-90">Welcome Video</p>
-                <p className="text-sm opacity-70">[Video placeholder - Replace with actual video embed]</p>
-              </div>
-            </div>
-            
-            {/* Alternative: YouTube embed placeholder */}
-            {/* 
-            <div className="aspect-video mb-8">
+            {/* Google Drive Video Embed */}
+            <div className="aspect-video mb-8 rounded-lg overflow-hidden shadow-lg">
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                src="https://drive.google.com/file/d/1PbCmOZgBR7qrmzH27XrSwq-DdA_bHmq8/preview" 
                 title="Welcome to Sunland News"
                 frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allow="autoplay; encrypted-media" 
                 allowFullScreen
-                className="rounded-lg"
+                className="w-full h-full"
               ></iframe>
             </div>
-            */}
             
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
