@@ -1,6 +1,39 @@
 'use client';
 
+import { useEffect } from 'react';
+
 export default function SupportPage() {
+  // Track page view for monetization options
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'ViewContent', {
+        content_name: 'Support Options',
+        content_category: 'Monetization',
+        content_ids: ['772_eats_guide', 'people_pass_membership', 'sunland_tshirt']
+      });
+    }
+  }, []);
+
+  // Track clicks on support options
+  const handleSupportClick = (optionTitle, price, href) => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      // Track as InitiateCheckout for paid options
+      if (price && price !== 'Coming Soon') {
+        window.fbq('track', 'InitiateCheckout', {
+          content_name: optionTitle,
+          content_category: 'Support Option',
+          value: parseFloat(price.replace(/[^0-9.]/g, '')),
+          currency: 'USD'
+        });
+      }
+    }
+    
+    // Open link if available
+    if (href && href !== '#') {
+      window.open(href, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   const supportOptions = [
     {
       emoji: '🍊',
@@ -78,14 +111,12 @@ export default function SupportPage() {
                 </p>
                 
                 {option.available ? (
-                  <a
-                    href={option.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleSupportClick(option.title, option.price, option.href)}
                     className={`block w-full bg-gradient-to-r ${option.color} text-white text-center py-4 px-6 rounded-lg font-semibold hover:opacity-90 transition-all shadow-md hover:shadow-lg`}
                   >
                     {option.ctaText}
-                  </a>
+                  </button>
                 ) : (
                   <button
                     disabled

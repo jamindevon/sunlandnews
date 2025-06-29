@@ -123,6 +123,17 @@ export default function QuizPage() {
         console.error('Failed to save quiz responses:', result.error);
       }
       
+      // Track quiz completion with Meta Pixel
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('trackCustom', 'QuizCompleted', {
+          content_name: 'Community Quiz',
+          willingness_to_support: responses.q5_support,
+          sms_optin: responses.q4_sms,
+          content_interests: responses.q1_interest,
+          phone_provided: responses.phone_number ? 'yes' : 'no'
+        });
+      }
+      
       // Route based on Q5 answer
       if (responses.q5_support === 'Yes, show me how') {
         router.push('/support');

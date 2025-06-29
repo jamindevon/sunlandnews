@@ -51,6 +51,15 @@ export default function HomePage() {
         console.error('Beehiiv subscription failed:', beehiivData.error);
       }
       
+      // Track email signup with Meta Pixel
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'Lead', {
+          content_name: 'Newsletter Signup',
+          content_category: 'Email Subscription',
+          source: 'funnel-homepage'
+        });
+      }
+      
       // Always redirect to thank you page (even if some services fail)
       router.push('/thank-you');
       
