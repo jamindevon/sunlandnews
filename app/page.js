@@ -1,301 +1,162 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { createSignup } from '../lib/supabase';
 
-export default function Home() {
+export default function HomePage() {
   const [email, setEmail] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [subscribed, setSubscribed] = useState(false);
-  const [latestNewsletter, setLatestNewsletter] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
-  useEffect(() => {
-    async function loadLatestNewsletter() {
-      try {
-        const response = await fetch('/api/wordpress?endpoint=newsletter&count=1');
-        if (response.ok) {
-          const data = await response.json();
-          setLatestNewsletter(data.items?.[0] || null);
-        }
-      } catch (err) {
-        console.error('Error fetching newsletter:', err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadLatestNewsletter();
-  }, []);
-
-  const handleSubscribe = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || isSubmitting) return;
 
-    setSubmitting(true);
+    setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/subscribe', {
+      // 1. Store email in Supabase for our funnel tracking
+      const supabaseResult = await createSignup(email);
+      
+      // Always store email for quiz flow
+      localStorage.setItem('signupEmail', email);
+      
+      // Only store signup_id if it's valid
+      if (supabaseResult.success && supabaseResult.data?.id) {
+        localStorage.setItem('signupId', supabaseResult.data.id);
+        console.log('Stored valid signup ID:', supabaseResult.data.id);
+      } else {
+        console.log('Supabase signup failed, but continuing with flow');
+        localStorage.removeItem('signupId'); // Clear any invalid ID
+      }
+      
+      // 2. Also subscribe to Beehiiv newsletter (existing integration)
+      const beehiivResponse = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           email,
-          source: 'homepage',
+          source: 'funnel-homepage',
         }),
       });
       
-      const data = await response.json();
-      
-      if (!data.success) {
-        throw new Error(data.error || 'Failed to subscribe');
+      const beehiivData = await beehiivResponse.json();
+      if (beehiivData.success) {
+        console.log('Successfully subscribed to newsletter');
+      } else {
+        console.error('Beehiiv subscription failed:', beehiivData.error);
       }
       
-      setSubscribed(true);
-      setEmail('');
-    } catch (err) {
-      console.error('Error subscribing:', err);
-      setSubscribed(true);
-      setEmail('');
+      // Always redirect to thank you page (even if some services fail)
+      router.push('/thank-you');
+      
+    } catch (error) {
+      console.error('Error during signup:', error);
+      // Still redirect for better UX
+      router.push('/thank-you');
     } finally {
-      setSubmitting(false);
+      setIsSubmitting(false);
     }
   };
 
-  const NewsletterSignup = ({ className = "", showDescription = true }) => (
-    <div className={`${className}`}>
-      {subscribed ? (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center animate-fade-in">
-          <svg className="w-10 h-10 text-green-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <h3 className="text-xl font-bold text-green-800 mb-1">You're in!</h3>
-          <p className="text-green-700">Check your inbox for our welcome email.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubscribe} className="space-y-3">
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address"
-              className="px-4 py-3 rounded-lg flex-grow border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors shadow-sm"
-              required
-            />
-            <button
-              type="submit"
-              disabled={submitting}
-              className={`px-6 py-3 rounded-lg font-medium text-white ${
-                submitting ? 'bg-gray-400' : 'bg-primary hover:bg-primary/90'
-              } transition-all shadow-md hover:shadow-lg hover:-translate-y-1 duration-300 whitespace-nowrap`}
-            >
-              {submitting ? 'Subscribing...' : 'Subscribe'}
-            </button>
-          </div>
-          {showDescription && (
-            <p className="text-xs text-gray-500 text-center">
-              Free daily newsletter • Unsubscribe anytime
-            </p>
-          )}
-        </form>
-      )}
-    </div>
-  );
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-200 via-primary/30 to-blue-100 py-20">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Your daily guide to life in<br />
+            Stay in the loop with what's happening in{' '}
             <span className="text-primary">St. Lucie County</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            The hyperlocal news, events, and stories that matter to your community. 
-            Delivered fresh to your inbox 5 days a week.
+          
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Clean, daily updates on events, food, people, and local culture.<br />
+            <strong>No politics. No crime.</strong> Just the stuff that makes this place feel like home.<br />
+            <span className="text-primary font-semibold">Always free.</span> Delivered every weekday morning.
           </p>
-          <div className="max-w-lg mx-auto">
-            <NewsletterSignup />
+          
+          {/* Email Form */}
+          <div className="max-w-lg mx-auto mb-12">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="flex-1 px-6 py-4 text-lg rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`px-8 py-4 text-lg font-semibold rounded-lg text-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 whitespace-nowrap ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-primary hover:bg-primary/90'
+                  }`}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Me the News'}
+                </button>
+              </div>
+            </form>
+          </div>
+          
+          {/* Benefits Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              '✅ Daily local news without the noise',
+              '✅ 30 to 50 handpicked events every Thursday',
+              '✅ Stories that actually reflect our community',
+              '✅ Trusted by 5,000+ readers across St. Lucie County'
+            ].map((benefit, index) => (
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100">
+                <p className="text-gray-700 font-medium">{benefit}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-6xl py-16">
-        {/* What We Cover */}
-        <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">What We Cover</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                title: 'News',
-                icon: '📰',
-                description: 'Local government, community issues, and stories that impact your daily life.',
-                color: 'bg-blue-100 text-blue-700'
-              },
-              {
-                title: 'Events',
-                icon: '🎉',
-                description: 'Festivals, community gatherings, and things to do this weekend.',
-                color: 'bg-purple-100 text-purple-700'
-              },
-              {
-                title: 'Eats',
-                icon: '🍽️',
-                description: 'New restaurants, local favorites, and food scenes worth knowing about.',
-                color: 'bg-orange-100 text-orange-700'
-              },
-              {
-                title: 'Play',
-                icon: '🛠️',
-                description: 'Tools to help you navigate the county - what to do, where to eat, and how to make the most of local life.',
-                color: 'bg-green-100 text-green-700'
-              }
-            ].map((item, index) => (
-              <div key={item.title} className={`${item.color} rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300`}>
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Today's Edition */}
-        <section className="mb-20">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Today's Edition</h2>
-            <Link 
-              href="/news"
-              className="text-primary font-medium hover:text-primary/80 transition-colors"
-            >
-              View All News →
-            </Link>
-          </div>
-          
-          {loading ? (
-            <div className="bg-gray-50 rounded-2xl p-8 text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-              <p className="text-gray-600">Loading today's edition...</p>
-            </div>
-          ) : latestNewsletter ? (
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-start gap-6">
-                <div className="flex-1">
-                  <div className="text-sm text-gray-500 mb-2">
-                    {new Date(latestNewsletter.date).toLocaleDateString('en-US', {
-                      weekday: 'long',
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 hover:text-primary transition-colors">
-                    <Link href="/newsletter/latest">
-                      {latestNewsletter.title}
-                    </Link>
-                  </h3>
-                  <div className="text-gray-600 mb-6 line-clamp-3">
-                    {latestNewsletter.excerpt}
-                  </div>
-                  <Link 
-                    href="/newsletter/latest"
-                    className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors"
-                  >
-                    Read Full Edition
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-                {latestNewsletter.featured_image && (
-                  <div className="flex-shrink-0 hidden md:block">
-                    <Image
-                      src={latestNewsletter.featured_image}
-                      alt={latestNewsletter.title}
-                      width={200}
-                      height={150}
-                      className="rounded-lg object-cover"
-                    />
-                  </div>
-                )}
+      {/* Ja'Min Bio Section */}
+      <section className="py-16 px-4 bg-white/50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <div className="w-48 h-48 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/images/bio-photo.png"
+                  alt="Ja'Min - Founder of Sunland News"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover object-left-top"
+                  style={{ transform: 'translateX(-20px)' }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.innerHTML = '<div class="text-6xl text-gray-400">📸</div>';
+                  }}
+                />
               </div>
             </div>
-          ) : (
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Fresh Content Daily</h3>
-              <p className="text-gray-600 mb-6">
-                Every weekday morning, we deliver the latest news, events, and happenings from St. Lucie County.
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Meet Ja'Min
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Hi, I'm Ja'Min, born and raised in St. Lucie County.<br />
+                I started Sunland News to share stories that actually reflect this place.<br />
+                <strong>No politics, no crime.</strong> Just the people, food, and local life that make it home.
               </p>
-              <Link 
-                href="/news"
-                className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors"
-              >
-                Browse All News
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          )}
-        </section>
-
-        {/* Why Sunland */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-r from-primary/10 to-blue-100 rounded-2xl p-8 md:p-12">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Sunland News?</h2>
-              <blockquote className="text-xl md:text-2xl text-gray-700 italic mb-8 leading-relaxed">
-                "Finally, a newsletter that actually covers what's happening in my neighborhood. 
-                No clickbait, no politics - just real local news I can use."
-              </blockquote>
-              <div className="flex items-center justify-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-lg">👤</span>
-                </div>
-                <div className="text-left">
-                  <p className="font-medium text-gray-900">Sarah M.</p>
-                  <p className="text-sm text-gray-600">Port St. Lucie Resident</p>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-primary mb-2">5 Days</div>
-                  <p className="text-gray-600">Fresh content every weekday</p>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary mb-2">7,500+</div>
-                  <p className="text-gray-600">Local subscribers</p>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary mb-2">100%</div>
-                  <p className="text-gray-600">Free to read</p>
-                </div>
-              </div>
             </div>
           </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Join 7,500+ locals who start their day with Sunland News
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Get the stories that matter to St. Lucie County delivered to your inbox every weekday morning. 
-            No spam, no politics - just local news you can use.
-          </p>
-          <div className="max-w-md mx-auto mb-8">
-            <NewsletterSignup showDescription={false} />
-          </div>
-          <p className="text-sm text-gray-500">
-            Questions? <Link href="/about" className="text-primary hover:underline">Learn more about our mission</Link> or <Link href="/news" className="text-primary hover:underline">browse our latest stories</Link>.
-          </p>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

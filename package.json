@@ -16,6 +16,7 @@
     "@sanity/client": "^6.28.4",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.82.0",
+    "@supabase/supabase-js": "^2.50.2",
     "axios": "^1.6.7",
     "next": "^14.1.0",
     "next-sanity": "^9.9.9",
