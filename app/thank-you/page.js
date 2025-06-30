@@ -1,8 +1,20 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function ThankYouPage() {
+  // Track conversion on thank you page
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'CompleteRegistration', {
+        content_name: 'Newsletter Signup Complete',
+        content_category: 'Email Subscription',
+        status: 'completed'
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       <div className="container mx-auto max-w-4xl px-4 py-16">

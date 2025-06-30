@@ -1,6 +1,19 @@
 'use client';
 
+import { useEffect } from 'react';
+
 export default function QuizThankYouPage() {
+  // Track quiz completion without support conversion
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('trackCustom', 'QuizCompletedNoSupport', {
+        content_name: 'Quiz Completed - No Support Conversion',
+        content_category: 'Engagement',
+        conversion_type: 'non_monetized'
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       <div className="container mx-auto max-w-2xl px-4 py-16">

@@ -93,28 +93,28 @@ export default function HomePage() {
           {/* Email Form */}
           <div className="max-w-lg mx-auto mb-12">
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   className="flex-1 px-6 py-4 text-lg rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm"
-                  required
-                />
-                <button
-                  type="submit"
+              required
+            />
+            <button
+              type="submit"
                   disabled={isSubmitting}
                   className={`px-8 py-4 text-lg font-semibold rounded-lg text-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 whitespace-nowrap ${
                     isSubmitting 
                       ? 'bg-gray-400 cursor-not-allowed' 
                       : 'bg-primary hover:bg-primary/90'
                   }`}
-                >
+            >
                   {isSubmitting ? 'Sending...' : 'Send Me the News'}
-                </button>
-              </div>
-            </form>
+            </button>
+          </div>
+        </form>
           </div>
           
           {/* Benefits Cards */}
@@ -130,8 +130,8 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       {/* Ja'Min Bio Section */}
       <section className="py-16 px-4 bg-white/50">
@@ -139,7 +139,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-shrink-0">
               <div className="w-48 h-48 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                <Image
+                    <Image
                   src="/images/bio-photo.png"
                   alt="Ja'Min - Founder of Sunland News"
                   width={192}
@@ -164,8 +164,8 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
     </div>
   );
 }
