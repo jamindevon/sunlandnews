@@ -36,15 +36,15 @@ export default function ThankYouPage() {
         {/* Video Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Google Drive Video Embed */}
+            {/* YouTube Video Embed */}
             <div className="aspect-video mb-8 rounded-lg overflow-hidden shadow-lg">
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://drive.google.com/file/d/1PbCmOZgBR7qrmzH27XrSwq-DdA_bHmq8/preview" 
+                src="https://www.youtube.com/embed/Rss_K3v__Wc" 
                 title="Welcome to Sunland News"
                 frameBorder="0" 
-                allow="autoplay; encrypted-media" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>
