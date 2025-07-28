@@ -1,17 +1,16 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as fbPixel from '../../../utils/fbPixel';
 
 export default function QuizThankYouPage() {
   // Track quiz completion without support conversion
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('trackCustom', 'QuizCompletedNoSupport', {
-        content_name: 'Quiz Completed - No Support Conversion',
-        content_category: 'Engagement',
-        conversion_type: 'non_monetized'
-      });
-    }
+    fbPixel.customEvent('QuizCompletedNoSupport', {
+      content_name: 'Quiz Completed - No Support Conversion',
+      content_category: 'Engagement',
+      conversion_type: 'non_monetized'
+    });
   }, []);
 
   return (

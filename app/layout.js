@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import FacebookPixelEvents from "./components/FacebookPixelEvents";
 
 // Set revalidation for the entire site
 export const revalidate = 60; // revalidate every 60 seconds
@@ -49,7 +50,7 @@ export default function RootLayout({ children }) {
         {/* Meta Pixel Code - Placed at top of body to load in head */}
         <Script
           id="meta-pixel"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -75,6 +76,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
         
+        <FacebookPixelEvents />
         <div className="min-h-screen flex flex-col">
           <Header />
           <ScrollToTop />

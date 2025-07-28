@@ -1,31 +1,28 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as fbPixel from '../../utils/fbPixel';
 
 export default function SupportPage() {
   // Track page view for monetization options
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'ViewContent', {
-        content_name: 'Support Options',
-        content_category: 'Monetization',
-        content_ids: ['772_eats_guide', 'people_pass_membership', 'sunland_tshirt']
-      });
-    }
+    fbPixel.event('ViewContent', {
+      content_name: 'Support Options',
+      content_category: 'Monetization',
+      content_ids: ['772_eats_guide', 'people_pass_membership', 'sunland_tshirt']
+    });
   }, []);
 
   // Track clicks on support options
   const handleSupportClick = (optionTitle, price, href) => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      // Track as InitiateCheckout for paid options
-      if (price && price !== 'Coming Soon') {
-        window.fbq('track', 'InitiateCheckout', {
-          content_name: optionTitle,
-          content_category: 'Support Option',
-          value: parseFloat(price.replace(/[^0-9.]/g, '')),
-          currency: 'USD'
-        });
-      }
+    // Track as InitiateCheckout for paid options
+    if (price && price !== 'Coming Soon') {
+      fbPixel.event('InitiateCheckout', {
+        content_name: optionTitle,
+        content_category: 'Support Option',
+        value: parseFloat(price.replace(/[^0-9.]/g, '')),
+        currency: 'USD'
+      });
     }
     
     // Open link if available
