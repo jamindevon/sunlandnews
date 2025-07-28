@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import FacebookPixelEvents from "./components/FacebookPixelEvents";
+import { Analytics } from "@vercel/analytics/next";
 
 // Set revalidation for the entire site
 export const revalidate = 60; // revalidate every 60 seconds
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
         </noscript>
         
         <FacebookPixelEvents />
+        <Analytics />
         <div className="min-h-screen flex flex-col">
           <Header />
           <ScrollToTop />
