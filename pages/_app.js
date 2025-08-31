@@ -24,17 +24,20 @@ export default function MyApp({ Component, pageProps }) {
         t = b.createElement(e)
         t.async = !0
         t.src = v
+        t.onload = function() {
+          // Initialize the pixel after script loads
+          window.fbq('init', FACEBOOK_PIXEL_ID)
+          window.fbq('track', 'PageView')
+        }
         s = b.getElementsByTagName(e)[0]
         s.parentNode.insertBefore(t, s)
       })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
 
-      // Initialize the pixel
-      window.fbq('init', FACEBOOK_PIXEL_ID)
-      window.fbq('track', 'PageView')
-
       // Track page views on route changes
       const handleRouteChange = () => {
-        window.fbq('track', 'PageView')
+        if (window.fbq) {
+          window.fbq('track', 'PageView')
+        }
       }
 
       router.events.on('routeChangeComplete', handleRouteChange)
