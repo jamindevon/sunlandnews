@@ -2,16 +2,18 @@
 
 import Link from 'next/link';
 import { useEffect } from 'react';
-import * as fbPixel from '../../utils/fbPixel';
 
 export default function ThankYouPage() {
   // Track conversion on thank you page
   useEffect(() => {
-    fbPixel.event('CompleteRegistration', {
-      content_name: 'Newsletter Signup Complete',
-      content_category: 'Email Subscription',
-      status: 'completed'
-    });
+    if (typeof window !== 'undefined') {
+      const ReactPixel = require('react-facebook-pixel');
+      ReactPixel.track('CompleteRegistration', {
+        content_name: 'Newsletter Signup Complete',
+        content_category: 'Email Subscription',
+        status: 'completed'
+      });
+    }
   }, []);
 
   return (

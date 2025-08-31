@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { createSignup } from '../lib/supabase';
-import * as fbPixel from '../utils/fbPixel';
 
 export default function HomePage() {
   const [email, setEmail] = useState('');
@@ -53,11 +52,14 @@ export default function HomePage() {
       }
       
       // Track email signup with Meta Pixel
-      fbPixel.event('Lead', {
-        content_name: 'Newsletter Signup',
-        content_category: 'Email Subscription',
-        source: 'funnel-homepage'
-      });
+      if (typeof window !== 'undefined') {
+        const ReactPixel = require('react-facebook-pixel');
+        ReactPixel.track('Lead', {
+          content_name: 'Newsletter Signup',
+          content_category: 'Email Subscription',
+          source: 'funnel-homepage'
+        });
+      }
       
       // Always redirect to thank you page (even if some services fail)
       router.push('/thank-you');

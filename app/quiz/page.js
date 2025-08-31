@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createQuizResponse } from '../../lib/supabase';
-import * as fbPixel from '../../utils/fbPixel';
 
 export default function QuizPage() {
   const router = useRouter();
@@ -125,13 +124,16 @@ export default function QuizPage() {
       }
       
       // Track quiz completion with Meta Pixel
-      fbPixel.customEvent('QuizCompleted', {
-        content_name: 'Community Quiz',
-        willingness_to_support: responses.q5_support,
-        sms_optin: responses.q4_sms,
-        content_interests: responses.q1_interest,
-        phone_provided: responses.phone_number ? 'yes' : 'no'
-      });
+      if (typeof window !== 'undefined') {
+        const ReactPixel = require('react-facebook-pixel');
+        ReactPixel.trackCustom('QuizCompleted', {
+          content_name: 'Community Quiz',
+          willingness_to_support: responses.q5_support,
+          sms_optin: responses.q4_sms,
+          content_interests: responses.q1_interest,
+          phone_provided: responses.phone_number ? 'yes' : 'no'
+        });
+      }
       
       // Route based on Q5 answer
       if (responses.q5_support === 'Yes, show me how') {
