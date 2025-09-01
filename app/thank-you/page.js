@@ -6,14 +6,21 @@ import { useEffect } from 'react';
 export default function ThankYouPage() {
   // Track conversion on thank you page
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const ReactPixel = require('react-facebook-pixel');
-      ReactPixel.track('CompleteRegistration', {
-        content_name: 'Newsletter Signup Complete',
-        content_category: 'Email Subscription',
-        status: 'completed'
-      });
-    }
+    const trackConversion = async () => {
+      try {
+        if (typeof window !== 'undefined') {
+          const ReactPixel = (await import('react-facebook-pixel')).default;
+          ReactPixel.track('CompleteRegistration', {
+            content_name: 'Newsletter Signup Complete',
+            content_category: 'Email Subscription',
+            status: 'completed'
+          });
+        }
+      } catch (error) {
+        console.warn('Failed to track pixel event:', error);
+      }
+    };
+    trackConversion();
   }, []);
 
   return (

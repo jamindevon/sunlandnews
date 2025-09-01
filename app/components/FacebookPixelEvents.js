@@ -8,10 +8,13 @@ export default function FacebookPixelEvents() {
 
   useEffect(() => {
     // Fire PageView on route change for SPA navigation
-    if (typeof window !== 'undefined') {
-      const ReactPixel = require('react-facebook-pixel');
-      ReactPixel.pageView();
-    }
+    const trackPageView = async () => {
+      if (typeof window !== 'undefined') {
+        const ReactPixel = (await import('react-facebook-pixel')).default;
+        ReactPixel.pageView();
+      }
+    };
+    trackPageView();
   }, [pathname]);
 
   return null;

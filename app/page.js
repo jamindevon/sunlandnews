@@ -53,7 +53,7 @@ export default function HomePage() {
       
       // Track email signup with Meta Pixel
       if (typeof window !== 'undefined') {
-        const ReactPixel = require('react-facebook-pixel');
+        const ReactPixel = (await import('react-facebook-pixel')).default;
         ReactPixel.track('Lead', {
           content_name: 'Newsletter Signup',
           content_category: 'Email Subscription',

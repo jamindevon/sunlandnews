@@ -5,28 +5,39 @@ import { useEffect } from 'react';
 export default function SupportPage() {
   // Track page view for monetization options
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const ReactPixel = require('react-facebook-pixel');
-      ReactPixel.track('ViewContent', {
-        content_name: 'Support Options',
-        content_category: 'Monetization',
-        content_ids: ['772_eats_guide', 'people_pass_membership', 'sunland_tshirt']
-      });
-    }
+    const trackPageView = async () => {
+      try {
+        if (typeof window !== 'undefined') {
+          const ReactPixel = (await import('react-facebook-pixel')).default;
+          ReactPixel.track('ViewContent', {
+            content_name: 'Support Options',
+            content_category: 'Monetization',
+            content_ids: ['772_eats_guide', 'people_pass_membership', 'sunland_tshirt']
+          });
+        }
+      } catch (error) {
+        console.warn('Failed to track pixel event:', error);
+      }
+    };
+    trackPageView();
   }, []);
 
   // Track clicks on support options
-  const handleSupportClick = (optionTitle, price, href) => {
+  const handleSupportClick = async (optionTitle, price, href) => {
     // Track as InitiateCheckout for paid options
     if (price && price !== 'Coming Soon') {
-      if (typeof window !== 'undefined') {
-        const ReactPixel = require('react-facebook-pixel');
-        ReactPixel.track('InitiateCheckout', {
-          content_name: optionTitle,
-          content_category: 'Support Option',
-          value: parseFloat(price.replace(/[^0-9.]/g, '')),
-          currency: 'USD'
-        });
+      try {
+        if (typeof window !== 'undefined') {
+          const ReactPixel = (await import('react-facebook-pixel')).default;
+          ReactPixel.track('InitiateCheckout', {
+            content_name: optionTitle,
+            content_category: 'Support Option',
+            value: parseFloat(price.replace(/[^0-9.]/g, '')),
+            currency: 'USD'
+          });
+        }
+      } catch (error) {
+        console.warn('Failed to track pixel event:', error);
       }
     }
     

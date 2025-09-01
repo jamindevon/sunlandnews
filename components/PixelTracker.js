@@ -1,11 +1,16 @@
 import { useEffect } from "react";
-import ReactPixel from "react-facebook-pixel";
 
 const PixelTracker = () => {
   useEffect(() => {
-    const pixelId = "1191376851980285";
-    ReactPixel.init(pixelId);
-    ReactPixel.pageView();
+    const initPixel = async () => {
+      if (typeof window !== 'undefined') {
+        const ReactPixel = (await import('react-facebook-pixel')).default;
+        const pixelId = "1191376851980285";
+        ReactPixel.init(pixelId);
+        ReactPixel.pageView();
+      }
+    };
+    initPixel();
   }, []);
 
   return null;

@@ -5,14 +5,21 @@ import { useEffect } from 'react';
 export default function QuizThankYouPage() {
   // Track quiz completion without support conversion
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const ReactPixel = require('react-facebook-pixel');
-      ReactPixel.trackCustom('QuizCompletedNoSupport', {
-        content_name: 'Quiz Completed - No Support Conversion',
-        content_category: 'Engagement',
-        conversion_type: 'non_monetized'
-      });
-    }
+    const trackCompletion = async () => {
+      try {
+        if (typeof window !== 'undefined') {
+          const ReactPixel = (await import('react-facebook-pixel')).default;
+          ReactPixel.trackCustom('QuizCompletedNoSupport', {
+            content_name: 'Quiz Completed - No Support Conversion',
+            content_category: 'Engagement',
+            conversion_type: 'non_monetized'
+          });
+        }
+      } catch (error) {
+        console.warn('Failed to track pixel event:', error);
+      }
+    };
+    trackCompletion();
   }, []);
 
   return (

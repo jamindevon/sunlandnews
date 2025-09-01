@@ -124,15 +124,19 @@ export default function QuizPage() {
       }
       
       // Track quiz completion with Meta Pixel
-      if (typeof window !== 'undefined') {
-        const ReactPixel = require('react-facebook-pixel');
-        ReactPixel.trackCustom('QuizCompleted', {
-          content_name: 'Community Quiz',
-          willingness_to_support: responses.q5_support,
-          sms_optin: responses.q4_sms,
-          content_interests: responses.q1_interest,
-          phone_provided: responses.phone_number ? 'yes' : 'no'
-        });
+      try {
+        if (typeof window !== 'undefined') {
+          const ReactPixel = (await import('react-facebook-pixel')).default;
+          ReactPixel.trackCustom('QuizCompleted', {
+            content_name: 'Community Quiz',
+            willingness_to_support: responses.q5_support,
+            sms_optin: responses.q4_sms,
+            content_interests: responses.q1_interest,
+            phone_provided: responses.phone_number ? 'yes' : 'no'
+          });
+        }
+      } catch (error) {
+        console.warn('Failed to track pixel event:', error);
       }
       
       // Route based on Q5 answer

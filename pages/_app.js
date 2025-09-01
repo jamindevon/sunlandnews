@@ -9,9 +9,9 @@ export default function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     // Track page views on route changes
-    const handleRouteChange = () => {
+    const handleRouteChange = async () => {
       if (typeof window !== 'undefined') {
-        const ReactPixel = require('react-facebook-pixel');
+        const ReactPixel = (await import('react-facebook-pixel')).default;
         ReactPixel.pageView();
       }
     }
