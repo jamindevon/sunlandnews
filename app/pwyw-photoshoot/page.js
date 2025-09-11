@@ -26,19 +26,12 @@ export default function PWYWPhotoshootPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="space-y-12">
           
-          {/* Sample Photos Section */}
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-center mb-2">
-              Sample Photos
-            </h2>
-            <p className="text-center text-lg mb-8 text-gray-600">
-              Check out these awesome shots!
-            </p>
-            
+          {/* Photos Section */}
+          <div className="bg-gray-50 rounded-lg p-4 md:p-8">
             {/* Topsy-turvy photo arrangement */}
-            <div className="relative h-96">
+            <div className="relative h-[500px] md:h-[600px]">
               {/* Photo 1 - tilted left */}
-              <div className="absolute top-0 left-4 w-48 h-48 transform -rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-gray-800 bg-white p-2 shadow-lg">
+              <div className="absolute top-0 left-2 md:left-4 w-40 h-40 md:w-64 md:h-64 transform -rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-gray-800 bg-white p-2 shadow-lg">
                 <img 
                   src="/images/P9040292.JPG" 
                   alt="Sample school portrait 1" 
@@ -47,7 +40,7 @@ export default function PWYWPhotoshootPage() {
               </div>
               
               {/* Photo 2 - tilted right */}
-              <div className="absolute top-8 right-8 w-52 h-52 transform rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-gray-800 bg-white p-2 shadow-lg">
+              <div className="absolute top-8 md:top-12 right-2 md:right-8 w-44 h-44 md:w-72 md:h-72 transform rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-gray-800 bg-white p-2 shadow-lg">
                 <img 
                   src="/images/P9040293.JPG" 
                   alt="Sample school portrait 2" 
@@ -56,7 +49,7 @@ export default function PWYWPhotoshootPage() {
               </div>
               
               {/* Photo 3 - slight tilt, lower center */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 rotate-6 hover:rotate-0 transition-transform duration-300 w-56 h-56 border-4 border-gray-800 bg-white p-2 shadow-lg">
+              <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 rotate-6 hover:rotate-0 transition-transform duration-300 w-48 h-48 md:w-80 md:h-80 border-4 border-gray-800 bg-white p-2 shadow-lg">
                 <img 
                   src="/images/P9040296.JPG" 
                   alt="Sample school portrait 3" 
@@ -122,7 +115,7 @@ export default function PWYWPhotoshootPage() {
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">1</div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Reserve Your Slot</h3>
-                    <p className="text-gray-600">Contact us to book your time slot with a $10 refundable deposit</p>
+                    <p className="text-gray-600">Book your time slot using the button below with a $10 refundable deposit</p>
                   </div>
                 </div>
                 <div className="flex">
@@ -136,7 +129,7 @@ export default function PWYWPhotoshootPage() {
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">3</div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Receive Your Photos</h3>
-                    <p className="text-gray-600">Get your edited digital photos and print by September 22nd</p>
+                    <p className="text-gray-600">Get your edited digital photos and print</p>
                   </div>
                 </div>
                 <div className="flex">
