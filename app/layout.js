@@ -17,7 +17,7 @@ export const metadata = {
   title: "Sunland News - Saint Lucie County",
   description: "A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People—delivered 5 days a week.",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/images/sunlandnews-logo.png',
     apple: '/images/apple-icon.png',
   },
   openGraph: {
