@@ -1,15 +1,18 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
+  const PIXEL_ID = '528010896404537';
+
   return (
     <Html>
       <Head>
+        {/* Facebook Pixel noscript fallback */}
         <noscript>
-          <img 
-            height="1" 
-            width="1" 
+          <img
+            height="1"
+            width="1"
             style={{display: 'none'}}
-            src="https://www.facebook.com/tr?id=1191376851980285&ev=PageView&noscript=1"
+            src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`}
             alt=""
           />
         </noscript>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { fbEvents } from '../../lib/fbPixel';
 
 export default function Subscribe() {
   const [selectedPlan, setSelectedPlan] = useState('monthly');
@@ -38,7 +39,12 @@ export default function Subscribe() {
       if (!data.success) {
         throw new Error(data.error || 'Failed to subscribe');
       }
-      
+
+      // Track newsletter subscription with Meta Pixel
+      fbEvents.subscribeSubmit('subscribe_page', {
+        content_name: 'Free Newsletter Signup'
+      });
+
       setSubscribed(true);
       setEmail('');
     } catch (err) {

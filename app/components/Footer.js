@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { fbEvents } from '../../lib/fbPixel';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -33,7 +34,12 @@ export default function Footer() {
       if (!data.success) {
         throw new Error(data.error || 'Failed to subscribe');
       }
-      
+
+      // Track newsletter subscription with Meta Pixel
+      fbEvents.subscribeSubmit('footer', {
+        content_name: 'Footer Newsletter Signup'
+      });
+
       setSubscribed(true);
       setEmail('');
     } catch (err) {

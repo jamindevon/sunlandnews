@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import FacebookPixel from "../components/FacebookPixel";
 import FacebookPixelEvents from "./components/FacebookPixelEvents";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <FacebookPixel />
         <FacebookPixelEvents />
         <Analytics />
         <div className="min-h-screen flex flex-col">
