@@ -15,7 +15,7 @@ import Script from 'next/script';
  * - Includes noscript fallback for users with JavaScript disabled
  */
 export default function FacebookPixel() {
-  const PIXEL_ID = '528010896404537';
+  const PIXEL_ID = '1091133472801541';
 
   useEffect(() => {
     // Initialize Facebook Pixel

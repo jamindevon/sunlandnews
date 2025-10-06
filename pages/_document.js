@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
-  const PIXEL_ID = '528010896404537';
+  const PIXEL_ID = '1091133472801541';
 
   return (
     <Html>

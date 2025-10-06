@@ -5,7 +5,7 @@ const PixelTracker = () => {
     const initPixel = async () => {
       if (typeof window !== 'undefined') {
         const ReactPixel = (await import('react-facebook-pixel')).default;
-        const pixelId = "528010896404537";
+        const pixelId = "1091133472801541";
         ReactPixel.init(pixelId);
         ReactPixel.pageView();
       }
