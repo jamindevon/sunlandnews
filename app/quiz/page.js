@@ -197,50 +197,51 @@ export default function QuizPage() {
           {/* Options */}
           <div className="space-y-4 mb-8">
             {currentQuestion.options.map((option, index) => (
-              <button
-                key={option}
-                onClick={() => handleOptionSelect(currentQuestion.id, option)}
-                className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
-                  currentResponse === option
-                    ? 'border-primary bg-primary/5 text-primary font-medium'
-                    : 'border-gray-200 hover:border-gray-300 text-gray-700'
-                }`}
-              >
-                <div className="flex items-center">
-                  <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
+              <div key={option}>
+                <button
+                  onClick={() => handleOptionSelect(currentQuestion.id, option)}
+                  className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
                     currentResponse === option
-                      ? 'border-primary bg-primary'
-                      : 'border-gray-300'
-                  }`}>
-                    {currentResponse === option && (
-                      <div className="w-full h-full rounded-full bg-primary"></div>
-                    )}
+                      ? 'border-primary bg-primary/5 text-primary font-medium'
+                      : 'border-gray-200 hover:border-gray-300 text-gray-700'
+                  }`}
+                >
+                  <div className="flex items-center">
+                    <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
+                      currentResponse === option
+                        ? 'border-primary bg-primary'
+                        : 'border-gray-300'
+                    }`}>
+                      {currentResponse === option && (
+                        <div className="w-full h-full rounded-full bg-primary"></div>
+                      )}
+                    </div>
+                    <span>{option}</span>
                   </div>
-                  <span>{option}</span>
-                </div>
-              </button>
+                </button>
+
+                {/* Conditional Phone Number Field - appears right under the Yes option */}
+                {currentQuestion.hasPhoneField && option === '✅ Yes, that sounds helpful' && currentResponse === option && (
+                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <label htmlFor="phone" className="block text-sm font-medium text-green-800 mb-2">
+                      Phone Number (optional)
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={responses.phone_number}
+                      onChange={(e) => setResponses(prev => ({ ...prev, phone_number: e.target.value }))}
+                      placeholder="(772) 555-0123"
+                      className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                    />
+                    <p className="text-xs text-green-600 mt-1">
+                      We'll only text you about important local stuff — no spam, promise!
+                    </p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
-          
-          {/* Conditional Phone Number Field */}
-          {currentQuestion.hasPhoneField && currentResponse === '✅ Yes, that sounds helpful' && (
-            <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg">
-              <label htmlFor="phone" className="block text-sm font-medium text-green-800 mb-2">
-                Phone Number (optional)
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                value={responses.phone_number}
-                onChange={(e) => setResponses(prev => ({ ...prev, phone_number: e.target.value }))}
-                placeholder="(772) 555-0123"
-                className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
-              />
-              <p className="text-xs text-green-600 mt-1">
-                We'll only text you about important local stuff — no spam, promise!
-              </p>
-            </div>
-          )}
 
           {/* Navigation Buttons */}
           <div className="flex justify-between">
