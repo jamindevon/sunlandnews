@@ -33,20 +33,20 @@ export default function QuizPage() {
       id: 'q2_lived',
       question: 'How long have you lived in the area?',
       options: [
-        'Just moved here',
-        'Been here a few years',
-        'Born & raised',
-        'I visit often'
+        '📦 Just moved here',
+        '🏡 Been here a few years',
+        '🌴 Born & raised',
+        '✈️ I visit often'
       ]
     },
     {
       id: 'q3_value',
       question: 'What would make this newsletter really valuable to you?',
       options: [
-        'Help me find places I wouldn\'t know about',
-        'Save me time & keep me updated',
-        'Connect me with local people & stories',
-        'Show me how to support local businesses'
+        '🔍 Help me find places I wouldn\'t know about',
+        '⏰ Save me time & keep me updated',
+        '🤝 Connect me with local people & stories',
+        '💼 Show me how to support local businesses'
       ]
     },
     {
@@ -54,9 +54,9 @@ export default function QuizPage() {
       question: 'Want to get occasional local alerts by text?',
       description: 'Like reminders for events, local deals, or early access to new stuff',
       options: [
-        'Yes, that sounds helpful',
-        'Maybe later',
-        'No thanks'
+        '✅ Yes, that sounds helpful',
+        '⏳ Maybe later',
+        '🙅 No thanks'
       ],
       hasPhoneField: true
     },
@@ -64,9 +64,9 @@ export default function QuizPage() {
       id: 'q5_support',
       question: 'Would you be open to supporting local news that feels like home?',
       options: [
-        'Yes, show me how',
-        'Maybe later',
-        'Just here for the free stuff 😅'
+        '💪 Yes, show me how',
+        '⏳ Maybe later',
+        '🆓 Just here for the free stuff 😅'
       ]
     }
   ];
@@ -140,7 +140,7 @@ export default function QuizPage() {
       }
       
       // Route based on Q5 answer
-      if (responses.q5_support === 'Yes, show me how') {
+      if (responses.q5_support === '💪 Yes, show me how') {
         router.push('/support');
       } else {
         router.push('/quiz/thank-you');
@@ -148,7 +148,7 @@ export default function QuizPage() {
     } catch (error) {
       console.error('Error submitting quiz:', error);
       // Still route to appropriate page for better UX
-      if (responses.q5_support === 'Yes, show me how') {
+      if (responses.q5_support === '💪 Yes, show me how') {
         router.push('/support');
       } else {
         router.push('/quiz/thank-you');
@@ -223,7 +223,7 @@ export default function QuizPage() {
           </div>
           
           {/* Conditional Phone Number Field */}
-          {currentQuestion.hasPhoneField && currentResponse === 'Yes, that sounds helpful' && (
+          {currentQuestion.hasPhoneField && currentResponse === '✅ Yes, that sounds helpful' && (
             <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg">
               <label htmlFor="phone" className="block text-sm font-medium text-green-800 mb-2">
                 Phone Number (optional)
