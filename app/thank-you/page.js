@@ -104,15 +104,13 @@ export default function ThankYouPage() {
             style={{
               width: '100%',
               maxWidth: '650px',
-              height: '920px',
+              height: '1100px',
               border: 'none',
               margin: '0 auto',
-              display: 'block',
-              overflow: 'hidden'
+              display: 'block'
             }}
             title="772 Eats Checkout"
             loading="eager"
-            scrolling="no"
           />
 
           {/* Guarantee & Mission */}
