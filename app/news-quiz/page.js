@@ -17,59 +17,59 @@ export default function NewsQuiz() {
     subtitle: "How well were you paying attention this week? Test your knowledge!",
     questions: [
       {
-        question: "What major announcement did Port St. Lucie make about the Walton One Project?",
+        question: "What is the maximum amount Port St. Lucie says they will reimburse for the soccer stadium project?",
         options: [
-          "A new convention center and hotel complex",
-          "A professional soccer club and 6,000-seat stadium",
-          "A downtown shopping mall and food hall",
-          "An expanded event center with concert venues"
+          "$55 million",
+          "$27.5 million",
+          "$80 million",
+          "$50 million"
         ],
         correctAnswer: 1, // Index of correct answer (0-based)
-        explanation: "Port St. Lucie announced a United Soccer League franchise with a $80 million, 6,000-seat stadium at the Mid-Florida Event Center site, with the men's team kicking off in 2027."
+        explanation: "The city says they will reimburse Ebenezer Stadium LLC up to $27.5 million over 20 years from CRA tax increment financing funds, even though the stadium cost has risen to $80 million."
       },
       {
-        question: "How much has food demand increased at GraceWay Village Café compared to last year?",
+        question: "According to City Manager Richard Chess, why was the Little Jim Bridge RFP closed with no winner?",
         options: [
-          "15%",
-          "23%",
-          "37%",
-          "45%"
-        ],
-        correctAnswer: 2,
-        explanation: "GraceWay Village Café reported a 37% increase in demand as food banks across the Treasure Coast are seeing pandemic-level need again."
-      },
-      {
-        question: "What was the problem with Fort Pierce's $63,347 Christmas lights contract?",
-        options: [
-          "The lights were defective and needed replacement",
-          "The work was completed after the contract expired and without proper bidding",
-          "The vendor overcharged by $20,000",
-          "The installation was delayed until 2026"
+          "Little Jim's withdrew their application",
+          "All five bidders were deemed \"nonresponsive\" for not submitting mandatory documents",
+          "The city ran out of funding",
+          "There were no qualified applicants"
         ],
         correctAnswer: 1,
-        explanation: "The Marina Square holiday lights were installed after the contract expired in November 2024, without competitive bidding, and the work was completed before proper approval was obtained."
+        explanation: "City Manager Richard Chess said the evaluation committee had scored bidders who didn't submit mandatory documents like balance sheets, making all five bidders nonresponsive."
       },
       {
-        question: "When does the new Port St. Lucie Soccer Club team start playing?",
+        question: "How many bilingual teachers does St. Lucie County Schools urgently need to hire?",
         options: [
-          "Fall 2025",
-          "Spring 2026",
-          "2027",
-          "2028"
+          "10",
+          "15",
+          "22",
+          "30"
         ],
         correctAnswer: 2,
-        explanation: "The men's team kicks off in 2027 in USL League One (third tier), with a women's team to follow."
+        explanation: "The district needs 22 bilingual teachers (17 Haitian Creole and 5 Spanish-speaking ESOL professionals) to help the 7,800 English language learners in the district."
       },
       {
-        question: "What new meal service did Stoney's just launch?",
+        question: "What Florida product does the state hate according to recent data?",
         options: [
-          "Sunday brunch",
-          "Weekday breakfast (Tuesday-Friday, 7-10 AM)",
-          "Late-night menu",
-          "Catering service"
+          "Candy corn",
+          "Pumpkin spice",
+          "Halloween costumes",
+          "Apple cider"
+        ],
+        correctAnswer: 0,
+        explanation: "Florida ranks among the lowest states nationally for candy corn purchases per Instacart data."
+      },
+      {
+        question: "What raise did City Manager Richard Chess receive after his satisfactory performance review?",
+        options: [
+          "3%",
+          "5%",
+          "7%",
+          "10%"
         ],
         correctAnswer: 1,
-        explanation: "Stoney's launched breakfast Tuesday through Friday from 7 AM to 10 AM, with items like chicken & waffles and sausage bowls all under $8."
+        explanation: "Chess received a 5% raise following his satisfactory performance review, per his contract terms."
       }
     ]
   };
