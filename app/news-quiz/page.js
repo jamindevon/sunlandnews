@@ -17,59 +17,59 @@ export default function NewsQuiz() {
     subtitle: "How well were you paying attention this week? Test your knowledge!",
     questions: [
       {
-        question: "What is the maximum amount Port St. Lucie says they will reimburse for the soccer stadium project?",
+        question: "When is Buc-ee's expected to open in Fort Pierce?",
         options: [
-          "$55 million",
-          "$27.5 million",
-          "$80 million",
-          "$50 million"
+          "Early 2026",
+          "Late 2026",
+          "Late 2027 or early 2028",
+          "2029"
         ],
-        correctAnswer: 1, // Index of correct answer (0-based)
-        explanation: "The city says they will reimburse Ebenezer Stadium LLC up to $27.5 million over 20 years from CRA tax increment financing funds, even though the stadium cost has risen to $80 million."
+        correctAnswer: 2, // Index of correct answer (0-based)
+        explanation: "After resolving permitting issues with FDOT, Buc-ee's could receive site plan approval by end of 2025, but construction will take 18-24 months, meaning an opening in late 2027 or early 2028."
       },
       {
-        question: "According to City Manager Richard Chess, why was the Little Jim Bridge RFP closed with no winner?",
+        question: "What are both Habitat for Humanity ReStore locations closing on November 22nd?",
         options: [
-          "Little Jim's withdrew their application",
-          "All five bidders were deemed \"nonresponsive\" for not submitting mandatory documents",
-          "The city ran out of funding",
-          "There were no qualified applicants"
-        ],
-        correctAnswer: 1,
-        explanation: "City Manager Richard Chess said the evaluation committee had scored bidders who didn't submit mandatory documents like balance sheets, making all five bidders nonresponsive."
-      },
-      {
-        question: "How many bilingual teachers does St. Lucie County Schools urgently need to hire?",
-        options: [
-          "10",
-          "15",
-          "22",
-          "30"
+          "Fort Pierce and Vero Beach",
+          "Port St. Lucie and Stuart",
+          "Fort Pierce and Port St. Lucie",
+          "Port St. Lucie and Vero Beach"
         ],
         correctAnswer: 2,
-        explanation: "The district needs 22 bilingual teachers (17 Haitian Creole and 5 Spanish-speaking ESOL professionals) to help the 7,800 English language learners in the district."
+        explanation: "Habitat for Humanity is closing both ReStore locations in Fort Pierce (2904 Okeechobee Road) and Port St. Lucie (10185 South US 1) to focus resources on building and repairing homes."
       },
       {
-        question: "What Florida product does the state hate according to recent data?",
+        question: "How much money did Indian River County's Hospital District approve to keep the maternity ward open?",
         options: [
-          "Candy corn",
-          "Pumpkin spice",
-          "Halloween costumes",
-          "Apple cider"
-        ],
-        correctAnswer: 0,
-        explanation: "Florida ranks among the lowest states nationally for candy corn purchases per Instacart data."
-      },
-      {
-        question: "What raise did City Manager Richard Chess receive after his satisfactory performance review?",
-        options: [
-          "3%",
-          "5%",
-          "7%",
-          "10%"
+          "$1 million",
+          "$2 million",
+          "$3 million",
+          "$5 million"
         ],
         correctAnswer: 1,
-        explanation: "Chess received a 5% raise following his satisfactory performance review, per his contract terms."
+        explanation: "The Hospital District unanimously voted to give Cleveland Clinic Indian River Hospital $2 million in taxpayer funding to keep its Labor and Delivery Unit open through December 2028."
+      },
+      {
+        question: "What is now completely fare-free across the entire Treasure Coast?",
+        options: [
+          "Parking meters",
+          "Bus transit",
+          "Toll roads",
+          "State park entrance"
+        ],
+        correctAnswer: 1,
+        explanation: "Martin County's Marty buses eliminated the $1.50 fare, making the entire Treasure Coast (St. Lucie, Indian River, and Martin counties) completely bus fare-free."
+      },
+      {
+        question: "How many Christmas parades are coming to the Treasure Coast this holiday season?",
+        options: [
+          "Five",
+          "Seven",
+          "Ten",
+          "Twelve"
+        ],
+        correctAnswer: 2,
+        explanation: "Ten holiday parades are coming to the Treasure Coast starting December 5, including seven traditional parades and three waterfront lighted boat parades."
       }
     ]
   };

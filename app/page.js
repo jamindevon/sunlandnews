@@ -54,10 +54,10 @@ export default function HomePage() {
       
       // Track email signup with Meta Pixel
       fbEvents.subscribeSubmit('funnel-homepage');
-      
+
       // Always redirect to thank you page (even if some services fail)
       router.push('/thank-you');
-      
+
     } catch (error) {
       console.error('Error during signup:', error);
       // Still redirect for better UX

@@ -3,16 +3,15 @@
 import { useEffect } from 'react';
 
 export default function QuizThankYouPage() {
-  // Track quiz completion and offer view
+  // Track quiz completion
   useEffect(() => {
     const trackCompletion = async () => {
       try {
         if (typeof window !== 'undefined') {
           const ReactPixel = (await import('react-facebook-pixel')).default;
-          ReactPixel.trackCustom('QuizCompleted_OfferViewed', {
-            content_name: 'Quiz Completed - Food Guide Offer',
-            content_category: 'Self-Liquidating Offer',
-            offer_type: 'food_guide'
+          ReactPixel.trackCustom('QuizCompleted', {
+            content_name: 'Community Quiz Completed',
+            content_category: 'Quiz'
           });
         }
       } catch (error) {
@@ -38,36 +37,9 @@ export default function QuizThankYouPage() {
             Welcome to Sunland News!
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-2xl mx-auto leading-relaxed">
-            Your first issue is on its way. But first...
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Thanks for taking the quiz. Your first newsletter is on its way!
           </p>
-
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Get instant access to our exclusive <strong>772 Eats Food Guide</strong> — the ultimate resource for discovering the best local restaurants, hidden gems, and must-try dishes in your area.
-          </p>
-
-          {/* Self-Liquidating Offer - Food Guide Checkout */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              772 Eats Food Guide
-            </h2>
-
-            {/* Iframe Checkout */}
-            <div className="mb-8">
-              <iframe
-                src="https://772eats.com/embed-checkout.html"
-                style={{
-                  width: '100%',
-                  maxWidth: '650px',
-                  height: '750px',
-                  border: 'none',
-                  margin: '0 auto',
-                  display: 'block'
-                }}
-                title="772 Eats Checkout"
-              />
-            </div>
-          </div>
 
           {/* What Happens Next */}
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 max-w-2xl mx-auto">
@@ -112,4 +84,4 @@ export default function QuizThankYouPage() {
       </div>
     </div>
   );
-} 
+}
