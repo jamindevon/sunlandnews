@@ -16,14 +16,14 @@ const supportOptions = [
     available: true
   },
   {
-    title: 'Food Discount Card',
-    emoji: '🍽️',
-    price: '$29',
-    subtitle: 'pre-order',
-    description: 'Pre-order the January 2026 card! 10 surprise restaurants with 10-20% off. Limited to 100 cards. Use it twice and it pays for itself.',
-    color: 'from-orange-500 to-orange-600',
-    ctaText: 'Pre-Order Now',
-    href: 'https://buy.stripe.com/3cI9AU2q62jTagu1C0cZa0a',
+    title: 'Sunland Brand Shirts',
+    emoji: '👕',
+    price: '$28',
+    subtitle: '',
+    description: 'Rep your local pride with Sunland Brand apparel. Comfy, stylish shirts that show where you\'re from.',
+    color: 'from-blue-500 to-blue-600',
+    ctaText: 'Shop Shirts',
+    href: 'https://sunlandbrand.com',
     available: true
   },
   {
