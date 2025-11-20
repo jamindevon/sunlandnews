@@ -18,8 +18,8 @@ const supportOptions = [
   {
     title: 'Sunland Brand Shirts',
     emoji: '👕',
-    price: '$28',
-    subtitle: '',
+    price: 'Purchase',
+    subtitle: 'a shirt',
     description: 'Rep your local pride with Sunland Brand apparel. Comfy, stylish shirts that show where you\'re from.',
     color: 'from-blue-500 to-blue-600',
     ctaText: 'Shop Shirts',
