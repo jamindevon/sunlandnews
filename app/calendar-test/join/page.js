@@ -30,21 +30,21 @@ export default function JoinCalendarClub() {
             Never Miss Another Fort Pierce Event
           </h2>
           <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: '1.5', marginBottom: '24px', textAlign: 'center' }}>
-            Get 150+ events auto-added to your calendar with <strong>one tap</strong> - plus VIP perks worth $50+/month
+            Get 150+ local events auto-added to your calendar with <strong>one tap</strong> each month
           </p>
 
           <div style={{ marginBottom: '24px' }}>
             <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
-              ✅ <strong>One tap</strong> adds 150+ events (no manual entry)
+              ✅ <strong>One tap</strong> adds all events (no manual calendar entry)
             </div>
             <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
-              ✅ <strong>VIP perks</strong> at local events ($50+ value/month)
+              ✅ <strong>Auto-reminders</strong> before every event
             </div>
             <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
-              ✅ <strong>Auto-reminders</strong> so you actually show up
+              ✅ <strong>Updated monthly</strong> with new local events
             </div>
             <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
-              ✅ <strong>Updated monthly</strong> with new events
+              ✅ <strong>Works everywhere</strong> - iPhone, Android, any calendar
             </div>
           </div>
 
