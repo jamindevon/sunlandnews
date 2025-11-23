@@ -26,25 +26,25 @@ export default function JoinCalendarClub() {
           marginBottom: '30px',
           border: '2px solid #667eea'
         }}>
-          <h2 style={{ fontSize: '24px', marginBottom: '16px', color: '#1a202c', textAlign: 'center' }}>
-            Want Events Like This Every Month?
+          <h2 style={{ fontSize: '26px', marginBottom: '12px', color: '#1a202c', textAlign: 'center', fontWeight: 'bold', lineHeight: '1.3' }}>
+            Never Miss Another Fort Pierce Event
           </h2>
-          <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.6', marginBottom: '20px', textAlign: 'center' }}>
-            Join the <strong>Sunland VIP Calendar Club</strong> and never miss a local event again.
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: '1.5', marginBottom: '24px', textAlign: 'center' }}>
+            Get 150+ events auto-added to your calendar with <strong>one tap</strong> - plus VIP perks worth $50+/month
           </p>
 
           <div style={{ marginBottom: '24px' }}>
-            <div style={{ fontSize: '14px', color: '#2d3748', marginBottom: '12px' }}>
-              ✅ <strong>New events every month</strong> - automatically added to your calendar
+            <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
+              ✅ <strong>One tap</strong> adds 150+ events (no manual entry)
             </div>
-            <div style={{ fontSize: '14px', color: '#2d3748', marginBottom: '12px' }}>
-              ✅ <strong>Exclusive VIP perks</strong> - discounts and early access at local events
+            <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
+              ✅ <strong>VIP perks</strong> at local events ($50+ value/month)
             </div>
-            <div style={{ fontSize: '14px', color: '#2d3748', marginBottom: '12px' }}>
-              ✅ <strong>Never miss out</strong> - reminders before every event
+            <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
+              ✅ <strong>Auto-reminders</strong> so you actually show up
             </div>
-            <div style={{ fontSize: '14px', color: '#2d3748', marginBottom: '12px' }}>
-              ✅ <strong>Support local</strong> - discover Fort Pierce's best events
+            <div style={{ fontSize: '15px', color: '#2d3748', marginBottom: '14px', lineHeight: '1.5' }}>
+              ✅ <strong>Updated monthly</strong> with new events
             </div>
           </div>
 
@@ -56,14 +56,14 @@ export default function JoinCalendarClub() {
             marginBottom: '24px',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '14px', fontWeight: 'bold', color: '#92400e', marginBottom: '8px' }}>
-              LIMITED TIME OFFER
+            <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#92400e', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              One-Time Payment
             </div>
-            <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1a202c', marginBottom: '4px' }}>
-              $10 <span style={{ fontSize: '16px', color: '#718096', fontWeight: 'normal' }}>one-time</span>
+            <div style={{ fontSize: '36px', fontWeight: 'bold', color: '#1a202c', marginBottom: '4px' }}>
+              $10
             </div>
-            <div style={{ fontSize: '13px', color: '#78350f' }}>
-              Lifetime access • 150+ events per year
+            <div style={{ fontSize: '14px', color: '#78350f', fontWeight: '500' }}>
+              Lifetime access • Never pay again
             </div>
           </div>
 
