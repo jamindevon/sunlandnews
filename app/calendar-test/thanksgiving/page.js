@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 export default function ThanksgivingWeekCalendar() {
   const router = useRouter();
 
-  const handleDownload = (url) => {
+  const handleDownloadWithRedirect = (url) => {
     // Trigger download
     const link = document.createElement('a');
     link.href = url;
@@ -118,7 +118,7 @@ export default function ThanksgivingWeekCalendar() {
           </p>
 
           <button
-            onClick={() => handleDownload('/calendar-test/thanksgiving-week-2025.ics')}
+            onClick={() => handleDownloadWithRedirect('/calendar-test/thanksgiving-week-2025.ics')}
             style={{
               display: 'inline-block',
               padding: '18px 40px',
@@ -182,8 +182,9 @@ export default function ThanksgivingWeekCalendar() {
                     }}>
                       {event.pricing}
                     </div>
-                    <button
-                      onClick={() => handleDownload(event.icsFile)}
+                    <a
+                      href={event.icsFile}
+                      download
                       style={{
                         display: 'inline-block',
                         padding: '8px 16px',
@@ -193,11 +194,12 @@ export default function ThanksgivingWeekCalendar() {
                         color: 'white',
                         border: 'none',
                         borderRadius: '8px',
+                        textDecoration: 'none',
                         cursor: 'pointer'
                       }}
                     >
                       📅 Add to Calendar
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
