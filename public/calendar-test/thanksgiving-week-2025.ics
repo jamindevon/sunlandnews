@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Sunland News//VIP Calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Fairgrounds Festival of Lights
+X-WR-CALNAME:Thanksgiving Week 2025 - All Events
 X-WR-TIMEZONE:America/New_York
 BEGIN:VTIMEZONE
 TZID:America/New_York
@@ -20,6 +20,55 @@ TZOFFSETTO:-0400
 RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
 END:DAYLIGHT
 END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:wine-tasting-nov25-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART;TZID=America/New_York:20251125T183000
+DTEND;TZID=America/New_York:20251125T203000
+SUMMARY:🍷 Thanksgiving Wine Tasting
+DESCRIPTION:Holiday wine tastings at The Wine Vault at Pierce Public Market.\n\nEnjoy a relaxing evening of great wines and charcuterie boards with friends and family before Thanksgiving.\n\n📍 Location: The Wine Vault at Pierce Public Market\n111 Orange Avenue, Fort Pierce\n\n⏰ Time: 6:30-8:30 PM\n\n💰 Pricing: Check website for details\n\n⚠️ IMPORTANT: Reservations required - sign up early!\n\nWhat to expect:\n• Curated holiday wine selection\n• Charcuterie boards\n• Relaxed atmosphere\n• Perfect pre-Thanksgiving gathering\n\nTips:\n🔸 Reserve your spot ASAP (limited seating)\n🔸 Bring friends and family\n🔸 Arrive a few minutes early\n🔸 Parking available on Orange Avenue
+LOCATION:The Wine Vault at Pierce Public Market, 111 Orange Avenue, Fort Pierce, FL
+GEO:27.4467;-80.3256
+CATEGORIES:FOOD,WINE,HOLIDAY,SOCIAL
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://piercepublicmarket.com
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Wine Tasting at Pierce Public Market! Don't forget your reservation.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT2H
+DESCRIPTION:Wine tasting starts in 2 hours at The Wine Vault!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:turkey-trot-nov27-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART;TZID=America/New_York:20251127T080000
+DTEND;TZID=America/New_York:20251127T100000
+SUMMARY:🦃 8th Annual Turkey Trot at Tradition
+DESCRIPTION:5K race/run/walk at Tradition Square benefiting New Horizons of the Treasure Coast, Okeechobee, and Treasure Coast Food Bank.\n\n📍 Location: Tradition Square\n\n⏰ Time: 8:00 AM\n\n💰 Registration required - check pricing online\n\n🎯 Benefiting:\n• New Horizons of the Treasure Coast\n• Okeechobee\n• Treasure Coast Food Bank\n\nWhat to expect:\n• 5K race/run/walk course\n• Chip timing\n• Post-race festivities\n• Support local nonprofits\n• Burn calories before Thanksgiving dinner!\n\nTips:\n🔸 Register online in advance\n🔸 Arrive 30 minutes early for check-in\n🔸 Wear comfortable running/walking shoes\n🔸 Bring water\n🔸 Great family-friendly event\n🔸 Parking available at Tradition Square
+LOCATION:Tradition Square, Port St. Lucie, FL
+GEO:27.3528;-80.3956
+CATEGORIES:FITNESS,CHARITY,FAMILY,THANKSGIVING
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Turkey Trot at 8am! Burn those calories before Thanksgiving dinner 🦃
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT12H
+DESCRIPTION:This morning: Turkey Trot at 8am - arrive early for check-in!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
 
 BEGIN:VEVENT
 UID:fairgrounds-lights-nov27-2025@sunlandnews.com
@@ -46,75 +95,7 @@ ACTION:DISPLAY
 END:VALARM
 END:VEVENT
 
-UID:night-market-nov28-2025@sunlandnews.com
-DTSTAMP:20251123T000000Z
-DTSTART;TZID=America/New_York:20251128T170000
-DTEND;TZID=America/New_York:20251128T210000
-SUMMARY:🎉 Day After Thanksgiving Night Market
-DESCRIPTION:Skip the big-box chaos and enjoy a laid-back night under the stars at Tradition Square!\n\n📍 Location: Tradition Square, Port St. Lucie\n\n⏰ Time: 5-9 PM\n\n💰 FREE admission!\n\nWhat to enjoy:\n• Food trucks (variety of cuisines)\n• Live music performances\n• Local vendor shopping\n• Holiday gift shopping\n• Adult beverages available\n• Relaxed outdoor atmosphere\n\nWhy come:\n🔸 Skip Black Friday mall madness\n🔸 Support local vendors and makers\n🔸 Unique holiday gifts\n🔸 Great food and live music\n🔸 Family-friendly (but adult drinks available)\n🔸 Free parking and free admission\n\nTips:\n• Bring cash (some vendors may be cash-only)\n• Arrive hungry - amazing food trucks\n• Perfect for holiday shopping\n• Pet-friendly event\n• Bring blankets or chairs for music area\n\nA perfect alternative to Black Friday shopping!
-LOCATION:Tradition Square, Port St. Lucie, FL
-GEO:27.3528;-80.3956
-CATEGORIES:SHOPPING,FOOD,MUSIC,FREE,FAMILY
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-TRIGGER:-P1D
-DESCRIPTION:Tomorrow: Night Market at Tradition! Skip Black Friday chaos for this instead 🎉
-ACTION:DISPLAY
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT3H
-DESCRIPTION:Night Market starts in 3 hours at Tradition Square!
-ACTION:DISPLAY
-END:VALARM
-END:VEVENT
-
-UID:psl-lights-nov28-2025@sunlandnews.com
-DTSTAMP:20251123T000000Z
-DTSTART;TZID=America/New_York:20251128T180000
-DTEND;TZID=America/New_York:20251128T210000
-SUMMARY:💡 PSL in Lights at The Port
-DESCRIPTION:Self-guided stroll through beautiful light displays at Port St. Lucie Botanical Gardens. Open every night through Dec 31!\n\n📍 Location: Port St. Lucie Botanical Gardens\n\n⏰ Time: Dusk to 9 PM (every night Nov 28-Dec 31)\n\n💰 FREE admission!\n\nWhat to experience:\n• Beautiful light displays throughout gardens\n• Self-guided walking tour\n• Vendors (select nights)\n• Popcorn and snacks\n• Food trucks (Friday, Saturday, Sunday nights)\n• Perfect for all ages\n\nSpecial features on select nights:\n🔸 Food trucks: Friday, Saturday, Sunday\n🔸 Vendors: Select weekends\n🔸 Live entertainment: Check schedule\n\nTips:\n• Opens at dusk (around 5:30-6pm)\n• Wear comfortable walking shoes\n• Bring camera for photos\n• Free parking\n• Best visited after dark for full effect\n• Visit multiple times - it's free!\n• Weekends have more vendors/food options\n\n🗓️ RECURRING: Open every night dusk-9pm through December 31st
-LOCATION:Port St. Lucie Botanical Gardens, Port St. Lucie, FL
-GEO:27.2730;-80.3582
-CATEGORIES:FAMILY,HOLIDAY,LIGHTS,FREE
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-TRIGGER:-P1D
-DESCRIPTION:Tomorrow: PSL in Lights opens! Free light show at Botanical Gardens 💡
-ACTION:DISPLAY
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT3H
-DESCRIPTION:PSL in Lights opens at dusk tonight (around 6pm) - FREE admission!
-ACTION:DISPLAY
-END:VALARM
-END:VEVENT
-
-UID:small-business-saturday-nov29-2025@sunlandnews.com
-DTSTAMP:20251123T000000Z
-DTSTART;TZID=America/New_York:20251129T100000
-DTEND;TZID=America/New_York:20251129T160000
-SUMMARY:🛍️ Small Business Saturday Sidewalk Pop Up
-DESCRIPTION:Shop local at Avenue D Corridor Business District with popup vendors on Lincoln Park Main Street!\n\n📍 Location: Avenue D Corridor Business District\nLincoln Park Main Street, Fort Pierce\n\n⏰ Time: 10 AM - 4 PM\n\n💰 FREE to attend | Free vendor spots available\n\nWhat to expect:\n• Local popup vendors along sidewalk\n• Unique handmade goods\n• Holiday gift shopping\n• Support small businesses\n• Shop Fort Pierce local makers\n• Community atmosphere\n\nFor shoppers:\n🔸 Browse unique local products\n🔸 Meet local makers and artisans\n🔸 Find one-of-a-kind holiday gifts\n🔸 Support your local economy\n🔸 Free parking on side streets\n🔸 Explore Avenue D businesses too\n\nFor vendors:\n• Free vendor spots available!\n• Contact organizers to sign up\n• Bring your own tent/table\n• Great foot traffic expected\n\nTips:\n• Bring cash (some vendors cash-only)\n• Arrive early for best selection\n• Park on side streets (free)\n• Check out Avenue D shops while you're there\n• Perfect for holiday shopping\n\n#ShopLocal #SmallBusinessSaturday
-LOCATION:Avenue D Corridor Business District, Lincoln Park Main Street, Fort Pierce, FL
-GEO:27.4469;-80.3258
-CATEGORIES:SHOPPING,LOCAL,FREE,SMALL-BUSINESS
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-TRIGGER:-P1D
-DESCRIPTION:Tomorrow: Small Business Saturday in Fort Pierce! Shop local popup vendors 🛍️
-ACTION:DISPLAY
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT12H
-DESCRIPTION:This morning: Small Business Saturday starts at 10am on Lincoln Park Main Street!
-ACTION:DISPLAY
-END:VALARM
-END:VEVENT
-
+BEGIN:VEVENT
 UID:christmas-main-street-nov28-2025@sunlandnews.com
 DTSTAMP:20251123T000000Z
 DTSTART;TZID=America/New_York:20251128T160000
@@ -138,49 +119,74 @@ ACTION:DISPLAY
 END:VALARM
 END:VEVENT
 
-UID:turkey-trot-nov27-2025@sunlandnews.com
+BEGIN:VEVENT
+UID:night-market-nov28-2025@sunlandnews.com
 DTSTAMP:20251123T000000Z
-DTSTART;TZID=America/New_York:20251127T080000
-DTEND;TZID=America/New_York:20251127T100000
-SUMMARY:🦃 8th Annual Turkey Trot at Tradition
-DESCRIPTION:5K race/run/walk at Tradition Square benefiting New Horizons of the Treasure Coast, Okeechobee, and Treasure Coast Food Bank.\n\n📍 Location: Tradition Square\n\n⏰ Time: 8:00 AM\n\n💰 Registration required - check pricing online\n\n🎯 Benefiting:\n• New Horizons of the Treasure Coast\n• Okeechobee\n• Treasure Coast Food Bank\n\nWhat to expect:\n• 5K race/run/walk course\n• Chip timing\n• Post-race festivities\n• Support local nonprofits\n• Burn calories before Thanksgiving dinner!\n\nTips:\n🔸 Register online in advance\n🔸 Arrive 30 minutes early for check-in\n🔸 Wear comfortable running/walking shoes\n🔸 Bring water\n🔸 Great family-friendly event\n🔸 Parking available at Tradition Square
+DTSTART;TZID=America/New_York:20251128T170000
+DTEND;TZID=America/New_York:20251128T210000
+SUMMARY:🎉 Day After Thanksgiving Night Market
+DESCRIPTION:Skip the big-box chaos and enjoy a laid-back night under the stars at Tradition Square!\n\n📍 Location: Tradition Square, Port St. Lucie\n\n⏰ Time: 5-9 PM\n\n💰 FREE admission!\n\nWhat to enjoy:\n• Food trucks (variety of cuisines)\n• Live music performances\n• Local vendor shopping\n• Holiday gift shopping\n• Adult beverages available\n• Relaxed outdoor atmosphere\n\nWhy come:\n🔸 Skip Black Friday mall madness\n🔸 Support local vendors and makers\n🔸 Unique holiday gifts\n🔸 Great food and live music\n🔸 Family-friendly (but adult drinks available)\n🔸 Free parking and free admission\n\nTips:\n• Bring cash (some vendors may be cash-only)\n• Arrive hungry - amazing food trucks\n• Perfect for holiday shopping\n• Pet-friendly event\n• Bring blankets or chairs for music area\n\nA perfect alternative to Black Friday shopping!
 LOCATION:Tradition Square, Port St. Lucie, FL
 GEO:27.3528;-80.3956
-CATEGORIES:FITNESS,CHARITY,FAMILY,THANKSGIVING
+CATEGORIES:SHOPPING,FOOD,MUSIC,FREE,FAMILY
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
 TRIGGER:-P1D
-DESCRIPTION:Tomorrow: Turkey Trot at 8am! Burn those calories before Thanksgiving dinner 🦃
+DESCRIPTION:Tomorrow: Night Market at Tradition! Skip Black Friday chaos for this instead 🎉
 ACTION:DISPLAY
 END:VALARM
 BEGIN:VALARM
-TRIGGER:-PT12H
-DESCRIPTION:This morning: Turkey Trot at 8am - arrive early for check-in!
+TRIGGER:-PT3H
+DESCRIPTION:Night Market starts in 3 hours at Tradition Square!
 ACTION:DISPLAY
 END:VALARM
 END:VEVENT
 
-UID:wine-tasting-nov25-2025@sunlandnews.com
+BEGIN:VEVENT
+UID:psl-lights-nov28-2025@sunlandnews.com
 DTSTAMP:20251123T000000Z
-DTSTART;TZID=America/New_York:20251125T183000
-DTEND;TZID=America/New_York:20251125T203000
-SUMMARY:🍷 Thanksgiving Wine Tasting
-DESCRIPTION:Holiday wine tastings at The Wine Vault at Pierce Public Market.\n\nEnjoy a relaxing evening of great wines and charcuterie boards with friends and family before Thanksgiving.\n\n📍 Location: The Wine Vault at Pierce Public Market\n111 Orange Avenue, Fort Pierce\n\n⏰ Time: 6:30-8:30 PM\n\n💰 Pricing: Check website for details\n\n⚠️ IMPORTANT: Reservations required - sign up early!\n\nWhat to expect:\n• Curated holiday wine selection\n• Charcuterie boards\n• Relaxed atmosphere\n• Perfect pre-Thanksgiving gathering\n\nTips:\n🔸 Reserve your spot ASAP (limited seating)\n🔸 Bring friends and family\n🔸 Arrive a few minutes early\n🔸 Parking available on Orange Avenue
-LOCATION:The Wine Vault at Pierce Public Market, 111 Orange Avenue, Fort Pierce, FL
-GEO:27.4467;-80.3256
-CATEGORIES:FOOD,WINE,HOLIDAY,SOCIAL
+DTSTART;TZID=America/New_York:20251128T180000
+DTEND;TZID=America/New_York:20251128T210000
+SUMMARY:💡 PSL in Lights at The Port
+DESCRIPTION:Self-guided stroll through beautiful light displays at Port St. Lucie Botanical Gardens. Open every night through Dec 31!\n\n📍 Location: Port St. Lucie Botanical Gardens\n\n⏰ Time: Dusk to 9 PM (every night Nov 28-Dec 31)\n\n💰 FREE admission!\n\nWhat to experience:\n• Beautiful light displays throughout gardens\n• Self-guided walking tour\n• Vendors (select nights)\n• Popcorn and snacks\n• Food trucks (Friday, Saturday, Sunday nights)\n• Perfect for all ages\n\nSpecial features on select nights:\n🔸 Food trucks: Friday, Saturday, Sunday\n🔸 Vendors: Select weekends\n🔸 Live entertainment: Check schedule\n\nTips:\n• Opens at dusk (around 5:30-6pm)\n• Wear comfortable walking shoes\n• Bring camera for photos\n• Free parking\n• Best visited after dark for full effect\n• Visit multiple times - it's free!\n• Weekends have more vendors/food options\n\n🗓️ RECURRING: Open every night dusk-9pm through December 31st
+LOCATION:Port St. Lucie Botanical Gardens, Port St. Lucie, FL
+GEO:27.2730;-80.3582
+CATEGORIES:FAMILY,HOLIDAY,LIGHTS,FREE
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-URL:https://piercepublicmarket.com
 BEGIN:VALARM
 TRIGGER:-P1D
-DESCRIPTION:Tomorrow: Wine Tasting at Pierce Public Market! Don't forget your reservation.
+DESCRIPTION:Tomorrow: PSL in Lights opens! Free light show at Botanical Gardens 💡
 ACTION:DISPLAY
 END:VALARM
 BEGIN:VALARM
-TRIGGER:-PT2H
-DESCRIPTION:Wine tasting starts in 2 hours at The Wine Vault!
+TRIGGER:-PT3H
+DESCRIPTION:PSL in Lights opens at dusk tonight (around 6pm) - FREE admission!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:small-business-saturday-nov29-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART;TZID=America/New_York:20251129T100000
+DTEND;TZID=America/New_York:20251129T160000
+SUMMARY:🛍️ Small Business Saturday Sidewalk Pop Up
+DESCRIPTION:Shop local at Avenue D Corridor Business District with popup vendors on Lincoln Park Main Street!\n\n📍 Location: Avenue D Corridor Business District\nLincoln Park Main Street, Fort Pierce\n\n⏰ Time: 10 AM - 4 PM\n\n💰 FREE to attend | Free vendor spots available\n\nWhat to expect:\n• Local popup vendors along sidewalk\n• Unique handmade goods\n• Holiday gift shopping\n• Support small businesses\n• Shop Fort Pierce local makers\n• Community atmosphere\n\nFor shoppers:\n🔸 Browse unique local products\n🔸 Meet local makers and artisans\n🔸 Find one-of-a-kind holiday gifts\n🔸 Support your local economy\n🔸 Free parking on side streets\n🔸 Explore Avenue D businesses too\n\nFor vendors:\n• Free vendor spots available!\n• Contact organizers to sign up\n• Bring your own tent/table\n• Great foot traffic expected\n\nTips:\n• Bring cash (some vendors cash-only)\n• Arrive early for best selection\n• Park on side streets (free)\n• Check out Avenue D shops while you're there\n• Perfect for holiday shopping\n\n#ShopLocal #SmallBusinessSaturday
+LOCATION:Avenue D Corridor Business District, Lincoln Park Main Street, Fort Pierce, FL
+GEO:27.4469;-80.3258
+CATEGORIES:SHOPPING,LOCAL,FREE,SMALL-BUSINESS
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Small Business Saturday in Fort Pierce! Shop local popup vendors 🛍️
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT12H
+DESCRIPTION:This morning: Small Business Saturday starts at 10am on Lincoln Park Main Street!
 ACTION:DISPLAY
 END:VALARM
 END:VEVENT
