@@ -28,7 +28,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "The Wine Vault at Pierce Public Market, 111 Orange Avenue, Fort Pierce",
       description: "Holiday wine tastings with charcuterie boards. Reservations required!",
       pricing: "Check pricing online",
-      icsFile: "/calendar-test/thanksgiving-events/wine-tasting.ics"
+      icsFile: "/calendar-test/thanksgiving-events/wine-tasting.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=🍷+Thanksgiving+Wine+Tasting&dates=20251125T183000/20251125T203000&details=Holiday+wine+tastings+with+charcuterie+boards.+Reservations+required!&location=The+Wine+Vault+at+Pierce+Public+Market,+111+Orange+Avenue,+Fort+Pierce,+FL&ctz=America/New_York"
     },
     {
       emoji: "🦃",
@@ -38,7 +39,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "Tradition Square, Port St. Lucie",
       description: "5K race/run/walk benefiting New Horizons of TC, Okeechobee, and TC Food Bank.",
       pricing: "Check pricing - register online",
-      icsFile: "/calendar-test/thanksgiving-events/turkey-trot.ics"
+      icsFile: "/calendar-test/thanksgiving-events/turkey-trot.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=8th+Annual+Turkey+Trot+at+Tradition&dates=20251127T080000/20251127T100000&details=5K+race/run/walk+benefiting+New+Horizons+of+TC,+Okeechobee,+and+TC+Food+Bank.&location=Tradition+Square,+Port+St.+Lucie&ctz=America/New_York"
     },
     {
       emoji: "🎪",
@@ -48,7 +50,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "St. Lucie County Fairgrounds",
       description: "Biggest light show on Treasure Coast! Drive-thru lights, real reindeer (Rudolph!), petting zoo, Santa's Village.",
       pricing: "$10/person advance, $12 at gate",
-      icsFile: "/calendar-test/thanksgiving-events/festival-lights.ics"
+      icsFile: "/calendar-test/thanksgiving-events/festival-lights.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=2nd+Annual+Fairgrounds+Festival+of+Lights&dates=20251127T180000/20251127T210000&details=Biggest+light+show+on+Treasure+Coast!+Drive-thru+lights,+real+reindeer+(Rudolph!),+petting+zoo,+Santa's+Village.&location=St.+Lucie+County+Fairgrounds&ctz=America/New_York"
     },
     {
       emoji: "🎄",
@@ -58,7 +61,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "Riverwalk Stage, Downtown Stuart",
       description: "FREE family fun with annual tree lighting ceremony!",
       pricing: "Free",
-      icsFile: "/calendar-test/thanksgiving-events/tree-lighting.ics"
+      icsFile: "/calendar-test/thanksgiving-events/tree-lighting.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Christmas+on+Main+Street+-+Tree+Lighting&dates=20251128T160000/20251128T190000&details=FREE+family+fun+with+annual+tree+lighting+ceremony!&location=Riverwalk+Stage,+Downtown+Stuart&ctz=America/New_York"
     },
     {
       emoji: "🎉",
@@ -68,7 +72,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "Tradition Square, Port St. Lucie",
       description: "Skip the big-box chaos! Food trucks, live music, local vendors, holiday shopping.",
       pricing: "Free",
-      icsFile: "/calendar-test/thanksgiving-events/night-market.ics"
+      icsFile: "/calendar-test/thanksgiving-events/night-market.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Day+After+Thanksgiving+Night+Market&dates=20251128T170000/20251128T210000&details=Skip+the+big-box+chaos!+Food+trucks,+live+music,+local+vendors,+holiday+shopping.&location=Tradition+Square,+Port+St.+Lucie&ctz=America/New_York"
     },
     {
       emoji: "💡",
@@ -78,7 +83,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "Port St. Lucie Botanical Gardens",
       description: "Self-guided stroll through beautiful light displays. Food trucks on select nights.",
       pricing: "Free",
-      icsFile: "/calendar-test/thanksgiving-events/psl-lights.ics"
+      icsFile: "/calendar-test/thanksgiving-events/psl-lights.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=PSL+in+Lights+at+The+Port&dates=20251128T180000/20251128T210000&details=Self-guided+stroll+through+beautiful+light+displays.+Food+trucks+on+select+nights.&location=Port+St.+Lucie+Botanical+Gardens&ctz=America/New_York"
     },
     {
       emoji: "🛍️",
@@ -88,7 +94,8 @@ export default function ThanksgivingWeekCalendar() {
       location: "Avenue D Corridor, Lincoln Park Main Street, Fort Pierce",
       description: "Shop local with popup vendors! Free vendor spots available.",
       pricing: "Free",
-      icsFile: "/calendar-test/thanksgiving-events/small-business-saturday.ics"
+      icsFile: "/calendar-test/thanksgiving-events/small-business-saturday.ics",
+      googleCal: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Small+Business+Saturday+Sidewalk+Pop+Up&dates=20251129T100000/20251129T160000&details=Shop+local+with+popup+vendors!+Free+vendor+spots+available.&location=Avenue+D+Corridor,+Lincoln+Park+Main+Street,+Fort+Pierce&ctz=America/New_York"
     }
   ];
 
@@ -117,8 +124,8 @@ export default function ThanksgivingWeekCalendar() {
             Everything happening on the Treasure Coast Nov 25-29
           </p>
 
-          <button
-            onClick={() => handleDownloadWithRedirect('/calendar-test/thanksgiving-week-2025.ics')}
+          <a
+            href="/calendar-test/join"
             style={{
               display: 'inline-block',
               padding: '18px 40px',
@@ -128,12 +135,13 @@ export default function ThanksgivingWeekCalendar() {
               color: 'white',
               border: 'none',
               borderRadius: '12px',
+              textDecoration: 'none',
               cursor: 'pointer',
               boxShadow: '0 4px 14px rgba(102, 126, 234, 0.4)',
             }}
           >
-            ⚡ Add All Events to Calendar
-          </button>
+            ⚡ Get VIP Calendar Access
+          </a>
 
           <p style={{ fontSize: '13px', color: '#a0aec0', marginTop: '12px' }}>
             Adds all 7 events with automatic reminders
@@ -170,7 +178,7 @@ export default function ThanksgivingWeekCalendar() {
                   <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5', marginBottom: '12px' }}>
                     {event.description}
                   </p>
-                  <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap', marginTop: '4px' }}>
+                  <div style={{ marginTop: '12px' }}>
                     <div style={{
                       display: 'inline-block',
                       fontSize: '13px',
@@ -178,28 +186,54 @@ export default function ThanksgivingWeekCalendar() {
                       padding: '6px 12px',
                       borderRadius: '8px',
                       background: event.pricing === 'Free' ? '#e8f5e9' : '#fff3e0',
-                      color: event.pricing === 'Free' ? '#27ae60' : '#f57c00'
+                      color: event.pricing === 'Free' ? '#27ae60' : '#f57c00',
+                      marginBottom: '12px'
                     }}>
                       {event.pricing}
                     </div>
-                    <a
-                      href={event.icsFile}
-                      download
-                      style={{
-                        display: 'inline-block',
-                        padding: '8px 16px',
-                        fontSize: '13px',
-                        fontWeight: 'bold',
-                        background: '#667eea',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '8px',
-                        textDecoration: 'none',
-                        cursor: 'pointer'
-                      }}
-                    >
-                      📅 Add to Calendar
-                    </a>
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      <a
+                        href={event.googleCal}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          flex: '1',
+                          minWidth: '140px',
+                          padding: '10px 16px',
+                          fontSize: '13px',
+                          fontWeight: 'bold',
+                          background: '#667eea',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '8px',
+                          textAlign: 'center',
+                          textDecoration: 'none',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        📅 Google Calendar
+                      </a>
+                      <a
+                        href={event.icsFile}
+                        download
+                        style={{
+                          flex: '1',
+                          minWidth: '140px',
+                          padding: '10px 16px',
+                          fontSize: '13px',
+                          fontWeight: 'bold',
+                          background: 'white',
+                          color: '#667eea',
+                          border: '2px solid #667eea',
+                          borderRadius: '8px',
+                          textAlign: 'center',
+                          textDecoration: 'none',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        💾 Download
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
