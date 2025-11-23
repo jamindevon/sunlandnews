@@ -5,12 +5,27 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Turkey Trot at Tradition
 X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:STANDARD
+DTSTART:20251101T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20250308T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+END:VTIMEZONE
 
 BEGIN:VEVENT
-UID:turkey-trot-nov27-2024@sunlandnews.com
-DTSTAMP:20241123T000000Z
-DTSTART:20241127T130000Z
-DTEND:20241127T150000Z
+UID:turkey-trot-nov27-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART;TZID=America/New_York:20251127T080000
+DTEND;TZID=America/New_York:20251127T100000
 SUMMARY:🦃 8th Annual Turkey Trot at Tradition
 DESCRIPTION:5K race/run/walk at Tradition Square benefiting New Horizons of the Treasure Coast, Okeechobee, and Treasure Coast Food Bank.\n\n📍 Location: Tradition Square\n\n⏰ Time: 8:00 AM\n\n💰 Registration required - check pricing online\n\n🎯 Benefiting:\n• New Horizons of the Treasure Coast\n• Okeechobee\n• Treasure Coast Food Bank\n\nWhat to expect:\n• 5K race/run/walk course\n• Chip timing\n• Post-race festivities\n• Support local nonprofits\n• Burn calories before Thanksgiving dinner!\n\nTips:\n🔸 Register online in advance\n🔸 Arrive 30 minutes early for check-in\n🔸 Wear comfortable running/walking shoes\n🔸 Bring water\n🔸 Great family-friendly event\n🔸 Parking available at Tradition Square
 LOCATION:Tradition Square, Port St. Lucie, FL

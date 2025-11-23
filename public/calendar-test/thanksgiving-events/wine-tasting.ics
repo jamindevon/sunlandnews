@@ -5,12 +5,27 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Thanksgiving Wine Tasting
 X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:STANDARD
+DTSTART:20251101T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20250308T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+END:VTIMEZONE
 
 BEGIN:VEVENT
-UID:wine-tasting-nov25-2024@sunlandnews.com
-DTSTAMP:20241123T000000Z
-DTSTART:20241125T233000Z
-DTEND:20241126T013000Z
+UID:wine-tasting-nov25-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART;TZID=America/New_York:20251125T183000
+DTEND;TZID=America/New_York:20251125T203000
 SUMMARY:🍷 Thanksgiving Wine Tasting
 DESCRIPTION:Holiday wine tastings at The Wine Vault at Pierce Public Market.\n\nEnjoy a relaxing evening of great wines and charcuterie boards with friends and family before Thanksgiving.\n\n📍 Location: The Wine Vault at Pierce Public Market\n111 Orange Avenue, Fort Pierce\n\n⏰ Time: 6:30-8:30 PM\n\n💰 Pricing: Check website for details\n\n⚠️ IMPORTANT: Reservations required - sign up early!\n\nWhat to expect:\n• Curated holiday wine selection\n• Charcuterie boards\n• Relaxed atmosphere\n• Perfect pre-Thanksgiving gathering\n\nTips:\n🔸 Reserve your spot ASAP (limited seating)\n🔸 Bring friends and family\n🔸 Arrive a few minutes early\n🔸 Parking available on Orange Avenue
 LOCATION:The Wine Vault at Pierce Public Market, 111 Orange Avenue, Fort Pierce, FL

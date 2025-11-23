@@ -5,12 +5,27 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Christmas on Main Street
 X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:STANDARD
+DTSTART:20251101T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20250308T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+END:VTIMEZONE
 
 BEGIN:VEVENT
-UID:christmas-main-street-nov28-2024@sunlandnews.com
-DTSTAMP:20241123T000000Z
-DTSTART:20241128T210000Z
-DTEND:20241129T000000Z
+UID:christmas-main-street-nov28-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART;TZID=America/New_York:20251128T160000
+DTEND;TZID=America/New_York:20251128T190000
 SUMMARY:🎄 Christmas on Main Street - Tree Lighting
 DESCRIPTION:FREE family fun with the annual tree lighting ceremony in Downtown Stuart!\n\n📍 Location: Riverwalk Stage, Downtown Stuart\n\n⏰ Time: 4-7 PM\n\n💰 FREE!\n\nWhat to expect:\n• Annual tree lighting ceremony\n• Live entertainment\n• Holiday activities for kids\n• Photos with Santa\n• Local vendors\n• Holiday spirit!\n\nTips:\n🔸 Arrive early for parking (gets crowded)\n🔸 Bring the kids for photos with Santa\n🔸 Free event - great for families\n🔸 Dress festive!\n🔸 Explore Downtown Stuart shops afterward\n🔸 Plenty of restaurants nearby for dinner\n\nLocation: Historic Downtown Stuart - beautiful waterfront setting on the St. Lucie River.
 LOCATION:Riverwalk Stage, Downtown Stuart, FL

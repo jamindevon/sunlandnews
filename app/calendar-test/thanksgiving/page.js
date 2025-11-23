@@ -1,6 +1,24 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 export default function ThanksgivingWeekCalendar() {
+  const router = useRouter();
+
+  const handleDownload = (url) => {
+    // Trigger download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Redirect to join page after short delay
+    setTimeout(() => {
+      router.push('/calendar-test/join');
+    }, 1000);
+  };
   const events = [
     {
       emoji: "🍷",
@@ -10,6 +28,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "The Wine Vault at Pierce Public Market, 111 Orange Avenue, Fort Pierce",
       description: "Holiday wine tastings with charcuterie boards. Reservations required!",
       pricing: "Check pricing online",
+      icsFile: "/calendar-test/thanksgiving-events/wine-tasting.ics"
     },
     {
       emoji: "🦃",
@@ -19,6 +38,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "Tradition Square, Port St. Lucie",
       description: "5K race/run/walk benefiting New Horizons of TC, Okeechobee, and TC Food Bank.",
       pricing: "Check pricing - register online",
+      icsFile: "/calendar-test/thanksgiving-events/turkey-trot.ics"
     },
     {
       emoji: "🎪",
@@ -28,6 +48,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "St. Lucie County Fairgrounds",
       description: "Biggest light show on Treasure Coast! Drive-thru lights, real reindeer (Rudolph!), petting zoo, Santa's Village.",
       pricing: "$10/person advance, $12 at gate",
+      icsFile: "/calendar-test/thanksgiving-events/festival-lights.ics"
     },
     {
       emoji: "🎄",
@@ -37,6 +58,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "Riverwalk Stage, Downtown Stuart",
       description: "FREE family fun with annual tree lighting ceremony!",
       pricing: "Free",
+      icsFile: "/calendar-test/thanksgiving-events/tree-lighting.ics"
     },
     {
       emoji: "🎉",
@@ -46,6 +68,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "Tradition Square, Port St. Lucie",
       description: "Skip the big-box chaos! Food trucks, live music, local vendors, holiday shopping.",
       pricing: "Free",
+      icsFile: "/calendar-test/thanksgiving-events/night-market.ics"
     },
     {
       emoji: "💡",
@@ -55,6 +78,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "Port St. Lucie Botanical Gardens",
       description: "Self-guided stroll through beautiful light displays. Food trucks on select nights.",
       pricing: "Free",
+      icsFile: "/calendar-test/thanksgiving-events/psl-lights.ics"
     },
     {
       emoji: "🛍️",
@@ -64,6 +88,7 @@ export default function ThanksgivingWeekCalendar() {
       location: "Avenue D Corridor, Lincoln Park Main Street, Fort Pierce",
       description: "Shop local with popup vendors! Free vendor spots available.",
       pricing: "Free",
+      icsFile: "/calendar-test/thanksgiving-events/small-business-saturday.ics"
     }
   ];
 
@@ -92,9 +117,8 @@ export default function ThanksgivingWeekCalendar() {
             Everything happening on the Treasure Coast Nov 25-29
           </p>
 
-          <a
-            href="/calendar-test/thanksgiving-week-2024.ics"
-            download
+          <button
+            onClick={() => handleDownload('/calendar-test/thanksgiving-week-2025.ics')}
             style={{
               display: 'inline-block',
               padding: '18px 40px',
@@ -104,13 +128,12 @@ export default function ThanksgivingWeekCalendar() {
               color: 'white',
               border: 'none',
               borderRadius: '12px',
-              textDecoration: 'none',
               cursor: 'pointer',
               boxShadow: '0 4px 14px rgba(102, 126, 234, 0.4)',
             }}
           >
             ⚡ Add All Events to Calendar
-          </a>
+          </button>
 
           <p style={{ fontSize: '13px', color: '#a0aec0', marginTop: '12px' }}>
             Adds all 7 events with automatic reminders
@@ -147,16 +170,34 @@ export default function ThanksgivingWeekCalendar() {
                   <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5', marginBottom: '12px' }}>
                     {event.description}
                   </p>
-                  <div style={{
-                    display: 'inline-block',
-                    fontSize: '13px',
-                    fontWeight: 'bold',
-                    padding: '6px 12px',
-                    borderRadius: '8px',
-                    background: event.pricing === 'Free' ? '#e8f5e9' : '#fff3e0',
-                    color: event.pricing === 'Free' ? '#27ae60' : '#f57c00'
-                  }}>
-                    {event.pricing}
+                  <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap', marginTop: '4px' }}>
+                    <div style={{
+                      display: 'inline-block',
+                      fontSize: '13px',
+                      fontWeight: 'bold',
+                      padding: '6px 12px',
+                      borderRadius: '8px',
+                      background: event.pricing === 'Free' ? '#e8f5e9' : '#fff3e0',
+                      color: event.pricing === 'Free' ? '#27ae60' : '#f57c00'
+                    }}>
+                      {event.pricing}
+                    </div>
+                    <button
+                      onClick={() => handleDownload(event.icsFile)}
+                      style={{
+                        display: 'inline-block',
+                        padding: '8px 16px',
+                        fontSize: '13px',
+                        fontWeight: 'bold',
+                        background: '#667eea',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '8px',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      📅 Add to Calendar
+                    </button>
                   </div>
                 </div>
               </div>
