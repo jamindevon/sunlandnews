@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Turkey Trot at Tradition
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:turkey-trot-nov27-2024@sunlandnews.com
+DTSTAMP:20241123T000000Z
+DTSTART:20241127T130000Z
+DTEND:20241127T150000Z
+SUMMARY:🦃 8th Annual Turkey Trot at Tradition
+DESCRIPTION:5K race/run/walk at Tradition Square benefiting New Horizons of the Treasure Coast, Okeechobee, and Treasure Coast Food Bank.\n\n📍 Location: Tradition Square\n\n⏰ Time: 8:00 AM\n\n💰 Registration required - check pricing online\n\n🎯 Benefiting:\n• New Horizons of the Treasure Coast\n• Okeechobee\n• Treasure Coast Food Bank\n\nWhat to expect:\n• 5K race/run/walk course\n• Chip timing\n• Post-race festivities\n• Support local nonprofits\n• Burn calories before Thanksgiving dinner!\n\nTips:\n🔸 Register online in advance\n🔸 Arrive 30 minutes early for check-in\n🔸 Wear comfortable running/walking shoes\n🔸 Bring water\n🔸 Great family-friendly event\n🔸 Parking available at Tradition Square
+LOCATION:Tradition Square, Port St. Lucie, FL
+GEO:27.3528;-80.3956
+CATEGORIES:FITNESS,CHARITY,FAMILY,THANKSGIVING
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Turkey Trot at 8am! Burn those calories before Thanksgiving dinner 🦃
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT12H
+DESCRIPTION:This morning: Turkey Trot at 8am - arrive early for check-in!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

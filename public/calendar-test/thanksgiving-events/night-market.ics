@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Day After Thanksgiving Night Market
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:night-market-nov28-2024@sunlandnews.com
+DTSTAMP:20241123T000000Z
+DTSTART:20241128T220000Z
+DTEND:20241129T020000Z
+SUMMARY:🎉 Day After Thanksgiving Night Market
+DESCRIPTION:Skip the big-box chaos and enjoy a laid-back night under the stars at Tradition Square!\n\n📍 Location: Tradition Square, Port St. Lucie\n\n⏰ Time: 5-9 PM\n\n💰 FREE admission!\n\nWhat to enjoy:\n• Food trucks (variety of cuisines)\n• Live music performances\n• Local vendor shopping\n• Holiday gift shopping\n• Adult beverages available\n• Relaxed outdoor atmosphere\n\nWhy come:\n🔸 Skip Black Friday mall madness\n🔸 Support local vendors and makers\n🔸 Unique holiday gifts\n🔸 Great food and live music\n🔸 Family-friendly (but adult drinks available)\n🔸 Free parking and free admission\n\nTips:\n• Bring cash (some vendors may be cash-only)\n• Arrive hungry - amazing food trucks\n• Perfect for holiday shopping\n• Pet-friendly event\n• Bring blankets or chairs for music area\n\nA perfect alternative to Black Friday shopping!
+LOCATION:Tradition Square, Port St. Lucie, FL
+GEO:27.3528;-80.3956
+CATEGORIES:SHOPPING,FOOD,MUSIC,FREE,FAMILY
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Night Market at Tradition! Skip Black Friday chaos for this instead 🎉
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+DESCRIPTION:Night Market starts in 3 hours at Tradition Square!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

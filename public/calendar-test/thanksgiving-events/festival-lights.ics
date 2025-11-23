@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Fairgrounds Festival of Lights
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:fairgrounds-lights-nov27-2024@sunlandnews.com
+DTSTAMP:20241123T000000Z
+DTSTART:20241127T230000Z
+DTEND:20241128T020000Z
+SUMMARY:🎪 2nd Annual Fairgrounds Festival of Lights
+DESCRIPTION:Biggest light show on the Treasure Coast! Opens Thanksgiving night and runs through Dec 28th.\n\n📍 Location: St. Lucie County Fairgrounds\n\n⏰ Time: 6-9 PM (open every night through Dec 28)\n\n💰 Price: $10/person advance | $12 at gate\n\nWhat to experience:\n• Drive-thru light displays (biggest on Treasure Coast!)\n• Real reindeer (including Rudolph!)\n• Petting zoo\n• Santa's Village\n• Photo opportunities\n• Food trucks on site\n\nThis is a DRIVE-THRU experience - enjoy from your car!\n\nTips:\n🔸 Buy tickets in advance to save $2/person\n🔸 Go early in the season to avoid long lines\n🔸 Tune radio to designated station for music\n🔸 Bring the whole family\n🔸 Visit Rudolph and the reindeer!\n🔸 Food trucks available (cash/card)\n\n🗓️ RECURRING EVENT: Open every night 6-9pm through December 28th
+LOCATION:St. Lucie County Fairgrounds, Fort Pierce, FL
+GEO:27.4389;-80.3478
+CATEGORIES:FAMILY,HOLIDAY,LIGHTS,THANKSGIVING
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://stluciefair.com
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Festival of Lights opens on Thanksgiving! Biggest light show on Treasure Coast 🎄
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+DESCRIPTION:Festival of Lights opens tonight at 6pm! Buy advance tickets to save $2/person.
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

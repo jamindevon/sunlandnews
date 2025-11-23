@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Small Business Saturday
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:small-business-saturday-nov29-2024@sunlandnews.com
+DTSTAMP:20241123T000000Z
+DTSTART:20241129T150000Z
+DTEND:20241129T210000Z
+SUMMARY:🛍️ Small Business Saturday Sidewalk Pop Up
+DESCRIPTION:Shop local at Avenue D Corridor Business District with popup vendors on Lincoln Park Main Street!\n\n📍 Location: Avenue D Corridor Business District\nLincoln Park Main Street, Fort Pierce\n\n⏰ Time: 10 AM - 4 PM\n\n💰 FREE to attend | Free vendor spots available\n\nWhat to expect:\n• Local popup vendors along sidewalk\n• Unique handmade goods\n• Holiday gift shopping\n• Support small businesses\n• Shop Fort Pierce local makers\n• Community atmosphere\n\nFor shoppers:\n🔸 Browse unique local products\n🔸 Meet local makers and artisans\n🔸 Find one-of-a-kind holiday gifts\n🔸 Support your local economy\n🔸 Free parking on side streets\n🔸 Explore Avenue D businesses too\n\nFor vendors:\n• Free vendor spots available!\n• Contact organizers to sign up\n• Bring your own tent/table\n• Great foot traffic expected\n\nTips:\n• Bring cash (some vendors cash-only)\n• Arrive early for best selection\n• Park on side streets (free)\n• Check out Avenue D shops while you're there\n• Perfect for holiday shopping\n\n#ShopLocal #SmallBusinessSaturday
+LOCATION:Avenue D Corridor Business District, Lincoln Park Main Street, Fort Pierce, FL
+GEO:27.4469;-80.3258
+CATEGORIES:SHOPPING,LOCAL,FREE,SMALL-BUSINESS
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Small Business Saturday in Fort Pierce! Shop local popup vendors 🛍️
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT12H
+DESCRIPTION:This morning: Small Business Saturday starts at 10am on Lincoln Park Main Street!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

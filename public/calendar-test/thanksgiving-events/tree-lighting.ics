@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Christmas on Main Street
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:christmas-main-street-nov28-2024@sunlandnews.com
+DTSTAMP:20241123T000000Z
+DTSTART:20241128T210000Z
+DTEND:20241129T000000Z
+SUMMARY:🎄 Christmas on Main Street - Tree Lighting
+DESCRIPTION:FREE family fun with the annual tree lighting ceremony in Downtown Stuart!\n\n📍 Location: Riverwalk Stage, Downtown Stuart\n\n⏰ Time: 4-7 PM\n\n💰 FREE!\n\nWhat to expect:\n• Annual tree lighting ceremony\n• Live entertainment\n• Holiday activities for kids\n• Photos with Santa\n• Local vendors\n• Holiday spirit!\n\nTips:\n🔸 Arrive early for parking (gets crowded)\n🔸 Bring the kids for photos with Santa\n🔸 Free event - great for families\n🔸 Dress festive!\n🔸 Explore Downtown Stuart shops afterward\n🔸 Plenty of restaurants nearby for dinner\n\nLocation: Historic Downtown Stuart - beautiful waterfront setting on the St. Lucie River.
+LOCATION:Riverwalk Stage, Downtown Stuart, FL
+GEO:27.1974;-80.2528
+CATEGORIES:FAMILY,HOLIDAY,FREE,CHRISTMAS
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Christmas on Main Street tree lighting in Stuart! FREE family fun 🎄
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT2H
+DESCRIPTION:Tree lighting ceremony starts in 2 hours in Downtown Stuart!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
