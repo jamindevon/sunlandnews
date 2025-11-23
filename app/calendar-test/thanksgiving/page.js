@@ -125,7 +125,7 @@ export default function ThanksgivingWeekCalendar() {
           </p>
 
           <a
-            href="/calendar-test/join"
+            href="/calendar-test/download-all"
             style={{
               display: 'inline-block',
               padding: '18px 40px',
