@@ -60,7 +60,7 @@ export default function JoinCalendarClub() {
               One-Time Payment
             </div>
             <div style={{ fontSize: '36px', fontWeight: 'bold', color: '#1a202c', marginBottom: '4px' }}>
-              $10
+              $9
             </div>
             <div style={{ fontSize: '14px', color: '#78350f', fontWeight: '500' }}>
               Lifetime access • Never pay again
@@ -83,7 +83,7 @@ export default function JoinCalendarClub() {
               boxShadow: '0 4px 14px rgba(102, 126, 234, 0.4)'
             }}
           >
-            Join Calendar Club - $10
+            Get Lifetime Access - $9
           </button>
 
           <p style={{ fontSize: '12px', color: '#a0aec0', textAlign: 'center', marginTop: '12px' }}>
