@@ -214,8 +214,7 @@ export default function ThanksgivingWeekCalendar() {
                         📅 Google Calendar
                       </a>
                       <a
-                        href={event.icsFile}
-                        download
+                        href={`/api/download-calendar?file=${event.icsFile}`}
                         style={{
                           flex: '1',
                           minWidth: '140px',

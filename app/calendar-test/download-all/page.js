@@ -7,10 +7,9 @@ export default function DownloadAll() {
   const router = useRouter();
 
   useEffect(() => {
-    // Trigger download immediately
+    // Trigger download immediately using API route
     const link = document.createElement('a');
-    link.href = '/calendar-test/thanksgiving-week-2025.ics';
-    link.download = 'thanksgiving-week-2025.ics';
+    link.href = '/api/download-calendar?file=/calendar-test/thanksgiving-week-2025.ics';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
