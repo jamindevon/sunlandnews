@@ -17,59 +17,59 @@ export default function NewsQuiz() {
     subtitle: "How well were you paying attention this week? Test your knowledge!",
     questions: [
       {
-        question: "When is Buc-ee's expected to open in Fort Pierce?",
+        question: "What big vote happened Tuesday night at the St. Lucie County School Board?",
         options: [
-          "Early 2026",
-          "Late 2026",
-          "Late 2027 or early 2028",
-          "2029"
+          "New school construction approval",
+          "Allowing high school athletes to profit from NIL (Name, Image, and Likeness)",
+          "Teacher salary increases",
+          "School calendar changes"
         ],
-        correctAnswer: 2, // Index of correct answer (0-based)
-        explanation: "After resolving permitting issues with FDOT, Buc-ee's could receive site plan approval by end of 2025, but construction will take 18-24 months, meaning an opening in late 2027 or early 2028."
+        correctAnswer: 1, // Index of correct answer (0-based)
+        explanation: "The School Board voted on allowing high school athletes to make money from endorsements, social media, autograph signings, and appearances through NIL deals."
       },
       {
-        question: "What are both Habitat for Humanity ReStore locations closing on November 22nd?",
+        question: "How many airlines are coming to Fort Pierce's Treasure Coast International Airport?",
         options: [
-          "Fort Pierce and Vero Beach",
-          "Port St. Lucie and Stuart",
-          "Fort Pierce and Port St. Lucie",
-          "Port St. Lucie and Vero Beach"
-        ],
-        correctAnswer: 2,
-        explanation: "Habitat for Humanity is closing both ReStore locations in Fort Pierce (2904 Okeechobee Road) and Port St. Lucie (10185 South US 1) to focus resources on building and repairing homes."
-      },
-      {
-        question: "How much money did Indian River County's Hospital District approve to keep the maternity ward open?",
-        options: [
-          "$1 million",
-          "$2 million",
-          "$3 million",
-          "$5 million"
+          "One",
+          "Two",
+          "Three",
+          "Four"
         ],
         correctAnswer: 1,
-        explanation: "The Hospital District unanimously voted to give Cleveland Clinic Indian River Hospital $2 million in taxpayer funding to keep its Labor and Delivery Unit open through December 2028."
+        explanation: "Commissioner Cathy Townsend announced two commercial airlines will be revealed by month's end, with one offering northeastern flights and another serving the Bahamas."
       },
       {
-        question: "What is now completely fare-free across the entire Treasure Coast?",
+        question: "Who did St. Lucie County commissioners unanimously choose as the new County Attorney?",
         options: [
-          "Parking meters",
-          "Bus transit",
-          "Toll roads",
-          "State park entrance"
-        ],
-        correctAnswer: 1,
-        explanation: "Martin County's Marty buses eliminated the $1.50 fare, making the entire Treasure Coast (St. Lucie, Indian River, and Martin counties) completely bus fare-free."
-      },
-      {
-        question: "How many Christmas parades are coming to the Treasure Coast this holiday season?",
-        options: [
-          "Five",
-          "Seven",
-          "Ten",
-          "Twelve"
+          "Michael Mortell",
+          "Dan McIntyre",
+          "Katherine Barbieri",
+          "Cindy Miller"
         ],
         correctAnswer: 2,
-        explanation: "Ten holiday parades are coming to the Treasure Coast starting December 5, including seven traditional parades and three waterfront lighted boat parades."
+        explanation: "Commissioners promoted interim County Attorney Katherine Barbieri after a rocky search that cost taxpayers $24,500 and saw multiple rounds of applicants."
+      },
+      {
+        question: "How much is the Indian River Lagoon worth in annual economic impact according to a new study?",
+        options: [
+          "$10 billion",
+          "$15 billion",
+          "$28.3 billion",
+          "$50 billion"
+        ],
+        correctAnswer: 2,
+        explanation: "The new study shows the lagoon generates $28.3 billion annually and supports over 128,000 jobs across seven counties - four times higher than the 2016 estimate."
+      },
+      {
+        question: "How much financing has SELF (Solar and Energy Loan Fund) provided to help families with home repairs?",
+        options: [
+          "$30 million",
+          "$45 million",
+          "$60 million",
+          "$75 million"
+        ],
+        correctAnswer: 2,
+        explanation: "SELF, started in St. Lucie County 15 years ago, has reached $60 million in financing helping 12,000 families with home repairs, hurricane-proofing, and energy upgrades."
       }
     ]
   };

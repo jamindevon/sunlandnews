@@ -158,8 +158,33 @@ export default function CalendarTest() {
           <h1 style={{ fontSize: '32px', marginBottom: '8px', color: '#1a202c' }}>
             Your VIP Event Calendar
           </h1>
-          <p style={{ color: '#718096', fontSize: '16px' }}>
-            Tap any event to add it to your calendar
+          <p style={{ color: '#718096', fontSize: '16px', marginBottom: '24px' }}>
+            Add all events at once or pick individual events below
+          </p>
+
+          <a
+            href="/calendar-test/all-events.ics"
+            download
+            style={{
+              display: 'inline-block',
+              padding: '18px 40px',
+              fontSize: '18px',
+              fontWeight: 'bold',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '12px',
+              textDecoration: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(102, 126, 234, 0.4)',
+              marginBottom: '12px'
+            }}
+          >
+            ⚡ Add All Events to Calendar (One Click!)
+          </a>
+
+          <p style={{ fontSize: '13px', color: '#a0aec0', marginBottom: '8px' }}>
+            Adds all 5 events with 60+ recurring dates automatically
           </p>
         </div>
 

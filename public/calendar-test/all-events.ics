@@ -1,0 +1,139 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sunland VIP Events Calendar
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Your complete VIP calendar with all local events and exclusive perks
+
+BEGIN:VEVENT
+UID:farmers-market-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251129T150000Z
+DTEND:20251129T170000Z
+RRULE:FREQ=WEEKLY;COUNT=20
+SUMMARY:🌽 Fort Pierce Farmers Market
+DESCRIPTION:Fresh local produce, artisanal goods, live music, and food vendors.\n\nWhat to expect:\n• Local farmers with seasonal produce\n• Handmade crafts and artisanal products\n• Live music performances\n• Food vendors\n\nTips:\n🔸 Come early for best selection (10am)\n🔸 Bring reusable bags\n🔸 Cash preferred but most vendors take cards\n🔸 Free parking nearby\n\nLocation: Downtown Fort Pierce\nDuration: 2 hours\nFamily-friendly event
+LOCATION:Downtown Fort Pierce, FL
+GEO:27.4467;-80.3256
+CATEGORIES:FAMILY,FOOD,WEEKLY,FREE
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Reminder: Farmers Market tomorrow at 10am!
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+DESCRIPTION:Farmers Market starts in 1 hour!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:sunset-concerts-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251129T230000Z
+DTEND:20251130T010000Z
+RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=12
+SUMMARY:🎸 Sunset Concert Series
+DESCRIPTION:Live music performances by local bands at Riverside Park.\n\nWhat to bring:\n• Blankets or lawn chairs\n• Picnic food and drinks\n• Bug spray (spring/summer)\n\nOn-site amenities:\n🔸 Food vendors available\n🔸 Cash bar for beverages\n🔸 Restroom facilities\n🔸 Free parking\n\nTips:\n• Arrive early (5:30pm) for best spots\n• Family-friendly atmosphere\n• Pet-friendly (keep on leash)\n• Rain cancels - check social media for updates\n\nLocation: Riverside Park, Fort Pierce\nDuration: 2 hours\nFREE admission
+LOCATION:Riverside Park, Fort Pierce, FL
+GEO:27.4472;-80.3253
+CATEGORIES:MUSIC,FAMILY,OUTDOORS,FREE
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT3H
+DESCRIPTION:Tonight: Sunset Concert at 6pm! Bring blankets and chairs.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT30M
+DESCRIPTION:Concert starts in 30 minutes!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:art-walk-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251213T230000Z
+DTEND:20251214T020000Z
+RRULE:FREQ=MONTHLY;BYDAY=2SA;COUNT=12
+SUMMARY:🎨 Downtown Art Walk
+DESCRIPTION:Monthly art walk featuring gallery openings, street performers, and local artists.\n\n✨ VIP MEMBER PERK:\nShow this calendar invite for complimentary wine at The Loft Gallery!\n\nWhat to expect:\n• 15+ galleries with new exhibitions\n• Street performers and live music\n• Local artists selling original work\n• Food trucks and beverage vendors\n\nHighlights:\n🔸 The Loft Gallery (VIP wine included)\n🔸 Riverside Art Studios (artist demos)\n🔸 Main Street galleries (varied exhibits)\n\nTips:\n• Start at The Loft for VIP perk\n• Wear comfortable walking shoes\n• Most galleries have AC\n• Free street parking after 6pm\n\nLocation: Downtown Arts District, Fort Pierce\nDuration: 3 hours\nFREE event with VIP perks!
+LOCATION:Downtown Arts District, Fort Pierce, FL
+GEO:27.4469;-80.3258
+CATEGORIES:ARTS,CULTURE,MONTHLY,VIP
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Art Walk! Remember your VIP perk at The Loft Gallery.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT2H
+DESCRIPTION:Art Walk starts in 2 hours! Show this invite for free wine.
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:food-truck-friday-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251128T220000Z
+DTEND:20251129T020000Z
+RRULE:FREQ=WEEKLY;COUNT=16
+SUMMARY:🍔 Food Truck Friday
+DESCRIPTION:Weekly gathering of gourmet food trucks at City Hall Plaza.\n\n✨ VIP MEMBER PERK:\n$5 off any $25+ purchase - show this calendar invite!\n\nWhat to expect:\n• 8-12 rotating food trucks weekly\n• Cuisines: BBQ, tacos, Asian fusion, pizza, desserts, and more\n• Local craft beer and beverages\n• Live music\n• Outdoor seating areas\n\nFeatured trucks (rotating):\n🔸 Smokin' Joe's BBQ\n🔸 Taco Tsunami\n🔸 The Rolling Oven (wood-fired pizza)\n🔸 Sweet Treats Dessert Truck\n\nTips:\n• Arrive before 6pm to avoid lines\n• Most trucks take cards but bring cash\n• Seating available but bring blankets\n• VIP discount applies to all trucks!\n\nLocation: City Hall Plaza, Fort Pierce\nDuration: 4 hours\nFREE entry + VIP discount!
+LOCATION:City Hall Plaza, Fort Pierce, FL
+GEO:27.4465;-80.3251
+CATEGORIES:FOOD,WEEKLY,VIP,MUSIC
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT5H
+DESCRIPTION:Tonight: Food Truck Friday! Use your VIP $5 off $25+ discount.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+DESCRIPTION:Food trucks open in 1 hour! Don't forget your VIP discount.
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-market-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251206T150000Z
+DTEND:20251206T210000Z
+SUMMARY:🎄 Holiday Market - Special Event
+DESCRIPTION:Annual holiday shopping market featuring 50+ local vendors and crafters.\n\n✨ VIP MEMBER PERKS:\n• Early entry at 9:30am (30 min before public)\n• Complimentary holiday tote bag at VIP check-in\n• 10% off all purchases (show this invite)\n• Access to VIP lounge with refreshments\n\nVendor highlights:\n• Handmade jewelry and accessories\n• Local artisan foods and preserves\n• Holiday decorations and wreaths\n• Pottery and home goods\n• Kids' toys and gifts\n• Baked goods and treats\n\nEvent features:\n🔸 Photos with Santa (11am-3pm)\n🔸 Live holiday music performances\n🔸 Hot cocoa and cider bar\n🔸 Food trucks on-site\n🔸 Gift wrapping station\n\nVIP Instructions:\n1. Arrive at 9:30am for early entry\n2. Check in at VIP tent near entrance\n3. Show this calendar invite to receive tote bag\n4. Get your 10% discount wristband\n5. Shop before the crowds!\n\nLocation: Harbor Square, Fort Pierce\nDuration: 6 hours (VIP early entry at 9:30am)\nFREE admission + exclusive VIP perks!
+LOCATION:Harbor Square, Fort Pierce, FL
+GEO:27.4463;-80.3249
+CATEGORIES:SHOPPING,FAMILY,HOLIDAY,VIP,SPECIAL
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P7D
+DESCRIPTION:Holiday Market in 1 week! VIP early entry at 9:30am.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Holiday Market! Remember VIP early entry at 9:30am.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT12H
+DESCRIPTION:This morning: Holiday Market VIP early entry at 9:30am!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
