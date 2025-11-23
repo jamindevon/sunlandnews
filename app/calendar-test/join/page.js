@@ -18,16 +18,7 @@ export default function JoinCalendarClub() {
         width: '100%',
         boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
       }}>
-        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <div style={{ fontSize: '64px', marginBottom: '16px' }}>🎉</div>
-          <h1 style={{ fontSize: '32px', marginBottom: '12px', color: '#1a202c' }}>
-            Events Added!
-          </h1>
-          <p style={{ fontSize: '16px', color: '#718096', lineHeight: '1.6' }}>
-            Check your calendar - your events should be there with automatic reminders.
-          </p>
-        </div>
-
+        {/* UPSELL PITCH FIRST - Above the fold on mobile */}
         <div style={{
           background: '#f7fafc',
           borderRadius: '16px',
@@ -96,11 +87,22 @@ export default function JoinCalendarClub() {
           </button>
 
           <p style={{ fontSize: '12px', color: '#a0aec0', textAlign: 'center', marginTop: '12px' }}>
-            One-time payment • Cancel anytime • Works with any calendar app
+            One-time payment • Works with any calendar app
           </p>
         </div>
 
-        <div style={{ textAlign: 'center' }}>
+        {/* CONFIRMATION - Below the pitch */}
+        <div style={{ textAlign: 'center', padding: '20px 0' }}>
+          <div style={{ fontSize: '48px', marginBottom: '12px' }}>✅</div>
+          <h3 style={{ fontSize: '20px', marginBottom: '8px', color: '#1a202c' }}>
+            Events Added to Your Calendar
+          </h3>
+          <p style={{ fontSize: '14px', color: '#718096' }}>
+            Check your calendar for automatic reminders
+          </p>
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
           <a
             href="/"
             style={{
