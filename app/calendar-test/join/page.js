@@ -68,7 +68,7 @@ export default function JoinCalendarClub() {
           </div>
 
           <button
-            onClick={() => window.location.href = 'mailto:join@sunlandnews.com?subject=Join%20Calendar%20Club'}
+            onClick={() => window.location.href = 'https://buy.stripe.com/00w4gA9Sy5w574idkIcZa0c'}
             style={{
               width: '100%',
               padding: '18px',
