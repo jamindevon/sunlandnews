@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Holiday Market
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:holiday-market-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251206T150000Z
+DTEND:20251206T210000Z
+SUMMARY:🎄 Holiday Market - Special Event
+DESCRIPTION:Annual holiday shopping market featuring 50+ local vendors and crafters.\n\n✨ VIP MEMBER PERKS:\n• Early entry at 9:30am (30 min before public)\n• Complimentary holiday tote bag at VIP check-in\n• 10% off all purchases (show this invite)\n• Access to VIP lounge with refreshments\n\nVendor highlights:\n• Handmade jewelry and accessories\n• Local artisan foods and preserves\n• Holiday decorations and wreaths\n• Pottery and home goods\n• Kids' toys and gifts\n• Baked goods and treats\n\nEvent features:\n🔸 Photos with Santa (11am-3pm)\n🔸 Live holiday music performances\n🔸 Hot cocoa and cider bar\n🔸 Food trucks on-site\n🔸 Gift wrapping station\n\nVIP Instructions:\n1. Arrive at 9:30am for early entry\n2. Check in at VIP tent near entrance\n3. Show this calendar invite to receive tote bag\n4. Get your 10% discount wristband\n5. Shop before the crowds!\n\nLocation: Harbor Square, Fort Pierce\nDuration: 6 hours (VIP early entry at 9:30am)\nFREE admission + exclusive VIP perks!
+LOCATION:Harbor Square, Fort Pierce, FL
+GEO:27.4463;-80.3249
+CATEGORIES:SHOPPING,FAMILY,HOLIDAY,VIP,SPECIAL
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P7D
+DESCRIPTION:Holiday Market in 1 week! VIP early entry at 9:30am.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Holiday Market! Remember VIP early entry at 9:30am.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT12H
+DESCRIPTION:This morning: Holiday Market VIP early entry at 9:30am!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

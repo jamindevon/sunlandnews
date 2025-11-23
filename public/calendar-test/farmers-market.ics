@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Fort Pierce Farmers Market
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Fresh local produce and artisanal goods
+
+BEGIN:VEVENT
+UID:farmers-market-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251129T150000Z
+DTEND:20251129T170000Z
+RRULE:FREQ=WEEKLY;COUNT=20
+SUMMARY:🌽 Fort Pierce Farmers Market
+DESCRIPTION:Fresh local produce, artisanal goods, live music, and food vendors.\n\nWhat to expect:\n• Local farmers with seasonal produce\n• Handmade crafts and artisanal products\n• Live music performances\n• Food vendors\n\nTips:\n🔸 Come early for best selection (10am)\n🔸 Bring reusable bags\n🔸 Cash preferred but most vendors take cards\n🔸 Free parking nearby\n\nLocation: Downtown Fort Pierce\nDuration: 2 hours\nFamily-friendly event
+LOCATION:Downtown Fort Pierce, FL
+GEO:27.4467;-80.3256
+CATEGORIES:FAMILY,FOOD,WEEKLY,FREE
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Reminder: Farmers Market tomorrow at 10am!
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+DESCRIPTION:Farmers Market starts in 1 hour!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

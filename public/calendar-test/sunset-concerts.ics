@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sunset Concert Series
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:sunset-concerts-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251129T230000Z
+DTEND:20251130T010000Z
+RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=12
+SUMMARY:🎸 Sunset Concert Series
+DESCRIPTION:Live music performances by local bands at Riverside Park.\n\nWhat to bring:\n• Blankets or lawn chairs\n• Picnic food and drinks\n• Bug spray (spring/summer)\n\nOn-site amenities:\n🔸 Food vendors available\n🔸 Cash bar for beverages\n🔸 Restroom facilities\n🔸 Free parking\n\nTips:\n• Arrive early (5:30pm) for best spots\n• Family-friendly atmosphere\n• Pet-friendly (keep on leash)\n• Rain cancels - check social media for updates\n\nLocation: Riverside Park, Fort Pierce\nDuration: 2 hours\nFREE admission
+LOCATION:Riverside Park, Fort Pierce, FL
+GEO:27.4472;-80.3253
+CATEGORIES:MUSIC,FAMILY,OUTDOORS,FREE
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT3H
+DESCRIPTION:Tonight: Sunset Concert at 6pm! Bring blankets and chairs.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT30M
+DESCRIPTION:Concert starts in 30 minutes!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

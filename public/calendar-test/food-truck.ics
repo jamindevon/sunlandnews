@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//VIP Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Food Truck Friday
+X-WR-TIMEZONE:America/New_York
+
+BEGIN:VEVENT
+UID:food-truck-friday-2025@sunlandnews.com
+DTSTAMP:20251123T000000Z
+DTSTART:20251128T220000Z
+DTEND:20251129T020000Z
+RRULE:FREQ=WEEKLY;COUNT=16
+SUMMARY:🍔 Food Truck Friday
+DESCRIPTION:Weekly gathering of gourmet food trucks at City Hall Plaza.\n\n✨ VIP MEMBER PERK:\n$5 off any $25+ purchase - show this calendar invite!\n\nWhat to expect:\n• 8-12 rotating food trucks weekly\n• Cuisines: BBQ, tacos, Asian fusion, pizza, desserts, and more\n• Local craft beer and beverages\n• Live music\n• Outdoor seating areas\n\nFeatured trucks (rotating):\n🔸 Smokin' Joe's BBQ\n🔸 Taco Tsunami\n🔸 The Rolling Oven (wood-fired pizza)\n🔸 Sweet Treats Dessert Truck\n\nTips:\n• Arrive before 6pm to avoid lines\n• Most trucks take cards but bring cash\n• Seating available but bring blankets\n• VIP discount applies to all trucks!\n\nLocation: City Hall Plaza, Fort Pierce\nDuration: 4 hours\nFREE entry + VIP discount!
+LOCATION:City Hall Plaza, Fort Pierce, FL
+GEO:27.4465;-80.3251
+CATEGORIES:FOOD,WEEKLY,VIP,MUSIC
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT5H
+DESCRIPTION:Tonight: Food Truck Friday! Use your VIP $5 off $25+ discount.
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+DESCRIPTION:Food trucks open in 1 hour! Don't forget your VIP discount.
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
