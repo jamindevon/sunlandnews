@@ -140,11 +140,11 @@ export default function ThanksgivingWeekCalendar() {
               boxShadow: '0 4px 14px rgba(102, 126, 234, 0.4)',
             }}
           >
-            ⚡ Get VIP Calendar Access
+            Add All 7 Events to My Calendar
           </a>
 
           <p style={{ fontSize: '13px', color: '#a0aec0', marginTop: '12px' }}>
-            Adds all 7 events with automatic reminders
+            One tap • Auto-reminders • Works everywhere
           </p>
         </div>
 
