@@ -48,7 +48,7 @@ export async function GET(req) {
                         subscription_status: 'active',
                         subscription_expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
                         stripe_customer_id: session.customer,
-                        stripe_subscription_id: session.subscription
+                        stripe_payment_id: session.subscription
                     },
                 ], { onConflict: 'email' })
                 .select()
