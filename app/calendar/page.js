@@ -66,6 +66,11 @@ export default function CalendarOffer() {
                     <p className="mt-4 text-sm text-gray-400">
                         Join 10,000+ locals • Built by Sunland News (St. Lucie County)
                     </p>
+                    <div className="mt-8">
+                        <a href="/calendar/login" className="text-sm font-medium text-gray-500 hover:text-primary transition-colors underline decoration-gray-300 hover:decoration-primary">
+                            Already a member? Sign in here
+                        </a>
+                    </div>
                 </div>
             </section>
 

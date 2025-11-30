@@ -104,6 +104,16 @@ export default function Header() {
                 </Link>
               </li>
 
+              <li className="py-2 md:py-0">
+                <Link
+                  href="/calendar"
+                  className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/calendar' ? 'text-primary' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Calendar Club
+                </Link>
+              </li>
+
               {/* Dropdown Menu */}
               <li className="py-2 md:py-0 relative group" ref={dropdownRef}>
                 <button
