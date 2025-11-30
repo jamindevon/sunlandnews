@@ -45,7 +45,7 @@ export default function CalendarLoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-white flex flex-col justify-center py-6 sm:py-12 sm:px-6 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="text-center mb-10">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary text-3xl mb-6">
