@@ -25,10 +25,8 @@ export async function POST(req) {
             .single();
 
         if (error || !user) {
-            // Security: Don't reveal if user exists or not, but for UX we might want to be helpful
-            // For now, let's just return success to prevent enumeration, but log it.
-            console.log(`Magic link requested for non-existent user: ${email}`);
-            return NextResponse.json({ success: true });
+            // UX Decision: Explicitly tell user if account doesn't exist so they know to sign up.
+            return NextResponse.json({ error: 'No account found with that email. Please sign up first.' }, { status: 404 });
         }
 
         // 2. Send Email
