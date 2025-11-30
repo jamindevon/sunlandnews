@@ -6,16 +6,40 @@ import Link from 'next/link';
 
 export default function CalendarSetup() {
     const searchParams = useSearchParams();
-    const token = searchParams.get('token');
-    const isNew = searchParams.get('new');
-    const [copied, setCopied] = useState(false);
-    const [origin, setOrigin] = useState('');
+    const sessionId = searchParams.get('session_id');
+    const [fetchedToken, setFetchedToken] = useState(null);
+    const [loading, setLoading] = useState(!!sessionId);
+    const [error, setError] = useState(null);
+
+    const activeToken = token || fetchedToken;
 
     useEffect(() => {
         setOrigin(window.location.origin);
-    }, []);
 
-    const calendarUrl = token ? `${origin}/cal/${token}` : '';
+        if (sessionId && !token) {
+            const fetchToken = async () => {
+                try {
+                    const res = await fetch(`/api/checkout/session?session_id=${sessionId}`);
+                    const data = await res.json();
+
+                    if (data.token) {
+                        setFetchedToken(data.token);
+                        // Optional: Update URL without reloading to clean it up
+                        window.history.replaceState({}, '', `/calendar/setup?token=${data.token}&new=true`);
+                    } else {
+                        setError(data.error || 'Failed to retrieve setup details.');
+                    }
+                } catch (err) {
+                    setError('Something went wrong. Please refresh.');
+                } finally {
+                    setLoading(false);
+                }
+            };
+            fetchToken();
+        }
+    }, [sessionId, token]);
+
+    const calendarUrl = activeToken ? `${origin}/cal/${activeToken}` : '';
     const webcalUrl = calendarUrl.replace(/^https?:\/\//, 'webcal://');
     const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcalUrl)}`;
 
@@ -25,7 +49,33 @@ export default function CalendarSetup() {
         setTimeout(() => setCopied(false), 2000);
     };
 
-    if (!token) {
+    if (loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="text-center p-8">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                    <h2 className="text-xl font-bold text-gray-900">Finalizing your setup...</h2>
+                    <p className="text-gray-500">This usually takes just a few seconds.</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="text-center p-8">
+                    <h1 className="text-2xl font-bold text-gray-900 mb-4">Setup Issue</h1>
+                    <p className="text-red-500 mb-8">{error}</p>
+                    <button onClick={() => window.location.reload()} className="text-primary font-bold hover:underline">
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    if (!activeToken) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
                 <div className="text-center p-8">
