@@ -1,15 +1,19 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 
-export default function CalendarSetup() {
+function SetupContent() {
     const searchParams = useSearchParams();
+    const token = searchParams.get('token');
+    const isNew = searchParams.get('new');
     const sessionId = searchParams.get('session_id');
     const [fetchedToken, setFetchedToken] = useState(null);
-    const [loading, setLoading] = useState(!!sessionId);
+    const [loading, setLoading] = useState(!!sessionId && !token);
     const [error, setError] = useState(null);
+    const [copied, setCopied] = useState(false);
+    const [origin, setOrigin] = useState('');
 
     const activeToken = token || fetchedToken;
 
@@ -189,5 +193,13 @@ export default function CalendarSetup() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function CalendarSetup() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <SetupContent />
+        </Suspense>
     );
 }
