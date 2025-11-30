@@ -33,7 +33,7 @@ const supportOptions = [
     subtitle: '',
     description: 'Just want to say thanks? Buy us a coffee and help fuel the next story.',
     color: 'from-amber-500 to-amber-600',
-    ctaText: 'Send Coffee',
+    ctaText: 'Buy Me a Coffee',
     href: 'https://www.buymeacoffee.com/sunland',
     available: true
   }
@@ -85,7 +85,7 @@ export default function SupportPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-orange-50">
+    <div className="min-h-screen bg-white">
       {/* Buy Me a Coffee Widget */}
       <Script
         data-name="BMC-Widget"

@@ -43,6 +43,11 @@ export const metadata = {
     description: "A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People—delivered 5 days a week.",
     images: ['/images/share-sunland.png'],
   },
+  keywords: ['St. Lucie County', 'Fort Pierce', 'Port St. Lucie', 'Local News', 'Events', 'Newsletter', 'Florida'],
+  authors: [{ name: "Sunland News Team" }, { name: "Ja'Min Devon" }],
+  alternates: {
+    canonical: 'https://sunlandnews.com',
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -48,7 +48,7 @@ const ptComponents = {
   types: {
     image: ({ value }) => {
       if (!value?.asset) return null;
-      
+
       return (
         <div className="my-8">
           <Image
@@ -78,9 +78,9 @@ const ptComponents = {
     link: ({ children, value }) => {
       const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
       return (
-        <a 
-          href={value.href} 
-          rel={rel} 
+        <a
+          href={value.href}
+          rel={rel}
           target={rel === 'noreferrer noopener' ? '_blank' : undefined}
           className="text-primary underline"
         >
@@ -107,7 +107,7 @@ function ArticleContent({ body }) {
   const paragraphCount = body?.filter(block => block._type === 'block' && block.style === 'normal')?.length || 0;
   const midPoint = Math.floor(paragraphCount / 2);
   let currentParagraph = 0;
-  
+
   const componentsWithPrompt = {
     ...ptComponents,
     block: {
@@ -115,7 +115,7 @@ function ArticleContent({ body }) {
       normal: ({ children }) => {
         currentParagraph++;
         const shouldShowPrompt = currentParagraph === midPoint && paragraphCount > 3;
-        
+
         return (
           <>
             <p className="my-4 text-gray-800">{children}</p>
@@ -125,7 +125,7 @@ function ArticleContent({ body }) {
       },
     },
   };
-  
+
   return (
     <div className="prose max-w-none">
       <PortableText value={body} components={componentsWithPrompt} />
@@ -155,7 +155,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
-  
+
   const post = await client.fetch(
     groq`*[_type == "post" && slug.current == $slug][0]{
       title,
@@ -166,7 +166,7 @@ export async function generateMetadata({ params }) {
     }`,
     { slug }
   );
-  
+
   if (!post) {
     return {
       title: 'Post Not Found - Sunland News',
@@ -176,17 +176,17 @@ export async function generateMetadata({ params }) {
 
   const title = `${post.title} - Sunland News`;
   const description = post.excerpt || `Read this story from Sunland News about ${post.title}`;
-  const imageUrl = post.mainImage 
+  const imageUrl = post.mainImage
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : 'https://sunlandnews.com/images/share-sunland.png'; // fallback image
   const url = `https://sunlandnews.com/post/${slug}`;
-  
+
   return {
     title,
     description,
     authors: post.authorName ? [{ name: post.authorName }] : undefined,
     publishedTime: post.publishedAt,
-    
+
     // Open Graph tags for Facebook, LinkedIn, etc.
     openGraph: {
       title,
@@ -206,7 +206,7 @@ export async function generateMetadata({ params }) {
       publishedTime: post.publishedAt,
       authors: post.authorName ? [post.authorName] : undefined,
     },
-    
+
     // Twitter Card tags
     twitter: {
       card: 'summary_large_image',
@@ -216,7 +216,7 @@ export async function generateMetadata({ params }) {
       creator: '@sunlandnews', // Update with your actual Twitter handle
       site: '@sunlandnews',
     },
-    
+
     // Additional meta tags
     robots: {
       index: true,
@@ -246,13 +246,13 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
 export default async function Post({ params }) {
   const { slug } = params;
   const post = await client.fetch(query, { slug });
-  
+
   if (!post) {
     return (
       <div className="text-center p-8">
         <h1 className="text-2xl font-bold text-gray-800">Post not found</h1>
         <p className="mt-4 mb-8">The post you're looking for doesn't exist or has been removed.</p>
-        <Link 
+        <Link
           href="/stories"
           className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
         >
@@ -265,7 +265,7 @@ export default async function Post({ params }) {
   return (
     <article className="max-w-3xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      
+
       {/* Author and Date */}
       <div className="flex items-center mb-6">
         {post.authorImage && (
@@ -284,7 +284,7 @@ export default async function Post({ params }) {
           <p className="text-sm text-gray-500">{formatDate(post.publishedAt)}</p>
         </div>
       </div>
-      
+
       {/* Categories */}
       {post.categories && post.categories.length > 0 && (
         <div className="mb-6">
@@ -300,7 +300,7 @@ export default async function Post({ params }) {
           </div>
         </div>
       )}
-      
+
       {/* Main Image */}
       {post.mainImage && (
         <div className="mb-8">
@@ -313,10 +313,10 @@ export default async function Post({ params }) {
           />
         </div>
       )}
-      
+
       {/* Content */}
       <ArticleContent body={post.body} />
-      
+
       {/* Social Sharing */}
       <div className="mt-12 border-t pt-6">
         <h3 className="text-lg font-semibold mb-4">Share this story</h3>
@@ -342,15 +342,36 @@ export default async function Post({ params }) {
             title={post.title}
           />
         </div>
-        
+
         {/* Navigation */}
-        <Link 
+        <Link
           href="/stories"
           className="text-blue-500 hover:underline flex items-center"
         >
           ← Back to all stories
         </Link>
       </div>
-    </article>
+
+      {/* NewsArticle Schema */}
+      < script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'NewsArticle',
+            headline: post.title,
+            image: post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : ['https://sunlandnews.com/images/share-sunland.png'],
+            datePublished: post.publishedAt,
+            dateModified: post.publishedAt,
+            author: [{
+              '@type': 'Person',
+              name: post.name || 'Sunland News',
+              url: 'https://sunlandnews.com'
+            }]
+          })
+        }
+        }
+      />
+    </article >
   );
 } 

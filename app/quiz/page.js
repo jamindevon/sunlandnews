@@ -108,21 +108,21 @@ export default function QuizPage() {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    
+
     try {
       // Get stored email and signup ID from localStorage
       const email = localStorage.getItem('signupEmail') || '';
       const signupId = localStorage.getItem('signupId') || null;
-      
+
       // Store quiz responses in Supabase
       const result = await createQuizResponse(signupId, email, responses);
-      
+
       if (result.success) {
         console.log('Quiz responses saved successfully');
       } else {
         console.error('Failed to save quiz responses:', result.error);
       }
-      
+
       // Track quiz completion with Meta Pixel
       try {
         if (typeof window !== 'undefined') {
@@ -138,7 +138,7 @@ export default function QuizPage() {
       } catch (error) {
         console.warn('Failed to track pixel event:', error);
       }
-      
+
       // Route based on Q5 answer
       if (responses.q5_support === '💪 Yes, show me how') {
         router.push('/support');
@@ -163,7 +163,7 @@ export default function QuizPage() {
   const canProceed = currentResponse !== '';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto max-w-2xl px-4 py-16">
         {/* Progress Bar */}
         <div className="mb-12">
@@ -174,7 +174,7 @@ export default function QuizPage() {
             <span className="text-sm text-gray-500">45 seconds</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
+            <div
               className="bg-primary h-2 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${(currentStep / questions.length) * 100}%` }}
             />
@@ -182,11 +182,11 @@ export default function QuizPage() {
         </div>
 
         {/* Question Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+        <div className="bg-white rounded-2xl p-0 md:p-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center leading-tight">
             {currentQuestion.question}
           </h1>
-          
+
           {/* Question Description */}
           {currentQuestion.description && (
             <p className="text-gray-600 text-center mb-8 text-lg">
@@ -200,18 +200,16 @@ export default function QuizPage() {
               <div key={option}>
                 <button
                   onClick={() => handleOptionSelect(currentQuestion.id, option)}
-                  className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
-                    currentResponse === option
+                  className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${currentResponse === option
                       ? 'border-primary bg-primary/5 text-primary font-medium'
                       : 'border-gray-200 hover:border-gray-300 text-gray-700'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center">
-                    <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                      currentResponse === option
+                    <div className={`w-4 h-4 rounded-full border-2 mr-3 ${currentResponse === option
                         ? 'border-primary bg-primary'
                         : 'border-gray-300'
-                    }`}>
+                      }`}>
                       {currentResponse === option && (
                         <div className="w-full h-full rounded-full bg-primary"></div>
                       )}
@@ -248,11 +246,10 @@ export default function QuizPage() {
             <button
               onClick={handleBack}
               disabled={currentStep === 1}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                currentStep === 1
+              className={`px-6 py-3 rounded-lg font-medium transition-all ${currentStep === 1
                   ? 'text-gray-400 cursor-not-allowed'
                   : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
-              }`}
+                }`}
             >
               Back
             </button>
@@ -260,11 +257,10 @@ export default function QuizPage() {
             <button
               onClick={handleNext}
               disabled={!canProceed || isSubmitting}
-              className={`px-8 py-3 rounded-lg font-semibold transition-all ${
-                canProceed && !isSubmitting
+              className={`px-8 py-3 rounded-lg font-semibold transition-all ${canProceed && !isSubmitting
                   ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-1'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              }`}
+                }`}
             >
               {isSubmitting ? (
                 <div className="flex items-center">

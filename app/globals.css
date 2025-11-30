@@ -9,15 +9,18 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
+
   /* Hide scrollbars for horizontal scrolling elements */
   .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none;
+    /* Chrome, Safari and Opera */
   }
 }
 
@@ -29,11 +32,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
+  background: rgb(var(--background-start-rgb));
 }
 
 /* Improved Post Content Styling */
@@ -190,11 +189,11 @@ body {
   .post-content h1 {
     font-size: 1.5rem;
   }
-  
+
   .post-content h2 {
     font-size: 1.3rem;
   }
-  
+
   .post-content h3 {
     font-size: 1.1rem;
   }
@@ -229,7 +228,7 @@ body {
   color: #2d3748;
 }
 
-.newsletter-content ul, 
+.newsletter-content ul,
 .newsletter-content ol {
   margin-bottom: 1.5rem;
   padding-left: 1.75rem;
@@ -337,11 +336,11 @@ body {
   display: block;
 }
 
-.newsletter-content h1, 
-.newsletter-content h2, 
-.newsletter-content h3, 
-.newsletter-content h4, 
-.newsletter-content h5, 
+.newsletter-content h1,
+.newsletter-content h2,
+.newsletter-content h3,
+.newsletter-content h4,
+.newsletter-content h5,
 .newsletter-content h6 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -382,13 +381,13 @@ body {
   text-decoration: none;
 }
 
-.newsletter-content ul, 
+.newsletter-content ul,
 .newsletter-content ol {
   margin: 1rem 0;
   padding-left: 1.5rem;
 }
 
-.newsletter-content ul li, 
+.newsletter-content ul li,
 .newsletter-content ol li {
   margin-bottom: 0.5rem;
 }
@@ -443,81 +442,201 @@ body {
   .newsletter-content img {
     margin: 1rem 0;
   }
-  
+
   .newsletter-content h1 {
     font-size: 1.5rem;
   }
-  
+
   .newsletter-content h2 {
     font-size: 1.25rem;
   }
-  
+
   .newsletter-content h3 {
     font-size: 1.125rem;
   }
-  
+
   .newsletter-content iframe {
     max-height: 250px;
   }
 }
 
+/* Beehiiv Specific Overrides - CRITICAL FIXES */
+.prose .beehiiv {
+  font-family: inherit !important;
+  color: inherit !important;
+}
+
+.prose .beehiiv .beehiiv__body {
+  font-family: inherit !important;
+}
+
+/* Fix massive social icons and images */
+.prose .beehiiv img,
+.prose .beehiiv svg {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 1.5rem auto !important;
+}
+
+/* Specific fix for the massive Facebook icon */
+.prose .beehiiv .image__image {
+  width: auto !important;
+  max-width: 100% !important;
+}
+
+/* Hide Beehiiv footer */
+.prose .beehiiv__footer {
+  display: none !important;
+}
+
+/* Style Beehiiv buttons */
+.prose .beehiiv .button {
+  text-align: center !important;
+  margin: 2rem 0 !important;
+}
+
+.prose .beehiiv .button__link {
+  background-color: #f88600 !important;
+  color: white !important;
+  padding: 0.75rem 2rem !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.2s !important;
+}
+
+.prose .beehiiv .button__link:hover {
+  background-color: #d97500 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Clean up sections */
+.prose .beehiiv .section {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 2rem 0 !important;
+}
+
+/* Typography overrides */
+.prose .beehiiv .heading {
+  font-family: inherit !important;
+  color: #111827 !important;
+  font-weight: 700 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.prose .beehiiv .paragraph {
+  font-family: inherit !important;
+  color: #374151 !important;
+  line-height: 1.75 !important;
+  margin-bottom: 1.25rem !important;
+  font-size: 1.125rem !important;
+}
+
+.prose .beehiiv a {
+  color: #f88600 !important;
+  text-decoration: underline !important;
+}
+
+/* Hide the 'Good Morning' image if it's just a spacer */
+.prose .beehiiv .image img[src*="spacer"] {
+  display: none !important;
+}
+
 /* Custom Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  to { 
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes slideIn {
-  from { 
+  from {
     opacity: 0;
     transform: translateX(-20px);
   }
-  to { 
+
+  to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes pulse-slow {
-  0% { opacity: 0.6; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.6; }
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes blob {
   0% {
     transform: scale(1);
   }
+
   33% {
     transform: scale(1.1);
     opacity: 0.7;
   }
+
   66% {
     transform: scale(0.9);
     opacity: 0.9;
   }
+
   100% {
     transform: scale(1);
     opacity: 0.8;
@@ -553,12 +672,10 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.1) 8%,
-    rgba(255, 255, 255, 0.3) 18%,
-    rgba(255, 255, 255, 0.1) 33%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.1) 8%,
+      rgba(255, 255, 255, 0.3) 18%,
+      rgba(255, 255, 255, 0.1) 33%);
   background-size: 200% 100%;
   animation: shimmer 3s linear infinite;
 }
@@ -571,4 +688,4 @@ body {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.6s ease-in-out forwards, slideUp 0.6s ease-out forwards;
-} 
+}

@@ -16,14 +16,14 @@ export default function HomePage() {
     if (!email || isSubmitting) return;
 
     setIsSubmitting(true);
-    
+
     try {
       // 1. Store email in Supabase for our funnel tracking
       const supabaseResult = await createSignup(email);
-      
+
       // Always store email for quiz flow
       localStorage.setItem('signupEmail', email);
-      
+
       // Only store signup_id if it's valid
       if (supabaseResult.success && supabaseResult.data?.id) {
         localStorage.setItem('signupId', supabaseResult.data.id);
@@ -32,7 +32,7 @@ export default function HomePage() {
         console.log('Supabase signup failed, but continuing with flow');
         localStorage.removeItem('signupId'); // Clear any invalid ID
       }
-      
+
       // 2. Also subscribe to Beehiiv newsletter (existing integration)
       const beehiivResponse = await fetch('/api/subscribe', {
         method: 'POST',
@@ -44,125 +44,146 @@ export default function HomePage() {
           source: 'funnel-homepage',
         }),
       });
-      
+
       const beehiivData = await beehiivResponse.json();
       if (beehiivData.success) {
         console.log('Successfully subscribed to newsletter');
       } else {
         console.error('Beehiiv subscription failed:', beehiivData.error);
       }
-      
+
       // Track email signup with Meta Pixel
       fbEvents.subscribeSubmit('funnel-homepage');
 
       // Always redirect to thank you page (even if some services fail)
-      router.push('/thank-you');
+      router.push('/thank-you-original');
 
     } catch (error) {
       console.error('Error during signup:', error);
       // Still redirect for better UX
-      router.push('/thank-you');
+      router.push('/thank-you-original');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Stay in the loop with what's happening in{' '}
-            <span className="text-primary">St. Lucie County</span>
+            St. Lucie in 5 minutes — every weekday at 7am.
           </h1>
-          
+
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Clean, daily updates on events, food, people, and local culture.<br />
-            <strong>No politics. No crime.</strong> Just the stuff that makes this place feel like home.<br />
-            <span className="text-primary font-semibold">Always free.</span> Delivered every weekday morning.
+          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Events, new openings, date-night ideas, and neighborhood news. <strong>No politics. No crime.</strong> Just the good stuff that makes this place feel like home. <span className="text-primary font-semibold">Always free.</span>
           </p>
-          
+
           {/* Email Form */}
-          <div className="max-w-lg mx-auto mb-12">
-            <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="flex-1 px-6 py-4 text-lg rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm"
-              required
-            />
-            <button
-              type="submit"
-                  disabled={isSubmitting}
-                  className={`px-8 py-4 text-lg font-semibold rounded-lg text-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 whitespace-nowrap ${
-                    isSubmitting 
-                      ? 'bg-gray-400 cursor-not-allowed' 
-                      : 'bg-primary hover:bg-primary/90'
+          <div className="max-w-md mx-auto mb-16">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="w-full px-6 py-4 text-lg bg-gray-50 border-2 border-gray-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-400"
+                required
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full px-8 py-4 text-lg font-bold rounded-xl text-white transition-all transform hover:-translate-y-0.5 active:translate-y-0 ${isSubmitting
+                  ? 'bg-gray-300 cursor-not-allowed'
+                  : 'bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30'
                   }`}
-            >
-                  {isSubmitting ? 'Sending...' : 'Send Me the News'}
-            </button>
+              >
+                {isSubmitting ? 'Joining...' : 'Get tomorrow’s issue'}
+              </button>
+              <p className="text-sm text-gray-400 mt-2">
+                Join 10,000+ locals • 1-tap unsubscribe • Zero spam
+              </p>
+            </form>
           </div>
-        </form>
-          </div>
-          
-          {/* Benefits Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+          {/* Benefits - Clean Grid */}
+          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto border-t border-gray-100 pt-12">
             {[
-              '✅ Daily local news without the noise',
-              '✅ 30 to 50 handpicked events every Thursday',
-              '✅ Stories that actually reflect our community',
-              '✅ Trusted by 5,000+ readers across St. Lucie County'
-            ].map((benefit, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100">
-                <p className="text-gray-700 font-medium">{benefit}</p>
+              { icon: '✅', title: 'Daily Updates', desc: 'News without the noise' },
+              { icon: '📅', title: 'Weekly Events', desc: '30+ things to do every Thursday' },
+              { icon: '🧡', title: 'Local Stories', desc: 'Celebrating our community' },
+              { icon: '🚫', title: 'No Politics', desc: 'Just the good stuff' }
+            ].map((item, index) => (
+              <div key={index} className="flex gap-4 items-start">
+                <span className="text-2xl bg-orange-50 w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0">{item.icon}</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                  <p className="text-gray-500">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-      {/* Ja'Min Bio Section */}
-      <section className="py-16 px-4 bg-white/50">
-        <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-48 h-48 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                    <Image
+      {/* Ja'Min Bio Section - Simplified */}
+      <section className="py-20 px-4 bg-gray-50/50">
+        <div className="container mx-auto max-w-3xl">
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="flex-shrink-0 relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-white shadow-xl">
+                <Image
                   src="/images/bio-photo.png"
                   alt="Ja'Min - Founder of Sunland News"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover object-left-top"
-                  style={{ transform: 'translateX(-20px)' }}
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-cover object-left"
                   onError={(e) => {
                     e.target.style.display = 'none';
-                    e.target.parentElement.innerHTML = '<div class="text-6xl text-gray-400">📸</div>';
+                    e.target.parentElement.innerHTML = '<div class="w-full h-full bg-gray-200 flex items-center justify-center text-4xl">👋</div>';
                   }}
                 />
               </div>
             </div>
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 Meet Ja'Min
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Hi, I'm Ja'Min, born and raised in St. Lucie County.<br />
-                I started Sunland News to share stories that actually reflect this place.<br />
-                <strong>No politics, no crime.</strong> Just the people, food, and local life that make it home.
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Hi, I'm Ja'Min, born and raised in St. Lucie County. I started Sunland News to share stories that actually reflect this place. <strong>No politics, no crime.</strong> Just the people, food, and local life that make it home.
               </p>
             </div>
           </div>
-          </div>
-        </section>
+        </div>
+      </section>
+
+      {/* Organization Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'NewsMediaOrganization',
+            name: 'Sunland News',
+            url: 'https://sunlandnews.com',
+            logo: 'https://sunlandnews.com/images/sunlandnews-logo.png',
+            sameAs: [
+              'https://www.facebook.com/thesunlandnews',
+              'https://www.instagram.com/sunlandnews'
+            ],
+            foundingDate: '2024',
+            founder: {
+              '@type': 'Person',
+              name: "Ja'Min Devon"
+            },
+            description: 'A hyper-local email newsletter covering Saint Lucie County. Food, News, Events, and People.'
+          })
+        }}
+      />
     </div>
   );
 }
 
- 

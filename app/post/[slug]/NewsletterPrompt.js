@@ -11,9 +11,9 @@ export default function NewsletterPrompt() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || isSubmitting) return;
-    
+
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -26,13 +26,13 @@ export default function NewsletterPrompt() {
           isPremium: false
         }),
       });
-      
+
       const data = await response.json();
-      
+
       if (!data.success) {
         throw new Error(data.error || 'Failed to subscribe');
       }
-      
+
       setIsSubscribed(true);
       setEmail('');
     } catch (err) {
@@ -66,8 +66,8 @@ export default function NewsletterPrompt() {
       <div className="max-w-md mx-auto">
         <h3 className="text-xl font-bold text-gray-900 mb-3">Enjoying this story?</h3>
         <p className="text-gray-600 mb-6">
-          Get stories like this delivered to your inbox every weekday morning. 
-          Join 7,500+ locals who start their day with Sunland News.
+          Get stories like this delivered to your inbox every weekday morning.
+          Join 10,000+ locals who start their day with Sunland News.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -78,12 +78,12 @@ export default function NewsletterPrompt() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button 
+          <button
             type="submit"
             className="w-full bg-primary text-white font-medium py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Subscribing..." : "Get Daily Updates"}
+            {isSubmitting ? "Sending..." : "Send me the news"}
           </button>
         </form>
         <p className="text-xs text-gray-500 mt-3">

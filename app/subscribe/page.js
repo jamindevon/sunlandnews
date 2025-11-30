@@ -18,9 +18,9 @@ export default function Subscribe() {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email) return;
-    
+
     setSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -33,9 +33,9 @@ export default function Subscribe() {
           isPremium: false
         }),
       });
-      
+
       const data = await response.json();
-      
+
       if (!data.success) {
         throw new Error(data.error || 'Failed to subscribe');
       }
@@ -116,12 +116,12 @@ export default function Subscribe() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button 
+              <button
                 type="submit"
                 className="w-full bg-white border-2 border-primary text-primary font-medium py-3 px-6 rounded-lg hover:bg-primary/5 transition-colors"
                 disabled={submitting}
               >
-                {submitting ? "Processing..." : "Subscribe Free"}
+                {submitting ? "Processing..." : "Send me the news"}
               </button>
             </form>
           )}
@@ -135,21 +135,19 @@ export default function Subscribe() {
             <div className="flex justify-center gap-4 mb-4">
               <button
                 onClick={() => setSelectedPlan('monthly')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  selectedPlan === 'monthly' 
-                    ? 'bg-primary text-white' 
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedPlan === 'monthly'
+                    ? 'bg-primary text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
               >
                 Monthly
               </button>
               <button
                 onClick={() => setSelectedPlan('yearly')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  selectedPlan === 'yearly' 
-                    ? 'bg-primary text-white' 
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedPlan === 'yearly'
+                    ? 'bg-primary text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
               >
                 Yearly
               </button>

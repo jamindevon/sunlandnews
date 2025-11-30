@@ -41,13 +41,13 @@ export default function Newsletter() {
         <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-700">
           Join our community of informed St. Lucie County residents. It's free!
         </p>
-        <a 
-          href="https://newsletter.sunlandnews.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://newsletter.sunlandnews.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-primary text-white font-medium px-8 py-4 rounded-lg text-lg hover:bg-primary/90 transition-colors"
         >
-          Subscribe Now
+          Send me the news
         </a>
         <p className="text-gray-500 text-sm mt-6">
           Powered by beehiiv • Unsubscribe anytime

@@ -58,178 +58,129 @@ export default async function NewsPage() {
   ]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-200 via-primary/30 to-blue-100 py-16">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+      <section className="pt-24 pb-16 px-4 border-b border-gray-100">
+        <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Your Daily Guide to<br />
             <span className="text-primary">St. Lucie County</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            From breaking news to weekend plans, from new restaurants to community events - 
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+            From breaking news to weekend plans, from new restaurants to community events -
             we've got your daily dose of local life covered.
           </p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 max-w-6xl py-16">
-
-
-        <div className="grid md:grid-cols-2 gap-16">
-          {/* The Garden - Longform Stories */}
-          <section>
-            <div className="flex items-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">The Garden</h2>
-              <div className="ml-4 px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
-                Longform
-              </div>
+        <div className="grid lg:grid-cols-12 gap-16">
+          {/* Main Content - The Garden */}
+          <div className="lg:col-span-8">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-2xl font-bold text-gray-900">Latest Stories</h2>
+              <Link href="/stories" className="text-primary font-medium hover:text-primary/80">
+                View All →
+              </Link>
             </div>
-            
-            <div className="space-y-6">
+
+            <div className="space-y-12">
               {recentStories.length > 0 ? (
-                recentStories.slice(0, 3).map((story, index) => (
-                  <article key={story._id} className="group">
-                    <div className="flex gap-4">
-                      {story.mainImage && (
-                        <div className="flex-shrink-0">
+                recentStories.slice(0, 5).map((story) => (
+                  <article key={story._id} className="group grid md:grid-cols-12 gap-6 items-start">
+                    {story.mainImage && (
+                      <div className="md:col-span-4">
+                        <div className="aspect-[4/3] relative rounded-xl overflow-hidden bg-gray-100">
                           <Image
-                            src={urlFor(story.mainImage).width(120).height(80).url()}
+                            src={urlFor(story.mainImage).width(400).height(300).url()}
                             alt={story.title}
-                            width={120}
-                            height={80}
-                            className="rounded-lg object-cover"
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
-                      )}
-                      <div className="flex-1">
-                        <div className="text-sm text-gray-500 mb-1">
-                          {new Date(story.publishedAt).toLocaleDateString()}
-                        </div>
-                        <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
-                          <Link href={`/post/${story.slug.current}`}>
-                            {story.title}
-                          </Link>
-                        </h3>
-                        <p className="text-gray-600 text-sm line-clamp-2">
-                          {story.excerpt || 'Read this story from Sunland News'}
-                        </p>
+                      </div>
+                    )}
+                    <div className={story.mainImage ? "md:col-span-8" : "col-span-12"}>
+                      <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                        <span className="font-medium text-primary uppercase tracking-wider text-xs">
+                          {story.categories?.[0]?.title || 'News'}
+                        </span>
+                        <span>•</span>
+                        <time>{new Date(story.publishedAt).toLocaleDateString()}</time>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors leading-tight">
+                        <Link href={`/post/${story.slug.current}`}>
+                          {story.title}
+                        </Link>
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed line-clamp-2 mb-4">
+                        {story.excerpt || 'Read the full story on Sunland News...'}
+                      </p>
+                      <div className="flex items-center gap-3">
+                        {story.author?.image && (
+                          <Image
+                            src={urlFor(story.author.image).width(40).height(40).url()}
+                            alt={story.author.name}
+                            width={24}
+                            height={24}
+                            className="rounded-full"
+                          />
+                        )}
+                        <span className="text-sm font-medium text-gray-900">
+                          {story.author?.name || 'Sunland Staff'}
+                        </span>
                       </div>
                     </div>
                   </article>
                 ))
               ) : (
-                <div className="text-center py-8">
+                <div className="text-center py-12 bg-gray-50 rounded-xl">
                   <p className="text-gray-500">Loading stories...</p>
                 </div>
               )}
             </div>
-            
-            <div className="mt-8">
-              <Link 
-                href="/stories"
-                className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
-              >
-                View All Stories
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </section>
+          </div>
 
-          {/* Newsletter Archive */}
-          <section>
-            <div className="flex items-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">Newsletter Archive</h2>
-              <div className="ml-4 px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
-                Archive
+          {/* Sidebar */}
+          <div className="lg:col-span-4 space-y-12">
+            {/* Newsletter Box */}
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Daily Newsletter</h3>
+              <p className="text-gray-600 mb-6 text-sm">
+                Join 10,000+ locals. Get the best of St. Lucie in your inbox every morning.
+              </p>
+              <Link
+                href="/subscribe"
+                className="block w-full text-center px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+              >
+                Subscribe Free
+              </Link>
+              <div className="mt-4 text-center">
+                <a href="https://newsletter.sunlandnews.com" target="_blank" className="text-sm text-gray-500 hover:text-gray-900 underline">
+                  View Archive
+                </a>
               </div>
             </div>
-            
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Browse Past Newsletters</h3>
-              <p className="text-gray-600 mb-6">
-                Access our complete archive of daily newsletters covering St. Lucie County news, events, and community stories.
-              </p>
-              <a 
-                href="https://newsletter.sunlandnews.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors"
-              >
-                View Archive
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </section>
+
+            {/* Categories */}
+            {categories.length > 0 && (
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Topics</h3>
+                <div className="flex flex-wrap gap-2">
+                  {categories.slice(0, 10).map((category) => (
+                    <Link
+                      key={category._id}
+                      href={`/stories/category/${category._id}`}
+                      className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors"
+                    >
+                      {category.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-
-        {/* Categories */}
-        {categories.length > 0 && (
-          <section className="mt-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse by Category</h2>
-            
-            <div className="grid md:grid-cols-4 gap-6">
-              {categories.slice(0, 8).map((category, index) => {
-                // Assign colors dynamically based on index
-                const colors = [
-                  'bg-blue-100 text-blue-700',
-                  'bg-orange-100 text-orange-700', 
-                  'bg-purple-100 text-purple-700',
-                  'bg-green-100 text-green-700',
-                  'bg-red-100 text-red-700',
-                  'bg-yellow-100 text-yellow-700',
-                  'bg-pink-100 text-pink-700',
-                  'bg-indigo-100 text-indigo-700'
-                ];
-                
-                // Assign icons based on category title
-                const getIcon = (title) => {
-                  const titleLower = title.toLowerCase();
-                  if (titleLower.includes('news')) return '📰';
-                  if (titleLower.includes('food') || titleLower.includes('dining')) return '🍽️';
-                  if (titleLower.includes('event')) return '🎉';
-                  if (titleLower.includes('community')) return '🏘️';
-                  if (titleLower.includes('garden')) return '🌱';
-                  if (titleLower.includes('work') || titleLower.includes('business')) return '🛠️';
-                  if (titleLower.includes('culture') || titleLower.includes('life')) return '🌀';
-                  if (titleLower.includes('interview')) return '🗣️';
-                  return '📋'; // Default icon
-                };
-                
-                return (
-                  <Link key={category._id} href={`/stories/category/${category._id}`}>
-                    <div className={`${colors[index % colors.length]} rounded-2xl p-6 text-center hover:scale-105 transition-transform group cursor-pointer`}>
-                      <div className="text-3xl mb-3">{getIcon(category.title)}</div>
-                      <h3 className="font-semibold group-hover:underline">{category.title}</h3>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        )}
-
-        {/* CTA Section */}
-        <section className="mt-16 bg-gradient-to-r from-primary/10 to-blue-100 rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Never Miss an Edition</h2>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Join 7,500+ locals who start their day with Sunland News. Get the latest stories, 
-            events, and everything happening in St. Lucie County delivered to your inbox.
-          </p>
-          <Link 
-            href="/subscribe"
-            className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors text-lg"
-          >
-            Subscribe Now
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </section>
       </div>
     </div>
   );
