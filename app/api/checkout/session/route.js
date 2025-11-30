@@ -7,6 +7,8 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+import { v4 as uuidv4 } from 'uuid';
+
 export async function GET(req) {
     const { searchParams } = new URL(req.url);
     const sessionId = searchParams.get('session_id');
@@ -24,27 +26,49 @@ export async function GET(req) {
             return NextResponse.json({ error: 'No email found in session' }, { status: 400 });
         }
 
-        // 2. Poll for the user in Supabase (webhook might be slightly delayed)
-        // We'll try 3 times with a 1-second delay
-        let user = null;
-        for (let i = 0; i < 5; i++) {
-            const { data, error } = await supabase
+        // 2. Check if user exists
+        let { data: user, error: fetchError } = await supabase
+            .from('users')
+            .select('calendar_token, id') // Select id as well for user_preferences
+            .eq('email', email)
+            .single();
+
+        // 3. If user doesn't exist (webhook failed or delayed), create them now
+        if (!user || !user.calendar_token) {
+            console.log(`User not found for ${email}, creating fallback record...`);
+
+            const calendarToken = uuidv4().replace(/-/g, '');
+
+            const { data: newUser, error: createError } = await supabase
                 .from('users')
-                .select('calendar_token')
-                .eq('email', email)
+                .upsert([
+                    {
+                        email,
+                        calendar_token: calendarToken,
+                        subscription_status: 'active',
+                        subscription_expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
+                        stripe_customer_id: session.customer,
+                        stripe_subscription_id: session.subscription
+                    },
+                ], { onConflict: 'email' })
+                .select()
                 .single();
 
-            if (data && data.calendar_token) {
-                user = data;
-                break;
+            if (createError) {
+                console.error('Error creating fallback user:', createError);
+                return NextResponse.json({ error: 'Failed to create user record' }, { status: 500 });
             }
 
-            // Wait 1 second before retrying
-            await new Promise(resolve => setTimeout(resolve, 1000));
-        }
+            // Create default preferences
+            await supabase.from('user_preferences').insert([
+                {
+                    user_id: newUser.id,
+                    interests: ["food", "music", "arts", "outdoors", "family"],
+                    location_preference: "all_slc",
+                },
+            ]);
 
-        if (!user || !user.calendar_token) {
-            return NextResponse.json({ error: 'Setup still processing. Please refresh in a moment.' }, { status: 404 });
+            user = newUser;
         }
 
         return NextResponse.json({ token: user.calendar_token });
