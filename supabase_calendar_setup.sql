@@ -48,21 +48,13 @@ CREATE TABLE IF NOT EXISTS events (
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- Magic links table (for passwordless updates)
-CREATE TABLE IF NOT EXISTS magic_links (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  token VARCHAR(100) UNIQUE NOT NULL,
-  expires_at TIMESTAMP NOT NULL,
-  used_at TIMESTAMP,
-  created_at TIMESTAMP DEFAULT NOW()
-);
+
 
 -- RLS Policies (Row Level Security)
 ALTER TABLE users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE user_preferences ENABLE ROW LEVEL SECURITY;
 ALTER TABLE events ENABLE ROW LEVEL SECURITY;
-ALTER TABLE magic_links ENABLE ROW LEVEL SECURITY;
+
 
 -- Allow public read access to events (for calendar feed)
 CREATE POLICY "Public events are viewable by everyone" 

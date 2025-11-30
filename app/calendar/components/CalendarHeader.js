@@ -18,9 +18,10 @@ export default function CalendarHeader() {
                     <Image
                         src="/images/sunlandnews-logo.png"
                         alt="Sunland News"
-                        width={120}
-                        height={40}
-                        className="h-8 w-auto"
+                        width={180}
+                        height={50}
+                        className="h-auto"
+                        priority
                     />
                 </Link>
                 {!isLoginPage && (
