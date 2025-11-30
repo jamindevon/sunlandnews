@@ -91,14 +91,29 @@ export async function POST(req) {
                             to: email,
                             subject: 'Welcome to Sunland Calendar! 📅',
                             html: `
-                        <h1>Your Calendar is Ready!</h1>
-                        <p>Thanks for joining Sunland Calendar. We're excited to help you discover the best local events.</p>
-                        <p><strong>Your Calendar Link:</strong></p>
-                        <p><a href="${setupUrl}">Click here to set up your calendar</a></p>
-                        <p>Or copy this link directly:</p>
-                        <code>${calendarUrl}</code>
-                        <p>If you have any questions, just reply to this email.</p>
-                        <p>- Ja'Min & The Sunland Team</p>
+                        <h1>Welcome to the Calendar Club! ☀️</h1>
+                        <p>You're in! Thanks for supporting local independent journalism and joining the Sunland News community.</p>
+                        
+                        <h2>🚀 Getting Started (It takes 2 minutes)</h2>
+                        <p>Your personalized calendar feed is ready. Here is how to set it up:</p>
+                        
+                        <ol>
+                            <li><strong><a href="${setupUrl}">Click here to customize your preferences</a></strong> (Select your interests, location, etc.)</li>
+                            <li>On that same page, you'll see a button to <strong>"Add to Calendar"</strong> (Works with Apple, Google, Outlook).</li>
+                        </ol>
+
+                        <p>Once added, your phone's calendar will automatically stay updated with the best local events matching your interests. No more searching!</p>
+
+                        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;" />
+
+                        <h3>💡 Quick Tip</h3>
+                        <p>You can change your preferences at any time by visiting your <a href="https://sunlandnews.com/calendar/dashboard">Dashboard</a>.</p>
+
+                        <p>If you have any trouble setting this up, just reply to this email and I'll help you out personally.</p>
+                        
+                        <p>Cheers,</p>
+                        <p><strong>Ja'Min & The Sunland Team</strong><br>
+                        <a href="https://sunlandnews.com">sunlandnews.com</a></p>
                     `
                         });
                         console.log('Welcome email sent to:', email);
