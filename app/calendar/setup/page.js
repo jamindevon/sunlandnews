@@ -79,18 +79,20 @@ function SetupContent() {
 
     const handleInterestChange = (interest) => {
         setPreferences(prev => {
-            const newInterests = prev.interests.includes(interest)
-                ? prev.interests.filter(i => i !== interest)
-                : [...prev.interests, interest];
+            const currentInterests = prev.interests || [];
+            const newInterests = currentInterests.includes(interest)
+                ? currentInterests.filter(i => i !== interest)
+                : [...currentInterests, interest];
             return { ...prev, interests: newInterests };
         });
     };
 
     const handleAvailabilityChange = (time) => {
         setPreferences(prev => {
-            const newAvailability = prev.availability.includes(time)
-                ? prev.availability.filter(t => t !== time)
-                : [...prev.availability, time];
+            const currentAvailability = prev.availability || [];
+            const newAvailability = currentAvailability.includes(time)
+                ? currentAvailability.filter(t => t !== time)
+                : [...currentAvailability, time];
             return { ...prev, availability: newAvailability };
         });
     };
@@ -227,13 +229,13 @@ function SetupContent() {
                             { id: 'Workshops', icon: '💡' },
                             { id: 'Community', icon: '🤝' }
                         ].map((item) => (
-                            <label key={item.id} className={`flex items-center justify-center flex-col p-6 rounded-2xl border-2 cursor-pointer transition-all bg-white hover:shadow-md ${preferences.interests.includes(item.id) ? 'border-black ring-1 ring-black' : 'border-gray-100'}`}>
+                            <label key={item.id} className={`flex items-center justify-center flex-col p-6 rounded-2xl border-2 cursor-pointer transition-all bg-white hover:shadow-md ${preferences.interests?.includes(item.id) ? 'border-black ring-1 ring-black' : 'border-gray-100'}`}>
                                 <span className="text-4xl mb-3">{item.icon}</span>
                                 <span className="font-bold text-gray-900">{item.id}</span>
                                 <input
                                     type="checkbox"
                                     className="hidden"
-                                    checked={preferences.interests.includes(item.id)}
+                                    checked={preferences.interests?.includes(item.id) || false}
                                     onChange={() => handleInterestChange(item.id)}
                                 />
                             </label>
@@ -270,13 +272,13 @@ function SetupContent() {
                             { id: 'Weekend Days', icon: '☀️' },
                             { id: 'Weekend Nights', icon: '🌙' }
                         ].map((item) => (
-                            <label key={item.id} className={`flex items-center justify-center flex-col p-6 rounded-2xl border-2 cursor-pointer transition-all bg-white hover:shadow-md ${preferences.availability.includes(item.id) ? 'border-black ring-1 ring-black' : 'border-gray-100'}`}>
+                            <label key={item.id} className={`flex items-center justify-center flex-col p-6 rounded-2xl border-2 cursor-pointer transition-all bg-white hover:shadow-md ${preferences.availability?.includes(item.id) ? 'border-black ring-1 ring-black' : 'border-gray-100'}`}>
                                 <span className="text-4xl mb-3">{item.icon}</span>
                                 <span className="font-bold text-gray-900">{item.id}</span>
                                 <input
                                     type="checkbox"
                                     className="hidden"
-                                    checked={preferences.availability.includes(item.id)}
+                                    checked={preferences.availability?.includes(item.id) || false}
                                     onChange={() => handleAvailabilityChange(item.id)}
                                 />
                             </label>

@@ -8,7 +8,7 @@ export default function CalendarLayout({ children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                     <Link href="/" className="flex-shrink-0">
                         <Image
-                            src="/images/sunland-logo-black.png"
+                            src="/images/sunlandnews-logo.png"
                             alt="Sunland News"
                             width={120}
                             height={40}

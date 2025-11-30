@@ -183,7 +183,7 @@ function DashboardContent() {
                         <div>
                             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Interests</h3>
                             <div className="flex flex-wrap gap-2">
-                                {preferences.interests.length > 0 ? (
+                                {preferences.interests?.length > 0 ? (
                                     preferences.interests.map(i => (
                                         <span key={i} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
                                             {i}

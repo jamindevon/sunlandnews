@@ -30,6 +30,11 @@ export default function Header() {
     };
   }, [dropdownRef]);
 
+  // Hide header on calendar pages (they have their own layout)
+  if (pathname?.startsWith('/calendar')) {
+    return null;
+  }
+
   const toggleMobileMenu = (e) => {
     if (e) e.stopPropagation();
     setMobileMenuOpen(!mobileMenuOpen);
