@@ -1,12 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function CalendarLoginPage() {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState('idle'); // idle, loading, success, error
     const [message, setMessage] = useState('');
+    const router = useRouter();
+
+    useEffect(() => {
+        const token = localStorage.getItem('calendarToken');
+        if (token) {
+            router.push('/calendar/dashboard');
+        }
+    }, [router]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
