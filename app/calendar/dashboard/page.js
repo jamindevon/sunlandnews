@@ -102,7 +102,7 @@ function DashboardContent() {
         }
     };
 
-    const handleLogout = () => {
+    const handleSignOut = () => {
         localStorage.removeItem('calendarToken');
         router.push('/calendar/login');
     };
@@ -115,91 +115,110 @@ function DashboardContent() {
         );
     }
 
-    if (!user) return null;
-
-    const calendarUrl = `${window.location.origin}/cal/${token}`;
-
     return (
         <div className="min-h-screen bg-gray-50 pb-12">
-            <div className="bg-white shadow">
-                <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div className="bg-white border-b border-gray-200 mb-8">
+                <div className="max-w-4xl mx-auto px-4 py-6 flex justify-between items-center">
                     <h1 className="text-2xl font-bold text-gray-900">Calendar Dashboard</h1>
-                    <button onClick={handleLogout} className="text-sm text-gray-500 hover:text-gray-900">
+                    <button onClick={handleSignOut} className="text-sm text-gray-500 hover:text-red-600 font-medium">
                         Sign Out
                     </button>
                 </div>
             </div>
 
-            <div className="container mx-auto max-w-4xl px-4 py-8 space-y-8">
+            <div className="max-w-4xl mx-auto px-4 space-y-6">
 
-                {/* Status Card */}
-                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                    <div className="flex items-center justify-between mb-4">
-                        <h2 className="text-lg font-bold text-gray-900">Subscription Status</h2>
-                        <span className={`px-3 py-1 rounded-full text-sm font-bold ${user.subscription_status === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                            {user.subscription_status?.toUpperCase()}
+                {/* Subscription Status */}
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                    <div className="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 className="text-lg font-bold text-gray-900">Subscription Status</h2>
+                            <p className="text-gray-500 text-sm">Member since: {user?.created_at ? new Date(user.created_at).toLocaleDateString() : 'N/A'}</p>
+                        </div>
+                        <span className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                            {user?.subscription_status || 'Active'}
                         </span>
                     </div>
-                    <p className="text-gray-600">
-                        Member since: {new Date(user.created_at).toLocaleDateString()}
-                    </p>
                 </div>
 
-                {/* Calendar Link Card */}
-                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                {/* Calendar Link */}
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                     <h2 className="text-lg font-bold text-gray-900 mb-4">Your Calendar Link</h2>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 mb-4">
                         <input
                             type="text"
                             readOnly
-                            value={calendarUrl}
-                            className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-600"
+                            value={`${window.location.origin}/cal/${token}`}
+                            className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-600 font-mono"
                         />
                         <button
-                            onClick={() => navigator.clipboard.writeText(calendarUrl)}
-                            className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-800"
+                            onClick={() => {
+                                navigator.clipboard.writeText(`${window.location.origin}/cal/${token}`);
+                                setMessage('Copied!');
+                                setTimeout(() => setMessage(''), 2000);
+                            }}
+                            className="bg-black text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-colors"
                         >
-                            Copy
+                            {message === 'Copied!' ? 'Copied!' : 'Copy'}
                         </button>
                     </div>
-                    <div className="mt-4">
-                        <Link href={`/calendar/setup?token=${token}`} className="text-primary font-bold hover:underline text-sm">
-                            View Setup Instructions &rarr;
-                        </Link>
-                    </div>
+                    <Link href={`/calendar/setup?token=${token}`} className="text-primary font-bold text-sm hover:underline">
+                        View Setup Instructions &rarr;
+                    </Link>
                 </div>
 
-                {/* Personalization Card */}
-                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                    <h2 className="text-lg font-bold text-gray-900 mb-6">Personalize Your Events</h2>
+                {/* Preferences Summary */}
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-lg font-bold text-gray-900">Your Preferences</h2>
+                        <Link
+                            href={`/calendar/setup?token=${token}&edit=true`}
+                            className="bg-primary/10 text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/20 transition-colors"
+                        >
+                            Edit Preferences
+                        </Link>
+                    </div>
 
-                    <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-3">What are you interested in?</label>
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                {['Food & Drink', 'Live Music', 'Arts & Culture', 'Family & Kids', 'Outdoors', 'Nightlife', 'Workshops'].map((interest) => (
-                                    <label key={interest} className="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-                                        <input
-                                            type="checkbox"
-                                            checked={preferences.interests.includes(interest)}
-                                            onChange={() => handleInterestChange(interest)}
-                                            className="w-5 h-5 text-primary rounded focus:ring-primary"
-                                        />
-                                        <span className="text-gray-700">{interest}</span>
-                                    </label>
-                                ))}
+                            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Interests</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {preferences.interests.length > 0 ? (
+                                    preferences.interests.map(i => (
+                                        <span key={i} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                                            {i}
+                                        </span>
+                                    ))
+                                ) : (
+                                    <span className="text-gray-400 text-sm italic">None selected</span>
+                                )}
                             </div>
                         </div>
 
-                        <div className="pt-4 border-t border-gray-100">
-                            <button
-                                onClick={handleSave}
-                                disabled={saving}
-                                className="w-full md:w-auto px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50"
-                            >
-                                {saving ? 'Saving...' : 'Save Preferences'}
-                            </button>
-                            {message && <span className="ml-4 text-green-600 font-medium">{message}</span>}
+                        <div>
+                            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Availability</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {preferences.availability?.length > 0 ? (
+                                    preferences.availability.map(i => (
+                                        <span key={i} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                                            {i}
+                                        </span>
+                                    ))
+                                ) : (
+                                    <span className="text-gray-400 text-sm italic">None selected</span>
+                                )}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Location</h3>
+                            <span className="text-gray-800 font-medium">
+                                {preferences.location_preference === 'fort_pierce' && 'Fort Pierce Only'}
+                                {preferences.location_preference === 'psl_fp' && 'PSL & Fort Pierce'}
+                                {preferences.location_preference === 'all_slc' && 'All St. Lucie County'}
+                                {preferences.location_preference === 'treasure_coast' && 'Treasure Coast'}
+                                {!preferences.location_preference && <span className="text-gray-400 text-sm italic">Not set</span>}
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,8 @@ function SetupContent() {
     const isNew = searchParams.get('new');
     const sessionId = searchParams.get('session_id');
 
+    const isEdit = searchParams.get('edit');
+
     const [fetchedToken, setFetchedToken] = useState(null);
     const [loading, setLoading] = useState(!!sessionId && !token);
     const [error, setError] = useState(null);
@@ -17,7 +19,7 @@ function SetupContent() {
     const [origin, setOrigin] = useState('');
 
     // Flow State
-    const [step, setStep] = useState(isNew ? 1 : 4); // 1: Interests, 2: Availability, 3: Location, 4: Complete
+    const [step, setStep] = useState(isNew || isEdit ? 1 : 4); // 1: Interests, 2: Availability, 3: Location, 4: Complete
     const [preferences, setPreferences] = useState({
         interests: [],
         availability: [],
@@ -29,6 +31,27 @@ function SetupContent() {
 
     useEffect(() => {
         setOrigin(window.location.origin);
+
+        // Fetch existing preferences if token is present
+        if (activeToken) {
+            const fetchPreferences = async () => {
+                try {
+                    const res = await fetch(`/api/user/preferences?token=${activeToken}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data.preferences) {
+                            setPreferences(prev => ({
+                                ...prev,
+                                ...data.preferences
+                            }));
+                        }
+                    }
+                } catch (err) {
+                    console.error('Failed to fetch preferences', err);
+                }
+            };
+            fetchPreferences();
+        }
 
         if (sessionId && !token) {
             const fetchToken = async () => {
@@ -52,7 +75,7 @@ function SetupContent() {
             };
             fetchToken();
         }
-    }, [sessionId, token]);
+    }, [sessionId, token, activeToken]);
 
     const handleInterestChange = (interest) => {
         setPreferences(prev => {
@@ -96,8 +119,13 @@ function SetupContent() {
             });
 
             if (res.ok) {
-                setStep(4);
-                window.scrollTo(0, 0);
+                if (isEdit) {
+                    // If editing, go back to dashboard
+                    window.location.href = '/calendar/dashboard';
+                } else {
+                    setStep(4);
+                    window.scrollTo(0, 0);
+                }
             } else {
                 alert('Failed to save preferences. Please try again.');
             }
