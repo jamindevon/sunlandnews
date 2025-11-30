@@ -9,11 +9,21 @@ function SetupContent() {
     const token = searchParams.get('token');
     const isNew = searchParams.get('new');
     const sessionId = searchParams.get('session_id');
+
     const [fetchedToken, setFetchedToken] = useState(null);
     const [loading, setLoading] = useState(!!sessionId && !token);
     const [error, setError] = useState(null);
     const [copied, setCopied] = useState(false);
     const [origin, setOrigin] = useState('');
+
+    // Flow State
+    // If isNew is present, we start at 'quiz'. Otherwise we show 'complete' (links).
+    const [step, setStep] = useState(isNew ? 'quiz' : 'complete');
+    const [preferences, setPreferences] = useState({
+        interests: [],
+        location_preference: 'all_slc'
+    });
+    const [saving, setSaving] = useState(false);
 
     const activeToken = token || fetchedToken;
 
@@ -28,8 +38,9 @@ function SetupContent() {
 
                     if (data.token) {
                         setFetchedToken(data.token);
-                        // Optional: Update URL without reloading to clean it up
+                        // Update URL but keep 'new' param so we stay in quiz mode
                         window.history.replaceState({}, '', `/calendar/setup?token=${data.token}&new=true`);
+                        setStep('quiz'); // Ensure we are in quiz mode for new sessions
                     } else {
                         setError(data.error || 'Failed to retrieve setup details.');
                     }
@@ -42,6 +53,37 @@ function SetupContent() {
             fetchToken();
         }
     }, [sessionId, token]);
+
+    const handleInterestChange = (interest) => {
+        setPreferences(prev => {
+            const newInterests = prev.interests.includes(interest)
+                ? prev.interests.filter(i => i !== interest)
+                : [...prev.interests, interest];
+            return { ...prev, interests: newInterests };
+        });
+    };
+
+    const handleQuizSubmit = async () => {
+        setSaving(true);
+        try {
+            const res = await fetch('/api/user/preferences', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: activeToken, preferences }),
+            });
+
+            if (res.ok) {
+                setStep('complete');
+                window.scrollTo(0, 0);
+            } else {
+                alert('Failed to save preferences. Please try again.');
+            }
+        } catch (error) {
+            alert('Error saving preferences.');
+        } finally {
+            setSaving(false);
+        }
+    };
 
     const calendarUrl = activeToken ? `${origin}/cal/${activeToken}` : '';
     const webcalUrl = calendarUrl.replace(/^https?:\/\//, 'webcal://');
@@ -93,23 +135,74 @@ function SetupContent() {
         );
     }
 
+    // STEP 1: THE QUIZ
+    if (step === 'quiz') {
+        return (
+            <div className="min-h-screen bg-white">
+                <div className="container mx-auto max-w-2xl px-4 py-16">
+                    <div className="mb-12 text-center">
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Let's Personalize Your Calendar
+                        </h1>
+                        <p className="text-xl text-gray-600">
+                            Select what you're interested in so we can curate the best events for you.
+                        </p>
+                    </div>
+
+                    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+                        <div className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {['Food & Drink', 'Live Music', 'Arts & Culture', 'Family & Kids', 'Outdoors', 'Nightlife', 'Workshops', 'Community'].map((interest) => (
+                                    <label key={interest} className={`flex items-center gap-4 p-4 border rounded-xl cursor-pointer transition-all ${preferences.interests.includes(interest) ? 'border-primary bg-primary/5' : 'border-gray-200 hover:border-primary/50'}`}>
+                                        <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${preferences.interests.includes(interest) ? 'border-primary bg-primary' : 'border-gray-300'}`}>
+                                            {preferences.interests.includes(interest) && <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
+                                        </div>
+                                        <input
+                                            type="checkbox"
+                                            className="hidden"
+                                            checked={preferences.interests.includes(interest)}
+                                            onChange={() => handleInterestChange(interest)}
+                                        />
+                                        <span className="text-lg font-medium text-gray-900">{interest}</span>
+                                    </label>
+                                ))}
+                            </div>
+
+                            <div className="pt-6">
+                                <button
+                                    onClick={handleQuizSubmit}
+                                    disabled={saving || preferences.interests.length === 0}
+                                    className="w-full py-4 bg-primary text-white text-xl font-bold rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-primary/20"
+                                >
+                                    {saving ? 'Saving...' : 'Get My Calendar Link →'}
+                                </button>
+                                {preferences.interests.length === 0 && (
+                                    <p className="text-center text-sm text-gray-500 mt-3">Please select at least one interest.</p>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // STEP 2: THE LINKS (COMPLETE)
     return (
         <div className="min-h-screen bg-white">
             <div className="container mx-auto max-w-2xl px-4 py-16">
 
-                {isNew && (
-                    <div className="mb-12 text-center">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 text-3xl mb-6">
-                            🎉
-                        </div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            You're in!
-                        </h1>
-                        <p className="text-xl text-gray-600">
-                            Your personalized calendar is ready.
-                        </p>
+                <div className="mb-12 text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 text-3xl mb-6">
+                        🎉
                     </div>
-                )}
+                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        You're All Set!
+                    </h1>
+                    <p className="text-xl text-gray-600">
+                        Here is your personalized calendar link.
+                    </p>
+                </div>
 
                 <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden mb-12">
                     <div className="p-8 bg-gray-50 border-b border-gray-100 text-center">
