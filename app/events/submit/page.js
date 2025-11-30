@@ -81,7 +81,7 @@ export default function SubmitEventPage() {
                 </div>
             </section>
 
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto px-4">
                 <form onSubmit={handleSubmit} className="space-y-12">
 
                     {/* Honeypot Field - Hidden */}
