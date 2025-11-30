@@ -60,17 +60,40 @@ export async function POST(req) {
             return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
         }
 
-        // Upsert Preferences
-        const { error: upsertError } = await supabase
+        // Check if preferences exist
+        const { data: existingPref } = await supabase
             .from('user_preferences')
-            .upsert({
-                user_id: user.id,
-                interests: preferences.interests,
-                location_preference: preferences.location_preference
-            }, { onConflict: 'user_id' });
+            .select('id')
+            .eq('user_id', user.id)
+            .single();
 
-        if (upsertError) {
-            console.error('Error saving preferences:', upsertError);
+        let error;
+        if (existingPref) {
+            // Update
+            const { error: updateError } = await supabase
+                .from('user_preferences')
+                .update({
+                    interests: preferences.interests,
+                    availability: preferences.availability,
+                    location_preference: preferences.location_preference
+                })
+                .eq('id', existingPref.id);
+            error = updateError;
+        } else {
+            // Insert
+            const { error: insertError } = await supabase
+                .from('user_preferences')
+                .insert({
+                    user_id: user.id,
+                    interests: preferences.interests,
+                    availability: preferences.availability,
+                    location_preference: preferences.location_preference
+                });
+            error = insertError;
+        }
+
+        if (error) {
+            console.error('Error saving preferences:', error);
             return NextResponse.json({ error: 'Failed to save' }, { status: 500 });
         }
 
