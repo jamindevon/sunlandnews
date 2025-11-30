@@ -101,7 +101,7 @@ export default function HomePage() {
                   : 'bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30'
                   }`}
               >
-                {isSubmitting ? 'Joining...' : 'Get tomorrow’s issue'}
+                {isSubmitting ? 'Joining...' : 'Send me the news'}
               </button>
               <p className="text-sm text-gray-400 mt-2">
                 Join 10,000+ locals • 1-tap unsubscribe • Zero spam
