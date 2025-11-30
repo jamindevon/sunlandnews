@@ -1,11 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function CalendarOffer() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem('calendarToken');
+        if (token) {
+            router.push('/calendar/dashboard');
+        }
+    }, [router]);
 
     const handlePurchase = async () => {
         setLoading(true);

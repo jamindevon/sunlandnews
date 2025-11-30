@@ -30,8 +30,9 @@ export default function Header() {
     };
   }, [dropdownRef]);
 
-  // Hide header on calendar pages (they have their own layout)
-  if (pathname?.startsWith('/calendar')) {
+  // Hide header on calendar sub-pages (dashboard, login, setup)
+  // But SHOW it on the main offer page (/calendar)
+  if (pathname?.startsWith('/calendar/')) {
     return null;
   }
 
