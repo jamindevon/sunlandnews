@@ -128,6 +128,8 @@ export async function GET(req, { params }) {
                 'X-Debug-DB-Url': supabaseUrl.substring(0, 20) + '...',
                 'X-Debug-Error-Count': errorCount.toString(),
                 'X-Debug-Last-Error': lastError,
+                'X-Debug-Calendar-Events-Count': calendar.events().length.toString(),
+                'X-Debug-First-Date': finalEvents[0]?.start_datetime || 'N/A',
             },
         });
     } catch (error) {
@@ -135,3 +137,4 @@ export async function GET(req, { params }) {
         return new NextResponse(`Internal Server Error: ${error.message}\nStack: ${error.stack}`, { status: 500 });
     }
 }
+
