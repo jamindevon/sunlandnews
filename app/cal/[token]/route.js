@@ -107,7 +107,7 @@ export async function GET(req, { params }) {
                     description: event.description,
                     location: event.location_name + (event.location_address ? `, ${event.location_address}` : ''),
                     url: event.url ? event.url.replace('http://', 'https://') : '',
-                    categories: event.categories || [],
+                    categories: (event.categories || []).map(c => ({ name: c })),
                 });
             } catch (err) {
                 console.error('Skipping invalid event:', event.id, err);
