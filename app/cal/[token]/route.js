@@ -95,6 +95,9 @@ export async function GET(req, { params }) {
             ttl: 60 * 60, // 1 hour
         });
 
+        let errorCount = 0;
+        let lastError = '';
+
         finalEvents.forEach(event => {
             try {
                 calendar.createEvent({
@@ -108,6 +111,8 @@ export async function GET(req, { params }) {
                 });
             } catch (err) {
                 console.error('Skipping invalid event:', event.id, err);
+                errorCount++;
+                lastError = err.message;
             }
         });
 
@@ -121,6 +126,8 @@ export async function GET(req, { params }) {
                 'X-Debug-Events-Filtered': filteredEvents.length.toString(),
                 'X-Debug-Final-Count': finalEvents.length.toString(),
                 'X-Debug-DB-Url': supabaseUrl.substring(0, 20) + '...',
+                'X-Debug-Error-Count': errorCount.toString(),
+                'X-Debug-Last-Error': lastError,
             },
         });
     } catch (error) {
