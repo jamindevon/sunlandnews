@@ -120,7 +120,7 @@ export async function GET(req, { params }) {
             summary: event.title,
             description: event.description,
             location: event.location_name + (event.location_address ? `, ${event.location_address}` : ''),
-            url: event.url,
+            url: event.url?.replace('http://', 'https://'),
             categories: event.categories || [],
         });
     });

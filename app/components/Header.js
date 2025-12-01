@@ -64,7 +64,7 @@ export default function Header() {
           </div>
 
           <button
-            className="md:hidden flex flex-col space-y-1.5 p-2 relative z-[60]"
+            className="lg:hidden flex flex-col space-y-1.5 p-2 relative z-[60]"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -73,9 +73,9 @@ export default function Header() {
             <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
           </button>
 
-          <nav className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent z-50 shadow-lg md:shadow-none transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 max-h-[80vh] overflow-y-auto' : 'opacity-0 max-h-0 md:opacity-100 md:max-h-none overflow-hidden md:overflow-visible'}`}>
-            <ul className="flex flex-col md:flex-row md:items-center py-4 md:py-0 px-4 md:px-0 md:space-x-8">
-              <li className="py-2 md:py-0">
+          <nav className={`absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-white lg:bg-transparent z-50 shadow-lg lg:shadow-none transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 max-h-[80vh] overflow-y-auto' : 'opacity-0 max-h-0 lg:opacity-100 lg:max-h-none overflow-hidden lg:overflow-visible'}`}>
+            <ul className="flex flex-col lg:flex-row lg:items-center py-4 lg:py-0 px-4 lg:px-0 lg:space-x-8">
+              <li className="py-2 lg:py-0">
                 <Link
                   href="/"
                   className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/' ? 'text-primary' : ''}`}
@@ -85,7 +85,7 @@ export default function Header() {
                 </Link>
               </li>
 
-              <li className="py-2 md:py-0">
+              <li className="py-2 lg:py-0">
                 <Link
                   href="/news"
                   className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/news' || pathname.startsWith('/news') || pathname.startsWith('/stories') || pathname.startsWith('/newsletter') ? 'text-primary' : ''}`}
@@ -95,7 +95,7 @@ export default function Header() {
                 </Link>
               </li>
 
-              <li className="py-2 md:py-0">
+              <li className="py-2 lg:py-0">
                 <Link
                   href="/latest"
                   className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/latest' ? 'text-primary' : ''}`}
@@ -105,7 +105,7 @@ export default function Header() {
                 </Link>
               </li>
 
-              <li className="py-2 md:py-0">
+              <li className="py-2 lg:py-0">
                 <Link
                   href="/calendar"
                   className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/calendar' ? 'text-primary' : ''}`}
@@ -147,7 +147,7 @@ export default function Header() {
                 </div>
               </li>
 
-              <li className="py-2 md:py-0">
+              <li className="py-2 lg:py-0">
                 <Link
                   href="/about"
                   className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/about' ? 'text-primary' : ''}`}
