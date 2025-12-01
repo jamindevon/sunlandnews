@@ -116,6 +116,11 @@ export async function GET(req, { params }) {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
                 'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+                'X-Debug-User-ID': user.id,
+                'X-Debug-Events-Total': events.length.toString(),
+                'X-Debug-Events-Filtered': filteredEvents.length.toString(),
+                'X-Debug-Final-Count': finalEvents.length.toString(),
+                'X-Debug-DB-Url': supabaseUrl.substring(0, 20) + '...',
             },
         });
     } catch (error) {
