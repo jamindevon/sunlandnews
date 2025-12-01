@@ -107,7 +107,11 @@ export async function GET(req, { params }) {
                     description: event.description,
                     location: event.location_name + (event.location_address ? `, ${event.location_address}` : ''),
                     url: event.url ? event.url.replace('http://', 'https://') : '',
-                    categories: (event.categories || []).map(c => ({ name: c })),
+                    categories: (Array.isArray(event.categories) ? event.categories : []).map(c => {
+                        if (typeof c === 'string') return { name: c };
+                        if (typeof c === 'object' && c?.name) return c;
+                        return { name: String(c) };
+                    }),
                 });
             } catch (err) {
                 console.error('Skipping invalid event:', event.id, err);
@@ -130,6 +134,7 @@ export async function GET(req, { params }) {
                 'X-Debug-Last-Error': lastError,
                 'X-Debug-Calendar-Events-Count': calendar.events().length.toString(),
                 'X-Debug-First-Date': finalEvents[0]?.start_datetime || 'N/A',
+                'X-Debug-First-Categories': JSON.stringify(finalEvents[0]?.categories || []),
             },
         });
     } catch (error) {
