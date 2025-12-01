@@ -3,13 +3,23 @@ import { createClient } from '@supabase/supabase-js';
 import ical from 'ical-generator';
 
 // Initialize Supabase client
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
+// Initialize Supabase client inside handler to catch errors
+// const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+// const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+// const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 export async function GET(req, { params }) {
     try {
+        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+        const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+        if (!supabaseUrl || !supabaseServiceKey) {
+            console.error('Missing Supabase Env Vars:', { url: !!supabaseUrl, key: !!supabaseServiceKey });
+            return new NextResponse(`Configuration Error: Missing Supabase Environment Variables. URL: ${!!supabaseUrl}, Key: ${!!supabaseServiceKey}`, { status: 500 });
+        }
+
+        const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
         const { token } = params;
 
         if (!token) {
