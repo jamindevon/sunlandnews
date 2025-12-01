@@ -108,7 +108,9 @@ export async function GET(req, { params }) {
     // 5. Generate ICS
     const calendar = ical({
         name: 'Sunland News Events',
+        prodId: { company: 'Sunland News', product: 'Calendar', language: 'EN' },
         url: `https://sunlandnews.com/cal/${token}`,
+        ttl: 60 * 60, // 1 hour
     });
 
     finalEvents.forEach(event => {
@@ -127,7 +129,7 @@ export async function GET(req, { params }) {
     return new NextResponse(calendar.toString(), {
         headers: {
             'Content-Type': 'text/calendar; charset=utf-8',
-            'Content-Disposition': `attachment; filename="sunland-events.ics"`,
+            'Cache-Control': 'public, max-age=3600, s-maxage=3600',
         },
     });
 }

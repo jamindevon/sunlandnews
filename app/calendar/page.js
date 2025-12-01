@@ -40,7 +40,7 @@ export default function CalendarOffer() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="pt-8 md:pt-24 pb-16 px-4">
+            <section className="pt-8 md:pt-12 pb-16 px-4">
                 <div className="container mx-auto max-w-4xl text-center">
                     <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-primary text-sm font-bold mb-6 tracking-wide uppercase">
                         Founder Offer
