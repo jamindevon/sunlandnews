@@ -69,3 +69,14 @@
   Special visitor flying in for the night, FREE kids Christmas crafts, drinks, and fun hosted by Main Street Fort Pierce.
 
 ---
+
+---
+
+## System Test Event (Live Verification)
+- **Date:** 2025-12-03
+- **Time:** 8:00 PM - 9:00 PM
+- **Location:** Virtual Test Location
+- **Categories:** System Test
+- **Link:** https://sunlandnews.com
+- **Description:**
+  This is a test event to verify that the calendar feed is syncing correctly. If you see this, the fix worked!

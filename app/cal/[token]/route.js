@@ -112,6 +112,9 @@ export async function GET(req, { params }) {
                         if (typeof c === 'object' && c?.name) return c;
                         return { name: String(c) };
                     }),
+                    alarms: [
+                        { type: 'display', trigger: 60 * 60 }, // 1 hour before (in seconds)
+                    ],
                 });
             } catch (err) {
                 console.error('Skipping invalid event:', event.id, err);
@@ -125,16 +128,6 @@ export async function GET(req, { params }) {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
                 'Cache-Control': 'public, max-age=3600, s-maxage=3600',
-                'X-Debug-User-ID': user.id,
-                'X-Debug-Events-Total': events.length.toString(),
-                'X-Debug-Events-Filtered': filteredEvents.length.toString(),
-                'X-Debug-Final-Count': finalEvents.length.toString(),
-                'X-Debug-DB-Url': supabaseUrl.substring(0, 20) + '...',
-                'X-Debug-Error-Count': errorCount.toString(),
-                'X-Debug-Last-Error': lastError,
-                'X-Debug-Calendar-Events-Count': calendar.events().length.toString(),
-                'X-Debug-First-Date': finalEvents[0]?.start_datetime || 'N/A',
-                'X-Debug-First-Categories': JSON.stringify(finalEvents[0]?.categories || []),
             },
         });
     } catch (error) {
