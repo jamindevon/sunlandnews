@@ -38,10 +38,17 @@ END:VEVENT\r
 
     icsContent += "END:VCALENDAR";
 
-    return new Response(icsContent, {
+    const encoder = new TextEncoder();
+    const buffer = encoder.encode(icsContent);
+
+    return new Response(buffer, {
         headers: {
             'Content-Type': 'text/calendar; charset=utf-8',
+            'Content-Length': buffer.byteLength,
             'Content-Disposition': 'inline; filename="sunland-events.ics"',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
         },
     });
 }
