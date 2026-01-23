@@ -14,62 +14,62 @@ export default function NewsQuiz() {
   // Weekly quiz data - easy to update each week
   const quizData = {
     title: "Sunland News Weekly Quiz 🌅",
-    subtitle: "How well were you paying attention this week? Test your knowledge!",
+    subtitle: "Week of January 12, 2026",
     questions: [
       {
-        question: "What big vote happened Tuesday night at the St. Lucie County School Board?",
+        question: "How much does St. Lucie County's half-cent sales tax raise annually across all municipalities?",
         options: [
-          "New school construction approval",
-          "Allowing high school athletes to profit from NIL (Name, Image, and Likeness)",
-          "Teacher salary increases",
-          "School calendar changes"
+          "$2.8 million",
+          "$15.6 million",
+          "$31.8 million",
+          "$47.3 million"
         ],
-        correctAnswer: 1, // Index of correct answer (0-based)
-        explanation: "The School Board voted on allowing high school athletes to make money from endorsements, social media, autograph signings, and appearances through NIL deals."
+        correctAnswer: 2, // $31.8 million
+        explanation: "The half-cent sales tax raises approximately $31.8 million annually for infrastructure projects."
       },
       {
-        question: "How many airlines are coming to Fort Pierce's Treasure Coast International Airport?",
+        question: "How many teacher vacancies does St. Lucie County currently have halfway through the school year?",
         options: [
-          "One",
-          "Two",
-          "Three",
-          "Four"
+          "15",
+          "128",
+          "234",
+          "117"
         ],
-        correctAnswer: 1,
-        explanation: "Commissioner Cathy Townsend announced two commercial airlines will be revealed by month's end, with one offering northeastern flights and another serving the Bahamas."
+        correctAnswer: 1, // 128
+        explanation: "There are currently 128 teacher vacancies in the county."
       },
       {
-        question: "Who did St. Lucie County commissioners unanimously choose as the new County Attorney?",
+        question: "What is Fort Pierce's new Police Chief David Smith's annual salary?",
         options: [
-          "Michael Mortell",
-          "Dan McIntyre",
-          "Katherine Barbieri",
-          "Cindy Miller"
+          "$140,000",
+          "$170,000",
+          "$190,000",
+          "$210,000"
         ],
-        correctAnswer: 2,
-        explanation: "Commissioners promoted interim County Attorney Katherine Barbieri after a rocky search that cost taxpayers $24,500 and saw multiple rounds of applicants."
+        correctAnswer: 2, // $190,000
+        explanation: "The new Police Chief's annual salary is set at $190,000."
       },
       {
-        question: "How much is the Indian River Lagoon worth in annual economic impact according to a new study?",
+        question: "By how many votes did Chris Dzadovsky win the Fort Pierce District 2 special election?",
         options: [
-          "$10 billion",
-          "$15 billion",
-          "$28.3 billion",
-          "$50 billion"
+          "15 votes",
+          "31 votes",
+          "56 votes",
+          "128 votes"
         ],
-        correctAnswer: 2,
-        explanation: "The new study shows the lagoon generates $28.3 billion annually and supports over 128,000 jobs across seven counties - four times higher than the 2016 estimate."
+        correctAnswer: 1, // 31 votes
+        explanation: "Chris Dzadovsky won the special election by a margin of 31 votes."
       },
       {
-        question: "How much financing has SELF (Solar and Energy Loan Fund) provided to help families with home repairs?",
+        question: "What is the starting fine for holding a phone while driving in a school or construction zone under the proposed Florida bill?",
         options: [
-          "$30 million",
-          "$45 million",
-          "$60 million",
-          "$75 million"
+          "$50",
+          "$100",
+          "$150",
+          "$200"
         ],
-        correctAnswer: 2,
-        explanation: "SELF, started in St. Lucie County 15 years ago, has reached $60 million in financing helping 12,000 families with home repairs, hurricane-proofing, and energy upgrades."
+        correctAnswer: 2, // $150
+        explanation: "The proposed bill sets the starting fine at $150 for handheld phone use in these zones."
       }
     ]
   };
@@ -119,7 +119,7 @@ export default function NewsQuiz() {
     const text = `I scored ${score}/${quizData.questions.length} on this week's Sunland News Quiz! ${getScoreMessage(score, quizData.questions.length)}`;
     const url = window.location.href;
 
-    switch(platform) {
+    switch (platform) {
       case 'twitter':
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
         break;
@@ -278,18 +278,16 @@ export default function NewsQuiz() {
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
-                  selectedAnswer === index
+                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${selectedAnswer === index
                     ? 'border-blue-600 bg-blue-50 shadow-md'
                     : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                }`}
+                  }`}
               >
                 <div className="flex items-center gap-3">
-                  <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                    selectedAnswer === index
+                  <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${selectedAnswer === index
                       ? 'border-blue-600 bg-blue-600'
                       : 'border-gray-300'
-                  }`}>
+                    }`}>
                     {selectedAnswer === index && (
                       <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -307,11 +305,10 @@ export default function NewsQuiz() {
         <button
           onClick={handleNext}
           disabled={selectedAnswer === ''}
-          className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${
-            selectedAnswer === ''
+          className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${selectedAnswer === ''
               ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
               : 'bg-gradient-to-r from-blue-600 to-orange-500 text-white hover:from-blue-700 hover:to-orange-600 shadow-lg transform hover:scale-105'
-          }`}
+            }`}
         >
           {currentQuestion < quizData.questions.length - 1 ? 'Next Question' : 'See Results'}
         </button>
