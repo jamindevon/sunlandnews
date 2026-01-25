@@ -2,14 +2,8 @@
 import { events } from '@/app/data/events';
 
 export async function GET(request) {
-    const { searchParams } = new URL(request.url);
-    const typesParam = searchParams.get('types'); // Comma separated tags
-    const selectedTypes = typesParam ? typesParam.split(',') : [];
-
-    const filteredEvents = events.filter(event =>
-        selectedTypes.length === 0 ||
-        event.tags.some(tag => selectedTypes.includes(tag))
-    );
+    // Always return all events for the "All Access" feed
+    // We can add filtering back later if needed, but for now we want everything.
 
     let icsContent = `BEGIN:VCALENDAR\r
 VERSION:2.0\r
@@ -19,7 +13,7 @@ METHOD:PUBLISH\r
 X-WR-CALNAME:Sunland Tailored Events\r
 `;
 
-    filteredEvents.forEach(event => {
+    events.forEach(event => {
         const start = event.gcalTime.split('/')[0];
         const end = event.gcalTime.split('/')[1];
         const now = new Date().toISOString().replace(/[-:.]/g, '').slice(0, 15) + 'Z';

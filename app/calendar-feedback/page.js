@@ -3,14 +3,9 @@
 import { useState, useEffect } from 'react';
 import { events } from '@/app/data/events';
 
-export default function CalendarFeedbackProp() {
-    const [step, setStep] = useState(0); // 0 = Intro, 1-4 = Questions, 5 = Success
-    const [formData, setFormData] = useState({
-        autoAdd: '',
-        eventTypes: [],
-        pricePoint: '',
-        email: ''
-    });
+export default function CalendarFeedback() {
+    const [hasSubmitted, setHasSubmitted] = useState(false);
+    const [email, setEmail] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [host, setHost] = useState('');
 
@@ -19,31 +14,6 @@ export default function CalendarFeedbackProp() {
             setHost(window.location.host);
         }
     }, []);
-
-    // Filter events based on selected preferences
-    const filteredEvents = events.filter(event =>
-        formData.eventTypes.length === 0 || // Show all if no filter selected (fallback)
-        event.tags.some(tag => formData.eventTypes.includes(tag))
-    );
-
-    const handleEventTypeChange = (type) => {
-        setFormData(prev => {
-            const newTypes = prev.eventTypes.includes(type)
-                ? prev.eventTypes.filter(t => t !== type)
-                : [...prev.eventTypes, type];
-            return { ...prev, eventTypes: newTypes };
-        });
-    };
-
-    const nextStep = () => {
-        setStep(prev => prev + 1);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    const prevStep = () => {
-        setStep(prev => prev - 1);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -56,31 +26,42 @@ export default function CalendarFeedbackProp() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    name: 'Calendar Feedback User',
-                    email: formData.email,
-                    subject: 'Calendar Club Feedback Quiz',
-                    message: `
-            Q1 (Auto-add tailored events): ${formData.autoAdd}
-            Q2 (Event Types): ${formData.eventTypes.join(', ')}
-            Q3 (Price Point): ${formData.pricePoint}
-            Email: ${formData.email}
-          `
+                    name: 'Calendar Club Interested User',
+                    email: email,
+                    subject: 'Calendar Club Signup',
+                    message: `User signed up for Calendar Club access.\nEmail: ${email}`
                 }),
             });
 
             if (response.ok) {
-                setStep(5); // Success step
+                setHasSubmitted(true);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
                 alert('Something went wrong. Please try again.');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Error submitting feedback. Please try again.');
+            alert('Error submitting. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
     };
+
+    // Generate URLs for subscription (No filters)
+    const getSubscriptionUrls = () => {
+        const protocol = typeof window !== 'undefined' && window.location.protocol === 'https:' ? 'https' : 'http';
+        const feedUrl = `${protocol}://${host}/api/calendar-feed`;
+
+        // Webcal for Apple/Outlook
+        const webcalUrl = feedUrl.replace(/^http/, 'webcal');
+
+        // Google Import
+        const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(feedUrl)}`;
+
+        return { webcalUrl, googleUrl, feedUrl };
+    };
+
+    const { webcalUrl, googleUrl, feedUrl } = getSubscriptionUrls();
 
     const getGoogleCalendarUrl = (event) => {
         const baseUrl = "https://calendar.google.com/calendar/render";
@@ -94,193 +75,52 @@ export default function CalendarFeedbackProp() {
         return `${baseUrl}?${params.toString()}`;
     };
 
-    // Generate URLs for subscription
-    const getSubscriptionUrls = () => {
-        const typesParams = formData.eventTypes.join(',');
-        const protocol = typeof window !== 'undefined' && window.location.protocol === 'https:' ? 'https' : 'http';
-        const feedUrl = `${protocol}://${host}/api/calendar-feed?types=${encodeURIComponent(typesParams)}`;
-
-        // Webcal for Apple/Outlook
-        const webcalUrl = feedUrl.replace(/^http/, 'webcal');
-
-        // Google Import (Needs public URL, so we warn if localhost)
-        const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(feedUrl)}`;
-
-        return { webcalUrl, googleUrl, feedUrl };
-    };
-
-    const { webcalUrl, googleUrl, feedUrl } = getSubscriptionUrls();
-
     return (
-        <div className="min-h-screen bg-neutral-50 font-sans flex items-center justify-center p-4">
-            <div className="max-w-xl w-full">
+        <div className="min-h-screen bg-gray-50 font-sans p-4">
+            <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
 
-                {/* Progress Bar (Only for quiz steps) */}
-                {step > 0 && step < 5 && (
-                    <div className="mb-6">
-                        <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                            <div
-                                className="h-full bg-blue-600 transition-all duration-500 ease-out"
-                                style={{ width: `${(step / 4) * 100}%` }}
-                            ></div>
-                        </div>
-                        <p className="text-right text-xs text-gray-500 mt-1">Step {step} of 4</p>
-                    </div>
-                )}
+                {/* Header */}
+                <div className="bg-blue-600 p-8 text-center">
+                    <h1 className="text-3xl font-bold text-white mb-2">Sunland Calendar Club</h1>
+                    <p className="text-blue-100 text-lg">Never miss a Fort Pierce event again.</p>
+                </div>
 
-                {/* Step 0: Intro */}
-                {step === 0 && (
-                    <div className="bg-white rounded-3xl shadow-xl p-8 text-center border border-gray-100">
-                        <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
-                            📅
-                        </div>
-                        <h1 className="text-3xl font-bold text-gray-900 mb-4">Sunland Calendar Club</h1>
-                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            We're building a tool to auto-add only the events <span className="font-bold text-gray-800">you actually care about</span> to your calendar. <br /><br />
-                            Take this 30-second quiz to help us build it — and get a custom event list for this week instantly.
-                        </p>
-                        <button
-                            onClick={nextStep}
-                            className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition-all"
-                        >
-                            Start Quick Quiz
-                        </button>
-                    </div>
-                )}
-
-                {/* Step 1: Auto-add willingness */}
-                {step === 1 && (
-                    <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                            Would you pay for a service that auto-adds <span className="text-blue-600">tailored</span> events to your calendar?
-                        </h2>
-                        <div className="space-y-4">
-                            {['Yes, definitely', 'Maybe, depends on price', 'No, not interested'].map((opt) => (
-                                <button
-                                    key={opt}
-                                    onClick={() => {
-                                        setFormData({ ...formData, autoAdd: opt });
-                                        nextStep();
-                                    }}
-                                    className="w-full p-5 rounded-xl border-2 border-gray-100 text-left text-lg font-medium hover:border-blue-500 hover:bg-blue-50 transition-all flex items-center justify-between group"
-                                >
-                                    {opt}
-                                    <span className="text-gray-300 group-hover:text-blue-500">→</span>
-                                </button>
-                            ))}
-                        </div>
-                        <button onClick={prevStep} className="mt-6 text-gray-400 text-sm hover:text-gray-600">Back</button>
-                    </div>
-                )}
-
-                {/* Step 2: Event Types */}
-                {step === 2 && (
-                    <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                            What do you care about?
-                        </h2>
-                        <p className="text-gray-500 mb-6">Select all that apply. We'll filter this week's events based on this.</p>
-
-                        <div className="grid grid-cols-2 gap-3 mb-8">
-                            {['Food & Drink', 'Live Music', 'Family/Kids', 'Arts & Culture', 'Outdoor/Nature', 'Nightlife', 'Networking', 'Free Events'].map((type) => (
-                                <button
-                                    key={type}
-                                    onClick={() => handleEventTypeChange(type)}
-                                    className={`p-4 rounded-xl border text-sm font-semibold transition-all ${formData.eventTypes.includes(type)
-                                            ? 'bg-gray-900 text-white border-gray-900 shadow-lg scale-[1.02]'
-                                            : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
-                                        }`}
-                                >
-                                    {type}
-                                </button>
-                            ))}
-                        </div>
-
-                        <button
-                            onClick={nextStep}
-                            disabled={formData.eventTypes.length === 0}
-                            className="w-full py-4 bg-gray-900 text-white rounded-xl font-bold shadow-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                        >
-                            Continue
-                        </button>
-                        <button onClick={prevStep} className="mt-4 text-center w-full text-gray-400 text-sm hover:text-gray-600">Back</button>
-                    </div>
-                )}
-
-                {/* Step 3: Price Point */}
-                {step === 3 && (
-                    <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                            If this saved you time every week, what's a fair monthly price?
-                        </h2>
-                        <div className="space-y-3">
-                            {['$1 - $5', '$5 - $10', '$10 - $15', '$15+'].map((price) => (
-                                <button
-                                    key={price}
-                                    onClick={() => {
-                                        setFormData({ ...formData, pricePoint: price });
-                                        nextStep();
-                                    }}
-                                    className="w-full p-5 rounded-xl border-2 border-gray-100 text-left text-lg font-medium hover:border-green-500 hover:bg-green-50 transition-all flex items-center justify-between group"
-                                >
-                                    {price}
-                                    <span className="text-gray-300 group-hover:text-green-500 font-bold">$</span>
-                                </button>
-                            ))}
-                        </div>
-                        <button onClick={prevStep} className="mt-6 text-gray-400 text-sm hover:text-gray-600">Back</button>
-                    </div>
-                )}
-
-                {/* Step 4: Email & Submit */}
-                {step === 4 && (
-                    <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            Last thing!
-                        </h2>
-                        <p className="text-gray-600 mb-6">
-                            Drop your email to get your <span className="font-bold text-blue-600">custom event list</span> and early access if we build this.
-                        </p>
-
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type="email"
-                                required
-                                placeholder="your@email.com"
-                                value={formData.email}
-                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className="w-full p-5 rounded-xl border-2 border-gray-200 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all outline-none text-lg mb-6"
-                            />
-
-                            <button
-                                type="submit"
-                                disabled={isSubmitting || !formData.email}
-                                className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all disabled:opacity-50"
-                            >
-                                {isSubmitting ? 'Generating...' : 'Get My Custom Events ->'}
-                            </button>
-                        </form>
-                        <button onClick={prevStep} className="mt-6 w-full text-center text-gray-400 text-sm hover:text-gray-600">Back</button>
-                    </div>
-                )}
-
-                {/* Step 5: Success & Results */}
-                {step === 5 && (
-                    <div className="max-w-2xl w-full mx-auto">
-                        <div className="bg-green-50 rounded-2xl p-8 mb-8 text-center border border-green-100 animate-fade-in">
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
-                                ✅
-                            </div>
-                            <h3 className="text-2xl font-bold text-green-900 mb-2">Results Ready!</h3>
-                            <p className="text-green-800">
-                                Found <b>{filteredEvents.length}</b> events matching <br />
-                                <span className="font-semibold">{formData.eventTypes.join(', ')}</span>
+                <div className="p-8">
+                    {!hasSubmitted ? (
+                        <div className="text-center">
+                            <p className="text-gray-600 text-lg mb-8">
+                                Get this week's <b>{events.length} curated events</b> added to your calendar instantly.
+                                Enter your email to unlock the "Add All" button.
                             </p>
-                        </div>
 
-                        {/* Subscribe Buttons */}
-                        {filteredEvents.length > 0 && (
-                            <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
+                                <input
+                                    type="email"
+                                    required
+                                    placeholder="your@email.com"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className="w-full p-4 rounded-xl border-2 border-gray-200 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all outline-none text-lg"
+                                />
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="w-full py-4 bg-gray-900 text-white rounded-xl font-bold text-lg shadow-lg hover:bg-black transition-all disabled:opacity-50"
+                                >
+                                    {isSubmitting ? 'Unlocking...' : 'Unlock Calendar Access'}
+                                </button>
+                            </form>
+                            <p className="text-sm text-gray-400 mt-4">No spam. Just local events.</p>
+                        </div>
+                    ) : (
+                        <div className="animate-fade-in">
+                            <div className="bg-green-50 rounded-xl p-6 mb-8 text-center border border-green-100">
+                                <h3 className="text-xl font-bold text-green-900 mb-2">You're In! 🎉</h3>
+                                <p className="text-green-800">Choose how you want to add these events:</p>
+                            </div>
+
+                            {/* Subscription Buttons */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                                 <a
                                     href={webcalUrl}
                                     className="w-full py-4 bg-gray-900 text-white rounded-xl font-bold text-lg shadow-lg hover:bg-black flex items-center justify-center gap-2 transform hover:-translate-y-1 transition-all"
@@ -299,59 +139,49 @@ export default function CalendarFeedbackProp() {
                                         }
                                     }}
                                 >
-                                    <span className="text-2xl">📅</span> Add to Google Cal *
+                                    <span className="text-2xl">📅</span> Add to Google Cal
                                 </a>
                             </div>
-                        )}
-                        {/* Download Link Backup */}
-                        {filteredEvents.length > 0 && (
-                            <div className="text-center mb-12">
-                                <a href={feedUrl} download="sunland-events.ics" className="text-gray-500 text-sm underline hover:text-gray-800">
-                                    Or download .ics file directly (Outlook/Other)
-                                </a>
-                            </div>
-                        )}
 
-                        <div className="space-y-4">
-                            {filteredEvents.length > 0 ? (
-                                filteredEvents.map((event) => (
-                                    <div key={event.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                            <div className="text-center mb-10">
+                                <a href={feedUrl} download="sunland-events.ics" className="text-gray-500 text-sm underline hover:text-gray-800">
+                                    Download .ics file (Outlook/Manual)
+                                </a>
+                            </div>
+
+                            <hr className="border-gray-100 my-8" />
+
+                            <h3 className="text-xl font-bold text-gray-900 mb-6">Preview: This Week's Events</h3>
+
+                            <div className="space-y-4">
+                                {events.map((event) => (
+                                    <div key={event.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                         <div className="flex flex-wrap gap-2 mb-3">
-                                            {event.tags.filter(t => formData.eventTypes.includes(t)).map(tag => (
-                                                <span key={tag} className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wider">
+                                            {event.tags.map(tag => (
+                                                <span key={tag} className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wider">
                                                     {tag}
                                                 </span>
                                             ))}
                                         </div>
-
                                         <h3 className="text-xl font-bold text-gray-900 mb-1">{event.title}</h3>
-                                        <div className="text-gray-500 text-sm mb-3 flex items-center gap-2">
+                                        <div className="text-gray-500 text-sm mb-3">
                                             <span className="font-medium text-gray-900">{event.date}</span> • {event.time}
                                         </div>
-
-                                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">{event.description}</p>
-
+                                        <p className="text-gray-600 text-sm mb-4">{event.description}</p>
                                         <a
                                             href={getGoogleCalendarUrl(event)}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline"
+                                            className="text-blue-600 hover:underline text-sm font-semibold"
                                         >
-                                            + Add to Google Calendar
+                                            + Add just this event
                                         </a>
                                     </div>
-                                ))
-                            ) : (
-                                <div className="text-center py-12 text-gray-500 bg-white rounded-2xl border border-dashed border-gray-300">
-                                    <p>No events found matching your specific filters for this week.</p>
-                                    <button onClick={() => setStep(2)} className="text-blue-600 underline mt-2">Try different categories</button>
-                                </div>
-                            )}
+                                ))}
+                            </div>
                         </div>
-
-                        <button onClick={() => window.location.reload()} className="mt-12 w-full text-center text-gray-400 text-sm hover:text-gray-600">Start Over</button>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
         </div>
     );
