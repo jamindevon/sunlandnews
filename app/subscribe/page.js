@@ -136,8 +136,8 @@ export default function Subscribe() {
               <button
                 onClick={() => setSelectedPlan('monthly')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedPlan === 'monthly'
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-primary text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
               >
                 Monthly
@@ -145,8 +145,8 @@ export default function Subscribe() {
               <button
                 onClick={() => setSelectedPlan('yearly')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedPlan === 'yearly'
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-primary text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
               >
                 Yearly
@@ -189,7 +189,7 @@ export default function Subscribe() {
           </ul>
 
           <a
-            href="https://buymeacoffee.com/sunland/membership"
+            href="https://www.patreon.com/SunlandCo"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full px-8 py-4 bg-primary text-white text-center font-medium rounded-lg hover:bg-primary/90 transition-colors"
