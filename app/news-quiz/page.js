@@ -14,62 +14,62 @@ export default function NewsQuiz() {
   // Weekly quiz data - easy to update each week
   const quizData = {
     title: "Sunland News Weekly Quiz 🌅",
-    subtitle: "Week of January 12, 2026",
+    subtitle: "Week of February 2, 2026",
     questions: [
       {
-        question: "How much does St. Lucie County's half-cent sales tax raise annually across all municipalities?",
+        question: "How old did Fort Pierce turn on February 2, 2026?",
         options: [
-          "$2.8 million",
-          "$15.6 million",
-          "$31.8 million",
-          "$47.3 million"
+          "100 years old",
+          "115 years old",
+          "125 years old",
+          "135 years old"
         ],
-        correctAnswer: 2, // $31.8 million
-        explanation: "The half-cent sales tax raises approximately $31.8 million annually for infrastructure projects."
+        correctAnswer: 2, // 125 years old
+        explanation: "Fort Pierce celebrated its 125th birthday on February 2, 2026."
       },
       {
-        question: "How many teacher vacancies does St. Lucie County currently have halfway through the school year?",
+        question: "How much did Port St. Lucie's payroll surge since 2021 according to the Florida DOGE report?",
         options: [
-          "15",
-          "128",
-          "234",
-          "117"
+          "$25 million",
+          "$38 million",
+          "$50 million",
+          "$87 million"
         ],
-        correctAnswer: 1, // 128
-        explanation: "There are currently 128 teacher vacancies in the county."
+        correctAnswer: 1, // $38 million
+        explanation: "The city's payroll has surged by $38 million since 2021, according to the report."
       },
       {
-        question: "What is Fort Pierce's new Police Chief David Smith's annual salary?",
+        question: "How many jobs could the proposed Indiantown data center bring?",
         options: [
-          "$140,000",
-          "$170,000",
-          "$190,000",
-          "$210,000"
+          "200 jobs",
+          "300 jobs",
+          "400 jobs",
+          "500 jobs"
         ],
-        correctAnswer: 2, // $190,000
-        explanation: "The new Police Chief's annual salary is set at $190,000."
+        correctAnswer: 2, // 400 jobs
+        explanation: "The proposed data center in Indiantown is expected to create 400 jobs."
       },
       {
-        question: "By how many votes did Chris Dzadovsky win the Fort Pierce District 2 special election?",
+        question: "How much will advance tickets cost for the Jackie Robinson Celebration Game through March 31?",
         options: [
-          "15 votes",
-          "31 votes",
-          "56 votes",
-          "128 votes"
+          "$8",
+          "$10",
+          "$12",
+          "$15"
         ],
-        correctAnswer: 1, // 31 votes
-        explanation: "Chris Dzadovsky won the special election by a margin of 31 votes."
+        correctAnswer: 1, // $10
+        explanation: "Presale tickets are available for $10 through March 31."
       },
       {
-        question: "What is the starting fine for holding a phone while driving in a school or construction zone under the proposed Florida bill?",
+        question: "How many iguanas were captured by Florida residents during the recent cold snap?",
         options: [
-          "$50",
-          "$100",
-          "$150",
-          "$200"
+          "Over 500",
+          "Over 700",
+          "Over 900",
+          "Over 1,200"
         ],
-        correctAnswer: 2, // $150
-        explanation: "The proposed bill sets the starting fine at $150 for handheld phone use in these zones."
+        correctAnswer: 2, // Over 900
+        explanation: "Residents captured over 900 iguanas during the designated time period."
       }
     ]
   };
@@ -279,14 +279,14 @@ export default function NewsQuiz() {
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
                 className={`w-full text-left p-4 rounded-xl border-2 transition-all ${selectedAnswer === index
-                    ? 'border-blue-600 bg-blue-50 shadow-md'
-                    : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                  ? 'border-blue-600 bg-blue-50 shadow-md'
+                  : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                   }`}
               >
                 <div className="flex items-center gap-3">
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${selectedAnswer === index
-                      ? 'border-blue-600 bg-blue-600'
-                      : 'border-gray-300'
+                    ? 'border-blue-600 bg-blue-600'
+                    : 'border-gray-300'
                     }`}>
                     {selectedAnswer === index && (
                       <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -306,8 +306,8 @@ export default function NewsQuiz() {
           onClick={handleNext}
           disabled={selectedAnswer === ''}
           className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${selectedAnswer === ''
-              ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              : 'bg-gradient-to-r from-blue-600 to-orange-500 text-white hover:from-blue-700 hover:to-orange-600 shadow-lg transform hover:scale-105'
+            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            : 'bg-gradient-to-r from-blue-600 to-orange-500 text-white hover:from-blue-700 hover:to-orange-600 shadow-lg transform hover:scale-105'
             }`}
         >
           {currentQuestion < quizData.questions.length - 1 ? 'Next Question' : 'See Results'}
