@@ -21,7 +21,7 @@ export async function POST(req) {
                 },
             ],
             mode: 'subscription',
-            success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://sunlandnews.com'}/calendar/setup?session_id={CHECKOUT_SESSION_ID}`,
+            success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://sunlandnews.com'}/calendar-club-member?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://sunlandnews.com'}/calendar`,
             automatic_tax: { enabled: true },
             allow_promotion_codes: true,
