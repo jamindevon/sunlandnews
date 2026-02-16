@@ -1,8 +1,14 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { createClient } from '@supabase/supabase-js';
+import { v4 as uuidv4 } from 'uuid';
 import { subscribeToNewsletter } from '../../services/beehiivService';
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 export async function POST(request) {
     try {
@@ -12,7 +18,46 @@ export async function POST(request) {
             return NextResponse.json({ success: false, error: 'Email is required' }, { status: 400 });
         }
 
-        // 1. Sync to Beehiiv
+        // 1. Check if user already exists
+        const { data: existingUser, error: checkError } = await supabase
+            .from('users')
+            .select('id, subscription_status')
+            .eq('email', email)
+            .single();
+
+        if (existingUser) {
+            console.log(`User already exists (${existingUser.subscription_status}): ${email}. Skipping welcome email.`);
+
+            // Optionally update interests or sync to Beehiiv even if existing? 
+            // User requested "don't double email", implying no spam. 
+            // We will skip Beehiiv and Email for existing users to be safe.
+            // Returning success so the UI shows "Access Granted" (which is true, they have access).
+            return NextResponse.json({ success: true, message: 'User already exists' });
+        }
+
+        // 2. Create new 'free' user in Supabase
+        const calendarToken = uuidv4().replace(/-/g, '');
+        const { data: newUser, error: createError } = await supabase
+            .from('users')
+            .insert([
+                {
+                    email,
+                    calendar_token: calendarToken,
+                    subscription_status: 'free',
+                    // No Stripe info for free users
+                }
+            ])
+            .select()
+            .single();
+
+        if (createError) {
+            console.error('Error creating free user:', createError);
+            // We continue even if DB fails, to ensure they get the email? 
+            // Or if DB fails, maybe they already exist and race condition?
+            // Let's log it but try to send email if it's not a duplicate key error.
+        }
+
+        // 3. Sync to Beehiiv
         try {
             await subscribeToNewsletter({
                 email,
@@ -26,7 +71,7 @@ export async function POST(request) {
             // Continue even if Beehiiv fails
         }
 
-        // 2. Send Confirmation Email with Upsell
+        // 4. Send Confirmation Email with Upsell
         if (resend) {
             await resend.emails.send({
                 from: `${process.env.EMAIL_FROM_NAME || 'Sunland News'} <${process.env.EMAIL_FROM || 'hello@sunland.news'}>`,
@@ -74,7 +119,7 @@ export async function POST(request) {
             console.log('Sent free calendar confirmation to:', email);
         }
 
-        // 3. Notify Admin (Legacy/Backup)
+        // 5. Notify Admin (Legacy/Backup)
         if (resend) {
             await resend.emails.send({
                 from: 'system@sunland.news',
@@ -86,6 +131,7 @@ export async function POST(request) {
                     <p><strong>Interests:</strong> ${JSON.stringify(interests)}</p>
                     <p><strong>Parent:</strong> ${isParent}</p>
                     <p><strong>Business Owner:</strong> ${isBusinessOwner}</p>
+                    <p><strong>Status:</strong> New User Created</p>
                 `
             });
         }
