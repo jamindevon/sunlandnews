@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
 import { Resend } from 'resend';
-import { subscribeToNewsletter } from '../../../../services/beehiivService';
+import { subscribeToNewsletter } from '../../../services/beehiivService';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
