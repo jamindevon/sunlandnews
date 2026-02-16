@@ -5,6 +5,8 @@ import ical from 'ical-generator';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request) {
     if (!supabaseUrl || !supabaseServiceKey) {
         console.error('Missing Supabase Env Vars');
@@ -37,6 +39,7 @@ export async function GET(request) {
             prodId: { company: 'Sunland News', product: 'Parent Calendar', language: 'EN' },
             url: 'https://sunlandnews.com/calendars/parent',
             timezone: 'America/New_York',
+            method: 'PUBLISH',
             ttl: 60 * 60, // 1 hour
         });
 
