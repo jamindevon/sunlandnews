@@ -59,7 +59,6 @@ export async function GET(request) {
         return new NextResponse(calendar.toString(), {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
-                'Content-Disposition': 'inline; filename="parent-calendar.ics"',
                 'Cache-Control': 'public, max-age=3600, s-maxage=3600',
             },
         });
