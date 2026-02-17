@@ -19,6 +19,14 @@ const nextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/calendars/:category.ics',
+        destination: '/calendars/:category',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
