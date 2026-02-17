@@ -155,12 +155,12 @@ function DashboardContent() {
                             <input
                                 type="text"
                                 readOnly
-                                value={`${window.location.origin}/cal/${token}`}
+                                value={`${window.location.origin}/cal/${token}.ics`}
                                 className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-600 font-mono truncate"
                             />
                             <button
                                 onClick={() => {
-                                    navigator.clipboard.writeText(`${window.location.origin}/cal/${token}`);
+                                    navigator.clipboard.writeText(`${window.location.origin}/cal/${token}.ics`);
                                     setMessage('Copied!');
                                     setTimeout(() => setMessage(''), 2000);
                                 }}

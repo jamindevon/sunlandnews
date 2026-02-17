@@ -25,6 +25,10 @@ const nextConfig = {
         source: '/calendars/:category.ics',
         destination: '/calendars/:category',
       },
+      {
+        source: '/cal/:token.ics',
+        destination: '/cal/:token',
+      },
     ];
   },
 };

@@ -59,6 +59,11 @@ export default function CalendarFreePage() {
         return getSubscriptionUrl(category).replace('https://', 'webcal://');
     };
 
+    const getGoogleUrl = (category) => {
+        const feedUrl = getSubscriptionUrl(category) + '.ics';
+        return `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(feedUrl)}`;
+    };
+
     if (step === 2) {
         return (
             <div className={`min-h-screen bg-slate-50 text-slate-900 ${inter.className}`}>
@@ -93,7 +98,7 @@ export default function CalendarFreePage() {
                                         Apple Calendar
                                     </a>
                                     <a
-                                        href={`https://calendar.google.com/calendar/r?cid=${encodeURIComponent(getSubscriptionUrl(calendar.id))}`}
+                                        href={getGoogleUrl(calendar.id)}
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         className='block w-full bg-white text-slate-900 border border-slate-200 px-4 py-3 rounded-lg font-medium text-center hover:bg-slate-50 transition-colors'
