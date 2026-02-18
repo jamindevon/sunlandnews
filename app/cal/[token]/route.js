@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import ical from 'ical-generator';
 
+export const dynamic = 'force-dynamic';
+
 // Initialize Supabase client
 // Initialize Supabase client inside handler to catch errors
 // const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
