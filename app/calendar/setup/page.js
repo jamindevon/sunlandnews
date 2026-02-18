@@ -220,14 +220,14 @@ function SetupContent() {
 
                     <div className="grid grid-cols-1 gap-4 mb-8">
                         {[
-                            { id: 'Food & Drink', icon: '🍔' },
+                            { id: 'Food & Drink', icon: '🍔' }, // Keeps broad matching
                             { id: 'Live Music', icon: '🎵' },
                             { id: 'Arts & Culture', icon: '🎨' },
-                            { id: 'Outdoors', icon: '🌳' },
-                            { id: 'Family Events', icon: '👨‍👩‍👧‍👦' },
-                            { id: 'Nightlife', icon: '🍸' },
-                            { id: 'Workshops', icon: '💡' },
-                            { id: 'Community', icon: '🤝' }
+                            { id: 'Outdoor', icon: '🌳' }, // Was 'Outdoors'
+                            { id: 'Family', icon: '👨‍👩‍👧‍👦' }, // Was 'Family Events'
+                            { id: 'Date Night', icon: '🍸' }, // Was 'Nightlife'
+                            { id: 'Big Events', icon: '💡' }, // Was 'Workshops' (closest match)
+                            { id: 'Civic', icon: '🤝' } // Was 'Community'
                         ].map((item) => (
                             <label key={item.id} className={`flex items-center justify-center flex-col p-6 rounded-2xl border-2 cursor-pointer transition-all bg-white hover:shadow-md ${preferences.interests?.includes(item.id) ? 'border-black ring-1 ring-black' : 'border-gray-100'}`}>
                                 <span className="text-4xl mb-3">{item.icon}</span>
