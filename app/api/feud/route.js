@@ -23,7 +23,7 @@ export async function POST(request) {
             subject: `Family Feud: New Submission`,
             html: `
                 <h2>New Family Feud Response!</h2>
-                <p><strong>Question:</strong> "What do you wish was in Saint Lucie county that currently not in Saint Lucie county..."</p>
+                <p><strong>Question:</strong> "What entertainment is missing from St. Lucie County?"</p>
                 <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
                     <p style="font-size: 18px; font-weight: bold; color: #111827;">"${response}"</p>
                 </div>

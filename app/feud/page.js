@@ -42,10 +42,10 @@ export default function FeudPage() {
                         Sunland Family Feud
                     </span>
                     <h1 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-6">
-                        What do you wish was in St. Lucie County?
+                        What <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">entertainment</span> is missing from St. Lucie County?
                     </h1>
                     <p className="text-xl text-gray-500">
-                        (That currently isn't here...)
+                        Theme parks, specific activities, nightlife, etc...
                     </p>
                 </div>
 
@@ -76,7 +76,7 @@ export default function FeudPage() {
                             <textarea
                                 value={response}
                                 onChange={(e) => setResponse(e.target.value)}
-                                placeholder="I wish we had a..."
+                                placeholder="We really need a specific..."
                                 className="w-full bg-gray-50 border-2 border-gray-100 rounded-2xl p-6 text-xl font-medium text-gray-900 focus:border-black focus:ring-0 transition-all placeholder-gray-300 min-h-[160px] resize-none"
                                 required
                             />
