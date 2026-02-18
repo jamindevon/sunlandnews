@@ -115,6 +115,40 @@ function DashboardContent() {
         );
     }
 
+    const getWebcalUrl = (path) => {
+        const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://sunlandnews.com';
+        return `${baseUrl}${path}`.replace(/^https?:\/\//, 'webcal://');
+    };
+
+    const getGoogleUrl = (path) => {
+        const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://sunlandnews.com';
+        const feedUrl = `${baseUrl}${path}`;
+        const webcalUrl = feedUrl.replace(/^https?:\/\//, 'webcal://');
+        return `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcalUrl)}`;
+    };
+
+    const MASTER_CALENDAR = {
+        name: "The Master Calendar",
+        desc: "Everything happening in St. Lucie County. (Includes all categories below)",
+        path: "/calendars/all",
+        icon: "👑",
+        isPremium: true
+    };
+
+    const PREMIUM_CALENDARS = [
+        { name: "Live Music", desc: "Concerts, local bands & acoustic sets.", path: "/calendars/live-music", icon: "🎸" },
+        { name: "Date Night", desc: "Evening events, wine tastings & specials.", path: "/calendars/date-night", icon: "🍷" },
+        { name: "Family", desc: "Kids activities, parks & family fun.", path: "/calendars/family", icon: "👨‍👩‍👧‍👦" },
+        { name: "Outdoor", desc: "Nature walks, beach cleanups & yoga.", path: "/calendars/outdoor", icon: "🌳" },
+        { name: "Business", desc: "Networking & chamber events.", path: "/calendars/business", icon: "💼" },
+    ];
+
+    const FREE_CALENDARS = [
+        { name: "Parent", desc: "School board, holidays & testing.", path: "/calendars/parent", icon: "📚" },
+        { name: "Civic", desc: "City & county meetings.", path: "/calendars/civic", icon: "🏛️" },
+        { name: "Big Events", desc: "Major festivals & parades.", path: "/calendars/big-events", icon: "🎉" },
+    ];
+
     return (
         <div className="min-h-screen bg-gray-50 pb-12">
             <div className="bg-white border-b border-gray-200 mb-8">
@@ -136,120 +170,84 @@ function DashboardContent() {
                 </div>
             </div>
 
-            <div className="max-w-5xl mx-auto px-4 space-y-8">
+            <div className="max-w-4xl mx-auto px-4 space-y-12">
 
-                {/* Quick Actions Grid */}
-                <div className="grid md:grid-cols-2 gap-6">
-                    {/* Calendar Link Card */}
-                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col h-full">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-500">
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
-                            </div>
-                            <h2 className="text-lg font-bold text-gray-900">Your Calendar Link</h2>
-                        </div>
-                        <p className="text-gray-500 text-sm mb-4 flex-grow">
-                            This is your unique magic link. Add it to Apple, Google, or Outlook to see your personalized events.
+                {/* 1. MASTER CALENDAR */}
+                <section>
+                    <div className="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 text-9xl">👑</div>
+                        <h2 className="text-3xl font-bold mb-2 relative z-10">The Master Calendar</h2>
+                        <p className="text-indigo-200 mb-8 max-w-lg relative z-10">
+                            Create one subscription and get <strong>everything</strong>. Includes all 8 categories automatically.
                         </p>
-                        <div className="flex gap-2 mb-3">
-                            <input
-                                type="text"
-                                readOnly
-                                value={`${window.location.origin}/cal/${token}.ics`}
-                                className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-600 font-mono truncate"
-                            />
-                            <button
-                                onClick={() => {
-                                    navigator.clipboard.writeText(`${window.location.origin}/cal/${token}.ics`);
-                                    setMessage('Copied!');
-                                    setTimeout(() => setMessage(''), 2000);
-                                }}
-                                className="bg-black text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-gray-800 transition-colors"
-                            >
-                                {message === 'Copied!' ? 'Copied!' : 'Copy'}
-                            </button>
+                        <div className="flex flex-col sm:flex-row gap-4 relative z-10">
+                            <a href={getWebcalUrl(MASTER_CALENDAR.path)} className="bg-white text-indigo-900 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                                🍎 Add to Apple Calendar
+                            </a>
+                            <a href={getGoogleUrl(MASTER_CALENDAR.path)} target="_blank" rel="noopener noreferrer" className="bg-indigo-800 text-white border border-indigo-700 px-6 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
+                                📅 Add to Google Calendar
+                            </a>
                         </div>
-                        <Link href={`/calendar/setup?token=${token}`} className="text-primary font-bold text-sm hover:underline inline-flex items-center gap-1">
-                            View Setup Instructions <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </Link>
                     </div>
+                </section>
 
-                    {/* Edit Preferences Card */}
-                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col h-full">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 bg-purple-50 rounded-full flex items-center justify-center text-purple-500">
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
-                            </div>
-                            <h2 className="text-lg font-bold text-gray-900">Personalization</h2>
-                        </div>
-                        <p className="text-gray-500 text-sm mb-6 flex-grow">
-                            Update your interests, availability, and location settings to refine which events appear on your calendar.
-                        </p>
-                        <Link
-                            href={`/calendar/setup?token=${token}&edit=true`}
-                            className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-3 rounded-xl font-bold text-sm hover:border-primary hover:text-primary transition-all text-center block"
-                        >
-                            Update Preferences
-                        </Link>
-                    </div>
-                </div>
+                <div className="border-t border-gray-200"></div>
 
-                {/* Preferences Summary */}
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div className="px-6 py-4 border-b border-gray-100 bg-gray-50/50">
-                        <h2 className="text-lg font-bold text-gray-900">Current Settings</h2>
-                    </div>
-                    <div className="p-6">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-pink-400"></span> Interests
-                                </h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {preferences.interests?.length > 0 ? (
-                                        preferences.interests.map(i => (
-                                            <span key={i} className="bg-pink-50 text-pink-700 px-3 py-1.5 rounded-lg text-sm font-medium border border-pink-100">
-                                                {i}
-                                            </span>
-                                        ))
-                                    ) : (
-                                        <span className="text-gray-400 text-sm italic">None selected</span>
-                                    )}
+                {/* 2. PREMIUM CALENDARS */}
+                <section>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <span className="bg-purple-100 text-purple-700 p-1 rounded">💎</span> Premium Feeds
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                        {PREMIUM_CALENDARS.map(cal => (
+                            <div key={cal.name} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+                                <div className="flex items-start justify-between mb-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="text-3xl">{cal.icon}</div>
+                                        <div>
+                                            <h4 className="font-bold text-gray-900">{cal.name}</h4>
+                                            <p className="text-xs text-gray-500">{cal.desc}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex gap-2">
+                                    <a href={getWebcalUrl(cal.path)} className="flex-1 bg-gray-50 text-gray-900 text-xs font-bold py-2 rounded-lg text-center hover:bg-gray-100">
+                                        Apple
+                                    </a>
+                                    <a href={getGoogleUrl(cal.path)} target="_blank" rel="noopener noreferrer" className="flex-1 bg-white border border-gray-200 text-gray-700 text-xs font-bold py-2 rounded-lg text-center hover:bg-gray-50">
+                                        Google
+                                    </a>
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </section>
 
-                            <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-blue-400"></span> Availability
-                                </h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {preferences.availability?.length > 0 ? (
-                                        preferences.availability.map(i => (
-                                            <span key={i} className="bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg text-sm font-medium border border-blue-100">
-                                                {i}
-                                            </span>
-                                        ))
-                                    ) : (
-                                        <span className="text-gray-400 text-sm italic">None selected</span>
-                                    )}
+                {/* 3. FREE CALENDARS */}
+                <section>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <span className="bg-green-100 text-green-700 p-1 rounded">🆓</span> Free Feeds
+                    </h3>
+                    <div className="grid md:grid-cols-3 gap-4">
+                        {FREE_CALENDARS.map(cal => (
+                            <div key={cal.name} className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+                                <div className="mb-4">
+                                    <div className="text-2xl mb-2">{cal.icon}</div>
+                                    <h4 className="font-bold text-gray-900 text-sm">{cal.name}</h4>
+                                    <p className="text-xs text-gray-500">{cal.desc}</p>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <a href={getWebcalUrl(cal.path)} className="bg-gray-50 text-gray-900 text-xs font-bold py-2 rounded-lg text-center hover:bg-gray-100 block">
+                                        Add to Apple
+                                    </a>
+                                    <a href={getGoogleUrl(cal.path)} target="_blank" rel="noopener noreferrer" className="bg-white border border-gray-200 text-gray-700 text-xs font-bold py-2 rounded-lg text-center hover:bg-gray-50 block">
+                                        Add to Google
+                                    </a>
                                 </div>
                             </div>
-
-                            <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-green-400"></span> Location
-                                </h3>
-                                <span className="text-gray-900 font-medium block p-3 bg-gray-50 rounded-lg border border-gray-100">
-                                    {preferences.location_preference === 'fort_pierce' && '📍 Fort Pierce Only'}
-                                    {preferences.location_preference === 'psl_fp' && '📍 PSL & Fort Pierce'}
-                                    {preferences.location_preference === 'all_slc' && '📍 All St. Lucie County'}
-                                    {preferences.location_preference === 'treasure_coast' && '📍 Treasure Coast'}
-                                    {!preferences.location_preference && <span className="text-gray-400 italic">Not set</span>}
-                                </span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
-                </div>
+                </section>
 
             </div>
         </div>
