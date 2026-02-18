@@ -29,35 +29,26 @@ export default function CalendarDebug() {
     }, []);
 
     const analyze = (allEvents) => {
-        const categories = {
-            'Big Events': [],
-            'Civic': [],
-            'Live Music': [],
-            'Family': [],
-            // Add others if needed
-        };
-
+        const categories = {};
         allEvents.forEach(event => {
             const cats = Array.isArray(event.categories) ? event.categories : [event.categories];
-
-            // Big Events Logic
-            const isBig = cats.some(c => (typeof c === 'string' ? c : c?.name) === 'Big Events');
-            if (isBig) categories['Big Events'].push(event);
-
-            // Civic Logic
-            const isCivic = cats.some(c => (typeof c === 'string' ? c : c?.name) === 'Civic');
-            if (isCivic) categories['Civic'].push(event);
-
-            // Live Music Logic
-            const isMusic = cats.some(c => (typeof c === 'string' ? c : c?.name) === 'Live Music');
-            if (isMusic) categories['Live Music'].push(event);
-
-            // Family Logic
-            const isFamily = cats.some(c => (typeof c === 'string' ? c : c?.name) === 'Family');
-            if (isFamily) categories['Family'].push(event);
+            cats.forEach(c => {
+                const name = typeof c === 'string' ? c : c?.name || JSON.stringify(c);
+                if (!categories[name]) categories[name] = [];
+                categories[name].push(event);
+            });
         });
 
-        setStats(categories);
+        // Sort keys alphabetically
+        const sorted = Object.keys(categories).sort().reduce(
+            (obj, key) => {
+                obj[key] = categories[key];
+                return obj;
+            },
+            {}
+        );
+
+        setStats(sorted);
     };
 
     if (loading) return <div className="p-8">Loading events...</div>;
