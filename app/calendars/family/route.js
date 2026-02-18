@@ -29,9 +29,14 @@ export async function GET(request) {
         }
 
         // Filter events that have 'Family' in their categories array
-        const events = allEvents.filter(event =>
-            event.categories && event.categories.includes('Family')
-        );
+        const events = allEvents.filter(event => {
+            if (!event.categories) return false;
+            const cats = Array.isArray(event.categories) ? event.categories : [event.categories];
+            return cats.some(c => {
+                const name = typeof c === 'string' ? c : c?.name;
+                return name === 'Family';
+            });
+        });
 
         // Generate ICS
         const calendar = ical({
