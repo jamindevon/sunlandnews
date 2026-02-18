@@ -61,7 +61,9 @@ export default function CalendarFreePage() {
 
     const getGoogleUrl = (category) => {
         const feedUrl = getSubscriptionUrl(category) + '.ics';
-        return `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(feedUrl)}`;
+        // Google often prefers webcal:// protocol in the CID param to treat it as a calendar immediately
+        const webcalUrl = feedUrl.replace(/^https?:\/\//, 'webcal://');
+        return `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcalUrl)}`;
     };
 
     if (step === 2) {
