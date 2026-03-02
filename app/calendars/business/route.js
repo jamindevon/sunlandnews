@@ -64,9 +64,11 @@ export async function GET(request) {
 
         events.forEach(event => {
             try {
+                // Pass strings directly with Explicit Timezone to prevent Vercel UTC shifting
                 calendar.createEvent({
-                    start: new Date(event.start_datetime),
-                    end: new Date(event.end_datetime),
+                    start: event.start_datetime,
+                    end: event.end_datetime,
+                    timezone: 'America/New_York',
                     summary: event.title,
                     description: event.description,
                     location: `${event.location_name || ''}, ${event.location_city || ''}`,
