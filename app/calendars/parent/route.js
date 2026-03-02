@@ -13,7 +13,9 @@ export async function GET(request) {
         return new NextResponse('Configuration Error: Missing API Keys', { status: 500 });
     }
 
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    const supabase = createClient(supabaseUrl, supabaseServiceKey, {
+        global: { fetch: (url, options) => fetch(url, { ...options, cache: 'no-store' }) }
+    });
 
     try {
         // Fetch all published events
