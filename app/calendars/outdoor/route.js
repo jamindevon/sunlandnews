@@ -50,8 +50,8 @@ export async function GET(request) {
         events.forEach(event => {
             try {
                 calendar.createEvent({
-                    start: new Date(event.start_datetime + 'Z'),
-                    end: new Date(event.end_datetime + 'Z'),
+                    start: new Date(event.start_datetime),
+                    end: new Date(event.end_datetime),
                     summary: event.title,
                     description: event.description,
                     location: `${event.location_name}, ${event.location_city}`,
@@ -67,7 +67,7 @@ export async function GET(request) {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
                 'Content-Disposition': 'inline; filename="outdoor.ics"',
-                'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+                'Cache-Control': 'no-store, max-age=0',
             },
         });
 

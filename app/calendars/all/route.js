@@ -32,8 +32,8 @@ export async function GET() {
         events.forEach(event => {
             try {
                 // Ensure date parsing is robust
-                const startDate = new Date(event.start_datetime + 'Z');
-                const endDate = new Date(event.end_datetime + 'Z');
+                const startDate = new Date(event.start_datetime);
+                const endDate = new Date(event.end_datetime);
 
                 if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
                     console.warn(`Skipping event with invalid dates: ${event.title}`);
@@ -67,7 +67,7 @@ export async function GET() {
         return new NextResponse(calendar.toString(), {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
-                'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+                'Cache-Control': 'no-store, max-age=0',
             },
         });
 
