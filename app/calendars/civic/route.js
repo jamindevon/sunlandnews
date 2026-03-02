@@ -28,20 +28,33 @@ export async function GET(request) {
             return new NextResponse('Database Error', { status: 500 });
         }
 
-        // Filter events that have 'Civic' in their categories array
+        // Filter events that have the specific category in their array
         const events = allEvents.filter(event => {
             if (!event.categories) return false;
-            const cats = Array.isArray(event.categories) ? event.categories : [event.categories];
+            
+            let cats = [];
+            try {
+                if (typeof event.categories === 'string') {
+                    cats = JSON.parse(event.categories);
+                } else if (Array.isArray(event.categories)) {
+                    cats = event.categories;
+                } else {
+                    cats = Object.values(event.categories);
+                }
+            } catch (e) {
+                cats = [event.categories];
+            }
+            
             return cats.some(c => {
                 const name = typeof c === 'string' ? c : c?.name;
-                return name === 'Civic';
+                return name === 'Civic & Government';
             });
         });
 
         // Generate ICS
         const calendar = ical({
-            name: 'Sunland Civic Calendar',
-            prodId: { company: 'Sunland News', product: 'Civic Calendar', language: 'EN' },
+            name: 'Sunland Civic',
+            prodId: { company: 'Sunland News', product: 'Sunland Civic', language: 'EN' },
             url: 'https://sunlandnews.com/calendars/civic',
             timezone: 'America/New_York',
             ttl: 60 * 60,
@@ -54,7 +67,7 @@ export async function GET(request) {
                     end: new Date(event.end_datetime),
                     summary: event.title,
                     description: event.description,
-                    location: `${event.location_name}, ${event.location_city}`,
+                    location: `${event.location_name || ''}, ${event.location_city || ''}`,
                     url: event.url || '',
                     uid: `${event.id}@sunland.news`,
                 });
@@ -66,7 +79,7 @@ export async function GET(request) {
         return new NextResponse(calendar.toString(), {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
-                'Content-Disposition': 'inline; filename="civic-calendar.ics"',
+                'Content-Disposition': 'inline; filename="civic.ics"',
                 'Cache-Control': 'no-store, max-age=0',
             },
         });

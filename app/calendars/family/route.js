@@ -28,10 +28,23 @@ export async function GET(request) {
             return new NextResponse('Database Error', { status: 500 });
         }
 
-        // Filter events that have 'Family' in their categories array
+        // Filter events that have the specific category in their array
         const events = allEvents.filter(event => {
             if (!event.categories) return false;
-            const cats = Array.isArray(event.categories) ? event.categories : [event.categories];
+            
+            let cats = [];
+            try {
+                if (typeof event.categories === 'string') {
+                    cats = JSON.parse(event.categories);
+                } else if (Array.isArray(event.categories)) {
+                    cats = event.categories;
+                } else {
+                    cats = Object.values(event.categories);
+                }
+            } catch (e) {
+                cats = [event.categories];
+            }
+            
             return cats.some(c => {
                 const name = typeof c === 'string' ? c : c?.name;
                 return name === 'Family';
@@ -40,8 +53,8 @@ export async function GET(request) {
 
         // Generate ICS
         const calendar = ical({
-            name: 'Sunland Family Activities',
-            prodId: { company: 'Sunland News', product: 'Family Calendar', language: 'EN' },
+            name: 'Sunland Family',
+            prodId: { company: 'Sunland News', product: 'Sunland Family', language: 'EN' },
             url: 'https://sunlandnews.com/calendars/family',
             timezone: 'America/New_York',
             ttl: 60 * 60,
@@ -54,7 +67,7 @@ export async function GET(request) {
                     end: new Date(event.end_datetime),
                     summary: event.title,
                     description: event.description,
-                    location: `${event.location_name}, ${event.location_city}`,
+                    location: `${event.location_name || ''}, ${event.location_city || ''}`,
                     url: event.url || '',
                     uid: `${event.id}@sunland.news`,
                 });
