@@ -140,13 +140,13 @@ function DashboardContent() {
         { name: "Date Night", desc: "Evening events, wine tastings & specials.", path: "/calendars/date-night", icon: "🍷" },
         { name: "Family", desc: "Kids activities, parks & family fun.", path: "/calendars/family", icon: "👨‍👩‍👧‍👦" },
         { name: "Outdoor", desc: "Nature walks, beach cleanups & yoga.", path: "/calendars/outdoor", icon: "🌳" },
-        { name: "Business", desc: "Networking & chamber events.", path: "/calendars/business", icon: "💼" },
     ];
 
     const FREE_CALENDARS = [
         { name: "Parent", desc: "School board, holidays & testing.", path: "/calendars/parent", icon: "📚" },
         { name: "Civic", desc: "City & county meetings.", path: "/calendars/civic", icon: "🏛️" },
         { name: "Big Events", desc: "Major festivals & parades.", path: "/calendars/big-events", icon: "🎉" },
+        { name: "Business", desc: "Networking & chamber events.", path: "/calendars/business", icon: "💼" },
     ];
 
     return (

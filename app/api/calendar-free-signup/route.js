@@ -91,6 +91,9 @@ export async function POST(request) {
                             
                             <h3>🎉 Big Events</h3>
                             <p><a href="webcal://sunlandnews.com/calendars/big-events">Add to Apple Calendar</a> | <a href="https://calendar.google.com/calendar/r?cid=https://sunlandnews.com/calendars/big-events">Add to Google Calendar</a></p>
+                            
+                            <h3>💼 Business & Networking</h3>
+                            <p><a href="webcal://sunlandnews.com/calendars/business">Add to Apple Calendar</a> | <a href="https://calendar.google.com/calendar/r?cid=https://sunlandnews.com/calendars/business">Add to Google Calendar</a></p>
                         </div>
 
                         <h2>Want More? 🔓</h2>
@@ -101,7 +104,6 @@ export async function POST(request) {
                             <li>🍷 Date Night</li>
                             <li>👨‍👩‍👧‍👦 Family Activities</li>
                             <li>🏃 Outdoor & Fitness</li>
-                            <li>💼 Business & Networking</li>
                         </ul>
                         
                         <p style="text-align: center; margin: 30px 0;">

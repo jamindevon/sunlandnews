@@ -55,7 +55,7 @@ export default function CalendarClubMemberPage() {
         { id: 'big-events', name: 'Big Events', emoji: '🎉', description: 'Major festivals, concerts, parades', tier: 'free' },
         { id: 'live-music', name: 'Live Music', emoji: '🎸', description: 'Local bands, jazz nights, acoustic shows', tier: 'paid' },
         { id: 'date-night', name: 'Date Night', emoji: '💕', description: 'Romantic events, wine tastings, art walks', tier: 'paid' },
-        { id: 'business', name: 'Business & Networking', emoji: '💼', description: 'Chamber events, meetups, workshops', tier: 'paid' },
+        { id: 'business', name: 'Business & Networking', emoji: '💼', description: 'Chamber events, meetups, workshops', tier: 'free' },
         { id: 'family', name: 'Family Activities', emoji: '👨‍👩‍👧‍👦', description: 'Kids events, movie nights, science days', tier: 'paid' },
         { id: 'outdoor', name: 'Outdoor & Fitness', emoji: '🏃', description: 'Yoga, 5Ks, hiking, outdoor activities', tier: 'paid' },
     ];
