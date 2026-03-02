@@ -50,8 +50,8 @@ export async function GET(request) {
         events.forEach(event => {
             try {
                 calendar.createEvent({
-                    start: new Date(event.start_datetime),
-                    end: new Date(event.end_datetime),
+                    start: new Date(event.start_datetime + 'Z'),
+                    end: new Date(event.end_datetime + 'Z'),
                     summary: event.title,
                     description: event.description,
                     location: `${event.location_name}, ${event.location_city}`,

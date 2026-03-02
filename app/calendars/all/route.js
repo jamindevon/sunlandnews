@@ -32,8 +32,8 @@ export async function GET() {
         events.forEach(event => {
             try {
                 // Ensure date parsing is robust
-                const startDate = new Date(event.start_datetime);
-                const endDate = new Date(event.end_datetime);
+                const startDate = new Date(event.start_datetime + 'Z');
+                const endDate = new Date(event.end_datetime + 'Z');
 
                 if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
                     console.warn(`Skipping event with invalid dates: ${event.title}`);
