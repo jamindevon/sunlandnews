@@ -25,15 +25,18 @@ export async function subscribeToNewsletter(subscriberData) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_BEEHIIV_API_KEY || ''}`,
+        'Authorization': `Bearer ${process.env.BEEHIIV_API_KEY || ''}`,
       },
       body: JSON.stringify({
         email: subscriberData.email,
         name: subscriberData.name || '',
         referring_site: 'sunlandnews.com',
-        custom_fields: {
-          premium_member: subscriberData.isPremium ? 'Yes' : 'No',
-        },
+        custom_fields: [
+          {
+            name: 'premium_member',
+            value: subscriberData.isPremium ? 'Yes' : 'No',
+          }
+        ],
         utm_source: 'website',
         utm_campaign: 'sunland_signup',
         utm_medium: subscriberData.source || 'direct',

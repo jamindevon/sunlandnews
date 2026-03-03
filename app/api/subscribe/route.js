@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
 // Configuration for Beehiiv API
 const BEEHIIV_PUBLICATION_ID = 'pub_4cdbaa69-8749-4433-881b-ef4090c671d1';
 const BEEHIIV_API_URL = 'https://api.beehiiv.com/v2';
+
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request) {
   try {
@@ -46,12 +49,31 @@ export async function POST(request) {
     if (!response.ok) {
       console.error('Beehiiv API error:', data);
       return NextResponse.json(
-        { 
-          success: false, 
-          error: data.message || 'Failed to subscribe to newsletter' 
+        {
+          success: false,
+          error: data.message || 'Failed to subscribe to newsletter'
         },
         { status: response.status }
       );
+    }
+
+    // Send admin notification
+    if (resend) {
+      try {
+        await resend.emails.send({
+          from: 'system@sunland.news',
+          to: ['thesunlandcompany@gmail.com'],
+          subject: 'New Newsletter Signup 🎉',
+          html: `
+            <p><strong>New Subscriber!</strong></p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Source:</strong> ${source || 'direct'}</p>
+            <p><strong>Premium:</strong> ${isPremium ? 'Yes' : 'No'}</p>
+          `
+        });
+      } catch (emailError) {
+        console.error('Failed to send admin notification:', emailError);
+      }
     }
 
     return NextResponse.json({ success: true, data });
