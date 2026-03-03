@@ -61,7 +61,7 @@ export async function POST(request) {
     if (resend) {
       try {
         await resend.emails.send({
-          from: 'system@sunland.news',
+          from: process.env.EMAIL_FROM || 'onboarding@resend.dev',
           to: ['thesunlandcompany@gmail.com'],
           subject: 'New Newsletter Signup 🎉',
           html: `
