@@ -100,7 +100,7 @@ function ThankYouForm() {
         <div className="w-full bg-brutalBlue border-b-4 border-black relative flex items-center justify-center py-8 px-4">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_rgba(0,0,0,1)] relative z-10 bg-white transform -rotate-2 hover:rotate-1 transition-transform">
             <Image
-              src="/images/image (15).png"
+              src="/images/jamin-profile.png"
               alt="Ja'Min"
               fill
               className="object-cover object-top"
