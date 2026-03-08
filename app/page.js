@@ -70,7 +70,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white font-sans text-black selection:bg-brutalPink selection:text-white">
       {/* Hero Section */}
-      <section className="pt-16 md:pt-24 pb-16 px-4">
+      <section className="pt-6 md:pt-24 pb-12 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-extrabold text-black mb-6 leading-tight tracking-tight">
