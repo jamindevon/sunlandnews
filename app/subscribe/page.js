@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { fbEvents } from '../../lib/fbPixel';
@@ -11,6 +11,15 @@ export default function Subscribe() {
   const [email, setEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlEmail = new URLSearchParams(window.location.search).get('email');
+      if (urlEmail) {
+        setEmail(urlEmail);
+      }
+    }
+  }, []);
 
   const plans = {
     monthly: { price: '$9', period: 'month', savings: '' },

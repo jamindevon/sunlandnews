@@ -10,8 +10,6 @@ function ThankYouForm() {
   const prefilledEmail = searchParams.get('email') || '';
 
   const [formData, setFormData] = useState({
-    firstName: '',
-    zipCode: '',
     interest: ''
   });
   const [submitting, setSubmitting] = useState(false);
@@ -42,8 +40,8 @@ function ThankYouForm() {
     setError(null);
 
     // Required field validation (HTML5 covers most, but fallback here)
-    if (!formData.firstName || !formData.zipCode || !formData.interest) {
-      setError('Please fill out all fields.');
+    if (!formData.interest) {
+      setError('Please select an option.');
       setSubmitting(false);
       return;
     }
@@ -55,8 +53,6 @@ function ThankYouForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email: prefilledEmail,
-          firstName: formData.firstName,
-          zipCode: formData.zipCode,
           interest: formData.interest
         })
       });
@@ -122,32 +118,7 @@ function ThankYouForm() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-black uppercase tracking-wider mb-2">First Name</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.firstName}
-                  onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  className="w-full px-4 py-3 bg-white border-4 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-brutalPink/30 transition-shadow shadow-[3px_3px_0px_rgba(0,0,0,1)]"
-                  placeholder="Jane"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-black uppercase tracking-wider mb-2">Zip Code</label>
-                <input
-                  type="text"
-                  required
-                  pattern="[0-9]{5}"
-                  title="5 digit zip code"
-                  value={formData.zipCode}
-                  onChange={(e) => setFormData({ ...formData, zipCode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-                  className="w-full px-4 py-3 bg-white border-4 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-brutalPink/30 transition-shadow shadow-[3px_3px_0px_rgba(0,0,0,1)]"
-                  placeholder="34952"
-                />
-              </div>
-            </div>
+
 
             <div className="bg-gray-50 border-4 border-black p-4 rounded-2xl shadow-[4px_4px_0px_rgba(0,0,0,1)]">
               <label className="block text-base font-black uppercase tracking-wider mb-4 text-center">What are you most looking for?</label>
@@ -186,8 +157,8 @@ function ThankYouForm() {
 
             <button
               type="submit"
-              disabled={submitting || !formData.firstName || !formData.zipCode || !formData.interest}
-              className={`w-full py-4 text-xl font-black uppercase tracking-wider rounded-2xl border-4 transition-all shadow-[6px_6px_0px_rgba(0,0,0,1)] ${submitting || !formData.firstName || !formData.zipCode || !formData.interest
+              disabled={submitting || !formData.interest}
+              className={`w-full py-4 text-xl font-black uppercase tracking-wider rounded-2xl border-4 transition-all shadow-[6px_6px_0px_rgba(0,0,0,1)] ${submitting || !formData.interest
                 ? 'bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed shadow-[2px_2px_0px_rgba(0,0,0,0.1)]'
                 : 'bg-primary text-white border-black hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none'
                 }`}

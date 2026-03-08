@@ -1,0 +1,1766 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//Sunland Big Events//EN
+URL:https://sunlandnews.com/calendars/big-events
+NAME:Sunland Big Events
+X-WR-CALNAME:Sunland Big Events
+TIMEZONE-ID:America/New_York
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:3e4889c6-8de5-4c60-846c-7235496c7215
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260217T130000
+DTEND;TZID=America/New_York:20260217T170000
+SUMMARY:Mardi Gras Parade & Festival
+LOCATION:Downtown\, Fort Pierce
+DESCRIPTION:Parade\, live music\, food vendors\, and beads!
+END:VEVENT
+BEGIN:VEVENT
+UID:294fe2c8-90af-4bf4-aa26-22877ffd3411
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260219T120000
+DTEND;TZID=America/New_York:20260219T140000
+SUMMARY:Frida Paint & Plant Workshop
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Paint a Frida-inspired planter and create your own planted mas
+ terpiece.
+END:VEVENT
+BEGIN:VEVENT
+UID:327a960b-9f02-435f-81bd-2336b551de6f
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260219T180000
+DTEND;TZID=America/New_York:20260219T200000
+SUMMARY:Paper Bead Making: 101
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Learn to transform paper into unique handmade beads in this gu
+ ided art class.
+END:VEVENT
+BEGIN:VEVENT
+UID:8319f3bc-cbf1-4fed-8991-2a2de30802a8
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260219T193000
+DTEND;TZID=America/New_York:20260219T213000
+SUMMARY:Chris Botti
+LOCATION:Sunrise Theatre\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Grammy-winning jazz trumpeter live at Sunrise Theatre\, Fort P
+ ierce.
+END:VEVENT
+BEGIN:VEVENT
+UID:056e019a-fd59-41ed-b441-280837e89178
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260220T120000
+DTEND;TZID=America/New_York:20260220T140000
+SUMMARY:Saint Nicholas Greek Festival
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Greek food\, music & cultural celebration.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a6c0cd4-62c3-47d0-85aa-716d350d0d36
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260220T173000
+DTEND;TZID=America/New_York:20260220T193000
+SUMMARY:Love at The Lynmoore
+LOCATION:The Lynmoore\, Port St. Lucie
+DESCRIPTION:Community evening with live music and nonprofit spotlight.
+END:VEVENT
+BEGIN:VEVENT
+UID:181552cb-36b4-4ced-a386-2605887528bb
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260220T190000
+DTEND;TZID=America/New_York:20260220T210000
+SUMMARY:Sixtiesmania: A Journey Through the ’60s
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:A nostalgic tribute concert celebrating iconic ’60s hits.
+END:VEVENT
+BEGIN:VEVENT
+UID:51f3349a-9a97-4d09-bc04-c52919f7cfc2
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260220T200000
+DTEND;TZID=America/New_York:20260220T220000
+SUMMARY:Jim Breuer – Find the Funny
+LOCATION:Sunrise Theatre\, Port St. Lucie
+DESCRIPTION:High-energy stand-up comedy at Sunrise Theatre.
+END:VEVENT
+BEGIN:VEVENT
+UID:6d820ae1-fe5b-408d-92c0-6a79cacba1d3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260221T120000
+DTEND;TZID=America/New_York:20260221T140000
+SUMMARY:Kids Anti-Bullying Jiu-Jitsu Seminar
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Confidence-building martial arts workshop for youth.
+END:VEVENT
+BEGIN:VEVENT
+UID:72c3115c-76fe-41c2-b47d-beb05db51cf3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260221T120000
+DTEND;TZID=America/New_York:20260221T140000
+SUMMARY:11th Annual Chimpathon 5K & 10K
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Charity run/walk benefiting Save the Chimps sanctuary.
+END:VEVENT
+BEGIN:VEVENT
+UID:c18ee13b-a574-4b32-a21c-76428f26f428
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260221T120000
+DTEND;TZID=America/New_York:20260221T140000
+SUMMARY:Highwaymen Museum Soft Opening
+LOCATION:Highwaymen Museum\, Port St. Lucie
+DESCRIPTION:Celebration honoring Florida’s legendary Highwaymen artists.
+END:VEVENT
+BEGIN:VEVENT
+UID:4b85a6d3-b2a7-4a21-904a-8173c769cac1
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260221T120000
+DTEND;TZID=America/New_York:20260221T140000
+SUMMARY:36th Annual Downtown Stuart Art Festival
+LOCATION:Downtown Stuart\, Stuart
+DESCRIPTION:120+ artists showcasing fine art in historic downtown Stuart.
+END:VEVENT
+BEGIN:VEVENT
+UID:6c265810-5472-4de4-a461-d8ed34b450c9
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260221T180000
+DTEND;TZID=America/New_York:20260221T200000
+SUMMARY:Florida AAU Karate District Championship
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Competitive martial arts championship event.
+END:VEVENT
+BEGIN:VEVENT
+UID:a41a10e3-840a-4626-b695-ab44a89b685f
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260221T190000
+DTEND;TZID=America/New_York:20260221T210000
+SUMMARY:Rhythm of The Dance
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:International Irish dance and music spectacular.
+END:VEVENT
+BEGIN:VEVENT
+UID:9a325fd7-1cb6-429e-b940-48359f8cbf8a
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260222T120000
+DTEND;TZID=America/New_York:20260222T140000
+SUMMARY:A Celebration Under the Stars
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:GraceWay Village gala fundraiser event.
+END:VEVENT
+BEGIN:VEVENT
+UID:c0ca4cd1-195d-468b-8378-0dd263f33492
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260222T190000
+DTEND;TZID=America/New_York:20260222T210000
+SUMMARY:Ana Popovic – Dance To The Rhythm Tour
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Blues-rock powerhouse live in concert.
+END:VEVENT
+BEGIN:VEVENT
+UID:9ce71cf8-4012-4a78-9d01-a775be61b5c6
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260222T200000
+DTEND;TZID=America/New_York:20260222T220000
+SUMMARY:PROUD Tina – The Ultimate Tribute to Tina Turner
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Electrifying tribute concert experience.
+END:VEVENT
+BEGIN:VEVENT
+UID:18a62c75-d053-4191-8f25-5a84c5f7d3b0
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260223T170000
+DTEND;TZID=America/New_York:20260223T190000
+SUMMARY:Power in the Fort – Coffee Hour
+LOCATION:First Pierce\, Fort Pierce
+DESCRIPTION:Community coffee meetup and connection hour.
+END:VEVENT
+BEGIN:VEVENT
+UID:3a83382c-98df-482c-95a9-2226c94010a3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260223T190000
+DTEND;TZID=America/New_York:20260223T210000
+SUMMARY:The Outlaws
+LOCATION:Stuart\, Stuart
+DESCRIPTION:Legendary Southern rock band live in Stuart.
+END:VEVENT
+BEGIN:VEVENT
+UID:58643b4e-6879-4c3e-aac1-f4e2f3ac70d1
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260224T120000
+DTEND;TZID=America/New_York:20260224T140000
+SUMMARY:Light and Lacy – Valerie Goodwin
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Textile art exhibition and mixed media showcase.
+END:VEVENT
+BEGIN:VEVENT
+UID:5cd6d695-9757-4b05-ab0e-ddc1c953f5f2
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260226T200000
+DTEND;TZID=America/New_York:20260226T220000
+SUMMARY:Brock Butler Band Debut @ Terra Fermata
+LOCATION:Terra Fermata\, Port St. Lucie
+DESCRIPTION:Live band debut performance.
+END:VEVENT
+BEGIN:VEVENT
+UID:7360666a-45aa-498d-9fb2-922aa4f8136b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260227T110000
+DTEND;TZID=America/New_York:20260308T180000
+SUMMARY:St. Lucie County Fair
+LOCATION:Fairgrounds\, Fort Pierce
+DESCRIPTION:Annual county fair with rides\, games\, livestock shows\, and 
+ concerts.
+END:VEVENT
+BEGIN:VEVENT
+UID:cc68e400-a7c0-47be-b40a-5e3fb4c2a5db
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260227T200000
+DTEND;TZID=America/New_York:20260227T220000
+SUMMARY:Garrison Keillor & Erica Rhodes (VIP Access)
+LOCATION:Sunrise Theatre\, Port St. Lucie
+DESCRIPTION:Premium theatre comedy experience.
+END:VEVENT
+BEGIN:VEVENT
+UID:f1f87aca-46e9-4400-9071-12c21e9585bc
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260228T120000
+DTEND;TZID=America/New_York:20260228T140000
+SUMMARY:One Act Play Festival
+LOCATION:Pineapple Playhouse\, Port St. Lucie
+DESCRIPTION:Four short plays showcased at Pineapple Playhouse.
+END:VEVENT
+BEGIN:VEVENT
+UID:77b69d2c-a5c1-4332-a740-dae94109db9f
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260228T160000
+DTEND;TZID=America/New_York:20260228T180000
+SUMMARY:Rise Of A Warrior – Live MMA Cage Fighting
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Action-packed amateur MMA and boxing event.
+END:VEVENT
+BEGIN:VEVENT
+UID:b77dac72-1565-41c5-bd24-1c474c0bc2d3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260228T190000
+DTEND;TZID=America/New_York:20260228T210000
+SUMMARY:Stayin’ Alive – One Night of The Bee Gees
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Tribute concert featuring Bee Gees classics.
+END:VEVENT
+BEGIN:VEVENT
+UID:1d3ab591-8cae-4919-8bf3-44e200bad53e
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T090000
+DTEND;TZID=America/New_York:20260301T110000
+SUMMARY:20 Ribeyes $39
+LOCATION:O'Reilly Auto Parts\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Wholesale Meat Truck Event -- Stock up on USDA Choice & Prime 
+ steaks\, chicken\, seafood & bundle boxes | Price: Free Entry | | Link: ht
+ tps://www.facebook.com/share/1GpiJxGe5d/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef5cba2a-c1b7-45c1-8556-00e09776e258
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Supernatural
+LOCATION:Space Coast Harley-Davidson\, Palm Bay\, Palm Bay
+DESCRIPTION:Santana Tribute (Bikeweek 2026) -- High-energy Santana tribute
+  performance featuring Latin rock rhythms and guitar solos | Price: Free |
+  | Link: https://www.facebook.com/share/1DrZKTS12b/
+END:VEVENT
+BEGIN:VEVENT
+UID:d9e114f9-63e3-4ec0-8d12-7263b9ccaf71
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Cherry Down Live
+LOCATION:Lou's Blues\, Melbourne\, Melbourne
+DESCRIPTION:Live rock performance | Price: Price varies | | Link: https://
+ www.facebook.com/share/1GJGBLWcna/
+END:VEVENT
+BEGIN:VEVENT
+UID:66b4f01c-cd46-43a2-8864-be60fa33b98f
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:a7a3a8dd-6bf2-4d57-85d3-4b9562f8c579
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Vintage Radio Live
+LOCATION:Flagler Park\, Stuart\, Stuart
+DESCRIPTION:Live music in Downtown Stuart alongside Market on Main | Price
+ : Free | | Link: https://www.facebook.com/share/1AfpUTFkLJ/
+END:VEVENT
+BEGIN:VEVENT
+UID:50b415c6-6ce7-4c1a-8026-04ac0e0b4c66
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:ROBERT JON & THE WRECK
+LOCATION:Raymond F. Kravis Center for the Performing Arts\, West Palm Beac
+ h\, West Palm Beach
+DESCRIPTION:Southern rock live performance | Price: Ticketed | | Link: htt
+ ps://www.facebook.com/share/1PLosm9LUd/
+END:VEVENT
+BEGIN:VEVENT
+UID:a41d7f5e-049a-493b-8fc7-c8fe2a5f3ff5
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Temple Beth Am's Purim Carnival
+LOCATION:Temple Beth Am\, Temple Beth Am
+DESCRIPTION:Bounce houses\, pony rides\, petting zoo & family fun | Price:
+  Free Entry | | Link: https://www.facebook.com/share/1GTjwwoKkR/
+END:VEVENT
+BEGIN:VEVENT
+UID:dba0048c-cde9-4b3b-9fb9-07c08c1e7da0
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Steven D Hunt Live
+LOCATION:Ocean Republic Brewing\, Stuart\, Stuart
+DESCRIPTION:Live music plus Snapology for Kids | Price: Free | | Link: htt
+ ps://www.facebook.com/events/1567678637676026/
+END:VEVENT
+BEGIN:VEVENT
+UID:69ca417e-c8b0-45bd-8a4a-99e8fbc2396b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Highwaymen Auction
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Art auction celebrating Florida Highwaymen legacy.
+END:VEVENT
+BEGIN:VEVENT
+UID:baf8e088-c02f-4fd5-8aa8-d4c75974cc68
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Vintage Radio
+LOCATION:Rock'n Riverwalk\, Stuart\, Stuart
+DESCRIPTION:Rock'n Riverwalk -- Live music along the waterfront | Price: F
+ ree | | Link: https://www.facebook.com/share/1FjLsseyQF/
+END:VEVENT
+BEGIN:VEVENT
+UID:5b5235ea-7638-4663-bc64-c5c90da34451
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:The Ultimate Conch & Cupcakes Pop-Up Event
+LOCATION:Café Sweets Bakery Carmen's Gourmet Kitchen & Conch Bar\, West P
+ alm Beach\, West Palm Beach
+DESCRIPTION:Island flavors\, fresh conch & gourmet cupcakes | Price: Free 
+ Entry | | Link: https://www.facebook.com/share/16vHsBxhiP/
+END:VEVENT
+BEGIN:VEVENT
+UID:cf51788d-9e82-4941-96cf-c43286c75ae8
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Cami Clune Live
+LOCATION:Frazier Creek Brewing & Distilling Co.\, Stuart\, Stuart
+DESCRIPTION:NBC's The Voice finalist performing live | Price: Free | | Lin
+ k: https://www.facebook.com/share/1Co6icrXSd/
+END:VEVENT
+BEGIN:VEVENT
+UID:7b927d34-2b75-4eec-afd9-22386a17e4a3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Clay Play Workshop
+LOCATION:Moonstruck Market\, Melbourne\, Melbourne
+DESCRIPTION:Hands-on clay hand-building workshop where participants create
+  their own pottery pieces | Price: $22 | | Link: https://www.facebook.com/
+ share/1Dvntm6eLM/
+END:VEVENT
+BEGIN:VEVENT
+UID:8538d4f3-efa2-4973-b69b-9f72dfbd80ef
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Chocolate Festival
+LOCATION:Grand Manor\, Melbourne\, Melbourne
+DESCRIPTION:Community chocolate-themed celebration | Price: Price varies |
+  | Link: https://www.facebook.com/share/1amdm3Wonu/
+END:VEVENT
+BEGIN:VEVENT
+UID:2d1bc3f6-220f-452d-b2b0-9cdd94e05b8a
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T120000
+DTEND;TZID=America/New_York:20260301T140000
+SUMMARY:Billy The Kid & The Regulators Live
+LOCATION:Earl's Hideaway Lounge\, Sebastian\, Sebastian
+DESCRIPTION:High-energy blues rock performance featuring guitar-driven rhy
+ thms and powerful vocals | Price: Free | | Link: https://www.facebook.com/
+ share/1AUHqDGWYg/
+END:VEVENT
+BEGIN:VEVENT
+UID:574cb9bc-5b40-4227-b0d6-aa4f1efc8ef2
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T131000
+DTEND;TZID=America/New_York:20260301T151000
+SUMMARY:New York Mets vs. Houston Astros
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Houston
+  Astros
+END:VEVENT
+BEGIN:VEVENT
+UID:8271a4cd-f6f2-41c4-916f-e043efde1467
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T140000
+DTEND;TZID=America/New_York:20260301T160000
+SUMMARY:Treasure Coast Theatre Presents Neil Simon Comedy
+LOCATION:Treasure Coast Theatre\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Live comedy performance | Price: $26 | | Link: https://www.fac
+ ebook.com/share/17QrKaycNR/
+END:VEVENT
+BEGIN:VEVENT
+UID:5a4b3989-d7ec-49ce-81fe-5e56c47a7f55
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T170000
+DTEND;TZID=America/New_York:20260301T190000
+SUMMARY:The Jake Hair Band Live
+LOCATION:Skipper's Cove Bar & Grill\, Skipper's Cove Bar & Grill
+DESCRIPTION:Honky-tonk country night | Price: See Venue | | Link: https://
+ www.facebook.com/share/1afTPHM1T6/
+END:VEVENT
+BEGIN:VEVENT
+UID:a312c8b3-2129-4b2a-8868-caad78a57119
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T190000
+DTEND;TZID=America/New_York:20260301T210000
+SUMMARY:Spyro Gyra
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:Celebrating 50 years of jazz fusion excellence.
+END:VEVENT
+BEGIN:VEVENT
+UID:d4a75cad-3e05-4e8f-a801-940ee9d3b483
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T190000
+DTEND;TZID=America/New_York:20260301T210000
+SUMMARY:Trombone Shorty
+LOCATION:TBD\, Port St. Lucie
+DESCRIPTION:High-energy jazz and funk performance.
+END:VEVENT
+BEGIN:VEVENT
+UID:2862f236-4de4-4c1a-9575-9afc21dd24e8
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T200000
+DTEND;TZID=America/New_York:20260301T220000
+SUMMARY:Johnny Debt Live
+LOCATION:Hop Life Brewing Company\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Florida balladeer Johnny Debt performs live in the beer garden
+  | Price: See Venue for Details | | Link: https://www.facebook.com/share/1
+ FzdpzueMq/
+END:VEVENT
+BEGIN:VEVENT
+UID:ddcfdc3a-69e8-4506-b036-ae03e85ddb0e
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260301T230000
+DTEND;TZID=America/New_York:20260302T010000
+SUMMARY:Dueling Pianos at Hop Life Brewing (21+)
+LOCATION:Hop Life Brewing Company\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Three hours of nonstop interactive musical entertainment | Pri
+ ce: 21+ Event | | Link: https://www.facebook.com/share/1LBSmgnEnh/
+END:VEVENT
+BEGIN:VEVENT
+UID:1450c927-4c20-4588-85df-ccfa70c777ff
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260302T120000
+DTEND;TZID=America/New_York:20260302T140000
+SUMMARY:Monday Night Trivia
+LOCATION:Intracoastal Brewing Company\, Melbourne\, Melbourne
+DESCRIPTION:Weekly trivia competition with prizes | Price: Free | | Link: 
+ https://www.facebook.com/share/1BxwFyoX1u/
+END:VEVENT
+BEGIN:VEVENT
+UID:4da7a27d-0b5b-48c0-9671-99e229515b89
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260302T120000
+DTEND;TZID=America/New_York:20260302T140000
+SUMMARY:BobFest
+LOCATION:Terra Fermata Tiki Bar\, Stuart\, Stuart
+DESCRIPTION:Annual Bob Dylan tribute celebration | Price: Ticketed | | Lin
+ k: https://www.facebook.com/share/1C7fKBfY8R/
+END:VEVENT
+BEGIN:VEVENT
+UID:595c9d50-a280-48a8-b545-fdb2eef99131
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260302T130000
+DTEND;TZID=America/New_York:20260302T150000
+SUMMARY:Island Bob Live
+LOCATION:Ocean Village Tiki Bar\, Hutchinson Island\, Hutchinson Island
+DESCRIPTION:Live music | Price: See Venue for Details | | Link: https://ww
+ w.facebook.com/share/1BdNkRz6vc/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1e9b21c-7ee2-4197-984b-0dde96dad573
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260302T160000
+DTEND;TZID=America/New_York:20260302T180000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:a7816eaf-0f61-444b-9f84-4542db78e12d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260302T173000
+DTEND;TZID=America/New_York:20260302T193000
+SUMMARY:TUSK
+LOCATION:Sunrise Theatre\, Sunrise Theatre
+DESCRIPTION:The Classic Fleetwood Mac Tribute -- Live tribute performance 
+ | Price: Tickets Required | | Link: https://www.facebook.com/share/1GsEMXc
+ V89/
+END:VEVENT
+BEGIN:VEVENT
+UID:0257dd55-7fb2-47a3-a8d8-e622969be1b5
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260303T120000
+DTEND;TZID=America/New_York:20260303T140000
+SUMMARY:Middle World Journey
+LOCATION:Brevard Drive Spiritual Center\, Melbourne\, Melbourne
+DESCRIPTION:Guided spiritual journey and meditation gathering | Price: Pri
+ ce varies | | Link: https://www.facebook.com/share/1By3kdnYcB/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef1c83be-381c-4360-989b-cd755b0aa397
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260303T120000
+DTEND;TZID=America/New_York:20260303T140000
+SUMMARY:Sporting Clay Course Grand Opening
+LOCATION:Indian River County Public Shooting Range\, Indian River County P
+ ublic Shooting Range
+DESCRIPTION:Ribbon cutting and tours of the expanded course | Price: Free 
+ | | Link: https://www.facebook.com/share/1DxpPQrked/
+END:VEVENT
+BEGIN:VEVENT
+UID:7710065b-1560-4979-ae98-038d8e0afdd9
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260303T131100
+DTEND;TZID=America/New_York:20260303T151100
+SUMMARY:New York Mets vs. Nicaragua
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Nicarag
+ ua
+END:VEVENT
+BEGIN:VEVENT
+UID:dfda8771-1c76-447f-ac73-7e0080023b44
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260303T160000
+DTEND;TZID=America/New_York:20260303T180000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:ba84c203-ea04-4a3e-aa03-ef943f992333
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260303T193000
+DTEND;TZID=America/New_York:20260303T213000
+SUMMARY:Swan Lake: International Ballet Stars
+LOCATION:Sunrise Theatre\, Sunrise Theatre
+DESCRIPTION:World-class ballet performance | Price: Tickets Required | | L
+ ink: https://www.facebook.com/share/18JX8f4zSU/
+END:VEVENT
+BEGIN:VEVENT
+UID:ee9255b2-f96f-4638-be51-367173935471
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T120000
+DTEND;TZID=America/New_York:20260304T140000
+SUMMARY:The Power of Art
+LOCATION:Emerson Center\, Emerson Center
+DESCRIPTION:Presentation exploring how art influences culture and life | P
+ rice: Ticketed | | Link: https://www.facebook.com/events/1167928738317005/
+END:VEVENT
+BEGIN:VEVENT
+UID:b7138eb2-404a-45cb-8fb9-7aad034a3948
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T120000
+DTEND;TZID=America/New_York:20260304T140000
+SUMMARY:Palm Beach Modern + Contemporary
+LOCATION:Palm Beach County Convention Center\, West Palm Beach\, West Palm
+  Beach
+DESCRIPTION:International art fair featuring contemporary & modern works |
+  Price: Ticketed | | Link: https://www.facebook.com/share/18KG8ngMbW/
+END:VEVENT
+BEGIN:VEVENT
+UID:58225395-07d8-4345-9d51-ec7d4573d2b8
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T120000
+DTEND;TZID=America/New_York:20260304T140000
+SUMMARY:Game Night in the District
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Monthly community board game night hosted by rotating merchant
+ s in the Eau Gallie Arts District\, Melbourne. | Price: Free | | Link: htt
+ ps://www.facebook.com/share/1KjUM9Cgzh/
+END:VEVENT
+BEGIN:VEVENT
+UID:bc34f798-5d98-4ebb-abd9-301068606c4d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T131000
+DTEND;TZID=America/New_York:20260304T151000
+SUMMARY:New York Mets vs. Israel
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Israel
+END:VEVENT
+BEGIN:VEVENT
+UID:20e33330-53bc-406d-a844-b6f205889ee1
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T160000
+DTEND;TZID=America/New_York:20260304T180000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:f8adcf69-a8f7-46a7-929e-d3bf66e18a88
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T170000
+DTEND;TZID=America/New_York:20260304T190000
+SUMMARY:Trivia Night at Recovery Sports Grill
+LOCATION:Recovery Sports Grill\, Recovery Sports Grill
+DESCRIPTION:Weekly trivia with Taco Tuesday specials | Price: Free to Play
+  | | Link: https://www.facebook.com/share/1Aoka4Qiah/
+END:VEVENT
+BEGIN:VEVENT
+UID:03624d14-088e-49ed-9ba9-d4fb4330469e
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260304T170000
+DTEND;TZID=America/New_York:20260304T190000
+SUMMARY:NJCAA Swimming Championship Meet
+LOCATION:Indian River State College\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Collegiate championship competition | Price: See Event | | Lin
+ k: https://www.facebook.com/share/1ChMUjnjsW/
+END:VEVENT
+BEGIN:VEVENT
+UID:43c1decf-516c-4782-9ab9-9b1d35e4589e
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260305T160000
+DTEND;TZID=America/New_York:20260305T180000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:9c291e33-a51c-433b-a830-4098b5fac196
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260305T163000
+DTEND;TZID=America/New_York:20260305T183000
+SUMMARY:Top Clown Karaoke
+LOCATION:Port St. Lucie Golf Course\, Port St. Lucie Golf Course
+DESCRIPTION:Karaoke night at The Saints | Price: See Venue for Details | |
+  Link: https://www.facebook.com/share/1BKLvRwXbW/
+END:VEVENT
+BEGIN:VEVENT
+UID:39d5b982-a4ce-47d9-8991-7ab14cb67a20
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260306T120000
+DTEND;TZID=America/New_York:20260306T140000
+SUMMARY:80s Band Live at Bike Week
+LOCATION:Space Coast Harley-Davidson\, Palm Bay\, Palm Bay
+DESCRIPTION:Classic 80s rock performance during Bike Week celebrations | P
+ rice: Free | | Link: https://www.facebook.com/share/1C9DAuuav9/
+END:VEVENT
+BEGIN:VEVENT
+UID:8d2fcb21-bdcf-4780-9453-14de62b3e23d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260306T160000
+DTEND;TZID=America/New_York:20260306T180000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:34565776-cbe3-4fe5-aad2-c5f12f937d18
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260306T170000
+DTEND;TZID=America/New_York:20260306T190000
+SUMMARY:Vertigo
+LOCATION:Tradition Square\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:The Ultimate U2 Tribute Band -- Live tribute concert with food
+  trucks | Price: Free Entry | | Link: https://www.facebook.com/share/1AXVv
+ 6FfJM/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ded55eb-318d-48f9-bff9-240899e80c17
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T090000
+DTEND;TZID=America/New_York:20260307T110000
+SUMMARY:Port Saint Lucie Sports Cards & Collectibles Show
+LOCATION:Polish American Club Convention Center\, Port St. Lucie\, Port St
+ . Lucie
+DESCRIPTION:Monthly trading card & memorabilia show featuring sports\, Pok
+ émon\, Marvel & more | Price: Free Admission | | Link: https://www.facebo
+ ok.com/share/1AaRQTvPcz/
+END:VEVENT
+BEGIN:VEVENT
+UID:304b3c30-15aa-4848-b12a-bc3014439d10
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:0ad0be48-b687-43ca-9f59-44d694edddb4
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Family Movie Night in the Park: Zootopia 2
+LOCATION:Abacoa Community Park\, Abacoa Community Park
+DESCRIPTION:Outdoor movie night | Price: Free | | Link: https://www.facebo
+ ok.com/share/1GsBi6WYeW/
+END:VEVENT
+BEGIN:VEVENT
+UID:e924e742-ed4d-4016-bfea-01dfb47617e3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Man In Black
+LOCATION:King Center for the Performing Arts\, Melbourne\, Melbourne
+DESCRIPTION:Tribute to Johnny Cash -- Live tribute concert honoring Johnny
+  Cash | Price: Price varies | | Link: https://www.facebook.com/share/1HrGC
+ PeyZC/
+END:VEVENT
+BEGIN:VEVENT
+UID:3db40b2f-7da7-4915-a575-30dbaa19b23c
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Art After Dark
+LOCATION:Norton Museum of Art\, West Palm Beach\, West Palm Beach
+DESCRIPTION:Art\, live performances & workshops | Price: $5--$10 | | Link:
+  https://www.facebook.com/share/183RG7uYZf/
+END:VEVENT
+BEGIN:VEVENT
+UID:c2603502-9571-4bff-858e-9b514b4bb695
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Guavafest 2026
+LOCATION:Terra Fermata Tiki Bar\, Stuart\, Stuart
+DESCRIPTION:Multi-band festival featuring Guavatron\, DJ Brownie & more | 
+ Price: $20+ | | Link: https://www.facebook.com/share/1AxV4PjwyQ/
+END:VEVENT
+BEGIN:VEVENT
+UID:6e1d193f-820d-4c4a-95e6-56814d2f2ded
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Treasure Coast Paddle Battle
+LOCATION:Jaycee Park\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Competitive paddle event and waterfront excitement | Price: Fr
+ ee | | Link: https://www.facebook.com/share/1GSNsWQyDm/
+END:VEVENT
+BEGIN:VEVENT
+UID:017f4489-326c-42fe-979d-2450ba6cb9b6
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:The Peach 2nd Annual Art Fair
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Art walk with open studios\, live music & artist booths in Wes
+ t Palm Beach. | Price: Free Entry | | Link: https://www.facebook.com/share
+ /18knzNfaN8/
+END:VEVENT
+BEGIN:VEVENT
+UID:7195ff17-a44d-49a1-9b98-d809a184c054
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Blue Jean Ball: Boogie to the 70's
+LOCATION:Marriott Hutchinson Island Beach Resort\, Stuart\, Stuart
+DESCRIPTION:5th Annual fundraiser gala | Price: $150 | | Link: https://www
+ .facebook.com/share/17LHz3gaAg/
+END:VEVENT
+BEGIN:VEVENT
+UID:289a7474-9c44-448e-bdd0-79b20cc11e92
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Annual "Walk the Plank" Longboard Contest
+LOCATION:Walton Rocks Beach\, Jensen Beach\, Jensen Beach
+DESCRIPTION:Competitive longboard surf contest and beach clean-up | Price:
+  Free (No Beach Sign-Up) | | Link: https://www.facebook.com/share/17vHz9ys
+ 5b/
+END:VEVENT
+BEGIN:VEVENT
+UID:ff1e3e96-1617-437a-8e0c-12c9666a62f1
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T120000
+DTEND;TZID=America/New_York:20260307T140000
+SUMMARY:Clays for a Cause
+LOCATION:Quail Creek Sporting Ranch\, Quail Creek Sporting Ranch
+DESCRIPTION:Sporting clays tournament with silent auction\, raffles & priz
+ es | Price: Ticketed | | Link: https://www.facebook.com/share/1AvYuDqYzs/
+END:VEVENT
+BEGIN:VEVENT
+UID:28461ad6-6746-48b6-af27-f481d08c85d2
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260307T160000
+DTEND;TZID=America/New_York:20260307T180000
+SUMMARY:River Fest
+LOCATION:Indian River State College\, Fort Pierce\, Fort Pierce
+DESCRIPTION:All-day community festival with live entertainment\, food truc
+ ks\, and family fun | Price: Free | | Link: https://www.facebook.com/share
+ /17vgcXB8LN/
+END:VEVENT
+BEGIN:VEVENT
+UID:805cf05d-3d7a-46dc-bc8b-58ba775ff2ca
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260308T100000
+DTEND;TZID=America/New_York:20260308T120000
+SUMMARY:Florida State Outrigger Regatta
+LOCATION:Jaycee Park\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Thrilling outrigger canoe races along the waterfront | Price: 
+ Free | | Link: https://www.facebook.com/share/1H7V1b2LZb/
+END:VEVENT
+BEGIN:VEVENT
+UID:8ba11d79-8aed-4766-9642-279734b12f05
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260308T110000
+DTEND;TZID=America/New_York:20260308T130000
+SUMMARY:Island Time on Hakuna Matata Cruise
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Alumni sunset cruise departing from Flagler Drive waterfront\,
+  West Palm Beach. | Price: $65 | | Link: https://www.facebook.com/share/1D
+ 8Nj6Hb8g/
+END:VEVENT
+BEGIN:VEVENT
+UID:1e4e13f8-8d4d-4473-b09d-22db8ee0b872
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260308T110000
+DTEND;TZID=America/New_York:20260308T130000
+SUMMARY:St. Lucie County Fair
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: St. Lucie County Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:813bf62e-9580-4faf-8742-383b2470542c
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260308T110000
+DTEND;TZID=America/New_York:20260308T130000
+SUMMARY:Vienna Philharmonic
+LOCATION:Raymond F. Kravis Center for the Performing Arts\, West Palm Beac
+ h\, West Palm Beach
+DESCRIPTION:Matinee performance led by Andris Nelsons | Price: Ticketed | 
+ | Link: https://www.facebook.com/share/1C5TrX53t2/
+END:VEVENT
+BEGIN:VEVENT
+UID:05445a9b-2618-41a6-b74c-31a5bcd0cd6b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260308T121000
+DTEND;TZID=America/New_York:20260308T141000
+SUMMARY:New York Mets vs. New York Yankees
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. New Yor
+ k Yankees
+END:VEVENT
+BEGIN:VEVENT
+UID:92d7200e-41d7-45d3-a4a1-481cd05a8221
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260309T110000
+DTEND;TZID=America/New_York:20260309T130000
+SUMMARY:Lang Lang & Vienna Philharmonic
+LOCATION:Raymond F. Kravis Center for the Performing Arts\, Raymond F. Kra
+ vis Center for the Performing Arts
+DESCRIPTION:World-renowned pianist joins orchestra | Price: Ticketed | | L
+ ink: https://www.facebook.com/share/1AWhcfeGcD/
+END:VEVENT
+BEGIN:VEVENT
+UID:fd2aa143-2182-41d1-8883-d5b879e2bedd
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260309T171000
+DTEND;TZID=America/New_York:20260309T191000
+SUMMARY:New York Mets vs. Florida Marlins
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Florida
+  Marlins
+END:VEVENT
+BEGIN:VEVENT
+UID:aa13ae27-d375-4b71-9bec-65e71e4a7b71
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260310T110000
+DTEND;TZID=America/New_York:20260310T130000
+SUMMARY:Jeep Night at Texas Roadhouse
+LOCATION:Texas Roadhouse\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Special Jeep showcase night with reserved parking & giveaways 
+ | Price: Free (With Dinner Purchase) | | Link: https://www.facebook.com/sh
+ are/1CGePH1Cg2/
+END:VEVENT
+BEGIN:VEVENT
+UID:b94b79bd-7d90-4997-bd8e-f07821eb854b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260310T121000
+DTEND;TZID=America/New_York:20260310T141000
+SUMMARY:New York Mets vs. St. Louis Cardinals
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. St. Lou
+ is Cardinals
+END:VEVENT
+BEGIN:VEVENT
+UID:5016ab27-d2b6-4f7e-81ad-4dc9155635c3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260313T110000
+DTEND;TZID=America/New_York:20260313T130000
+SUMMARY:Zora Experience Festival
+LOCATION:809 N 9th St\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Festival of art and culture celebrating Zora Neale Hurston | P
+ rice: Ticketed | | Link: https://www.facebook.com/share/1C5rrgVd2d/
+END:VEVENT
+BEGIN:VEVENT
+UID:e77bbc1e-31d5-4694-b025-76fb6d029a38
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260313T110000
+DTEND;TZID=America/New_York:20260313T130000
+SUMMARY:Causeway Cove Boat Show & Marine Flea Market
+LOCATION:601 Seaway Dr\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Marine vendors\, boating gear\, and waterfront shopping | Pric
+ e: Vendor spaces available | | Link: https://www.facebook.com/share/1Apjsi
+ iAvU/
+END:VEVENT
+BEGIN:VEVENT
+UID:a5e4b0e6-0321-4f56-976b-e1076eba9add
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260313T171000
+DTEND;TZID=America/New_York:20260313T191000
+SUMMARY:New York Mets vs. Florida Marlins (split squad)
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Florida
+  Marlins (split squad)
+END:VEVENT
+BEGIN:VEVENT
+UID:fe97ff25-ee03-46f8-86f6-7b00ad82eb3c
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:St. Patrick's Day Pawty & Open House
+LOCATION:The Dog Stop: Stuart\, Stuart\, Stuart
+DESCRIPTION:Themed pet celebration with tours & treats | Price: Free | | L
+ ink: https://www.facebook.com/share/1BdN7NcWJb/
+END:VEVENT
+BEGIN:VEVENT
+UID:9a45714b-8081-4766-a714-4ff757ae4efb
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:7th Annual Classic Car Show
+LOCATION:Grand Oaks of Jensen Beach\, Grand Oaks of Jensen Beach
+DESCRIPTION:Classic cars\, live music\, food\, and raffles | Price: Free |
+  | Link: https://www.facebook.com/share/18C9JBV7Hv/
+END:VEVENT
+BEGIN:VEVENT
+UID:b6531c7f-2162-4a10-97a8-7cdcd719cfab
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:Senior Legends Showdown
+LOCATION:Whispering Pines Park\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:First-ever regional senior athletic competition | Price: See E
+ vent for Details | | Link: https://www.facebook.com/share/1AaG7qyyvg/
+END:VEVENT
+BEGIN:VEVENT
+UID:4f0cbf48-7bb2-4da1-adc9-2e096a3837d4
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:4th Annual Causeway Cove Boat Show
+LOCATION:601 Seaway Dr\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Marine exhibits\, vendors\, and waterfront attractions | Price
+ : Vendor Registration Required | | Link: https://www.facebook.com/share/1D
+ VYABNWB1/
+END:VEVENT
+BEGIN:VEVENT
+UID:b53db7b8-c536-4a47-9dca-630fbffbe00d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:City of Stuart Amphitheater Grand Opening & Rockin' Blues Fest
+LOCATION:Veterans Memorial Park\, Stuart\, Stuart
+DESCRIPTION:Ribbon cutting and full day of live music | Price: Free | | Li
+ nk: https://www.facebook.com/share/1EJnzcz6kr/
+END:VEVENT
+BEGIN:VEVENT
+UID:162f6f82-6800-4eed-bb7d-556075d57702
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:Game Show #7
+LOCATION:10020 Orange Ave\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Family-friendly equestrian competition featuring barrels\, pol
+ es\, cones & more | Price: $50--$70 Riders | | Link: https://www.facebook.
+ com/share/18EtGPYSKp/
+END:VEVENT
+BEGIN:VEVENT
+UID:293a850a-34c1-4921-924d-6517828e1dab
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:Casino Night 2026: 007 Casino Royale
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Blackjack\, poker\, live jazz & Bond-style cocktails inside th
+ e Piper Aircraft hangar hosted by United Against Poverty. | Price: $50+ | 
+ | Link: https://www.facebook.com/share/17wCBYTWfG/
+END:VEVENT
+BEGIN:VEVENT
+UID:dc53842e-6d60-4824-84cd-bbb4700eff01
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:The Art of Painting Nature & Water Conservation
+LOCATION:Ann Norton Sculpture Gardens\, West Palm Beach\, West Palm Beach
+DESCRIPTION:Rain barrel painting workshop with Jeanne Martin | Price: $10-
+ -$15 (Members Free) | | Link: https://www.facebook.com/share/18WYq26Rgq/
+END:VEVENT
+BEGIN:VEVENT
+UID:c71d8746-a868-403d-b560-39ce801df6bc
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:Great Irish Festival
+LOCATION:Abacoa Amphitheater\, Abacoa Amphitheater
+DESCRIPTION:Irish music\, food & festivities | Price: Ticketed | | Link: h
+ ttps://www.facebook.com/share/183pLTmfMp/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef3b00dc-20ee-485e-9c9d-2bbf0719ada9
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T110000
+DTEND;TZID=America/New_York:20260314T130000
+SUMMARY:SwapMeet Saturday
+LOCATION:Palm Beach Harley-Davidson\, West Palm Beach\, West Palm Beach
+DESCRIPTION:Buy\, sell & trade motorcycle parts | Price: Free Entry | | Li
+ nk: https://www.facebook.com/share/17wVjHLkze/
+END:VEVENT
+BEGIN:VEVENT
+UID:88af3e8c-ee51-4537-87ff-cbebe073d5d0
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260314T140000
+DTEND;TZID=America/New_York:20260314T160000
+SUMMARY:Port St. Lucie Irish Festival
+LOCATION:MIDFLORIDA Event Center\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Family-friendly celebration of Irish & Celtic culture with liv
+ e music and food | Price: Free Admission | | Link: https://www.facebook.co
+ m/share/1HFjWX5v49/
+END:VEVENT
+BEGIN:VEVENT
+UID:7b5c0c15-9f3f-4b1e-8fe4-f511e0cfd983
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260315T110000
+DTEND;TZID=America/New_York:20260315T130000
+SUMMARY:Game On! Treasure Coast Tri
+LOCATION:Jaycee Park\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Exciting triathlon event | Price: Registration Required | | Li
+ nk: https://www.facebook.com/share/1DLYQnkvM7/
+END:VEVENT
+BEGIN:VEVENT
+UID:400333e1-a6c1-47d0-9ac9-c485be88bd32
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260315T110000
+DTEND;TZID=America/New_York:20260315T130000
+SUMMARY:Music at the Mansion featuring VIVA
+LOCATION:Tuckahoe\, Jensen Beach\, Jensen Beach
+DESCRIPTION:Free waterfront concert with family activities at The Mansion 
+ | Price: Free | | Link: https://www.facebook.com/share/1GecWBU3pX/
+END:VEVENT
+BEGIN:VEVENT
+UID:925e9733-3be3-41a0-a44f-1ee5e79541a4
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260315T121000
+DTEND;TZID=America/New_York:20260315T141000
+SUMMARY:New York Mets vs. Toronto Blue Jays
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Toronto
+  Blue Jays
+END:VEVENT
+BEGIN:VEVENT
+UID:53b1d798-dd04-4bfe-bcee-a5ee3bbf0613
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260316T171000
+DTEND;TZID=America/New_York:20260316T191000
+SUMMARY:New York Mets vs. Washington Nationals
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Washing
+ ton Nationals
+END:VEVENT
+BEGIN:VEVENT
+UID:c1a1966d-ed2f-448a-bf52-0cefa99da2a5
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260317T110000
+DTEND;TZID=America/New_York:20260317T130000
+SUMMARY:Spring Training: Mets vs. Nationals
+LOCATION:Clover Park\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:MLB Spring Training game | Price: Tickets Required | | Link: h
+ ttps://www.facebook.com/events/1863705797602511/
+END:VEVENT
+BEGIN:VEVENT
+UID:5ea97288-460d-4332-a293-8dbebfdf9979
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260320T121000
+DTEND;TZID=America/New_York:20260320T141000
+SUMMARY:New York Mets vs. St. Louis Cardinals
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. St. Lou
+ is Cardinals
+END:VEVENT
+BEGIN:VEVENT
+UID:3d436556-1244-4f4a-986c-b1bb194c5597
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260320T153000
+DTEND;TZID=America/New_York:20260320T173000
+SUMMARY:Floating Sound Bath
+LOCATION:270 NW Peacock Blvd\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Meditation experience with aerial hammocks or floor seating | 
+ Price: $35--$40 | | Link: https://www.facebook.com/share/1CNq5sP2kB/
+END:VEVENT
+BEGIN:VEVENT
+UID:909d1faf-c139-4918-9387-4f540fe1278d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260320T200000
+DTEND;TZID=America/New_York:20260320T220000
+SUMMARY:SHREK RAVE (18+)
+LOCATION:Guadalajara Night Club\, Fort Pierce\, Fort Pierce
+DESCRIPTION:High-energy themed dance party | Price: $18+ | | Link: https:/
+ /www.facebook.com/share/1BmnLhBnsp/
+END:VEVENT
+BEGIN:VEVENT
+UID:0afb2095-34a2-43c2-a7a2-3b31237c77b7
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T100000
+DTEND;TZID=America/New_York:20260321T120000
+SUMMARY:Verano Car Show
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Community car show featuring classic and custom vehicles in Po
+ rt St. Lucie. | Price: Free Entry | | Link: https://www.facebook.com/event
+ s/2355435671638453/
+END:VEVENT
+BEGIN:VEVENT
+UID:2a6761e5-16a8-4fa1-be49-343c075c0882
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Guided Canoe Cruise
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Grassy Waters -- Educational Everglades paddle tour departing 
+ from Grassy Waters Preserve\, West Palm Beach. | Price: $5--$10 | | Link: 
+ https://www.facebook.com/share/14X8iy7VJyK/
+END:VEVENT
+BEGIN:VEVENT
+UID:2d76bc33-33ff-45b2-8bf6-8ca98d6b3b4b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Fit Fest
+LOCATION:724 SE 10th St.\, Stuart\, Stuart
+DESCRIPTION:Fitness demos\, health screenings & community wellness activit
+ ies | Price: Free | | Link: https://www.facebook.com/share/17nwaC7AVn/
+END:VEVENT
+BEGIN:VEVENT
+UID:2eebfb61-1d86-48b2-813f-9fe42b29af36
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Wine Down with Wildlife
+LOCATION:Busch Wildlife Sanctuary\, Busch Wildlife Sanctuary
+DESCRIPTION:Native plant talk\, planter painting & take-home wildlife-frie
+ ndly plant | Price: Ticketed | | Link: https://www.facebook.com/share/18Js
+ ScKFns/
+END:VEVENT
+BEGIN:VEVENT
+UID:7fec2cd2-2d40-4752-8f4a-cdcf9cba0ce5
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:CCW Presents: Anniversary 22
+LOCATION:MIDFLORIDA Event Center\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Coastal Championship Wrestling celebrates 22 years | Price: Se
+ e Event for Pricing | | Link: https://www.facebook.com/share/181jbwUBiU/
+END:VEVENT
+BEGIN:VEVENT
+UID:eac91464-120c-4d72-8606-4e6ef0801375
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Yoga in the Wild
+LOCATION:Busch Wildlife Sanctuary\, Busch Wildlife Sanctuary
+DESCRIPTION:Outdoor yoga session in the Educational Amphitheater | Price: 
+ $20 | | Link: https://www.facebook.com/share/14ftj3nF8Z8/
+END:VEVENT
+BEGIN:VEVENT
+UID:185e0c36-4155-492d-9d71-af9f11b600fa
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Family Fun Festival & Book Fair
+LOCATION:$35 per spot\, $35 per spot
+DESCRIPTION:Free community festival promoting Independence Classical Acade
+ my in Ft. Pierce. Vendors available | Price: Free | | Link: https://www.fa
+ cebook.com/share/1AhYQFTbdB/
+END:VEVENT
+BEGIN:VEVENT
+UID:32173ddd-4e52-4263-af00-97230243d5bf
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:New Breed Ultimate Challenge
+LOCATION:MIDFLORIDA Event Center\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:NJJF grappling competition | Price: Tickets Required | | Link:
+  https://www.facebook.com/share/1TS1MaCQY3/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef5c2813-1f99-4682-b96f-1902681909da
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Dinkin Dawgs Indoor Pickleball Tournament
+LOCATION:Diadem Pickleball Complex\, Jensen Beach\, Jensen Beach
+DESCRIPTION:Competitive doubles tournament | Price: Registration Required 
+ | | Link: https://www.facebook.com/share/1DN9RnvPif/
+END:VEVENT
+BEGIN:VEVENT
+UID:e7b81fbe-301c-4293-aef7-c2eb46706b2c
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Tropical Fruit Tree & Edible Plant Sale
+LOCATION:South Florida Fairgrounds\, West Palm Beach\, West Palm Beach
+DESCRIPTION:Large selection of fruit trees & edible plants | Price: Free E
+ ntry | | Link: https://www.facebook.com/share/1BaRRpCi2M/
+END:VEVENT
+BEGIN:VEVENT
+UID:47a3ab57-7444-46a3-ba54-6f837798ae9d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:SOLID BRASS
+LOCATION:Abacoa Amphitheater\, Abacoa Amphitheater
+DESCRIPTION:Earl Stewart LIVE Concert Series -- High-energy 8-piece horn b
+ and performing classic hits | Price: Ticketed | | Link: https://www.facebo
+ ok.com/share/14aCGDMSxz9/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef440764-69f8-427c-92e1-759b329adf3b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Coastal Babes Wellness Event
+LOCATION:Fit Town Jupiter\, Fit Town Jupiter
+DESCRIPTION:Fitness classes\, vendors\, free B12 shots & giveaways | Price
+ : Free | | Link: https://www.facebook.com/share/1NZvj8PuKa/
+END:VEVENT
+BEGIN:VEVENT
+UID:6f391890-a930-4f3b-a079-7345617e8c99
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T110000
+DTEND;TZID=America/New_York:20260321T130000
+SUMMARY:Spring Craft Fair
+LOCATION:South Florida Fairgrounds\, South Florida Fairgrounds
+DESCRIPTION:Handmade crafts & artisan vendors | Price: Free Entry | | Link
+ : https://www.facebook.com/share/1NoM2HnDBk/
+END:VEVENT
+BEGIN:VEVENT
+UID:fde5c1ad-f4b1-4296-b67f-a94df5118a87
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260321T121000
+DTEND;TZID=America/New_York:20260321T141000
+SUMMARY:New York Mets vs. Houston Astros (split squad)
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: New York Mets vs. Houston
+  Astros (split squad)
+END:VEVENT
+BEGIN:VEVENT
+UID:c98c2908-efce-4857-aa7e-92423132127e
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260322T110000
+DTEND;TZID=America/New_York:20260322T130000
+SUMMARY:Two Bridges Loop Run & Potluck
+LOCATION:Indian Riverside Park\, Jensen Beach\, Jensen Beach
+DESCRIPTION:10.75-mile scenic group run with post-run potluck | Price: Fre
+ e | | Link: https://www.facebook.com/share/1DFZ8Whjrt/
+END:VEVENT
+BEGIN:VEVENT
+UID:9edc9ff3-75e2-46d5-9908-280ba88f9176
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260322T110000
+DTEND;TZID=America/New_York:20260322T130000
+SUMMARY:Slippery When Wet
+LOCATION:Earl's Hideaway Lounge\, Sebastian\, Sebastian
+DESCRIPTION:Bon Jovi Tribute -- Live tribute performance celebrating Bon J
+ ovi classics | Price: Free | | Link: https://www.facebook.com/share/1LBJUs
+ U7sR/
+END:VEVENT
+BEGIN:VEVENT
+UID:647e4791-7523-4a20-bbe8-d195a1399e6b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260322T110000
+DTEND;TZID=America/New_York:20260322T130000
+SUMMARY:Bread Zeppelin Live
+LOCATION:US-1 & CR512\, Sebastian\, Sebastian
+DESCRIPTION:Tribute performance celebrating the legendary music of Led Zep
+ pelin | Price: Free | | Link: https://www.facebook.com/share/1DtkNpvUGu/
+END:VEVENT
+BEGIN:VEVENT
+UID:c28fb995-6865-4337-9ff8-3e22d5df8332
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260324T110000
+DTEND;TZID=America/New_York:20260324T130000
+SUMMARY:The Campfireball
+LOCATION:Vero Beach Theatre Guild\, Vero Beach Theatre Guild
+DESCRIPTION:Interactive storytelling show inspired by audience stories | P
+ rice: Ticketed | | Link: https://www.facebook.com/share/1HXu4LdSrA/
+END:VEVENT
+BEGIN:VEVENT
+UID:a0fe5b2d-b860-4bbb-b833-5b9b59a9107e
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260325T110000
+DTEND;TZID=America/New_York:20260325T130000
+SUMMARY:Walter Trout Live
+LOCATION:The Lyric Theatre\, Stuart\, Stuart
+DESCRIPTION:Blues rock performance | Price: Ticketed | | Link: https://www
+ .facebook.com/events/1581126886361210/
+END:VEVENT
+BEGIN:VEVENT
+UID:02fd5829-c1a5-4fd6-93fb-f656e51d7134
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T090000
+DTEND;TZID=America/New_York:20260327T110000
+SUMMARY:6th Annual Strawberry Festival
+LOCATION:MIDFLORIDA Event Center\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Two-day festival with strawberries\, monster truck rides\, Cir
+ que show & family fun | Price: See Event for Details | | Link: https://www
+ .facebook.com/share/1GwVm542fv/
+END:VEVENT
+BEGIN:VEVENT
+UID:3bbcbe93-e609-4d00-8316-bcfd6f85b467
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Meg O'Malley's St. Patrick's Celebration
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Downtown Irish festival featuring parade\, race\, live music\,
+  food\, and drinks in Historic Downtown Melbourne. | Price: Free | | Link:
+  https://www.facebook.com/share/14Z1safrNA8/
+END:VEVENT
+BEGIN:VEVENT
+UID:cece2b98-644d-4a42-b769-10310275ad2b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:29th Annual Downtown Stuart Art & Craft Festival
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:National artists and crafters along SW Osceola Street\, Downto
+ wn Stuart. | Price: Free | | Link: https://www.facebook.com/share/1Bw88vz2
+ xr/
+END:VEVENT
+BEGIN:VEVENT
+UID:f47d0565-8c90-43a4-9816-f8232a0de724
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:FIHA Annual Native American Powwow
+LOCATION:St. Lucie County Fairgrounds\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:60th annual intertribal powwow featuring dancing\, drumming\, 
+ Native food & vendors | Price: $10 Adults / $5 Kids | | Link: https://www.
+ facebook.com/share/1XramvFyMR/
+END:VEVENT
+BEGIN:VEVENT
+UID:af901e1d-3a74-42c8-b00e-8a98718100da
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Wild Spring Break Adventure Camp
+LOCATION:Busch Wildlife Sanctuary\, Busch Wildlife Sanctuary
+DESCRIPTION:Wildlife education camp for ages 8--11 | Price: $250 | | Link:
+  https://www.facebook.com/share/14a1y4Pi71j/
+END:VEVENT
+BEGIN:VEVENT
+UID:7ce8c574-d03d-43f8-b089-b044017cd88c
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Vero's Van-Go Van-Life Event
+LOCATION:Waldo's Secret Garden\, Waldo's Secret Garden
+DESCRIPTION:Camper vans\, workshops\, vendors\, antiques\, food trucks & l
+ ive music | Price: $10 (public Sat) | | Link: https://www.facebook.com/sha
+ re/1CfudjU3AS/
+END:VEVENT
+BEGIN:VEVENT
+UID:3d9ddf80-6c40-490a-81f8-b46f68bc4c59
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Earl's Rock'n'Roll Blowout
+LOCATION:Earl's Hideaway Lounge\, Sebastian\, Sebastian
+DESCRIPTION:Three-day live music celebration featuring tribute bands and p
+ erformances along the Indian River | Price: Free | | Link: https://www.fac
+ ebook.com/share/1ZWpKkT5sD/
+END:VEVENT
+BEGIN:VEVENT
+UID:30f02cb9-1fb3-46a7-aec0-4cc02464a0c8
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Palm Bay Strawberry Festival
+LOCATION:Fred Poppe Regional Park\, Palm Bay\, Palm Bay
+DESCRIPTION:Family festival featuring strawberries\, live entertainment\, 
+ crafts\, food vendors\, rides\, and contests | Price: $7 (Kids 2 & under f
+ ree) | | Link: https://www.facebook.com/share/1PUiNz39Za/
+END:VEVENT
+BEGIN:VEVENT
+UID:ccc47181-36e4-4e7b-b996-0e930422a3d6
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Great American Fort Pierce Gun Show
+LOCATION:Havert L. Fenn Center\, Fort Pierce\, Fort Pierce
+DESCRIPTION:Firearms expo and concealed carry classes | Price: $10 Entry |
+  | Link: https://www.facebook.com/share/14Y968WNQKx/
+END:VEVENT
+BEGIN:VEVENT
+UID:acad463f-cbeb-4cf4-82c6-6a172ad6ed6c
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:March Mysteries: Murder on the Symphonic Express
+LOCATION:Melbourne Auditorium\, Melbourne\, Melbourne
+DESCRIPTION:Interactive orchestral mystery show with actors and classical 
+ music | Price: Free | | Link: https://www.facebook.com/share/1ZiwRXwAKL/
+END:VEVENT
+BEGIN:VEVENT
+UID:46455257-a4c8-49ae-ae36-a5d2db2b6bc9
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Saturday\, March 28
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Sunday\, March 29
+END:VEVENT
+BEGIN:VEVENT
+UID:657d0c31-d700-4a77-a857-ba066c21eb8b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Shrimpfest
+LOCATION:US-1 & CR512\, Sebastian\, Sebastian
+DESCRIPTION:Two-day coastal festival featuring shrimp dishes\, live music\
+ , art\, and a car show | Price: Free | | Link: https://www.facebook.com/sh
+ are/1CYoXPFgaD/
+END:VEVENT
+BEGIN:VEVENT
+UID:9847aa92-a137-4540-bb68-572a499c6d54
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Friday\, March 27
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Sunday\, March 29
+END:VEVENT
+BEGIN:VEVENT
+UID:82c37089-2cbe-4c37-85c2-1088ae340ed4
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Friday\, Mar 20
+LOCATION:See Details\, Treasure Coast
+DESCRIPTION:Saturday\, Mar 21
+END:VEVENT
+BEGIN:VEVENT
+UID:7237766f-152b-46e6-b9a1-1c5ae4b9f6c1
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Touch-A-Truck Spring Fling
+LOCATION:Jupiter Community Park\, Jupiter Community Park
+DESCRIPTION:Family festival with vehicles\, eggs\, crafts & live DJ | Pric
+ e: Free | | Link: https://www.facebook.com/share/1AGH95Jypu/
+END:VEVENT
+BEGIN:VEVENT
+UID:2cd8d8de-35e2-4b98-8a54-019ee503877a
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:The Sheepdogs Live
+LOCATION:Earl's Hideaway Lounge\, Sebastian\, Sebastian
+DESCRIPTION:Live rock performance from Canadian band The Sheepdogs | Price
+ : Price varies | | Link: https://www.facebook.com/share/1amzR9WcWZ/
+END:VEVENT
+BEGIN:VEVENT
+UID:311e96a3-ceb0-4a62-92e2-97d920ebeba3
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T110000
+DTEND;TZID=America/New_York:20260327T130000
+SUMMARY:Space Coast Hot Air Balloon Festival
+LOCATION:Space Coast Daily Park\, Melbourne\, Melbourne
+DESCRIPTION:Festival featuring tethered balloon rides\, DJs\, food trucks\
+ , vendors\, and nightly balloon glow show | Price: $35 rides / Festival fr
+ ee | | Link: https://www.facebook.com/share/1DgC6b2nSx/
+END:VEVENT
+BEGIN:VEVENT
+UID:a0d1fdb8-07f7-4558-87ab-7a6aa96fe52a
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260327T150000
+DTEND;TZID=America/New_York:20260327T170000
+SUMMARY:60th Annual FIHA Powwow
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: 60th Annual FIHA Powwow
+END:VEVENT
+BEGIN:VEVENT
+UID:16606367-d48d-4cd6-8b21-c19024d285e5
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260328T090000
+DTEND;TZID=America/New_York:20260328T110000
+SUMMARY:60th Annual FIHA Powwow
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: 60th Annual FIHA Powwow
+END:VEVENT
+BEGIN:VEVENT
+UID:db048e10-0295-47da-8af3-111dee78208b
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260328T110000
+DTEND;TZID=America/New_York:20260328T130000
+SUMMARY:JP Soars and the Red Hots
+LOCATION:Northwood Art & Music Warehouse\, West Palm Beach\, West Palm Bea
+ ch
+DESCRIPTION:Live blues performance | Price: Ticketed | | Link: https://www
+ .facebook.com/share/1FGRWZZJig/
+END:VEVENT
+BEGIN:VEVENT
+UID:5567f246-3c72-4594-8b5d-e6174059a725
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260328T110000
+DTEND;TZID=America/New_York:20260328T130000
+SUMMARY:23rd Annual Pirate Costume Bash
+LOCATION:Squid Lips\, Melbourne\, Melbourne
+DESCRIPTION:Pirate-themed festival with live music\, costume contests\, an
+ d entertainment | Price: Free | | Link: https://www.facebook.com/share/1Aj
+ Fhx7wxf/
+END:VEVENT
+BEGIN:VEVENT
+UID:d3d7ea43-d30d-4906-a03f-4f70bb4d05ab
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260328T110000
+DTEND;TZID=America/New_York:20260328T130000
+SUMMARY:Sturr-ific Saturday Polkafest
+LOCATION:the Polish American Club\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:18-time Grammy winner Jimmy Sturr & His Orchestra live | Price
+ : $22 Advance / $25 Door | | Link: https://www.facebook.com/share/186vW389
+ fn/
+END:VEVENT
+BEGIN:VEVENT
+UID:7a4f8bc9-9c7b-407f-a86a-6439bfc5ab6d
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260328T110000
+DTEND;TZID=America/New_York:20260328T130000
+SUMMARY:Tropical Rock Concert
+LOCATION:King Center for the Performing Arts\, Melbourne\, Melbourne
+DESCRIPTION:Live tropical rock performance | Price: Price varies | | Link:
+  https://www.facebook.com/share/1Qp8jCfX3Z/
+END:VEVENT
+BEGIN:VEVENT
+UID:39628072-a38b-40a9-b15f-672d9b0f3ff8
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260328T110000
+DTEND;TZID=America/New_York:20260328T130000
+SUMMARY:Grateful Dead Night
+LOCATION:Squid Lips Seafood Restaurant\, Sebastian\, Sebastian
+DESCRIPTION:Tribute night celebrating the music of the Grateful Dead with 
+ live performances | Price: Free | | Link: https://www.facebook.com/share/1
+ HN4q8p8ty/
+END:VEVENT
+BEGIN:VEVENT
+UID:d0fb191d-ce24-475d-b4a3-eccc5b4530af
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260329T090000
+DTEND;TZID=America/New_York:20260329T110000
+SUMMARY:60th Annual FIHA Powwow
+LOCATION:St. Lucie County\, St. Lucie County
+DESCRIPTION:St. Lucie County Parks & Recreation: 60th Annual FIHA Powwow
+END:VEVENT
+BEGIN:VEVENT
+UID:b9162e2d-b964-41a5-b439-0aa8b2338aff
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260329T110000
+DTEND;TZID=America/New_York:20260329T130000
+SUMMARY:The Sheepdogs Live
+LOCATION:The Shack Riverfront Restaurant & Tiki Bar\, Palm Bay\, Palm Bay
+DESCRIPTION:Live rock performance by The Sheepdogs | Price: Price varies |
+  | Link: https://www.facebook.com/share/1DZbhqbgKH/
+END:VEVENT
+BEGIN:VEVENT
+UID:a63e16dd-657a-484e-8d74-09594660dd04
+SEQUENCE:0
+DTSTAMP:20260302T140237
+DTSTART;TZID=America/New_York:20260329T110000
+DTEND;TZID=America/New_York:20260329T130000
+SUMMARY:9ZERØLIVE Returns to Hop Life
+LOCATION:Hop Life Brewing Company\, Port St. Lucie\, Port St. Lucie
+DESCRIPTION:Live music performance | Price: See Venue for Details | | Link
+ : https://www.facebook.com/share/174fNJq7mj/
+END:VEVENT
+END:VCALENDAR

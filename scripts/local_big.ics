@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sunland News//Sunland Big Events//EN
+URL:https://sunlandnews.com/calendars/big-events
+NAME:Sunland Big Events
+X-WR-CALNAME:Sunland Big Events
+TIMEZONE-ID:America/New_York
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:05e3a938-fcf0-4ff8-81af-cfd46940efd8
+SEQUENCE:0
+DTSTAMP:20260302T120508
+DTSTART:20260217T180000
+DTEND:20260217T220000
+SUMMARY:Mardi Gras Parade & Festival
+LOCATION:Downtown\, Fort Pierce
+DESCRIPTION:Parade\, live music\, food vendors\, and beads!
+END:VEVENT
+BEGIN:VEVENT
+UID:a32296fa-539b-44c7-8cba-58c41658a24d
+SEQUENCE:0
+DTSTAMP:20260302T120508
+DTSTART:20260227T160000
+DTEND:20260308T230000
+SUMMARY:St. Lucie County Fair
+LOCATION:Fairgrounds\, Fort Pierce
+DESCRIPTION:Annual county fair with rides\, games\, livestock shows\, and 
+ concerts.
+END:VEVENT
+END:VCALENDAR

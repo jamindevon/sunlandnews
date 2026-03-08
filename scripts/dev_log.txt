@@ -1,0 +1,18 @@
+
+> wordpress-sunland@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1119ms
+ ✓ Compiled /calendars/big-events in 422ms (130 modules)
+ GET /calendars/big-events 200 in 523ms
+ ✓ Compiled in 11ms
+ ✓ Compiled in 511ms (203 modules)
+ ✓ Compiled in 81ms (203 modules)
+ ✓ Compiled /calendars/big-events in 121ms (130 modules)
+ GET /calendars/big-events 200 in 1266ms
+ HEAD /calendars/big-events 200 in 524ms
