@@ -1,14 +1,23 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
-export default function ThankYouPage() {
+function ThankYouForm() {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const searchParams = useSearchParams();
+  const prefilledEmail = searchParams.get('email') || '';
 
-  // Track conversion on thank you page
+  const [formData, setFormData] = useState({
+    firstName: '',
+    zipCode: '',
+    interest: ''
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+
+  // Track conversion on load
   useEffect(() => {
     const trackConversion = async () => {
       try {
@@ -27,183 +36,183 @@ export default function ThankYouPage() {
     trackConversion();
   }, []);
 
-  const handlePurchase = async () => {
-    setLoading(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
+    // Required field validation (HTML5 covers most, but fallback here)
+    if (!formData.firstName || !formData.zipCode || !formData.interest) {
+      setError('Please fill out all fields.');
+      setSubmitting(false);
+      return;
+    }
+
     try {
-      const response = await fetch('/api/checkout', {
+      // Save to new DB and tag in Beehiiv
+      const response = await fetch('/api/segment', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: prefilledEmail,
+          firstName: formData.firstName,
+          zipCode: formData.zipCode,
+          interest: formData.interest
+        })
       });
 
-      const data = await response.json();
-
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        console.error('Checkout error:', data.error);
-        alert('Something went wrong. Please try again.');
-        setLoading(false);
+      // Don't strongly block on failure — still redirect them
+      if (!response.ok) {
+        console.warn('Segment save failed, proceeding anyway');
       }
-    } catch (error) {
-      console.error('Purchase error:', error);
-      alert('Something went wrong. Please try again.');
-      setLoading(false);
+
+      // For now, redirect everyone to the support page
+      router.push('/support');
+
+    } catch (err) {
+      console.error('Submission error:', err);
+      // Fallback routing if API is completely down
+      router.push('/support');
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Confirmation Header */}
-      <div className="bg-green-50 border-b border-green-100 px-4 py-4 text-center">
-        <p className="text-green-800 font-medium flex items-center justify-center gap-2">
-          <span className="text-xl">✅</span>
-          You're on the list! Your welcome email is on its way.
+    <div className="container mx-auto max-w-3xl px-4 py-8 md:py-12 relative z-10">
+      {/* Success Message — compact */}
+      <div className="text-center mb-6 md:mb-8">
+        <h1 className="text-3xl md:text-5xl font-black text-black mb-2 md:mb-3 uppercase tracking-tight mx-auto flex items-center justify-center gap-2 md:gap-3">
+          <div className="w-10 h-10 md:w-16 md:h-16 bg-brutalYellow border-4 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)] rounded-full flex items-center justify-center transform -rotate-3 animate-pulse">
+            <span className="text-2xl md:text-5xl text-black">!</span>
+          </div>
+          Wait, one last step!
+        </h1>
+        <p className="text-base md:text-lg font-bold text-gray-800 inline-block px-4 py-1.5 md:px-5 md:py-2 bg-white border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)] md:shadow-[3px_3px_0px_rgba(0,0,0,1)] rounded-xl transform rotate-1">
+          Your initial signup is complete. Action required below 👇
         </p>
       </div>
 
-      {/* Hero Section */}
-      <section className="pt-16 pb-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-primary text-sm font-bold mb-6 tracking-wide uppercase">
-            Founder Offer
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Plan your week in St. Lucie — $39/year
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Take a 2-minute quiz, tap one link, and only the events you care about show up in your calendar—every week. <span className="font-semibold text-gray-800">Fort Pierce • Port St. Lucie • St. Lucie County.</span>
-          </p>
+      {/* Segmentation Form Card */}
+      <div className="bg-white rounded-3xl border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden relative max-w-xl mx-auto">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: "radial-gradient(#000 2px, transparent 2px)", backgroundSize: "16px 16px" }}></div>
 
-          {/* Bullets */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500 mb-10 max-w-3xl mx-auto">
-            <span className="flex items-center">✨ Your picks (food • live music • family • outdoors)</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="flex items-center">📅 Works with Apple/Google/Outlook</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="flex items-center">🚫 No politics by default</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="flex items-center">🛡️ 7-day refund</span>
+        {/* Top: Photo Header */}
+        <div className="w-full bg-brutalBlue border-b-4 border-black relative flex items-center justify-center py-8 px-4">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_rgba(0,0,0,1)] relative z-10 bg-white transform -rotate-2 hover:rotate-1 transition-transform">
+            <Image
+              src="/images/image (15).png"
+              alt="Ja'Min"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </div>
+        </div>
 
-          <div className="flex flex-col items-center gap-4">
-            <button
-              onClick={handlePurchase}
-              disabled={loading}
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold text-lg rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 transform hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
-            >
-              {loading ? 'Processing...' : 'Get my calendar — $39'}
-            </button>
-            <p className="text-sm text-gray-400">
-              Join 10,000+ locals • Built by Sunland News (St. Lucie County)
+        {/* Bottom: Form Area */}
+        <div className="w-full p-5 md:p-8 relative z-10">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-black text-black uppercase tracking-tight mb-2 flex flex-col items-center gap-2">
+              <span className="bg-black text-white px-3 py-1 rounded-md text-sm tracking-widest block transform -rotate-2 w-max shadow-[3px_3px_0px_rgba(255,107,107,1)] border-2 border-black">STEP 2 OF 2</span>
+              Complete Your Setup
+            </h2>
+            <p className="font-bold text-gray-700 bg-brutalYellow px-2 inline-block text-sm md:text-base mt-2">
+              Tell us what you're looking for so we don't send you junk.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Visual How it Works */}
-      <section className="pb-24 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">How it works</h3>
-
-            <div className="grid md:grid-cols-3 gap-8 relative">
-              {/* Connecting Line (Desktop only) */}
-              <div className="hidden md:block absolute top-12 left-0 w-full h-1 bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 -z-10 transform -translate-y-1/2"></div>
-
-              {/* Step 1 */}
-              <div className="relative bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center transform hover:-translate-y-1 transition-all duration-300">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-sm">
-                  <span className="text-3xl">📝</span>
-                </div>
-                <div className="absolute top-0 right-0 bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold -mt-3 -mr-3 border-4 border-white">1</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Pick Your Interests</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Tell us what you love—Food, Music, Family, Outdoors. We filter out the noise.
-                </p>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-black uppercase tracking-wider mb-2">First Name</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.firstName}
+                  onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                  className="w-full px-4 py-3 bg-white border-4 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-brutalPink/30 transition-shadow shadow-[3px_3px_0px_rgba(0,0,0,1)]"
+                  placeholder="Jane"
+                />
               </div>
-
-              {/* Step 2 */}
-              <div className="relative bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center transform hover:-translate-y-1 transition-all duration-300">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-sm">
-                  <span className="text-3xl">🔗</span>
-                </div>
-                <div className="absolute top-0 right-0 bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold -mt-3 -mr-3 border-4 border-white">2</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Get Magic Link</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  We generate a unique, secure calendar link just for you. No app download needed.
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="relative bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center transform hover:-translate-y-1 transition-all duration-300">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-sm">
-                  <span className="text-3xl">📱</span>
-                </div>
-                <div className="absolute top-0 right-0 bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold -mt-3 -mr-3 border-4 border-white">3</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Auto-Sync Forever</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Events magically appear in your phone's calendar. Updated weekly.
-                </p>
+              <div>
+                <label className="block text-sm font-black uppercase tracking-wider mb-2">Zip Code</label>
+                <input
+                  type="text"
+                  required
+                  pattern="[0-9]{5}"
+                  title="5 digit zip code"
+                  value={formData.zipCode}
+                  onChange={(e) => setFormData({ ...formData, zipCode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
+                  className="w-full px-4 py-3 bg-white border-4 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:ring-4 focus:ring-brutalPink/30 transition-shadow shadow-[3px_3px_0px_rgba(0,0,0,1)]"
+                  placeholder="34952"
+                />
               </div>
             </div>
 
-            {/* Visual Calendar Preview */}
-            <div className="mt-16 max-w-2xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                <div className="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <span className="font-bold text-gray-600 text-sm">Your Phone Calendar</span>
-                </div>
-                <div className="p-6 space-y-4">
-                  <div className="flex items-start space-x-4 p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                    <div className="text-center min-w-[60px]">
-                      <div className="text-xs font-bold text-blue-500 uppercase">Sat</div>
-                      <div className="text-xl font-bold text-gray-900">14</div>
+            <div className="bg-gray-50 border-4 border-black p-4 rounded-2xl shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <label className="block text-base font-black uppercase tracking-wider mb-4 text-center">What are you most looking for?</label>
+              <div className="space-y-3">
+                {[
+                  'Stay informed on local news and breaking alerts',
+                  'Events, things to do, food, and new openings',
+                  'Feel more connected to my community'
+                ].map((option) => (
+                  <label
+                    key={option}
+                    className={`block relative cursor-pointer group`}
+                  >
+                    <div className={`p-3 border-4 rounded-xl transition-all font-bold text-sm flex items-center gap-3 ${formData.interest === option
+                      ? 'border-black bg-brutalYellow shadow-[3px_3px_0px_rgba(0,0,0,1)] translate-x-[2px] translate-y-[2px]'
+                      : 'border-black bg-white shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0px_rgba(0,0,0,1)]'
+                      }`}>
+                      <div className={`w-5 h-5 rounded-full border-4 flex-shrink-0 flex items-center justify-center transition-colors ${formData.interest === option ? 'border-black bg-black' : 'border-black bg-white'}`}></div>
+                      <input
+                        type="radio"
+                        name="interest"
+                        value={option}
+                        checked={formData.interest === option}
+                        onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
+                        className="sr-only"
+                        required
+                      />
+                      <span className="leading-snug">{option}</span>
                     </div>
-                    <div>
-                      <h5 className="font-bold text-gray-900">Farmers Market 🥬</h5>
-                      <p className="text-sm text-gray-600">9:00 AM • Downtown Fort Pierce</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4 p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
-                    <div className="text-center min-w-[60px]">
-                      <div className="text-xs font-bold text-purple-500 uppercase">Sat</div>
-                      <div className="text-xl font-bold text-gray-900">14</div>
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-gray-900">Jazz on the Water 🎷</h5>
-                      <p className="text-sm text-gray-600">7:00 PM • Melody Lane</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-500">
-                    <div className="text-center min-w-[60px]">
-                      <div className="text-xs font-bold text-orange-500 uppercase">Sun</div>
-                      <div className="text-xl font-bold text-gray-900">15</div>
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-gray-900">Brunch & Art Walk 🎨</h5>
-                      <p className="text-sm text-gray-600">11:00 AM • Peacock Arts District</p>
-                    </div>
-                  </div>
-                </div>
+                  </label>
+                ))}
               </div>
-              <p className="text-center text-gray-400 text-sm mt-4">
-                (This is exactly how it looks on your phone!)
-              </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* No Thanks Link */}
-      <div className="text-center pb-16">
-        <Link href="/quiz" className="text-gray-400 hover:text-gray-600 text-sm underline transition-colors">
-          No thanks, take me to the quiz to personalize my news experience
-        </Link>
+            {error && <p className="text-red-600 font-bold bg-red-100 p-3 border-4 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)] rounded-xl text-center text-sm">{error}</p>}
+
+            <button
+              type="submit"
+              disabled={submitting || !formData.firstName || !formData.zipCode || !formData.interest}
+              className={`w-full py-4 text-xl font-black uppercase tracking-wider rounded-2xl border-4 transition-all shadow-[6px_6px_0px_rgba(0,0,0,1)] ${submitting || !formData.firstName || !formData.zipCode || !formData.interest
+                ? 'bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed shadow-[2px_2px_0px_rgba(0,0,0,0.1)]'
+                : 'bg-primary text-white border-black hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none'
+                }`}
+            >
+              {submitting ? 'Saving...' : 'Finish Setup →'}
+            </button>
+          </form>
+        </div>
       </div>
+
+      <div className="text-center mt-6">
+        <p className="text-sm font-bold text-gray-500 uppercase tracking-wide">
+          This step ensures your newsletter is completely personalized
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function ThankYouPage() {
+  return (
+    <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white">
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center font-black uppercase text-xl">Loading...</div>}>
+        <ThankYouForm />
+      </Suspense>
     </div>
   );
 }

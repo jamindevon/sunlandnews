@@ -24,28 +24,31 @@ export default function ThankYouPageOriginal() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
-            <div className="container mx-auto max-w-4xl px-4 py-16">
+        <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white">
+            <div className="container mx-auto max-w-4xl px-4 py-16 md:py-24">
                 {/* Success Message */}
-                <div className="text-center mb-12">
-                    <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                <div className="text-center mb-16 relative">
+                    <div className="w-24 h-24 bg-green-400 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-full flex items-center justify-center mx-auto mb-8 transform -rotate-3 hover:rotate-0 transition-transform">
+                        <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
                         </svg>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6 uppercase tracking-tight">
                         You're in! 🎉
                     </h1>
-                    <p className="text-xl text-gray-700 mb-8">
+                    <p className="text-2xl font-bold text-gray-800 mb-8 max-w-2xl mx-auto bg-white inline-block px-6 py-3 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl transform rotate-1">
                         Thanks for signing up.
                     </p>
                 </div>
 
                 {/* Video Section */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
-                    <div className="max-w-3xl mx-auto text-center">
+                <div className="bg-white rounded-3xl border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] p-8 md:p-12 mb-12 relative overflow-hidden">
+                    {/* Decorative brutalist background dots */}
+                    <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "radial-gradient(#000 2px, transparent 2px)", backgroundSize: "16px 16px" }}></div>
+
+                    <div className="max-w-3xl mx-auto text-center relative z-10">
                         {/* YouTube Video Embed */}
-                        <div className="aspect-video mb-8 rounded-lg overflow-hidden shadow-lg">
+                        <div className="aspect-video mb-12 rounded-xl overflow-hidden border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-brutalBlue">
                             <iframe
                                 width="100%"
                                 height="100%"
@@ -58,19 +61,20 @@ export default function ThankYouPageOriginal() {
                             ></iframe>
                         </div>
 
-                        <div className="space-y-6">
-                            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        <div className="space-y-8">
+                            <p className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed max-w-2xl mx-auto">
                                 Before we start sending you local news, take this 45-second quiz.
-                                It'll help us send you the right stuff — not random stuff.
+                                <br />
+                                <span className="bg-brutalYellow inline-block mt-2 px-2">It'll help us send you the right stuff — not random stuff.</span>
                             </p>
 
                             <Link
                                 href="/quiz"
-                                className="inline-flex items-center px-8 py-4 bg-primary text-white text-lg font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300"
+                                className="inline-flex items-center px-10 py-5 bg-primary text-white text-xl font-black uppercase tracking-wide border-4 border-black rounded-2xl shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all"
                             >
                                 Take the Quick Quiz
-                                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                <svg className="w-6 h-6 ml-3 stroke-[3px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                 </svg>
                             </Link>
                         </div>
@@ -79,7 +83,7 @@ export default function ThankYouPageOriginal() {
 
                 {/* Additional Context */}
                 <div className="text-center">
-                    <p className="text-gray-600">
+                    <p className="text-gray-800 font-bold uppercase tracking-wider text-sm bg-gray-200 inline-block px-4 py-2 border-2 border-black rounded shadow-[2px_2px_0px_rgba(0,0,0,1)]">
                         This will only take a minute and helps us personalize your experience.
                     </p>
                 </div>

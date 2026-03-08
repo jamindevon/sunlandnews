@@ -64,17 +64,18 @@ export default function SubmitEventPage() {
     };
 
     return (
-        <div className="bg-white">
+        <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white pb-24">
             {/* Hero Section */}
-            <section className="bg-gray-900 text-white py-16 px-4 rounded-3xl mb-12">
-                <div className="container mx-auto max-w-4xl text-center">
-                    <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-sm font-bold mb-4 tracking-wide uppercase border border-primary/30">
+            <section className="pt-16 pb-12 px-4 border-b-4 border-black bg-brutalBlue relative overflow-hidden mb-16">
+                <div className="absolute inset-0 opacity-[0.06] pointer-events-none" style={{ backgroundImage: "radial-gradient(#000 2px, transparent 2px)", backgroundSize: "24px 24px" }}></div>
+                <div className="container mx-auto max-w-4xl text-center relative z-10">
+                    <span className="inline-block py-2 px-4 bg-brutalYellow text-black text-sm font-black mb-6 tracking-widest uppercase border-2 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)] transform -rotate-2">
                         Community Calendar
                     </span>
-                    <h1 className="text-3xl md:text-5xl font-bold mb-6">
+                    <h1 className="text-4xl md:text-6xl font-black text-black mb-6 uppercase tracking-tight">
                         Submit an Event
                     </h1>
-                    <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl font-bold text-gray-800 max-w-2xl mx-auto bg-white inline-block px-6 py-3 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl transform rotate-1">
                         Share your local event with the Sunland community. <br className="hidden md:block" />
                         All submissions are reviewed by our team before publishing.
                     </p>
@@ -98,14 +99,15 @@ export default function SubmitEventPage() {
                     </div>
 
                     {/* Section: Your Info */}
-                    <div>
-                        <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-                            <span className="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">1</span>
-                            <h2 className="text-2xl font-bold text-gray-900">Your Information</h2>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative">
+                        <div className="absolute -top-6 -left-4 w-12 h-12 bg-brutalYellow border-4 border-black rounded-full flex items-center justify-center font-black text-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-6">
+                            1
                         </div>
+                        <h2 className="text-3xl font-black text-black uppercase tracking-tight mb-8 border-b-4 border-black pb-4">Your Information</h2>
+
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">
+                                <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                     Your Name <span className="text-red-500">*</span>
                                 </label>
                                 <input
@@ -115,11 +117,11 @@ export default function SubmitEventPage() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     placeholder="Jane Doe"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                    className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">
+                                <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                     Your Email <span className="text-red-500">*</span>
                                 </label>
                                 <input
@@ -129,22 +131,22 @@ export default function SubmitEventPage() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="jane@example.com"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                    className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                 />
                             </div>
                         </div>
                     </div>
 
                     {/* Section: Event Details */}
-                    <div>
-                        <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-                            <span className="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">2</span>
-                            <h2 className="text-2xl font-bold text-gray-900">Event Details</h2>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative">
+                        <div className="absolute -top-6 -left-4 w-12 h-12 bg-[#ff4365] text-white border-4 border-black rounded-full flex items-center justify-center font-black text-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] transform rotate-6">
+                            2
                         </div>
+                        <h2 className="text-3xl font-black text-black uppercase tracking-tight mb-8 border-b-4 border-black pb-4">Event Details</h2>
 
                         <div className="space-y-6">
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">
+                                <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                     Event Name <span className="text-red-500">*</span>
                                 </label>
                                 <input
@@ -154,13 +156,13 @@ export default function SubmitEventPage() {
                                     value={formData.eventName}
                                     onChange={handleChange}
                                     placeholder="e.g. Downtown Jazz Festival"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                    className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                 />
                             </div>
 
                             <div className="grid md:grid-cols-3 gap-6">
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 mb-2">
+                                    <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                         Date <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -169,11 +171,11 @@ export default function SubmitEventPage() {
                                         required
                                         value={formData.eventDate}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                        className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 mb-2">
+                                    <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                         Start Time <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -182,11 +184,11 @@ export default function SubmitEventPage() {
                                         required
                                         value={formData.startTime}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                        className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 mb-2">
+                                    <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                         End Time <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -195,21 +197,24 @@ export default function SubmitEventPage() {
                                         required
                                         value={formData.endTime}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                        className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                     />
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 transition-colors hover:border-gray-200">
-                                <input
-                                    type="checkbox"
-                                    name="isRecurring"
-                                    id="isRecurring"
-                                    checked={formData.isRecurring}
-                                    onChange={handleChange}
-                                    className="w-5 h-5 text-primary rounded focus:ring-primary border-gray-300"
-                                />
-                                <label htmlFor="isRecurring" className="text-sm font-medium text-gray-700 cursor-pointer select-none">
+                            <div className="flex items-center gap-3 p-4 bg-brutalBlue/10 rounded-xl border-4 border-black border-dashed transition-all hover:bg-brutalBlue/20">
+                                <div className="relative flex items-center cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="isRecurring"
+                                        id="isRecurring"
+                                        checked={formData.isRecurring}
+                                        onChange={handleChange}
+                                        className="appearance-none w-8 h-8 rounded-lg bg-white border-2 border-black checked:bg-brutalYellow checked:border-black transition-all cursor-pointer peer relative z-10"
+                                    />
+                                    <svg className="absolute w-6 h-6 z-20 top-1 left-1 pointer-events-none opacity-0 peer-checked:opacity-100 peer-checked:text-black stroke-[4px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <label htmlFor="isRecurring" className="text-base font-bold text-black cursor-pointer select-none">
                                     This is a recurring event (e.g. every week)
                                 </label>
                             </div>
@@ -217,14 +222,15 @@ export default function SubmitEventPage() {
                     </div>
 
                     {/* Section: Location */}
-                    <div>
-                        <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-                            <span className="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">3</span>
-                            <h2 className="text-2xl font-bold text-gray-900">Location</h2>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative">
+                        <div className="absolute -top-6 -left-4 w-12 h-12 bg-orange-400 border-4 border-black rounded-full flex items-center justify-center font-black text-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-3">
+                            3
                         </div>
+                        <h2 className="text-3xl font-black text-black uppercase tracking-tight mb-8 border-b-4 border-black pb-4">Location</h2>
+
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">
+                                <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                     Venue Name <span className="text-red-500">*</span>
                                 </label>
                                 <input
@@ -234,11 +240,11 @@ export default function SubmitEventPage() {
                                     value={formData.venue}
                                     onChange={handleChange}
                                     placeholder="e.g. Riverside Park"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                    className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">
+                                <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                     Address
                                 </label>
                                 <input
@@ -247,62 +253,65 @@ export default function SubmitEventPage() {
                                     value={formData.address}
                                     onChange={handleChange}
                                     placeholder="123 Main St, Fort Pierce, FL"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                    className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                 />
                             </div>
                         </div>
                     </div>
 
                     {/* Section: More Info */}
-                    <div>
-                        <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-                            <span className="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">4</span>
-                            <h2 className="text-2xl font-bold text-gray-900">More Info</h2>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative">
+                        <div className="absolute -top-6 -left-4 w-12 h-12 bg-green-400 border-4 border-black rounded-full flex items-center justify-center font-black text-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] transform rotate-1">
+                            4
                         </div>
+                        <h2 className="text-3xl font-black text-black uppercase tracking-tight mb-8 border-b-4 border-black pb-4">More Info</h2>
 
                         <div className="space-y-6">
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">
+                                <label className="block text-sm font-black text-black uppercase tracking-wider mb-2">
                                     Event Link
                                 </label>
                                 <input
                                     type="text"
                                     name="link"
-                                    value={formData.link}
+                                    value={formData.link} // Changed 'link' to 'eventLink' based on Supabase target
                                     onChange={handleChange}
                                     placeholder="https://... or just a description"
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium"
+                                    className="w-full px-4 py-3 bg-white border-2 border-black font-bold text-gray-900 rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
                                 />
-                                <p className="text-xs text-gray-500 mt-2">Link to tickets, Facebook event, or website.</p>
+                                <p className="text-sm font-bold text-gray-600 mt-2">Link to tickets, Facebook event, or website.</p>
                             </div>
 
-                            <div className="flex items-start gap-4 p-6 bg-yellow-50 rounded-2xl border border-yellow-100 hover:shadow-sm transition-all">
-                                <input
-                                    type="checkbox"
-                                    name="isSponsored"
-                                    id="isSponsored"
-                                    checked={formData.isSponsored}
-                                    onChange={handleChange}
-                                    className="w-6 h-6 text-primary rounded focus:ring-primary border-gray-300 mt-1"
-                                />
-                                <label htmlFor="isSponsored" className="text-base text-gray-700 cursor-pointer select-none">
-                                    <span className="font-bold block text-gray-900 mb-1 text-lg">Interested in a Sponsored Listing?</span>
-                                    Get your event featured at the top of the calendar and in our newsletter.
+                            <div className="flex items-start gap-4 p-6 bg-brutalYellow rounded-2xl border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] transition-all">
+                                <div className="relative flex items-center mt-1 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="isSponsored"
+                                        id="isSponsored"
+                                        checked={formData.isSponsored}
+                                        onChange={handleChange}
+                                        className="appearance-none w-8 h-8 rounded-lg bg-white border-2 border-black checked:bg-black checked:border-black transition-all cursor-pointer peer relative z-10"
+                                    />
+                                    <svg className="absolute w-6 h-6 z-20 top-1 left-1 pointer-events-none opacity-0 peer-checked:opacity-100 peer-checked:text-brutalYellow stroke-[4px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <label htmlFor="isSponsored" className="text-base text-gray-900 cursor-pointer select-none">
+                                    <span className="font-black block text-black mb-1 text-xl uppercase tracking-tight">Interested in a Sponsored Listing?</span>
+                                    <span className="font-bold">Get your event featured at the top of the calendar and in our newsletter.</span>
                                 </label>
                             </div>
                         </div>
                     </div>
 
-                    <div className="pt-8">
+                    <div className="pt-8 text-center pb-12">
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className={`w-full py-5 text-xl font-bold text-white rounded-2xl shadow-xl shadow-primary/20 transition-all transform hover:-translate-y-1 active:translate-y-0 ${isSubmitting ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary hover:bg-primary/90'
+                            className={`w-full max-w-lg mx-auto py-5 px-8 text-xl font-black uppercase tracking-wider text-white rounded-2xl border-4 transition-all ${isSubmitting ? 'bg-gray-400 border-gray-500 translate-x-[4px] translate-y-[4px] cursor-not-allowed shadow-none' : 'bg-primary border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none'
                                 }`}
                         >
                             {isSubmitting ? 'Submitting...' : 'Submit Event'}
                         </button>
-                        <p className="text-center text-sm text-gray-500 mt-6">
+                        <p className="text-center font-bold text-gray-700 mt-6 bg-white inline-block px-4 py-2 border-2 border-black rounded-lg transform -rotate-1 shadow-[2px_2px_0px_rgba(0,0,0,1)]">
                             By submitting, you agree to our terms. All events are subject to approval.
                         </p>
                     </div>

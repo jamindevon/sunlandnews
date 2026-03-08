@@ -55,73 +55,76 @@ export default function HomePage() {
       // Track email signup with Meta Pixel
       fbEvents.subscribeSubmit('funnel-homepage');
 
-      // Always redirect to thank you page (even if some services fail)
-      router.push('/thank-you-original');
+      // Always redirect to thank you page with email for segmentation
+      router.push(`/thank-you?email=${encodeURIComponent(email)}`);
 
     } catch (error) {
       console.error('Error during signup:', error);
       // Still redirect for better UX
-      router.push('/thank-you-original');
+      router.push(`/thank-you?email=${encodeURIComponent(email)}`);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans text-black selection:bg-brutalPink selection:text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
+      <section className="pt-16 md:pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            St. Lucie in 5 minutes — every weekday at 7am.
+          <h1 className="text-4xl md:text-6xl font-extrabold text-black mb-6 leading-tight tracking-tight">
+            St. Lucie in 5 minutes <br className="hidden md:block" />
+            <span className="inline-block bg-brutalYellow px-3 py-1 mt-2 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl">every weekday at 7am.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Events, new openings, date-night ideas, and neighborhood news. <strong>No politics. No crime.</strong> Just the good stuff that makes this place feel like home. <span className="text-primary font-semibold">Always free.</span>
+          <p className="text-lg md:text-xl text-gray-800 font-medium mb-12 max-w-2xl mx-auto leading-relaxed px-2 md:px-0">
+            Events, new openings, date-night ideas, and neighborhood news. <br className="hidden md:block" />
+            <strong className="bg-[#ff4365] text-white px-2 py-0.5 rounded-sm shadow-[2px_2px_0px_rgba(0,0,0,1)] inline-block mt-2 mb-1">No politics. No crime.</strong><br aria-hidden="true" />
+            <span className="mt-1 inline-block">Just the good stuff that makes this place feel like home.</span> <span className="font-bold underline decoration-4 underline-offset-4 decoration-primary inline-block">Always free.</span>
           </p>
 
           {/* Email Form */}
-          <div className="max-w-md mx-auto mb-16">
+          <div className="max-w-md mx-auto mb-16 px-4 md:px-0">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-6 py-4 text-lg bg-gray-50 border-2 border-gray-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-gray-400"
+                className="w-full px-5 py-3 text-base bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all placeholder:text-gray-400 font-bold"
                 required
               />
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-8 py-4 text-lg font-bold rounded-xl text-white transition-all transform hover:-translate-y-0.5 active:translate-y-0 ${isSubmitting
-                  ? 'bg-gray-300 cursor-not-allowed'
-                  : 'bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30'
+                className={`w-full px-6 py-3 text-lg font-bold uppercase text-white border-2 border-black rounded-xl transition-all ${isSubmitting
+                  ? 'bg-gray-400 shadow-[2px_2px_0px_rgba(0,0,0,1)] translate-x-[2px] translate-y-[2px] cursor-not-allowed'
+                  : 'bg-primary shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none'
                   }`}
               >
                 {isSubmitting ? 'Joining...' : 'Send me the news'}
               </button>
-              <p className="text-sm text-gray-400 mt-2">
+              <p className="text-sm text-gray-500 font-medium mt-1">
                 Join 10,000+ locals • 1-tap unsubscribe • Zero spam
               </p>
             </form>
           </div>
 
           {/* Benefits - Clean Grid */}
-          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto border-t border-gray-100 pt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-3xl mx-auto pt-8 px-4 md:px-0">
             {[
-              { icon: '✅', title: 'Daily Updates', desc: 'News without the noise' },
-              { icon: '📅', title: 'Weekly Events', desc: '30+ things to do every Thursday' },
-              { icon: '🧡', title: 'Local Stories', desc: 'Celebrating our community' },
-              { icon: '🚫', title: 'No Politics', desc: 'Just the good stuff' }
+              { icon: '☀️', title: 'Daily Updates', desc: 'News without the noise', color: 'bg-brutalBlue' },
+              { icon: '📅', title: 'Weekly Events', desc: '30+ things to do every Thursday', color: 'bg-[#ff4365]' },
+              { icon: '🌴', title: 'Local Stories', desc: 'Celebrating our community', color: 'bg-brutalYellow text-black' },
+              { icon: '✌️', title: 'No Politics', desc: 'Just the good stuff', color: 'bg-primary' }
             ].map((item, index) => (
-              <div key={index} className="flex gap-4 items-start">
-                <span className="text-2xl bg-orange-50 w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0">{item.icon}</span>
+              <div key={index} className="flex gap-4 items-start bg-white border-2 border-black p-5 shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-2xl hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] transition-all cursor-default">
+                <span className={`text-2xl w-12 h-12 flex items-center justify-center border-2 border-black rounded-xl shadow-[2px_2px_0px_rgba(0,0,0,1)] flex-shrink-0 text-white ${item.color}`}>{item.icon}</span>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{item.title}</h3>
-                  <p className="text-gray-500">{item.desc}</p>
+                  <h3 className="font-bold text-black text-lg">{item.title}</h3>
+                  <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -129,30 +132,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ja'Min Bio Section - Simplified */}
-      <section className="py-20 px-4 bg-gray-50/50">
-        <div className="container mx-auto max-w-3xl">
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="flex-shrink-0 relative">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-white shadow-xl">
+      {/* Ja'Min Bio Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center gap-10 bg-white border-2 border-black p-8 md:p-12 shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-[2rem] relative overflow-hidden">
+            {/* Background accent */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-brutalBlue rounded-full border-2 border-black opacity-20"></div>
+
+            <div className="flex-shrink-0 z-10">
+              <div className="w-32 h-32 md:w-48 md:h-48 overflow-hidden border-2 border-black bg-[#ff4365] rounded-full shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                 <Image
                   src="/images/bio-photo.png"
                   alt="Ja'Min - Founder of Sunland News"
-                  width={160}
-                  height={160}
+                  width={192}
+                  height={192}
                   className="w-full h-full object-cover object-left"
                   onError={(e) => {
                     e.target.style.display = 'none';
-                    e.target.parentElement.innerHTML = '<div class="w-full h-full bg-gray-200 flex items-center justify-center text-4xl">👋</div>';
+                    e.target.parentElement.innerHTML = '<div class="w-full h-full bg-[#ff4365] flex items-center justify-center text-4xl font-bold text-white">JD</div>';
                   }}
                 />
               </div>
             </div>
-            <div className="text-center md:text-left">
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="text-center md:text-left z-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
                 Meet Ja'Min
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-800 leading-relaxed font-medium">
                 Hi, I'm Ja'Min, born and raised in St. Lucie County. I started Sunland News to share stories that actually reflect this place. <strong>No politics, no crime.</strong> Just the people, food, and local life that make it home.
               </p>
             </div>
@@ -186,4 +192,3 @@ export default function HomePage() {
     </div>
   );
 }
-

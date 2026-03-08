@@ -7,28 +7,34 @@ import Image from 'next/image';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [newsDropdownOpen, setNewsDropdownOpen] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const newsDropdownRef = useRef(null);
+  const productsDropdownRef = useRef(null);
   const pathname = usePathname();
 
   // Close mobile menu when pathname changes (page navigation)
   useEffect(() => {
     setMobileMenuOpen(false);
-    setDropdownOpen(false);
+    setNewsDropdownOpen(false);
+    setProductsDropdownOpen(false);
   }, [pathname]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
+      if (newsDropdownRef.current && !newsDropdownRef.current.contains(event.target)) {
+        setNewsDropdownOpen(false);
+      }
+      if (productsDropdownRef.current && !productsDropdownRef.current.contains(event.target)) {
+        setProductsDropdownOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdownRef]);
+  }, [newsDropdownRef, productsDropdownRef]);
 
   // Hide header on calendar sub-pages (dashboard, login, setup)
   // But SHOW it on the main offer page (/calendar)
@@ -41,17 +47,24 @@ export default function Header() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const toggleDropdown = (e) => {
+  const toggleNewsDropdown = (e) => {
     if (e) e.stopPropagation();
-    setDropdownOpen(!dropdownOpen);
+    setNewsDropdownOpen(!newsDropdownOpen);
+    setProductsDropdownOpen(false);
+  };
+
+  const toggleProductsDropdown = (e) => {
+    if (e) e.stopPropagation();
+    setProductsDropdownOpen(!productsDropdownOpen);
+    setNewsDropdownOpen(false);
   };
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-brutalBg border-b-2 border-black sticky top-0 z-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center hover:-translate-y-1 hover:-translate-x-1 transition-transform">
               <Image
                 src="/images/sunlandnews-logo.png"
                 alt="Sunland News Logo"
@@ -64,103 +77,96 @@ export default function Header() {
           </div>
 
           <button
-            className="lg:hidden flex flex-col space-y-1.5 p-2 relative z-[60]"
+            className={`lg:hidden flex flex-col space-y-1.5 p-3 relative z-[60] bg-white border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded-lg hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-[1px_1px_0px_rgba(0,0,0,1)] transition-all ${mobileMenuOpen ? 'shadow-[1px_1px_0px_rgba(0,0,0,1)] translate-y-[1px] translate-x-[1px]' : ''}`}
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-            <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-1 bg-black rounded-full transition-all duration-300 ${mobileMenuOpen ? 'transform rotate-45 translate-y-2.5' : ''}`}></span>
+            <span className={`block w-6 h-1 bg-black rounded-full transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block w-6 h-1 bg-black rounded-full transition-all duration-300 ${mobileMenuOpen ? 'transform -rotate-45 -translate-y-2.5' : ''}`}></span>
           </button>
 
-          <nav className={`absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-white lg:bg-transparent z-50 shadow-lg lg:shadow-none transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 max-h-[80vh] overflow-y-auto' : 'opacity-0 max-h-0 lg:opacity-100 lg:max-h-none overflow-hidden lg:overflow-visible'}`}>
-            <ul className="flex flex-col lg:flex-row lg:items-center py-4 lg:py-0 px-4 lg:px-0 lg:space-x-8">
-              <li className="py-2 lg:py-0">
+          <nav className={`absolute lg:relative top-[76px] lg:top-0 left-0 w-full lg:w-auto bg-brutalBg lg:bg-transparent z-50 border-b-2 border-black lg:border-b-0 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 max-h-[80vh] overflow-y-auto' : 'opacity-0 max-h-0 lg:opacity-100 lg:max-h-none overflow-hidden lg:overflow-visible'}`}>
+            <ul className="flex flex-col lg:flex-row lg:items-center py-6 lg:py-0 px-6 lg:px-0 lg:space-x-8 xl:space-x-12">
+              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none">
                 <Link
                   href="/"
-                  className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/' ? 'text-primary' : ''}`}
+                  className={`block lg:inline-flex lg:items-center text-black font-extrabold text-lg lg:text-sm xl:text-base uppercase whitespace-nowrap transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname === '/' ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
               </li>
 
-              <li className="py-2 lg:py-0">
-                <Link
-                  href="/news"
-                  className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/news' || pathname.startsWith('/news') || pathname.startsWith('/stories') || pathname.startsWith('/newsletter') ? 'text-primary' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
+              {/* News Dropdown */}
+              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group" ref={newsDropdownRef}>
+                <button
+                  onClick={toggleNewsDropdown}
+                  className={`flex items-center w-full lg:w-auto justify-between lg:justify-start text-black font-extrabold text-lg lg:text-sm xl:text-base whitespace-nowrap uppercase transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname === '/news' || pathname.startsWith('/news/') || pathname.startsWith('/stories') || pathname.startsWith('/newsletter') || pathname === '/latest' ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
                 >
                   News
-                </Link>
-              </li>
-
-              <li className="py-2 lg:py-0">
-                <Link
-                  href="/latest"
-                  className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/latest' ? 'text-primary' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Latest Newsletter
-                </Link>
-              </li>
-
-              <li className="py-2 lg:py-0">
-                <Link
-                  href="/calendar"
-                  className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/calendar' ? 'text-primary' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Calendar Club
-                </Link>
-              </li>
-
-              {/* Dropdown Menu */}
-              <li className="py-2 md:py-0 relative group" ref={dropdownRef}>
-                <button
-                  onClick={toggleDropdown}
-                  className={`flex items-center text-gray-700 hover:text-primary font-medium transition-colors w-full md:w-auto justify-between md:justify-start ${pathname.startsWith('/events') || pathname.startsWith('/sponsor') ? 'text-primary' : ''}`}
-                >
-                  Get Involved
-                  <svg className={`w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180 ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  <svg className={`w-6 h-6 lg:w-4 lg:h-4 ml-1 stroke-[3px] transition-transform duration-200 group-hover:rotate-180 ${newsDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
 
-                {/* Desktop Dropdown */}
-                <div className={`md:absolute md:top-full md:left-0 md:w-48 bg-white md:shadow-xl rounded-lg py-2 mt-1 md:mt-2 border border-gray-100 transition-all duration-200 ${dropdownOpen ? 'block' : 'hidden md:group-hover:block'}`}>
-                  {/* Invisible bridge to prevent menu from closing when moving mouse from button to menu */}
-                  <div className="hidden md:block absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
+                <div className={`lg:absolute lg:top-full lg:left-0 lg:w-56 bg-white lg:rounded-xl py-3 mt-2 lg:mt-3 lg:border-2 lg:border-black lg:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 z-50 border-l-4 border-black ml-2 px-2 lg:ml-0 lg:px-0 lg:border-l-2 ${newsDropdownOpen ? 'block' : 'hidden lg:group-hover:block'}`}>
+                  <div className="hidden lg:block absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
 
                   <Link
-                    href="/events/submit"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary"
+                    href="/news"
+                    className="block px-5 py-3 text-base lg:text-sm font-bold text-black uppercase whitespace-nowrap hover:bg-brutalYellow hover:pl-6 transition-all border-b-2 border-transparent hover:border-black mx-2 rounded-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Submit an Event
+                    All News
                   </Link>
-                  {/* <Link
-                    href="/sponsor"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary"
+
+                  <Link
+                    href="/latest"
+                    className="block px-5 py-3 text-base lg:text-sm font-bold text-black uppercase whitespace-nowrap hover:bg-brutalYellow hover:pl-6 transition-all border-b-2 border-transparent hover:border-black mx-2 rounded-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Become a Sponsor
-                  </Link> */}
+                    Latest Newsletter
+                  </Link>
                 </div>
               </li>
 
-              <li className="py-2 lg:py-0">
+              {/* Products Dropdown */}
+              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group" ref={productsDropdownRef}>
+                <button
+                  onClick={toggleProductsDropdown}
+                  className={`flex items-center w-full lg:w-auto justify-between lg:justify-start text-black font-extrabold text-lg lg:text-sm xl:text-base whitespace-nowrap uppercase transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname.startsWith('/calendar') ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
+                >
+                  Products
+                  <svg className={`w-6 h-6 lg:w-4 lg:h-4 ml-1 stroke-[3px] transition-transform duration-200 group-hover:rotate-180 ${productsDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+
+                <div className={`lg:absolute lg:top-full lg:left-0 lg:w-56 bg-white lg:rounded-xl py-3 mt-2 lg:mt-3 lg:border-2 lg:border-black lg:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 z-50 border-l-4 border-black ml-2 px-2 lg:ml-0 lg:px-0 lg:border-l-2 ${productsDropdownOpen ? 'block' : 'hidden lg:group-hover:block'}`}>
+                  <div className="hidden lg:block absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
+
+                  <Link
+                    href="/calendar"
+                    className="block px-5 py-3 text-base lg:text-sm font-bold text-black uppercase whitespace-nowrap hover:bg-brutalYellow hover:pl-6 transition-all border-b-2 border-transparent hover:border-black mx-2 rounded-lg"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Calendar Club
+                  </Link>
+                </div>
+              </li>
+
+
+              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none">
                 <Link
                   href="/about"
-                  className={`text-gray-700 hover:text-primary font-medium block transition-colors ${pathname === '/about' ? 'text-primary' : ''}`}
+                  className={`block lg:inline-flex lg:items-center text-black font-extrabold text-lg lg:text-sm xl:text-base uppercase whitespace-nowrap transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname === '/about' ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
                 </Link>
               </li>
 
-              <li className="py-2 md:py-0 md:hidden">
+              <li className="py-8 lg:py-0 lg:hidden mt-4">
                 <Link
                   href="/subscribe"
-                  className="w-full block py-3 bg-primary text-white font-medium rounded-md text-center hover:bg-opacity-90 transition-colors mt-4"
+                  className="w-full block py-4 bg-brutalBlue text-white border-2 border-black font-black text-xl tracking-wide uppercase rounded-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] text-center hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Subscribe
@@ -171,7 +177,7 @@ export default function Header() {
 
           <Link
             href="/subscribe"
-            className="hidden md:inline-block px-5 py-2 bg-primary text-white font-medium rounded hover:bg-opacity-90 transition-colors"
+            className="hidden lg:inline-block px-5 py-2 bg-brutalBlue text-white border-2 border-black font-black uppercase text-sm tracking-wide whitespace-nowrap rounded-lg shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-[1px_1px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all z-10"
           >
             Subscribe
           </Link>
@@ -179,4 +185,4 @@ export default function Header() {
       </div>
     </header>
   );
-} 
+}

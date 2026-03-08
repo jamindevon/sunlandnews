@@ -163,66 +163,74 @@ export default function QuizPage() {
   const canProceed = currentResponse !== '';
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto max-w-2xl px-4 py-16">
+    <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white">
+      <div className="container mx-auto max-w-xl px-4 py-8 pb-16">
+
         {/* Progress Bar */}
         <div className="mb-12">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-sm font-medium text-gray-600">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-xs font-black uppercase tracking-widest bg-white border-2 border-black px-2 py-1 rounded-lg shadow-[2px_2px_0px_rgba(0,0,0,1)]">
               Question {currentStep} of {questions.length}
             </span>
-            <span className="text-sm text-gray-500">45 seconds</span>
+            <span className="text-xs font-bold text-gray-600">~45 sec</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-white border-4 border-black h-5 rounded-full overflow-hidden">
             <div
-              className="bg-primary h-2 rounded-full transition-all duration-300 ease-out"
+              className="h-full bg-brutalPink border-r-4 border-black transition-all duration-300 ease-out overflow-hidden"
               style={{ width: `${(currentStep / questions.length) * 100}%` }}
-            />
+            >
+              <div className="w-full h-full opacity-30" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 20px)" }}></div>
+            </div>
           </div>
         </div>
 
         {/* Question Card */}
-        <div className="bg-white rounded-2xl p-0 md:p-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center leading-tight">
+        <div className="bg-white border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-2xl p-5 md:p-8 relative overflow-hidden">
+          {/* Top accent strip */}
+          <div className="absolute top-0 left-0 w-full h-3 bg-brutalYellow border-b-4 border-black"></div>
+
+          <h1 className="text-2xl md:text-3xl font-black text-black mb-4 text-center leading-tight uppercase tracking-tight mt-3">
             {currentQuestion.question}
           </h1>
 
           {/* Question Description */}
           {currentQuestion.description && (
-            <p className="text-gray-600 text-center mb-8 text-lg">
+            <p className="font-bold text-gray-700 text-center mb-5 leading-relaxed bg-brutalBg border-2 border-black p-3 rounded-xl shadow-[2px_2px_0px_rgba(0,0,0,1)] text-sm">
               {currentQuestion.description}
             </p>
           )}
 
           {/* Options */}
-          <div className="space-y-4 mb-8">
+          <div className="space-y-3 mb-6">
             {currentQuestion.options.map((option, index) => (
               <div key={option}>
                 <button
                   onClick={() => handleOptionSelect(currentQuestion.id, option)}
-                  className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${currentResponse === option
-                      ? 'border-primary bg-primary/5 text-primary font-medium'
-                      : 'border-gray-200 hover:border-gray-300 text-gray-700'
+                  className={`w-full p-3 text-left rounded-xl border-4 transition-all font-bold text-base ${currentResponse === option
+                    ? 'border-black bg-brutalYellow shadow-[4px_4px_0px_rgba(0,0,0,1)] translate-x-[2px] translate-y-[2px]'
+                    : 'border-black bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]'
                     }`}
                 >
-                  <div className="flex items-center">
-                    <div className={`w-4 h-4 rounded-full border-2 mr-3 ${currentResponse === option
-                        ? 'border-primary bg-primary'
-                        : 'border-gray-300'
+                  <div className="flex items-center gap-3">
+                    <div className={`w-7 h-7 rounded-full border-4 flex-shrink-0 flex items-center justify-center transition-colors ${currentResponse === option
+                      ? 'border-black bg-black'
+                      : 'border-black bg-white'
                       }`}>
                       {currentResponse === option && (
-                        <div className="w-full h-full rounded-full bg-primary"></div>
+                        <svg className="w-4 h-4" fill="none" stroke="#EAB308" strokeWidth="3" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
                       )}
                     </div>
-                    <span>{option}</span>
+                    <span className={currentResponse === option ? 'text-black' : 'text-gray-800'}>{option}</span>
                   </div>
                 </button>
 
-                {/* Conditional Phone Number Field - appears right under the Yes option */}
+                {/* Conditional Phone Number Field */}
                 {currentQuestion.hasPhoneField && option === '✅ Yes, that sounds helpful' && currentResponse === option && (
-                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <label htmlFor="phone" className="block text-sm font-medium text-green-800 mb-2">
-                      Phone Number (optional)
+                  <div className="mt-4 p-5 bg-brutalBg border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl">
+                    <label htmlFor="phone" className="block text-sm font-black uppercase tracking-wide text-black mb-3">
+                      📱 Phone Number (optional)
                     </label>
                     <input
                       type="tel"
@@ -230,9 +238,9 @@ export default function QuizPage() {
                       value={responses.phone_number}
                       onChange={(e) => setResponses(prev => ({ ...prev, phone_number: e.target.value }))}
                       placeholder="(772) 555-0123"
-                      className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                      className="w-full px-4 py-3 border-2 border-black bg-white font-bold shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:outline-none focus:translate-x-[1px] focus:translate-y-[1px] focus:shadow-[1px_1px_0px_rgba(0,0,0,1)] transition-all rounded-xl"
                     />
-                    <p className="text-xs text-green-600 mt-1">
+                    <p className="text-xs font-bold text-gray-600 mt-2 uppercase tracking-wide">
                       We'll only text you about important local stuff — no spam, promise!
                     </p>
                   </div>
@@ -242,35 +250,35 @@ export default function QuizPage() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center gap-3 mt-4">
             <button
               onClick={handleBack}
               disabled={currentStep === 1}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${currentStep === 1
-                  ? 'text-gray-400 cursor-not-allowed'
-                  : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
+              className={`px-4 py-2.5 text-sm font-black uppercase tracking-wider rounded-xl border-2 transition-all flex-shrink-0 ${currentStep === 1
+                ? 'text-gray-400 cursor-not-allowed border-gray-300 bg-gray-100'
+                : 'text-black border-black bg-white shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none'
                 }`}
             >
-              Back
+              ← Back
             </button>
 
             <button
               onClick={handleNext}
               disabled={!canProceed || isSubmitting}
-              className={`px-8 py-3 rounded-lg font-semibold transition-all ${canProceed && !isSubmitting
-                  ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-1'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              className={`px-6 py-3 text-base font-black uppercase tracking-wider rounded-xl border-4 border-black transition-all flex-1 ${canProceed && !isSubmitting
+                ? 'bg-primary text-white shadow-[5px_5px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[7px_7px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none'
+                : 'bg-gray-200 text-gray-400 cursor-not-allowed border-gray-300'
                 }`}
             >
               {isSubmitting ? (
-                <div className="flex items-center">
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                  Submitting...
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  Saving...
                 </div>
               ) : currentStep === questions.length ? (
-                'Complete Quiz'
+                'Complete Quiz ✓'
               ) : (
-                'Next'
+                'Next →'
               )}
             </button>
           </div>
@@ -278,11 +286,11 @@ export default function QuizPage() {
 
         {/* Quiz Info */}
         <div className="text-center mt-8">
-          <p className="text-gray-600 text-sm">
+          <p className="text-sm font-bold text-gray-600 uppercase tracking-wide">
             Your responses help us personalize your newsletter experience
           </p>
         </div>
       </div>
     </div>
   );
-} 
+}

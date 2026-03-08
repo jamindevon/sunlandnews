@@ -138,48 +138,50 @@ export default function NewsQuiz() {
 
   if (showResults) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 flex items-center justify-center px-4 py-12">
-        <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white flex items-center justify-center px-4 py-12 pb-24 border-t-2 border-black">
+        <div className="max-w-2xl w-full bg-white border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-2xl p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-4 bg-brutalPink border-b-4 border-black"></div>
+
+          <div className="text-center mb-8 mt-4">
+            <h1 className="text-4xl md:text-5xl font-black text-black mb-4 uppercase tracking-tight">
               Quiz Complete! 🎉
             </h1>
-            <div className="text-6xl md:text-7xl font-bold text-blue-600 mb-4">
+            <div className="text-7xl md:text-8xl font-black text-black mb-4 inline-block bg-brutalYellow px-6 py-2 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-2">
               {score}/{quizData.questions.length}
             </div>
-            <p className="text-xl md:text-2xl text-gray-700 font-medium">
+            <p className="text-xl md:text-2xl text-gray-800 font-bold mt-4 uppercase tracking-wide">
               {getScoreMessage(score, quizData.questions.length)}
             </p>
           </div>
 
           {/* Answer Review */}
-          <div className="mb-8 space-y-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Review Your Answers</h2>
+          <div className="mb-10 space-y-6">
+            <h2 className="text-3xl font-black text-black mb-6 uppercase tracking-tight bg-primary text-white inline-block px-4 py-1 border-2 border-black rotate-1">Review Your Answers</h2>
             {quizData.questions.map((q, index) => {
               const userAnswer = userAnswers[index];
               const isCorrect = userAnswer === q.correctAnswer;
 
               return (
-                <div key={index} className="border-l-4 pl-4 py-2" style={{
-                  borderColor: isCorrect ? '#10b981' : '#ef4444'
-                }}>
-                  <div className="flex items-start gap-2 mb-2">
-                    <span className="text-2xl">{isCorrect ? '✅' : '❌'}</span>
+                <div key={index} className="border-4 border-black p-4 bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)] mb-6 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]">
+                  <div className="flex items-start gap-3 mb-2">
+                    <span className="text-3xl bg-brutalBg border-2 border-black rounded-full flex-shrink-0 w-12 h-12 flex items-center justify-center shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                      {isCorrect ? '✅' : '❌'}
+                    </span>
                     <div className="flex-1">
-                      <p className="font-semibold text-gray-900 mb-2">
-                        Question {index + 1}: {q.question}
+                      <p className="font-black text-black text-lg mb-3 leading-tight uppercase">
+                        {index + 1}. {q.question}
                       </p>
                       {!isCorrect && (
-                        <div className="space-y-1 text-sm mb-2">
-                          <p className="text-red-600">
-                            Your answer: {q.options[userAnswer]}
+                        <div className="space-y-2 text-sm mb-4 bg-gray-50 border-2 border-black p-3 rounded-lg shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                          <p className="text-black font-bold flex items-center gap-2">
+                            <span className="text-red-500 font-black">Your answer:</span> {q.options[userAnswer]}
                           </p>
-                          <p className="text-green-600">
-                            Correct answer: {q.options[q.correctAnswer]}
+                          <p className="text-black font-bold flex items-center gap-2">
+                            <span className="text-green-600 font-black">Correct answer:</span> {q.options[q.correctAnswer]}
                           </p>
                         </div>
                       )}
-                      <p className="text-gray-600 text-sm">{q.explanation}</p>
+                      <p className="text-gray-800 font-bold border-t-2 border-black pt-2 mt-2 bg-brutalBlue/10 p-2 border-l-4">{q.explanation}</p>
                     </div>
                   </div>
                 </div>
@@ -188,32 +190,32 @@ export default function NewsQuiz() {
           </div>
 
           {/* Share Buttons */}
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+          <div className="mb-10 bg-brutalBg border-4 border-black p-6 shadow-[6px_6px_0px_rgba(0,0,0,1)] rounded-2xl transform rotate-1">
+            <h3 className="text-2xl font-black text-black mb-6 text-center uppercase tracking-wide">
               Share Your Results
             </h3>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={() => handleShare('twitter')}
-                className="px-6 py-3 bg-[#1DA1F2] text-white rounded-lg font-medium hover:bg-[#1a8cd8] transition-colors"
+                className="px-6 py-3 bg-[#1DA1F2] text-white font-black uppercase text-sm border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all rounded-xl"
               >
-                Share on Twitter
+                Twitter
               </button>
               <button
                 onClick={() => handleShare('facebook')}
-                className="px-6 py-3 bg-[#1877F2] text-white rounded-lg font-medium hover:bg-[#0d65d9] transition-colors"
+                className="px-6 py-3 bg-[#1877F2] text-white font-black uppercase text-sm border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all rounded-xl"
               >
-                Share on Facebook
+                Facebook
               </button>
               <button
                 onClick={() => handleShare('linkedin')}
-                className="px-6 py-3 bg-[#0A66C2] text-white rounded-lg font-medium hover:bg-[#004182] transition-colors"
+                className="px-6 py-3 bg-[#0A66C2] text-white font-black uppercase text-sm border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all rounded-xl"
               >
-                Share on LinkedIn
+                LinkedIn
               </button>
               <button
                 onClick={() => handleShare('copy')}
-                className="px-6 py-3 bg-gray-600 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors"
+                className="px-6 py-3 bg-white text-black font-black uppercase text-sm border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:bg-gray-100 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all rounded-xl cursor-copy"
               >
                 Copy Link
               </button>
@@ -221,16 +223,16 @@ export default function NewsQuiz() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <button
               onClick={handleRestart}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg"
+              className="px-8 py-5 bg-brutalBlue text-white border-4 border-black font-black text-lg uppercase tracking-wider rounded-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all w-full sm:w-auto"
             >
               Take Quiz Again
             </button>
             <button
               onClick={() => router.push('/')}
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg"
+              className="px-8 py-5 bg-[#ff4365] text-white border-4 border-black font-black text-lg uppercase tracking-wider rounded-xl shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all w-full sm:w-auto"
             >
               Back to Home
             </button>
@@ -243,58 +245,63 @@ export default function NewsQuiz() {
   const currentQ = quizData.questions[currentQuestion];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 flex items-center justify-center px-4 py-12">
-      <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+    <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white flex items-center justify-center px-4 py-12 pb-24 border-t-2 border-black">
+      <div className="max-w-2xl w-full bg-white border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-2xl p-8 md:p-12 relative overflow-hidden">
+        {/* Background accent */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-primary rounded-full blur-[40px] opacity-20 transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-10 relative z-10 mt-4">
+          <h1 className="text-4xl md:text-5xl font-black text-black mb-4 uppercase tracking-tight">
             {quizData.title}
           </h1>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="inline-block bg-brutalBlue text-white font-bold text-lg px-4 py-2 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)] uppercase tracking-wide mb-8 -rotate-1">
             {quizData.subtitle}
           </p>
 
           {/* Progress Bar */}
-          <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+          <div className="w-full bg-white border-4 border-black h-6 rounded-full overflow-hidden mb-3 relative shadow-[insets_0_2px_4px_rgba(0,0,0,0.1)]">
             <div
-              className="bg-gradient-to-r from-blue-600 to-orange-500 h-3 rounded-full transition-all duration-300"
+              className="h-full bg-brutalPink border-r-4 border-black transition-all duration-300 ease-out flex items-center justify-end pr-2 overflow-hidden"
               style={{ width: `${((currentQuestion + 1) / quizData.questions.length) * 100}%` }}
-            ></div>
+            >
+              <div className="w-full h-full opacity-30 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 20px)" }}></div>
+            </div>
           </div>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm font-black text-black uppercase tracking-widest bg-gray-100 inline-block px-3 py-1 border-2 border-black rounded-lg">
             Question {currentQuestion + 1} of {quizData.questions.length}
           </p>
         </div>
 
         {/* Question */}
-        <div className="mb-8">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+        <div className="mb-10 relative z-10">
+          <h2 className="text-2xl md:text-3xl font-black text-black mb-8 leading-tight">
             {currentQ.question}
           </h2>
 
           {/* Answer Options */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             {currentQ.options.map((option, index) => (
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${selectedAnswer === index
-                  ? 'border-blue-600 bg-blue-50 shadow-md'
-                  : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                className={`w-full text-left p-5 rounded-xl border-4 transition-all ${selectedAnswer === index
+                  ? 'border-black bg-brutalYellow shadow-[4px_4px_0px_rgba(0,0,0,1)] translate-x-[2px] translate-y-[2px]'
+                  : 'border-black bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]'
                   }`}
               >
-                <div className="flex items-center gap-3">
-                  <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${selectedAnswer === index
-                    ? 'border-blue-600 bg-blue-600'
-                    : 'border-gray-300'
+                <div className="flex items-center gap-4">
+                  <div className={`w-8 h-8 rounded-full border-4 flex-shrink-0 flex items-center justify-center shadow-[inset_2px_2px_0px_rgba(0,0,0,0.1)] transition-colors ${selectedAnswer === index
+                    ? 'border-black bg-black'
+                    : 'border-black bg-white'
                     }`}>
                     {selectedAnswer === index && (
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg className="w-4 h-4 text-brutalYellow stroke-[4px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     )}
                   </div>
-                  <span className="text-gray-700 font-medium">{option}</span>
+                  <span className={`text-xl font-bold ${selectedAnswer === index ? 'text-black' : 'text-gray-800'}`}>{option}</span>
                 </div>
               </button>
             ))}
@@ -305,9 +312,9 @@ export default function NewsQuiz() {
         <button
           onClick={handleNext}
           disabled={selectedAnswer === ''}
-          className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${selectedAnswer === ''
-            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            : 'bg-gradient-to-r from-blue-600 to-orange-500 text-white hover:from-blue-700 hover:to-orange-600 shadow-lg transform hover:scale-105'
+          className={`w-full py-5 rounded-xl font-black text-xl uppercase tracking-wider transition-all border-4 border-black relative z-10 ${selectedAnswer === ''
+            ? 'bg-gray-200 text-gray-400 cursor-not-allowed border-gray-300'
+            : 'bg-primary text-white shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none'
             }`}
         >
           {currentQuestion < quizData.questions.length - 1 ? 'Next Question' : 'See Results'}

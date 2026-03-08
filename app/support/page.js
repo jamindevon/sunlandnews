@@ -2,45 +2,38 @@
 
 import { useEffect } from 'react';
 import Script from 'next/script';
+import Link from 'next/link';
 
 const supportOptions = [
   {
     title: 'People Pass',
     emoji: '🎟️',
-    price: '$9',
-    subtitle: '/month',
+    price: '$9/mo',
     description: 'The best way to support the newsletter. Get exclusive podcasts, 20% off all future merch, and help keep Sunland News free forever.',
-    color: 'from-purple-500 to-purple-600',
+    bg: 'bg-brutalBlue',
     ctaText: 'Become a Member',
-    href: 'https://buymeacoffee.com/sunland/membership',
-    available: true
-  },
-  {
-    title: 'Sunland Brand Shirts',
-    emoji: '👕',
-    price: '',
-    subtitle: '',
-    description: 'Rep your local pride with Sunland Brand apparel. Comfy, stylish shirts that show where you\'re from.',
-    color: 'from-blue-500 to-blue-600',
-    ctaText: 'Shop Shirts',
-    href: 'https://sunlandbrand.com',
+    href: 'https://www.patreon.com/cw/SunlandCo/membership',
     available: true
   },
   {
     title: 'Buy Me a Coffee',
     emoji: '☕',
     price: 'Any Amount',
-    subtitle: '',
     description: 'Just want to say thanks? Buy us a coffee and help fuel the next story.',
-    color: 'from-amber-500 to-amber-600',
+    bg: 'bg-brutalYellow',
     ctaText: 'Buy Me a Coffee',
     href: 'https://www.buymeacoffee.com/sunland',
     available: true
   }
 ];
 
+const benefits = [
+  { icon: '🎙️', title: 'Exclusive Podcasts', desc: 'Sunland News podcasts exclusively for People Pass members' },
+  { icon: '👕', title: '20% Off Merch', desc: 'Get 20% off all future Sunland Brand merchandise' },
+  { icon: '📰', title: 'Support Local News', desc: 'Help keep Sunland News free forever for everyone' },
+];
+
 export default function SupportPage() {
-  // Track page view for monetization options
   useEffect(() => {
     const trackPageView = async () => {
       try {
@@ -49,7 +42,7 @@ export default function SupportPage() {
           ReactPixel.track('ViewContent', {
             content_name: 'Support Options',
             content_category: 'Monetization',
-            content_ids: ['people_pass_membership', 'food_discount_card']
+            content_ids: ['people_pass_membership', 'sunland_brand_shirts', 'buy_me_a_coffee']
           });
         }
       } catch (error) {
@@ -59,33 +52,24 @@ export default function SupportPage() {
     trackPageView();
   }, []);
 
-  // Track clicks on support options
-  const handleSupportClick = async (optionTitle, price, href) => {
-    // Track as InitiateCheckout for paid options
-    if (price) {
+  const handleSupportPixel = async (option) => {
+    if (option.price && option.price !== 'Any Amount' && option.price !== 'Shop Now') {
       try {
         if (typeof window !== 'undefined') {
           const ReactPixel = (await import('react-facebook-pixel')).default;
           ReactPixel.track('InitiateCheckout', {
-            content_name: optionTitle,
+            content_name: option.title,
             content_category: 'Support Option',
-            value: parseFloat(price.replace(/[^0-9.]/g, '')),
-            currency: 'USD'
           });
         }
       } catch (error) {
         console.warn('Failed to track pixel event:', error);
       }
     }
-
-    // Open link if available
-    if (href && href !== '#') {
-      window.open(href, '_blank', 'noopener,noreferrer');
-    }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white">
       {/* Buy Me a Coffee Widget */}
       <Script
         data-name="BMC-Widget"
@@ -101,55 +85,51 @@ export default function SupportPage() {
         strategy="lazyOnload"
       />
 
-      <div className="container mx-auto max-w-4xl px-4 py-16">
+      <div className="container mx-auto max-w-5xl px-4 py-12 md:py-20">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-14">
+          <h1 className="text-5xl md:text-7xl font-black text-black mb-4 uppercase tracking-tight">
             Support Sunland News
           </h1>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            The newsletter is <strong>free forever and always</strong>. But if you want to support local journalism and get some perks, here's how:
+          <p className="text-xl font-bold text-gray-800 max-w-2xl mx-auto bg-white inline-block px-6 py-3 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl transform -rotate-1">
+            The newsletter is <span className="bg-brutalYellow px-1">free forever and always.</span> But if you want to show love, here's how:
           </p>
         </div>
 
-        {/* Support Options Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Support Cards */}
+        <div className="grid md:grid-cols-2 max-w-3xl mx-auto gap-6 mb-16">
           {supportOptions.map((option, index) => (
             <div
               key={option.title}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              className="bg-white border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-2xl overflow-hidden hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-all"
             >
-              {/* Card Header with Gradient */}
-              <div className={`bg-gradient-to-r ${option.color} p-6 text-white text-center`}>
-                <div className="text-4xl mb-3">{option.emoji}</div>
-                <h3 className="text-2xl font-bold mb-1">{option.title}</h3>
-                <div className="text-3xl font-bold">
-                  {option.price}
-                  {option.subtitle && (
-                    <span className="text-lg font-normal opacity-90 ml-1">
-                      {option.subtitle}
-                    </span>
-                  )}
-                </div>
+              {/* Card Header */}
+              <div className={`${option.bg} p-6 border-b-4 border-black text-center`}>
+                <div className="text-5xl mb-3">{option.emoji}</div>
+                <h3 className="text-2xl font-black uppercase tracking-tight text-black">{option.title}</h3>
+                <div className="text-xl font-black text-black mt-1">{option.price}</div>
               </div>
 
               {/* Card Body */}
-              <div className="p-6">
-                <p className="text-gray-700 text-center mb-6 leading-relaxed">
+              <div className="p-6 flex flex-col gap-4">
+                <p className="font-bold text-gray-800 leading-relaxed text-center flex-1">
                   {option.description}
                 </p>
 
                 {option.available ? (
-                  <button
-                    onClick={() => handleSupportClick(option.title, option.price, option.href)}
-                    className={`block w-full bg-gradient-to-r ${option.color} text-white text-center py-4 px-6 rounded-lg font-semibold hover:opacity-90 transition-all shadow-md hover:shadow-lg`}
+                  <a
+                    href={option.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleSupportPixel(option)}
+                    className="w-full py-4 px-6 bg-black text-white font-black uppercase tracking-wider rounded-xl border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all text-center block"
                   >
                     {option.ctaText}
-                  </button>
+                  </a>
                 ) : (
                   <button
                     disabled
-                    className="block w-full bg-gradient-to-r from-gray-400 to-gray-500 text-white text-center py-4 px-6 rounded-lg font-semibold cursor-not-allowed opacity-60"
+                    className="w-full py-4 px-6 bg-gray-300 text-gray-500 font-black uppercase tracking-wider rounded-xl border-2 border-gray-300 cursor-not-allowed"
                   >
                     {option.ctaText}
                   </button>
@@ -160,88 +140,34 @@ export default function SupportPage() {
         </div>
 
         {/* People Pass Benefits */}
-        <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl shadow-lg p-8 md:p-12 text-white mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+        <div className="bg-brutalBlue border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-2xl p-8 md:p-12 mb-16 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.06] pointer-events-none" style={{ backgroundImage: "radial-gradient(#000 2px, transparent 2px)", backgroundSize: "20px 20px" }}></div>
+
+          <h2 className="text-3xl md:text-4xl font-black text-black mb-10 text-center uppercase tracking-tight relative z-10">
             What You Get with People Pass
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎙️</span>
+          <div className="grid md:grid-cols-3 gap-8 relative z-10">
+            {benefits.map((b) => (
+              <div key={b.title} className="text-center bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl p-6">
+                <div className="text-4xl mb-3">{b.icon}</div>
+                <h3 className="font-black text-xl text-black mb-2 uppercase tracking-tight">{b.title}</h3>
+                <p className="font-bold text-gray-700 text-sm leading-relaxed">{b.desc}</p>
               </div>
-              <h3 className="font-bold mb-2">Exclusive Podcasts</h3>
-              <p className="text-sm opacity-90">
-                Sunland News podcasts are exclusively for People Pass members
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">👕</span>
-              </div>
-              <h3 className="font-bold mb-2">20% Off Merch</h3>
-              <p className="text-sm opacity-90">
-                Get 20% off all future merchandise
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📰</span>
-              </div>
-              <h3 className="font-bold mb-2">Support Local News</h3>
-              <p className="text-sm opacity-90">
-                Help keep Sunland News free forever
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-            Why Your Support Matters
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📰</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Independent Journalism</h3>
-              <p className="text-gray-600 text-sm">
-                We're not beholden to big media companies or advertisers. Your support keeps us independent.
-              </p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏠</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Local Focus</h3>
-              <p className="text-gray-600 text-sm">
-                Every dollar helps us cover more local stories that actually matter to your daily life.
-              </p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Community Building</h3>
-              <p className="text-gray-600 text-sm">
-                Supporting Sunland News means supporting a stronger, more connected St. Lucie County.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer Message */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600">
-            Not ready to support yet? No worries! The newsletter is <strong>free forever and always</strong>.
+        {/* Footer */}
+        <div className="text-center">
+          <p className="font-bold text-gray-700 mb-3">
+            Not ready to support yet? No worries — the newsletter is <strong>always free.</strong>
           </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Questions about supporting Sunland News? Email us at{' '}
-            <a href="mailto:hello@sunlandnews.com" className="text-primary hover:underline">
-              hello@sunlandnews.com
-            </a>
-          </p>
+          <Link
+            href="/"
+            className="inline-block font-black uppercase text-sm tracking-widest text-black border-2 border-black px-5 py-2 bg-white shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0px_rgba(0,0,0,1)] transition-all rounded-lg"
+          >
+            ← Back to Home
+          </Link>
         </div>
       </div>
     </div>

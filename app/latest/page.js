@@ -34,42 +34,40 @@ export default async function LatestNewsletterPage() {
     });
 
     return (
-        <div className="min-h-screen bg-white pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-white font-sans text-black selection:bg-brutalPink selection:text-white pt-16 md:pt-24 pb-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
                 {/* Header Info */}
-                <div className="text-center mb-12">
-                    <Link href="/" className="inline-block mb-6 hover:opacity-80 transition-opacity">
-                        <img src="/images/sunlandnews-logo.png" alt="Sunland News" className="h-10 w-auto mx-auto" />
-                    </Link>
-                    <div className="flex items-center justify-center gap-3 text-sm text-gray-500 mb-4">
-                        <span className="uppercase tracking-wider font-medium">Latest Issue</span>
+                <div className="text-center mb-12 bg-white border-2 border-black p-8 shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-[2rem] relative overflow-hidden">
+                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-brutalBlue rounded-full border-2 border-black opacity-20"></div>
+                    <div className="flex items-center justify-center gap-3 text-sm text-black font-bold mb-6 relative z-10">
+                        <span className="bg-brutalYellow border-2 border-black px-3 py-1 shadow-[2px_2px_0px_rgba(0,0,0,1)] uppercase tracking-wider font-black rounded-lg">Latest Issue</span>
                         <span>•</span>
                         <time>{date}</time>
                     </div>
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight relative z-10">
                         {latestPost.title}
                     </h1>
                 </div>
 
                 {/* Content */}
-                <article className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-2xl prose-img:shadow-sm prose-blockquote:border-l-primary prose-blockquote:text-gray-600 prose-blockquote:italic prose-strong:text-gray-900">
+                <article className="bg-white border-2 border-black p-6 md:p-12 shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-2xl prose prose-lg max-w-none prose-headings:font-black prose-headings:tracking-tight prose-headings:text-black prose-p:text-gray-800 prose-p:leading-relaxed prose-p:font-medium prose-a:text-black prose-a:font-bold prose-a:underline prose-a:decoration-2 prose-a:decoration-primary prose-a:underline-offset-4 hover:prose-a:text-primary prose-img:rounded-xl prose-img:border-2 prose-img:border-black prose-img:shadow-[4px_4px_0px_rgba(0,0,0,1)] prose-blockquote:border-l-4 prose-blockquote:border-black prose-blockquote:bg-brutalYellow/30 prose-blockquote:text-black prose-blockquote:italic prose-blockquote:py-2 prose-blockquote:pr-4 prose-strong:text-black prose-strong:font-black">
                     <div dangerouslySetInnerHTML={{ __html: latestPost.content }} />
                 </article>
 
                 {/* Footer CTA */}
-                <div className="mt-16 pt-12 border-t border-gray-100 text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Don't miss the next one</h3>
-                    <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                <div className="mt-16 pt-16 border-t-4 border-black text-center">
+                    <h3 className="text-3xl font-black text-black mb-4 uppercase tracking-tight">Don't miss the next one</h3>
+                    <p className="text-gray-800 font-bold mb-8 max-w-md mx-auto text-lg">
                         Join 10,000+ locals getting the best stories from St. Lucie County delivered to their inbox.
                     </p>
                     <Link
-                        href="/"
-                        className="inline-block bg-primary text-white font-bold px-8 py-4 rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-0.5"
+                        href="/subscribe"
+                        className="inline-block bg-primary text-white font-bold uppercase tracking-wide px-8 py-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all"
                     >
                         Subscribe for Free
                     </Link>
                     <div className="mt-8">
-                        <Link href="/" className="text-gray-500 hover:text-gray-900 text-sm font-medium transition-colors">
+                        <Link href="/" className="text-black font-bold hover:text-primary uppercase underline decoration-2 decoration-black hover:decoration-primary underline-offset-4 transition-colors">
                             ← Back to Home
                         </Link>
                     </div>

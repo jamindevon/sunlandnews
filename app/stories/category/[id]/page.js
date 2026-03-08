@@ -106,27 +106,27 @@ export default async function CategoryPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brutalBg font-sans text-black selection:bg-brutalPink selection:text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 border-b border-gray-100">
+      <section className="pt-24 pb-16 px-4 border-b-2 border-black bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-3">
+          <h1 className="text-5xl md:text-7xl font-black text-black mb-6 flex items-center justify-center gap-3 uppercase tracking-tight">
             {category && categoryIcons[category.title] && <span>{categoryIcons[category.title]}</span>}
             {category ? category.title : 'Category'}
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl font-bold text-gray-800 max-w-2xl mx-auto">
             {category?.description || 'Stories and updates from St. Lucie County'}
           </p>
         </div>
       </section>
 
       {/* Categories Filter */}
-      <section className="py-8 px-4 border-b border-gray-50">
+      <section className="py-6 md:py-8 border-b-2 border-black bg-brutalYellow">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex overflow-x-auto pb-4 md:pb-0 md:flex-wrap gap-2 justify-center scrollbar-hide">
+          <div className="flex overflow-x-auto pb-4 md:pb-0 md:flex-wrap gap-3 md:gap-4 justify-start md:justify-center scrollbar-hide px-4">
             <Link
               href="/stories"
-              className="px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all bg-white border border-gray-200 text-gray-600 hover:border-primary hover:text-primary"
+              className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 text-xs md:text-base font-bold uppercase tracking-widest whitespace-nowrap transition-all bg-white text-black border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
             >
               All Stories
             </Link>
@@ -135,12 +135,12 @@ export default async function CategoryPage({ params }) {
               <Link
                 key={cat._id}
                 href={`/stories/category/${cat._id}`}
-                className={`inline-flex items-center px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all border ${cat._id === id
-                  ? 'bg-primary text-white border-primary shadow-md shadow-primary/20'
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-primary hover:text-primary'
+                className={`inline-flex items-center px-4 py-2 md:px-6 md:py-3 text-xs md:text-base font-bold uppercase tracking-widest whitespace-nowrap transition-all border-2 border-black ${cat._id === id
+                  ? 'bg-black text-white shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]'
+                  : 'bg-white text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none'
                   }`}
               >
-                {categoryIcons[cat.title] && <span className="mr-2">{categoryIcons[cat.title]}</span>}
+                {categoryIcons[cat.title] && <span className="mr-2 md:mr-3 text-base md:text-xl">{categoryIcons[cat.title]}</span>}
                 {cat.title}
               </Link>
             ))}
@@ -149,15 +149,15 @@ export default async function CategoryPage({ params }) {
       </section>
 
       {/* Posts Display */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-brutalBg">
         <div className="container mx-auto max-w-6xl">
           {posts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {posts.map((post) => (
-                <article key={post._id} className="group flex flex-col h-full">
+                <article key={post._id} className="group flex flex-col h-full bg-white border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-all duration-300 rounded-2xl overflow-hidden p-6 relative">
                   {post.mainImage && (
-                    <Link href={post.slug && post.slug.current ? `/post/${post.slug.current}` : `/post/${post._id}`} className="block overflow-hidden rounded-2xl mb-6">
-                      <div className="aspect-[3/2] relative bg-gray-100">
+                    <Link href={post.slug && post.slug.current ? `/post/${post.slug.current}` : `/post/${post._id}`} className="block overflow-hidden rounded-xl border-2 border-black mb-6 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                      <div className="aspect-[3/2] relative bg-brutalBlue">
                         <Image
                           src={urlFor(post.mainImage).width(600).height(400).url()}
                           alt={post.title}
@@ -169,36 +169,36 @@ export default async function CategoryPage({ params }) {
                     </Link>
                   )}
 
-                  <div className="flex-1 flex flex-col">
-                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                      <span className="font-medium text-primary uppercase tracking-wider text-xs">
+                  <div className="flex-1 flex flex-col relative z-10">
+                    <div className="flex items-center gap-3 text-sm font-bold text-gray-800 mb-4 border-b-2 border-black pb-3">
+                      <span className="font-black text-black bg-brutalYellow px-2 py-0.5 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)] uppercase tracking-wider text-xs">
                         {post.categories?.[0]?.title || 'News'}
                       </span>
                       <span>•</span>
-                      <time>{formatDate(post.publishedAt)}</time>
+                      <time className="uppercase tracking-wide">{formatDate(post.publishedAt)}</time>
                     </div>
 
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors leading-tight">
+                    <h2 className="text-2xl font-black text-black mb-4 group-hover:text-primary transition-colors leading-tight uppercase tracking-tight">
                       <Link href={post.slug && post.slug.current ? `/post/${post.slug.current}` : `/post/${post._id}`}>
                         {post.title}
                       </Link>
                     </h2>
 
-                    <p className="text-gray-600 line-clamp-3 mb-4 flex-1">
+                    <p className="text-gray-800 font-bold line-clamp-3 mb-6 flex-1 text-lg">
                       {post.excerpt}
                     </p>
 
-                    <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-50">
+                    <div className="flex items-center gap-3 mt-auto pt-4 border-t-2 border-black bg-gray-50 -mx-6 -mb-6 px-6 pb-6 pt-6">
                       {post.author?.image && (
                         <Image
                           src={urlFor(post.author.image).width(40).height(40).url()}
                           alt={post.author.name}
-                          width={24}
-                          height={24}
-                          className="rounded-full"
+                          width={32}
+                          height={32}
+                          className="rounded-full border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]"
                         />
                       )}
-                      <span className="text-sm font-medium text-gray-900">
+                      <span className="text-sm font-black text-black uppercase tracking-wider">
                         {post.author?.name || 'Sunland Staff'}
                       </span>
                     </div>
@@ -207,9 +207,9 @@ export default async function CategoryPage({ params }) {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-gray-50 rounded-2xl">
-              <p className="text-gray-500 text-lg mb-2">No stories found in this category.</p>
-              <Link href="/stories" className="text-primary font-medium hover:underline">
+            <div className="text-center py-20 bg-white border-4 border-black border-dashed rounded-3xl shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+              <p className="text-black font-black uppercase tracking-widest text-xl mb-4">No stories found in this category.</p>
+              <Link href="/stories" className="inline-flex items-center px-6 py-3 font-bold uppercase tracking-wide whitespace-nowrap transition-all bg-brutalBlue text-white hover:-translate-y-1 hover:-translate-x-1 shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] border-2 border-black active:translate-y-[2px] active:translate-x-[2px] active:shadow-none">
                 View all stories
               </Link>
             </div>
