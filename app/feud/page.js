@@ -3,16 +3,15 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-// Easily change these 8 questions to update the entire form and backend
+// Easily change these questions to update the entire form and backend
 const FEUD_QUESTIONS = [
-    "Name something you always need to survive a Florida summer.",
-    "Name a reason someone moves to St. Lucie County.",
-    "Name a road in St. Lucie County that always has traffic.",
-    "Name something people buy before a hurricane.",
-    "Name something you always keep in your car in Florida.",
-    "Name a city you will drive to out of town to have fun.",
-    "Name something you always bring to the beach.",
-    "Name something drivers in St. Lucie County are bad at."
+    "Name a landmark in St. Lucie County everyone knows",
+    "Name the most famous person from St. Lucie County",
+    "You know you're in Port St. Lucie when you see ___",
+    "Name something you wish Port St. Lucie had that it currently doesn't",
+    "If you could bring back one business that's no longer in St. Lucie County, what would it be?",
+    "Name something you only buy when you live in Florida",
+    "Name something every Florida home has"
 ];
 
 export default function FeudPage() {
@@ -128,6 +127,9 @@ export default function FeudPage() {
                                     <label className="block text-sm font-black text-black mb-2 uppercase tracking-wide">
                                         Email <span className="text-gray-400 font-bold ml-1">(Optional)</span>
                                     </label>
+                                    <p className="text-xs font-bold text-gray-600 bg-brutalYellow/40 p-2 rounded-lg border-2 border-black mb-3 shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                                        🎁 Enter your email for a chance to win a <span className="text-brutalPink underline">gift card at a local restaurant!</span> We give away one gift card per episode.
+                                    </p>
                                     <input
                                         type="email"
                                         value={formData.email}
