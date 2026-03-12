@@ -99,7 +99,11 @@ export default function Header() {
               </li>
 
               {/* News Dropdown */}
-              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group" ref={newsDropdownRef}>
+              <li
+                className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group"
+                ref={newsDropdownRef}
+                onMouseEnter={() => setProductsDropdownOpen(false)}
+              >
                 <button
                   onClick={toggleNewsDropdown}
                   className={`flex items-center w-full lg:w-auto justify-between lg:justify-start text-black font-extrabold text-lg lg:text-sm xl:text-base whitespace-nowrap uppercase transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname === '/news' || pathname.startsWith('/news/') || pathname.startsWith('/stories') || pathname.startsWith('/newsletter') || pathname === '/latest' ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
@@ -130,7 +134,11 @@ export default function Header() {
               </li>
 
               {/* Products Dropdown */}
-              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group" ref={productsDropdownRef}>
+              <li
+                className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group"
+                ref={productsDropdownRef}
+                onMouseEnter={() => setNewsDropdownOpen(false)}
+              >
                 <button
                   onClick={toggleProductsDropdown}
                   className={`flex items-center w-full lg:w-auto justify-between lg:justify-start text-black font-extrabold text-lg lg:text-sm xl:text-base whitespace-nowrap uppercase transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname.startsWith('/calendar') ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
