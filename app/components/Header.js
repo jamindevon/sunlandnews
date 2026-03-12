@@ -142,13 +142,15 @@ export default function Header() {
                 <div className={`lg:absolute lg:top-full lg:left-0 lg:w-56 bg-white lg:rounded-xl py-3 mt-2 lg:mt-3 lg:border-2 lg:border-black lg:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 z-50 border-l-4 border-black ml-2 px-2 lg:ml-0 lg:px-0 lg:border-l-2 ${productsDropdownOpen ? 'block' : 'hidden lg:group-hover:block'}`}>
                   <div className="hidden lg:block absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
 
-                  <Link
-                    href="/calendar"
+                  <a
+                    href="https://calendar.sunlandnews.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block px-5 py-3 text-base lg:text-sm font-bold text-black uppercase whitespace-nowrap hover:bg-brutalYellow hover:pl-6 transition-all border-b-2 border-transparent hover:border-black mx-2 rounded-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Calendar Club
-                  </Link>
+                  </a>
                 </div>
               </li>
 

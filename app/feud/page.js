@@ -58,11 +58,11 @@ export default function FeudPage() {
             });
 
             if (res.ok) {
-                // Instantly redirect to subscribe page to drop them into the funnel
+                // Instantly redirect to the new calendar thank you page
                 if (formData.email) {
-                    router.push('/subscribe?email=' + encodeURIComponent(formData.email));
+                    window.location.href = 'https://calendar.sunlandnews.com/thank-you?email=' + encodeURIComponent(formData.email);
                 } else {
-                    router.push('/subscribe');
+                    window.location.href = 'https://calendar.sunlandnews.com/thank-you';
                 }
             } else {
                 setStatus('error');
@@ -173,8 +173,8 @@ export default function FeudPage() {
                                 type="submit"
                                 disabled={status === 'submitting'}
                                 className={`w-full text-2xl font-black uppercase py-5 rounded-2xl border-4 transition-all ${status === 'submitting'
-                                        ? 'bg-gray-300 border-gray-400 text-gray-500 cursor-not-allowed shadow-[2px_2px_0px_rgba(0,0,0,0.2)]'
-                                        : 'bg-primary text-white border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[8px] active:translate-y-[8px]'
+                                    ? 'bg-gray-300 border-gray-400 text-gray-500 cursor-not-allowed shadow-[2px_2px_0px_rgba(0,0,0,0.2)]'
+                                    : 'bg-primary text-white border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[8px] active:translate-y-[8px]'
                                     }`}
                             >
                                 {status === 'submitting' ? 'Submitting...' : 'Send Answers'}
