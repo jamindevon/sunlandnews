@@ -61,13 +61,17 @@ function ThankYouForm() {
       if (!response.ok) {
         console.warn('Segment save failed, proceeding anyway');
       }
-
-      // For now, redirect everyone to the support page
-      router.push('/support');
-
     } catch (err) {
       console.error('Submission error:', err);
-      // Fallback routing if API is completely down
+    }
+
+    // Redirect user depending on their selected interest
+    if (formData.interest === 'Events, things to do, food, and new openings') {
+      const destUrl = prefilledEmail
+        ? `https://calendar.sunlandnews.com/thank-you?email=${encodeURIComponent(prefilledEmail)}`
+        : 'https://calendar.sunlandnews.com/thank-you';
+      window.location.href = destUrl;
+    } else {
       router.push('/support');
     }
   };
