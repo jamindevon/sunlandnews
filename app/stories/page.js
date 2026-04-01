@@ -9,7 +9,7 @@ export const revalidate = 300;
 async function getAllStories() {
     try {
         const stories = await client.fetch(
-            groq`*[_type == "post"] | order(publishedAt desc)[0...20] {
+            groq`*[_type == "post" && !(_id in path('drafts.**'))] | order(publishedAt desc)[0...20] {
         _id,
         title,
         slug,

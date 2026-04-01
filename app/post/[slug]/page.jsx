@@ -145,7 +145,7 @@ export const revalidate = 30; // Revalidate every 30 seconds
 
 export async function generateStaticParams() {
   const slugs = await client.fetch(
-    groq`*[_type == "post" && defined(slug.current)][].slug.current`
+    groq`*[_type == "post" && defined(slug.current) && !(_id in path('drafts.**'))][].slug.current`
   );
 
   return slugs.map((slug) => ({
@@ -157,7 +157,7 @@ export async function generateMetadata({ params }) {
   const { slug } = params;
 
   const post = await client.fetch(
-    groq`*[_type == "post" && slug.current == $slug][0]{
+    groq`*[_type == "post" && slug.current == $slug && !(_id in path('drafts.**'))][0]{
       title,
       excerpt,
       mainImage,
@@ -233,7 +233,7 @@ export async function generateMetadata({ params }) {
 }
 
 // This query includes projections for author and categories
-const query = groq`*[_type == "post" && slug.current == $slug][0]{
+const query = groq`*[_type == "post" && slug.current == $slug && !(_id in path('drafts.**'))][0]{
   title,
   "name": author->name,
   "authorImage": author->image,

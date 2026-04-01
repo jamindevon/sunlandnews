@@ -7,7 +7,7 @@ async function getRecentStories() {
   try {
     // Fetch directly from Sanity client instead of API route
     const stories = await client.fetch(
-      groq`*[_type == "post"] | order(publishedAt desc)[0...6] {
+      groq`*[_type == "post" && !(_id in path('drafts.**'))] | order(publishedAt desc)[0...6] {
         _id,
         title,
         slug,
@@ -35,7 +35,7 @@ async function getRecentStories() {
 async function getCategories() {
   try {
     const categories = await client.fetch(
-      groq`*[_type == "category"] | order(title asc) {
+      groq`*[_type == "category" && !(_id in path('drafts.**'))] | order(title asc) {
         _id,
         title,
         description
