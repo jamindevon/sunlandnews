@@ -2,32 +2,41 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center flex-col py-12 px-4">
-      <div className="text-center bg-white p-8 rounded-xl shadow-lg max-w-xl border border-gray-100 animate-fade-in-up">
-        <div className="mb-6 text-blue-500">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-16 h-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
+    <div className="min-h-[80vh] flex items-center justify-center flex-col py-12 px-4 selection:bg-[#ff4365] selection:text-white">
+      <div className="text-center bg-white border-4 border-black p-8 md:p-12 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-[2rem] max-w-xl w-full relative overflow-hidden">
+        
+        {/* Background accent */}
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-brutalYellow rounded-full border-2 border-black opacity-30"></div>
+
+        <div className="relative z-10 flex justify-center mb-6">
+          <div className="w-20 h-20 bg-brutalBlue border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl flex items-center justify-center text-4xl">
+             🚧
+          </div>
         </div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Page Not Found</h2>
-        <p className="text-gray-600 mb-6">
-          The page you're looking for doesn't exist or has been moved.
+
+        <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4 uppercase tracking-tight relative z-10">
+          Uhh, 404.
+        </h2>
+        
+        <p className="text-lg md:text-xl text-gray-800 font-medium mb-8 leading-relaxed relative z-10">
+          Looks like this route doesn't exist anymore. <strong className="bg-[#ff4365] text-white px-2 py-0.5 rounded-sm shadow-[2px_2px_0px_rgba(0,0,0,1)] inline-block mt-2">Let's get you back home.</strong>
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
           <Link
             href="/"
-            className="px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+            className="w-full sm:w-auto px-8 py-4 text-lg font-bold uppercase text-white bg-primary border-2 border-black rounded-xl transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
           >
-            Return to home
+            Home
           </Link>
           <Link
-            href="/stories"
-            className="px-6 py-3 bg-white text-primary border border-primary font-medium rounded-lg hover:bg-gray-50 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+            href="/news"
+            className="w-full sm:w-auto px-8 py-4 text-lg font-bold uppercase text-black bg-white border-2 border-black rounded-xl transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:bg-brutalYellow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
           >
-            Browse stories
+            Browse News
           </Link>
         </div>
       </div>
     </div>
   );
-} 
+}

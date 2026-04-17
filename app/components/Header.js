@@ -173,6 +173,16 @@ export default function Header() {
                 </Link>
               </li>
 
+              <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none">
+                <Link
+                  href="/sponsor"
+                  className={`block lg:inline-flex lg:items-center text-black font-extrabold text-lg lg:text-sm xl:text-base uppercase whitespace-nowrap transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname === '/sponsor' ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Sponsor
+                </Link>
+              </li>
+
               <li className="py-8 lg:py-0 lg:hidden mt-4">
                 <Link
                   href="/subscribe"
