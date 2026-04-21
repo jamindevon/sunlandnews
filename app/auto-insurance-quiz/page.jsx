@@ -189,7 +189,31 @@ export default function AutoInsuranceQuiz() {
             required 
             className="w-full px-5 py-3 text-base bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-xl focus:outline-none focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all placeholder:text-gray-400 font-bold"
             value={leadData.phone} 
-            onChange={(e) => setLeadData({...leadData, phone: e.target.value})}
+            onChange={(e) => {
+              let input = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+              
+              // Automatically strip the leading '1' (US country code) if someone pastes 11 digits
+              if (input.length === 11 && input.startsWith('1')) {
+                input = input.substring(1);
+              }
+
+              // Enforce 10-digit limit
+              if (input.length > 10) {
+                input = input.substring(0, 10);
+              }
+
+              // Format to (XXX) XXX-XXXX
+              let formatted = input;
+              if (input.length > 6) {
+                formatted = `(${input.slice(0, 3)}) ${input.slice(3, 6)}-${input.slice(6)}`;
+              } else if (input.length > 3) {
+                formatted = `(${input.slice(0, 3)}) ${input.slice(3)}`;
+              } else if (input.length > 0) {
+                formatted = `(${input}`;
+              }
+
+              setLeadData({...leadData, phone: formatted});
+            }}
             placeholder="(555) 555-5555"
           />
         </div>
