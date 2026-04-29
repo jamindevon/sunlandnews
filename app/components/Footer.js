@@ -91,8 +91,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Hubs & Contact Column */}
           <div>
+            <h3 className="text-xl font-black uppercase mb-5 tracking-wide underline decoration-4 underline-offset-4 decoration-primary inline-block">Local News</h3>
+            <ul className="space-y-3 font-bold mb-8">
+              <li><Link href="/city/fort-pierce" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Fort Pierce News</Link></li>
+              <li><Link href="/city/port-st-lucie" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Port St. Lucie News</Link></li>
+              <li><Link href="/city/st-lucie-county" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">St. Lucie County News</Link></li>
+            </ul>
+
             <h3 className="text-xl font-black uppercase mb-5 tracking-wide underline decoration-4 underline-offset-4 decoration-primary inline-block">Contact</h3>
             <ul className="space-y-3 font-bold">
               <li><Link href="/contact" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Contact Us</Link></li>

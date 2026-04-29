@@ -353,25 +353,32 @@ export default async function Post({ params }) {
       </div>
 
       {/* NewsArticle Schema */}
-      < script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'NewsArticle',
             headline: post.title,
-            image: post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : ['https://sunlandnews.com/images/share-sunland.png'],
+            image: post.mainImage ? [urlFor(post.mainImage).width(1200).height(630).url()] : ['https://sunlandnews.com/images/share-sunland.png'],
             datePublished: post.publishedAt,
             dateModified: post.publishedAt,
             author: [{
               '@type': 'Person',
               name: post.name || 'Sunland News',
               url: 'https://sunlandnews.com'
-            }]
+            }],
+            publisher: {
+              '@type': 'Organization',
+              name: 'Sunland News',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://sunlandnews.com/images/sunlandnews-logo.png'
+              }
+            }
           })
-        }
-        }
+        }}
       />
-    </article >
+    </article>
   );
 } 
