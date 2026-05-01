@@ -79,6 +79,17 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Error sending email' }, { status: 400 });
     }
 
+    // Send data to Zapier Webhook (Fire and forget)
+    try {
+      await fetch('https://hooks.zapier.com/hooks/catch/19891721/uvg8747/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    } catch (zapError) {
+      console.error('Zapier Error:', zapError);
+    }
+
     return NextResponse.json({ success: true, data: result.data }, { status: 200 });
   } catch (error) {
     console.error('Server Error:', error);
