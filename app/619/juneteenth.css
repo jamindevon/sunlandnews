@@ -1,0 +1,226 @@
+.juneteenth-wrapper {
+  /* Concert Poster Color Palette */
+  --poster-red: #D32F2F;
+  --poster-green: #1B5E20;
+  --poster-black: #1A1A1A;
+  --poster-cream: #F5EFEB;
+  --poster-orange: #EF6C00;
+  
+  --font-poster: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --shadow-offset: 8px;
+  --border-thick: 4px;
+
+  font-family: var(--font-body);
+  background-color: var(--poster-cream);
+  color: var(--poster-black);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  line-height: 1.5;
+  padding-bottom: 5rem;
+}
+
+/* Vintage Printed Noise Effect */
+.juneteenth-wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: transparent;
+  filter: url(#noiseFilter);
+  opacity: 0.12;
+  z-index: 9999;
+}
+
+/* Big Headlines */
+.juneteenth-wrapper h1, .juneteenth-wrapper h2, .juneteenth-wrapper h3, .juneteenth-wrapper h4 {
+  font-family: var(--font-poster);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+}
+
+.juneteenth-wrapper h1 {
+  font-size: 6rem;
+  text-shadow: 4px 4px 0px var(--poster-black);
+  margin-bottom: 0.5rem;
+  color: var(--poster-red);
+}
+
+.juneteenth-wrapper h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.juneteenth-wrapper h3 {
+  font-size: 2.5rem;
+}
+
+.juneteenth-wrapper .highlight {
+  background-color: var(--poster-black);
+  color: var(--poster-cream);
+  padding: 0.2rem 1rem;
+  border: var(--border-thick) solid var(--poster-black);
+  display: inline-block;
+  box-shadow: 4px 4px 0px var(--poster-green);
+  text-shadow: none;
+}
+
+.juneteenth-wrapper .poster-star {
+  color: var(--poster-black);
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.juneteenth-wrapper .j-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.juneteenth-wrapper .brutalist-card {
+  background-color: #ffffff;
+  border: var(--border-thick) solid var(--poster-black);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--poster-black);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.juneteenth-wrapper .brutalist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0px var(--poster-black);
+}
+
+.juneteenth-wrapper .btn-primary {
+  display: inline-block;
+  font-family: var(--font-poster);
+  font-size: 2.2rem;
+  background-color: var(--poster-green);
+  color: var(--poster-cream);
+  padding: 0.5rem 2rem;
+  border: var(--border-thick) solid var(--poster-black);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 6px 6px 0px var(--poster-black);
+  text-transform: uppercase;
+}
+
+.juneteenth-wrapper .btn-primary:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--poster-black);
+}
+
+.juneteenth-wrapper .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.juneteenth-wrapper .form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.juneteenth-wrapper .form-control {
+  width: 100%;
+  padding: 1rem;
+  border: 3px solid var(--poster-black);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background-color: white;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.juneteenth-wrapper .form-control:focus {
+  outline: none;
+  box-shadow: 6px 6px 0px var(--poster-red);
+  border-color: var(--poster-black);
+}
+
+.juneteenth-wrapper .animate-fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.juneteenth-wrapper .feature-box {
+  background: var(--poster-cream);
+  border: var(--border-thick) solid var(--poster-black);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--poster-black);
+  text-align: left;
+}
+
+.juneteenth-wrapper .feature-box.green { background: var(--poster-green); color: var(--poster-cream); }
+.juneteenth-wrapper .feature-box.red { background: var(--poster-red); color: var(--poster-cream); }
+
+.juneteenth-wrapper .feature-icon {
+  background: var(--poster-cream);
+  width: 60px;
+  height: 60px;
+  border: var(--border-thick) solid var(--poster-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--poster-black);
+  flex-shrink: 0;
+  box-shadow: 3px 3px 0px var(--poster-black);
+}
+
+@media (max-width: 768px) {
+  .juneteenth-wrapper h1 { font-size: 4rem; }
+  .juneteenth-wrapper h2 { font-size: 2.5rem; }
+  .juneteenth-wrapper .feature-box { align-items: flex-start; flex-direction: column; }
+  
+  .juneteenth-wrapper .j-container {
+    padding: 1rem;
+  }
+  
+  /* Mobile Form Optimizations */
+  .juneteenth-wrapper .brutalist-card {
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+    box-shadow: 4px 4px 0px var(--poster-black);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .juneteenth-wrapper .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .juneteenth-wrapper .form-control {
+    padding: 0.8rem;
+    font-size: 16px; /* Prevents iOS auto-zoom */
+  }
+  
+  .juneteenth-wrapper .form-group[style*="display: flex"] {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .juneteenth-wrapper .btn-primary {
+    font-size: 1.5rem !important;
+    padding: 0.5rem 1rem !important;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+}
