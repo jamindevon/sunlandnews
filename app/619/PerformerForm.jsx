@@ -103,12 +103,12 @@ export default function PerformerForm() {
   if (success) {
     return (
       <div className="animate-fade-in-up" style={{ textAlign: 'center', padding: '1rem', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-        <h3 style={{ color: 'var(--poster-green)', marginBottom: '1rem', fontSize: 'max(1.8rem, 5vw)', lineHeight: 1.1 }}>★ APPLICATION RECEIVED ★</h3>
-        <p style={{ fontWeight: 600, fontSize: 'max(1rem, 3.5vw)', marginBottom: '1rem' }}>
+        <h3 style={{ color: 'var(--poster-green)', marginBottom: '1rem', fontSize: '2rem', lineHeight: 1.2 }}>★ APPLICATION RECEIVED ★</h3>
+        <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '1rem' }}>
           Thank you for your interest in performing at the TCBU Juneteenth Festival!
         </p>
-        <p style={{ fontSize: 'max(0.9rem, 3.5vw)' }}>
-          Selected performers will be notified via email by Saturday, May 23 from <strong style={{wordBreak: 'break-all'}}>kayylovemanagement@gmail.com</strong>.
+        <p style={{ fontSize: '1rem' }}>
+          Selected performers will be notified via email by Saturday, May 23 from <br/><strong style={{wordBreak: 'break-all'}}>kayylovemanagement@gmail.com.</strong>
         </p>
       </div>
     );
@@ -126,8 +126,8 @@ export default function PerformerForm() {
           </p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', fontSize: '0.9rem', lineHeight: '1.6' }}>
             <li>Submission of this form does not guarantee selection.</li>
-            <li>Selected performers will be notified via email by Saturday, May 23 from <strong>kayylovemanagement@gmail.com</strong>.</li>
-            <li>If selected, you understand that this is a voluntary performance opportunity and will not be a paid booking.</li>
+            <li>Selected performers will be notified via email by Saturday, May 23 from <br/><strong>kayylovemanagement@gmail.com.</strong></li>
+            <li style={{ marginBottom: '1rem' }}>If selected, you understand that this is a voluntary performance opportunity and will not be a paid booking.</li>
             <li>If selected, the Juneteenth Festival Media Partner, Sunland News, will contact you to schedule your content shoot. Content will be filmed during the week of May 25 through May 29.</li>
           </ul>
           <p style={{ fontSize: '0.9rem', fontStyle: 'italic' }}>Please ensure all information submitted is accurate and up to date.</p>
