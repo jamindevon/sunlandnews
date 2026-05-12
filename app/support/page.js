@@ -34,6 +34,19 @@ const benefits = [
 ];
 
 const supporters = [
+  { name: 'Jane Lipson', action: 'became a supporter.', message: null },
+  { name: 'Rollins Brown', action: 'became a supporter.', message: null },
+  { name: 'Paul Silvis', action: 'became a supporter.', message: null },
+  { name: 'KimannC', action: 'became a monthly supporter.', message: 'Appreciate you keeping the information coming to us.' },
+  { name: 'Sol Cat', action: 'became a supporter.', message: 'Love your work, please keep improving it and providing us with such useful news. Thanks a lot!' },
+  { name: 'Tanya L Nunnery, Realtor®', action: 'is now a member.', message: null },
+  { name: 'Julie Beaty', action: 'is now a member.', message: null },
+  { name: 'AVC', action: 'became a supporter.', message: null },
+  { name: 'Diane Dyer', action: 'became a supporter.', message: 'Appreciate seeing the “good stuff”' },
+  { name: 'Ed', action: 'became a supporter.', message: "Keep going young man you're doing a great job!!!" },
+  { name: 'Wayne Peppers', action: 'became a supporter.', message: null },
+  { name: 'Dorene', action: 'became a supporter.', message: 'Thank you. Looking forward to positive news.' },
+  { name: 'Ernest Griffin', action: 'became a supporter.', message: 'Your a blessing to the community' },
   { name: 'mommachiefa', action: 'became a supporter.', message: 'Thank you for giving our family fun things to do and ways to be out in our local community!' },
   { name: 'Tangie Jennings', action: 'became a supporter.', message: 'I appreciate you keeping me abreast with local current events happening on The Treasure Coast.' },
   { name: 'Dale Ann Ervin', action: 'became a supporter.', message: 'My daily must-read!' },
