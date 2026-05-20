@@ -22,19 +22,18 @@
   padding-bottom: 5rem;
 }
 
-/* Vintage Printed Noise Effect */
+/* Subtle Neo-Brutalist Grid Background */
 .juneteenth-wrapper::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: transparent;
-  filter: url(#noiseFilter);
-  opacity: 0.12;
-  z-index: 9999;
+  background-image: radial-gradient(rgba(0,0,0,0.15) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  z-index: -1;
 }
 
 /* Big Headlines */
@@ -182,6 +181,39 @@
   color: var(--poster-black);
   flex-shrink: 0;
   box-shadow: 3px 3px 0px var(--poster-black);
+}
+
+/* Neo-Brutalist Layout Utilities */
+.juneteenth-wrapper .brutal-border {
+  border: var(--border-thick) solid var(--poster-black);
+}
+
+.juneteenth-wrapper .brutal-shadow {
+  box-shadow: 6px 6px 0px var(--poster-black);
+  transition: all 0.2s ease-in-out;
+}
+
+.juneteenth-wrapper .brutal-shadow:hover {
+  box-shadow: 8px 8px 0px var(--poster-black);
+  transform: translate(-2px, -2px);
+}
+
+.juneteenth-wrapper .brutal-shadow-sm {
+  box-shadow: 4px 4px 0px var(--poster-black);
+  transition: all 0.2s ease-in-out;
+}
+
+.juneteenth-wrapper .brutal-shadow-sm:hover {
+  box-shadow: 6px 6px 0px var(--poster-black);
+  transform: translate(-2px, -2px) rotate(-1deg);
+}
+
+.juneteenth-wrapper .quirky-tilt:hover {
+  transform: rotate(2deg) scale(1.02);
+}
+
+.juneteenth-wrapper .quirky-tilt-reverse:hover {
+  transform: rotate(-2deg) scale(1.02);
 }
 
 @media (max-width: 768px) {

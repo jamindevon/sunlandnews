@@ -1,149 +1,93 @@
 'use client';
-import { useState, useRef } from 'react';
 import Link from 'next/link';
 import './juneteenth.css';
-import VolunteerForm from './VolunteerForm';
-import PerformerForm from './PerformerForm';
+import RSVPForm from './RSVPForm';
 
 export default function JuneteenthPage() {
-  const [activeTab, setActiveTab] = useState('info');
-  const mainRef = useRef(null);
-
-  // Automatically scroll to the top of the content when switching tabs
-  const handleSwitchTab = (tab) => {
-    setActiveTab(tab);
-    setTimeout(() => {
-      mainRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 50);
-  };
 
   return (
     <div className="juneteenth-wrapper">
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          objectFit: 'cover',
-          zIndex: -2,
-          opacity: 0.25,
-          filter: 'blur(6px)',
-          mixBlendMode: 'multiply'
-        }}
-      >
-        <source src="/JUNETEENTH BG video.mov" />
-      </video>
-
-      <div className="j-container" style={{ position: 'relative', zIndex: 10, textAlign: 'center' }}>
       
-      {/* HEADER / HERO */}
-      <header style={{ marginBottom: '3rem', marginTop: '3rem' }} className="animate-fade-in-up">
-        
-        <div style={{ width: '100%', marginBottom: '2rem' }}>
-          <div style={{ borderBottom: '4px solid var(--poster-black)', paddingBottom: '1rem', display: 'inline-block' }}>
-            <h2 style={{ fontSize: '2rem', marginBottom: '0', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
-              <span className="poster-star">★</span>
-              FORT PIERCE
-              <span className="poster-star">★</span>
-            </h2>
+      {/* Header Links */}
+      <div className="absolute top-6 right-6 z-50 flex gap-4">
+        <Link href="/619/performer" className="inline-block px-4 py-2 bg-[var(--poster-red)] text-[var(--poster-cream)] brutal-border brutal-shadow-sm font-bold text-sm hover:-translate-y-1 transition-transform rotate-2 uppercase" style={{ fontFamily: 'var(--font-poster)', fontSize: '1.2rem', textDecoration: 'none' }}>
+          Apply to Perform
+        </Link>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Left: Content & Narrative */}
+          <div className="space-y-8 animate-fade-in-up">
+            
+            <div className="inline-block bg-[var(--poster-black)] text-[var(--poster-cream)] px-4 py-2 brutal-border brutal-shadow-sm -rotate-2">
+              <span className="text-sm font-bold tracking-wider uppercase flex items-center gap-2">
+                ★ FORT PIERCE, FL
+              </span>
+            </div>
+
+            <div>
+              <h1 className="text-7xl md:text-8xl font-serif font-black tracking-tighter uppercase leading-[0.9] mb-4" style={{ fontFamily: 'var(--font-poster)', color: 'var(--poster-red)', textShadow: '4px 4px 0px var(--poster-black)' }}>
+                JUNETEENTH <br />
+                <span className="text-[var(--poster-black)] inline-block mt-2" style={{ textShadow: 'none' }}>2026</span>
+              </h1>
+              <p className="text-2xl font-bold bg-[var(--poster-green)] text-white inline-block px-3 py-1 brutal-border brutal-shadow-sm rotate-1 mb-4" style={{ fontFamily: 'var(--font-poster)' }}>
+                FREE COMMUNITY CELEBRATION
+              </p>
+              <p className="text-lg md:text-xl font-medium max-w-xl leading-relaxed mt-4 border-l-4 border-black pl-4">
+                Two days of culture, history, and community. Join us for a powerful symposium honoring our past, followed by a massive block party celebrating our future with live music, local vendors, and family fun.
+              </p>
+            </div>
+
+            {/* RSVP Form Component */}
+            <RSVPForm />
+
           </div>
-        </div>
 
-        <div style={{ padding: '0 3rem' }}>
-          <h1 style={{ position: 'relative', display: 'inline-block' }}>
-            <span style={{ position: 'absolute', top: '10px', left: '-50px', fontSize: '3rem', transform: 'rotate(-25deg)', color: 'var(--poster-black)' }}>★</span>
-            JUNETEENTH
-            <span style={{ position: 'absolute', bottom: '10px', right: '-40px', fontSize: '2.5rem', transform: 'rotate(15deg)', color: 'var(--poster-green)' }}>★</span>
-          </h1>
-        </div>
-        <h1 style={{ fontSize: '7.5rem', color: 'var(--poster-black)', marginTop: '0' }}>
-          2 0 2 6
-        </h1>
-        <h2 style={{ fontSize: '4rem', color: 'var(--poster-black)' }}>CELEBRATION</h2>
-        
-        <div style={{ marginTop: '1rem' }}>
-          <span className="highlight" style={{ fontSize: '2.5rem', transform: 'rotate(-3deg)' }}>FREE EVENT</span>
-        </div>
-
-        <div style={{ marginTop: '4rem', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button 
-            className="btn-primary" 
-            style={activeTab === 'info' ? {backgroundColor: 'var(--poster-black)', color: 'var(--poster-cream)', transform: 'translate(4px, 4px)', boxShadow: '0px 0px 0px var(--poster-red)'} : {backgroundColor: 'var(--poster-cream)', color: 'var(--poster-black)'}}
-            onClick={() => handleSwitchTab('info')}
-          >
-            EVENT SCHEDULE
-          </button>
-          <button 
-            className="btn-primary" 
-            style={activeTab === 'volunteer' ? {backgroundColor: 'var(--poster-black)', color: 'var(--poster-cream)', transform: 'translate(4px, 4px)', boxShadow: '0px 0px 0px var(--poster-red)'} : {backgroundColor: 'var(--poster-green)', color: 'var(--poster-cream)'}}
-            onClick={() => handleSwitchTab('volunteer')}
-          >
-            BECOME A VOLUNTEER
-          </button>
-          <Link 
-            href="/619/performer"
-            className="btn-primary" 
-            style={{backgroundColor: 'var(--poster-red)', color: 'var(--poster-cream)', textAlign: 'center'}}
-          >
-            REGISTER TO PERFORM
-          </Link>
-        </div>
-      </header>
-
-      {/* DYNAMIC CONTENT AREA */}
-      <main ref={mainRef} style={{ marginTop: '1rem', textAlign: 'left', minHeight: '500px' }}>
-        
-        {activeTab === 'info' && (
-          <div className="animate-fade-in-up">
-            <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '3.5rem' }}>Join the Community</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '850px', margin: '0 auto' }}>
+          {/* Right: Event Details & Bulletin Board */}
+          <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            
+            {/* Day 1 & Day 2 Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               
-              {/* Day 1: Symposium */}
-              <div className="feature-box green">
-                <div className="feature-icon">★</div>
-                <div>
-                  <h3 style={{ marginBottom: '0.2rem', color: '#ffffff' }}>THE SYMPOSIUM</h3>
-                  <p style={{ fontSize: '1.2rem', fontFamily: 'var(--font-poster)', marginBottom: '0.5rem', color: '#ffffff', opacity: 0.9 }}>JUNE 18TH | 6:00 PM - 9:00 PM</p>
-                  <p style={{ fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>Museum, Presentation, Q&A Panel, & More.</p>
+              <div className="bg-white p-6 brutal-border brutal-shadow-sm quirky-tilt rotate-1">
+                <div className="w-12 h-12 bg-[var(--poster-green)] brutal-border flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">🏛️</span>
                 </div>
+                <h3 className="text-sm font-black uppercase tracking-wider mb-1" style={{ color: 'var(--poster-green)' }}>Day 1: The Symposium</h3>
+                <p className="text-xl font-bold" style={{ fontFamily: 'var(--font-poster)', fontSize: '1.5rem' }}>June 18TH</p>
+                <p className="text-md font-medium text-gray-700">6:00 PM - 9:00 PM</p>
               </div>
 
-              {/* Day 2: Celebration */}
-              <div className="feature-box red">
-                <div className="feature-icon">★</div>
-                <div>
-                  <h3 style={{ marginBottom: '0.2rem', color: '#ffffff' }}>MAIN EVENT</h3>
-                  <p style={{ fontSize: '1.2rem', fontFamily: 'var(--font-poster)', marginBottom: '0.5rem', color: '#ffffff', opacity: 0.9 }}>JUNE 19TH | 12:00 PM - 8:00 PM</p>
-                  <p style={{ fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>Live Music, DJs, Local Vendors, Family Fun.</p>
+              <div className="bg-white p-6 brutal-border brutal-shadow-sm quirky-tilt -rotate-1">
+                <div className="w-12 h-12 bg-[var(--poster-red)] brutal-border flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">🎵</span>
                 </div>
-              </div>
-
-              {/* Location */}
-              <div className="feature-box" style={{ gridColumn: '1 / -1', background: 'var(--poster-black)', color: '#ffffff' }}>
-                <div className="feature-icon">📍</div>
-                <div>
-                  <h3 style={{ marginBottom: '0.2rem', color: 'var(--poster-cream)' }}>LOCATION</h3>
-                  <p style={{ fontSize: '2rem', fontFamily: 'var(--font-poster)', letterSpacing: '0.05em' }}>2902 AVE D, FORT PIERCE, FL</p>
-                </div>
+                <h3 className="text-sm font-black uppercase tracking-wider mb-1" style={{ color: 'var(--poster-red)' }}>Day 2: Main Event</h3>
+                <p className="text-xl font-bold" style={{ fontFamily: 'var(--font-poster)', fontSize: '1.5rem' }}>June 19TH</p>
+                <p className="text-md font-medium text-gray-700">12:00 PM - 8:00 PM</p>
               </div>
 
             </div>
-          </div>
-        )}
 
-        {activeTab === 'volunteer' && (
-          <div className="brutalist-card" style={{ maxWidth: '650px', margin: '0 auto' }}>
-            <VolunteerForm />
-          </div>
-        )}
+            {/* Location Card */}
+            <div className="bg-[var(--poster-black)] text-[var(--poster-cream)] p-6 brutal-border brutal-shadow quirky-tilt-reverse mt-6 rotate-1">
+              <div className="flex items-start gap-4 mb-2">
+                <div className="w-12 h-12 bg-white brutal-border flex items-center justify-center shrink-0">
+                  <span className="text-black text-2xl">📍</span>
+                </div>
+                <div>
+                  <h3 className="text-sm font-black uppercase tracking-wider mb-1" style={{ color: 'var(--poster-cream)', opacity: 0.8 }}>Location</h3>
+                  <p className="text-2xl font-bold" style={{ fontFamily: 'var(--font-poster)', letterSpacing: '0.05em' }}>2902 AVE D, FORT PIERCE, FL</p>
+                </div>
+              </div>
+            </div>
 
-      </main>
+          </div>
+
+        </div>
+      </div>
       
       {/* FOOTER */}
       <footer style={{ marginTop: '5rem', paddingBottom: '3rem', textAlign: 'center' }}>
@@ -151,7 +95,6 @@ export default function JuneteenthPage() {
           ★ JUNETEENTH 2026 CELEBRATION ★
         </p>
       </footer>
-    </div>
     </div>
   );
 }
