@@ -1,11 +1,12 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import './juneteenth.css';
 import RSVPForm from './RSVPForm';
 
 export default function JuneteenthPage() {
   const [activeTab, setActiveTab] = useState('All');
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const mainEl = document.querySelector('main');
@@ -14,6 +15,36 @@ export default function JuneteenthPage() {
       mainEl.className = 'flex-grow w-full';
       return () => {
         mainEl.className = originalClasses;
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Force play when component mounts or once interaction triggers
+      const playVideo = () => {
+        videoRef.current.play().catch(err => {
+          console.warn("Autoplay was prevented, waiting for user interaction:", err);
+        });
+      };
+      
+      playVideo();
+      
+      // Also add touch/click handlers to kickstart it if mobile browser blocked it initially
+      const handleUserInteraction = () => {
+        if (videoRef.current && videoRef.current.paused) {
+          playVideo();
+        }
+        document.removeEventListener('click', handleUserInteraction);
+        document.removeEventListener('touchstart', handleUserInteraction);
+      };
+      
+      document.addEventListener('click', handleUserInteraction);
+      document.addEventListener('touchstart', handleUserInteraction);
+      
+      return () => {
+        document.removeEventListener('click', handleUserInteraction);
+        document.removeEventListener('touchstart', handleUserInteraction);
       };
     }
   }, []);
@@ -78,8 +109,8 @@ export default function JuneteenthPage() {
       
       {/* Fixed Background Video and Overlay */}
       <div className="fixed-video-container">
-        <video autoPlay loop muted playsInline>
-          <source src="/JUNETEENTH BG video.mov" />
+        <video ref={videoRef} autoPlay loop muted playsInline style={{ pointerEvents: 'none' }}>
+          <source src="/JUNETEENTH BG video.mov" type="video/quicktime" />
         </video>
         <div className="fixed-video-overlay"></div>
       </div>
