@@ -11,15 +11,30 @@ export default function RSVPForm() {
     if (!email) return;
     
     setStatus('loading');
+    setErrorMsg('');
     
-    // Simulating API call for now. 
-    // In reality, this would hit Zapier or a local API route to store the email.
     try {
-      // await fetch('/api/619/rsvp', { method: 'POST', body: JSON.stringify({ email }) })
-      setTimeout(() => setStatus('success'), 1000);
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          source: 'juneteenth_619'
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to subscribe. Please try again.');
+      }
+      
+      setStatus('success');
     } catch (err) {
       setStatus('error');
-      setErrorMsg('Something went wrong. Try again.');
+      setErrorMsg(err.message || 'Something went wrong. Try again.');
     }
   };
 
