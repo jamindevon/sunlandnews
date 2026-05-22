@@ -31,6 +31,15 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/619/performer',
+        destination: '/619',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
