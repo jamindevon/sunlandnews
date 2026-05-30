@@ -48,9 +48,11 @@ export default function SubmitEventPage() {
             const data = await response.json();
 
             if (data.success) {
-                // Redirect to thank you page or show success message
-                alert('Event submitted successfully! It will be reviewed shortly.');
-                router.push('/');
+                if (formData.isSponsored) {
+                    router.push('/events/sponsor');
+                } else {
+                    router.push('/events/success');
+                }
             } else {
                 alert('Something went wrong. Please try again.');
                 console.error('Submission error:', data.error);
