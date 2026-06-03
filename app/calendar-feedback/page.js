@@ -22,12 +22,11 @@ export default function CalendarFeedbackPage() {
 
     // Generate URLs for subscription (points to production domain on localhost so testing actually works!)
     const getSubscriptionUrls = () => {
-        const protocol = 'https';
         // If testing on localhost, use the production domain so Google/Apple servers can resolve the feed
-        const targetHost = host && !host.includes('localhost') ? host : 'sunlandnews.com';
-        const feedUrl = `${protocol}://${targetHost}/api/calendar-feed`;
-        const webcalUrl = `webcal://${targetHost}/api/calendar-feed`;
-        const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(feedUrl)}`;
+        const targetHost = host && !host.includes('localhost') ? host : 'www.sunlandnews.com';
+        const feedUrl = `https://${targetHost}/api/calendar-feed.ics`;
+        const webcalUrl = `webcal://${targetHost}/api/calendar-feed.ics`;
+        const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcalUrl)}`;
         return { webcalUrl, googleUrl, feedUrl };
     };
 

@@ -22,6 +22,10 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: '/api/calendar-feed.ics',
+        destination: '/api/calendar-feed',
+      },
+      {
         source: '/calendars/:category.ics',
         destination: '/calendars/:category',
       },
