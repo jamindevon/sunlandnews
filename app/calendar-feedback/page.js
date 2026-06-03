@@ -20,16 +20,18 @@ export default function CalendarFeedbackPage() {
         }));
     };
 
-    // Generate URLs for subscription (Master Feed containing all 10 events)
+    // Generate URLs for subscription (points to production domain on localhost so testing actually works!)
     const getSubscriptionUrls = () => {
-        const protocol = typeof window !== 'undefined' && window.location.protocol === 'https:' ? 'https' : 'http';
-        const feedUrl = `${protocol}://${host}/api/calendar-feed`;
-        const webcalUrl = feedUrl.replace(/^http/, 'webcal');
+        const protocol = 'https';
+        // If testing on localhost, use the production domain so Google/Apple servers can resolve the feed
+        const targetHost = host && !host.includes('localhost') ? host : 'sunlandnews.com';
+        const feedUrl = `${protocol}://${targetHost}/api/calendar-feed`;
+        const webcalUrl = `webcal://${targetHost}/api/calendar-feed`;
         const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(feedUrl)}`;
         return { webcalUrl, googleUrl, feedUrl };
     };
 
-    const { webcalUrl, googleUrl, feedUrl } = getSubscriptionUrls();
+    const { webcalUrl, googleUrl } = getSubscriptionUrls();
 
     // Individual Google Calendar redirect URL generator
     const getGoogleCalendarUrl = (event) => {
@@ -72,6 +74,40 @@ export default function CalendarFeedbackPage() {
         document.body.removeChild(link);
     };
 
+    // Client-side multiple events ICS downloader
+    const downloadAllIcs = () => {
+        const icsEvents = events.map(event => {
+            const [startGcal, endGcal] = event.gcalTime.split('/');
+            return [
+                'BEGIN:VEVENT',
+                `UID:event-${event.id}-${Date.now()}@sunlandnews.com`,
+                `DTSTART;TZID=America/New_York:${startGcal}`,
+                `DTEND;TZID=America/New_York:${endGcal}`,
+                `SUMMARY:${event.title.replace(/[,;]/g, '\\$&')}`,
+                `DESCRIPTION:${event.description.replace(/\n/g, '\\n').replace(/[,;]/g, '\\$&')}`,
+                `LOCATION:${event.location.replace(/[,;]/g, '\\$&')}`,
+                event.url ? `URL:${event.url}` : '',
+                'END:VEVENT'
+            ].filter(Boolean).join('\r\n');
+        }).join('\r\n');
+
+        const icsContent = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Sunland News//Master Calendar//EN',
+            icsEvents,
+            'END:VCALENDAR'
+        ].join('\r\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'sunland-all-events.ics';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="min-h-screen bg-brutalBg font-sans text-black p-4 md:p-8 selection:bg-brutalPink selection:text-white">
             <div className="max-w-5xl mx-auto">
@@ -97,13 +133,13 @@ export default function CalendarFeedbackPage() {
                         ⚡ Sync All 10 Events
                     </h2>
                     <p className="text-gray-600 text-sm font-bold mb-5">
-                        Subscribe once to have the entire list added to your device automatically.
+                        Subscribe to the automatic feed or download the file to import all events instantly.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <a
                             href={webcalUrl}
-                            className="inline-flex items-center justify-center bg-white text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
+                            className="inline-flex items-center justify-center bg-white text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center animate-pulse-subtle"
                         >
                             🍏 Apple Calendar
                         </a>
@@ -112,22 +148,15 @@ export default function CalendarFeedbackPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center bg-brutalYellow text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
-                            onClick={(e) => {
-                                if (host.includes('localhost')) {
-                                    e.preventDefault();
-                                    alert('Google Calendar Sync requires a public URL. This link will work seamlessly on the live domain! To test locally, use Apple Calendar or download the ICS file.');
-                                }
-                            }}
                         >
                             📅 Google Calendar
                         </a>
-                        <a
-                            href={feedUrl}
-                            download="sunland-events.ics"
+                        <button
+                            onClick={downloadAllIcs}
                             className="inline-flex items-center justify-center bg-brutalBlue text-white font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                         >
                             📥 Download .ICS File
-                        </a>
+                        </button>
                     </div>
                 </div>
 
