@@ -1,67 +1,55 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
 import ical from 'ical-generator';
+import { events } from '@/app/data/events';
 
-// Initialize Supabase client
-// Note: In Next.js App Router, it's safe to use process.env here for server-side logic
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const convertGcalToISO = (gcalStr) => {
+    // "20260605T100000" -> "2026-06-05T10:00:00"
+    const year = gcalStr.substring(0, 4);
+    const month = gcalStr.substring(4, 6);
+    const day = gcalStr.substring(6, 8);
+    const time = gcalStr.substring(9);
+    const hours = time.substring(0, 2);
+    const minutes = time.substring(2, 4);
+    const seconds = time.substring(4, 6);
+    return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
+};
 
 export async function GET(request) {
-    if (!supabaseUrl || !supabaseServiceKey) {
-        console.error('Missing Supabase Env Vars');
-        return new NextResponse('Configuration Error: Missing API Keys', { status: 500 });
-    }
-
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
-
     try {
-        // 1. Fetch Events from Database
-        // Logic: Get all events that are Published AND have the 'Free Tier' category
-        const { data: events, error } = await supabase
-            .from('events')
-            .select('*')
-            .eq('is_published', true)
-            .contains('categories', ['Free Tier']);
-
-        if (error) {
-            console.error('Error fetching events:', error);
-            return new NextResponse('Database Error', { status: 500 });
-        }
-
-        // 2. Generate ICS
+        // Generate ICS calendar using static events
         const calendar = ical({
-            name: 'Sunland Tailored Events',
+            name: 'Sunland Calendar Club - Featured Events',
             prodId: { company: 'Sunland News', product: 'Calendar Club', language: 'EN' },
             url: 'https://sunlandnews.com/api/calendar-feed',
+            timezone: 'America/New_York',
             ttl: 60 * 60, // 1 hour
         });
 
         events.forEach(event => {
             try {
-                // Ensure dates are valid Date objects
-                const start = new Date(event.start_datetime);
-                const end = new Date(event.end_datetime);
+                const [startGcal, endGcal] = event.gcalTime.split('/');
+                const startISO = convertGcalToISO(startGcal);
+                const endISO = convertGcalToISO(endGcal);
 
                 calendar.createEvent({
-                    start: start,
-                    end: end,
+                    start: startISO,
+                    end: endISO,
+                    timezone: 'America/New_York',
                     summary: event.title,
                     description: event.description,
-                    location: `${event.location_name}, ${event.location_city}`,
+                    location: event.location,
                     url: event.url || '',
-                    categories: (Array.isArray(event.categories) ? event.categories : []).map(c => ({ name: String(c) })),
+                    uid: `featured-event-${event.id}@sunland.news`
                 });
             } catch (err) {
                 console.error(`Skipping event ${event.title}:`, err);
             }
         });
 
-        // 3. Return ICS File
         return new NextResponse(calendar.toString(), {
             headers: {
                 'Content-Type': 'text/calendar; charset=utf-8',
-                'Content-Disposition': 'inline; filename="sunland-events.ics"',
+                'Content-Disposition': 'inline; filename="sunland-featured-events.ics"',
                 'Cache-Control': 'public, max-age=3600, s-maxage=3600',
             },
         });
