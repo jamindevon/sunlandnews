@@ -5,12 +5,20 @@ import { events } from '@/app/data/events';
 
 export default function CalendarFeedbackPage() {
     const [host, setHost] = useState('');
+    const [expandedEvents, setExpandedEvents] = useState({});
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setHost(window.location.host);
         }
     }, []);
+
+    const toggleExpand = (id) => {
+        setExpandedEvents(prev => ({
+            ...prev,
+            [id]: !prev[id]
+        }));
+    };
 
     // Generate URLs for subscription (Master Feed containing all 10 events)
     const getSubscriptionUrls = () => {
@@ -66,36 +74,36 @@ export default function CalendarFeedbackPage() {
 
     return (
         <div className="min-h-screen bg-brutalBg font-sans text-black p-4 md:p-8 selection:bg-brutalPink selection:text-white">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 
                 {/* Header */}
-                <div className="text-center mb-12">
-                    <span className="inline-block py-1.5 px-4 rounded-lg bg-brutalYellow border-2 border-black shadow-brutal-sm text-black text-sm font-black mb-6 tracking-wider uppercase">
-                        Sunland Events Portal
+                <div className="text-center mb-10">
+                    <span className="inline-block py-1 px-3 rounded bg-brutalYellow border-2 border-black shadow-brutal-sm text-black text-xs font-black mb-4 tracking-wider uppercase">
+                        Sunland Events
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-black mb-4 leading-tight tracking-tight uppercase">
-                        Add Events To Your Calendar
+                    <h1 className="text-3xl md:text-5xl font-black text-black mb-3 leading-tight tracking-tight uppercase">
+                        Add to Calendar
                     </h1>
-                    <p className="text-lg md:text-xl font-bold text-gray-800 max-w-2xl mx-auto">
-                        Quickly sync this week's featured local events (June 5 – June 7, 2026) directly to your phone or calendar app.
+                    <p className="text-base font-bold text-gray-700 max-w-xl mx-auto">
+                        Sync the weekend's featured local events (June 5 – June 7, 2026) directly to your calendar app.
                     </p>
                 </div>
 
                 {/* ADD ALL SECTION */}
-                <div className="bg-white border-4 border-black p-6 md:p-8 rounded-[2rem] shadow-brutal mb-12 relative overflow-hidden">
-                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-brutalPink rounded-full border-4 border-black opacity-10"></div>
+                <div className="bg-white border-4 border-black p-6 rounded-2xl shadow-brutal mb-10 relative overflow-hidden">
+                    <div className="absolute -top-10 -right-10 w-24 h-24 bg-brutalPink rounded-full border-4 border-black opacity-10"></div>
                     
-                    <h2 className="text-2xl md:text-3xl font-black text-black uppercase mb-4 tracking-tight">
-                        ⚡ Add All 10 Events in One Click
+                    <h2 className="text-xl md:text-2xl font-black text-black uppercase mb-2 tracking-tight">
+                        ⚡ Sync All 10 Events
                     </h2>
-                    <p className="text-gray-700 font-bold mb-6">
-                        Subscribe to the complete featured events feed. Your calendar will automatically sync these details.
+                    <p className="text-gray-600 text-sm font-bold mb-5">
+                        Subscribe once to have the entire list added to your device automatically.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <a
                             href={webcalUrl}
-                            className="inline-flex items-center justify-center bg-white text-black font-black uppercase border-4 border-black py-4 px-6 rounded-xl shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all text-center"
+                            className="inline-flex items-center justify-center bg-white text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                         >
                             🍏 Apple Calendar
                         </a>
@@ -103,7 +111,7 @@ export default function CalendarFeedbackPage() {
                             href={googleUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center bg-brutalYellow text-black font-black uppercase border-4 border-black py-4 px-6 rounded-xl shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all text-center"
+                            className="inline-flex items-center justify-center bg-brutalYellow text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                             onClick={(e) => {
                                 if (host.includes('localhost')) {
                                     e.preventDefault();
@@ -116,87 +124,89 @@ export default function CalendarFeedbackPage() {
                         <a
                             href={feedUrl}
                             download="sunland-events.ics"
-                            className="inline-flex items-center justify-center bg-brutalBlue text-white font-black uppercase border-4 border-black py-4 px-6 rounded-xl shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all text-center"
+                            className="inline-flex items-center justify-center bg-brutalBlue text-white font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                         >
-                            📥 Download .ICS file
+                            📥 Download .ICS File
                         </a>
                     </div>
                 </div>
 
-                {/* INDIVIDUAL EVENTS LIST */}
-                <h2 className="text-2xl font-black text-black uppercase mb-6 tracking-tight">
-                    📌 Or Add Events Individually:
+                {/* INDIVIDUAL EVENTS GRID */}
+                <h2 className="text-xl font-black text-black uppercase mb-5 tracking-tight">
+                    📌 Or Add Individually:
                 </h2>
                 
-                <div className="space-y-6">
-                    {events.map((event) => (
-                        <div 
-                            key={event.id} 
-                            className="bg-white border-4 border-black p-6 rounded-2xl shadow-brutal hover:shadow-brutal-lg transition-all duration-200"
-                        >
-                            {/* Tags */}
-                            <div className="flex flex-wrap gap-2 mb-3">
-                                {event.tags.map((tag, idx) => {
-                                    const colors = ['bg-brutalYellow', 'bg-brutalBlue text-white', 'bg-brutalPink text-white', 'bg-green-200'];
-                                    const colorClass = colors[idx % colors.length];
-                                    return (
-                                        <span 
-                                            key={tag} 
-                                            className={`text-xs font-black px-2.5 py-1 rounded border-2 border-black uppercase ${colorClass}`}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {events.map((event) => {
+                        const isExpanded = !!expandedEvents[event.id];
+                        return (
+                            <div 
+                                key={event.id} 
+                                className="bg-white border-4 border-black p-5 rounded-xl shadow-brutal hover:shadow-brutal-lg transition-all duration-200 flex flex-col justify-between"
+                            >
+                                <div>
+                                    {/* Date & Time */}
+                                    <div className="text-primary font-black uppercase text-xs mb-1.5">
+                                        📅 {event.date} &nbsp;•&nbsp; 🕒 {event.time}
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="text-xl font-black text-black mb-2 leading-tight">{event.title}</h3>
+                                    
+                                    {/* Location */}
+                                    <div className="text-xs font-bold text-gray-500 mb-3 flex items-start gap-1">
+                                        <span>📍</span>
+                                        <span>{event.location}</span>
+                                    </div>
+
+                                    {/* Description (Expandable) */}
+                                    <div className="mb-4">
+                                        <p className={`text-gray-700 text-xs leading-relaxed font-semibold ${isExpanded ? 'whitespace-pre-wrap' : 'line-clamp-2'}`}>
+                                            {event.description}
+                                        </p>
+                                        <button 
+                                            onClick={() => toggleExpand(event.id)}
+                                            className="text-[10px] font-black uppercase underline text-gray-500 hover:text-black mt-1.5 transition-colors block"
                                         >
-                                            {tag}
-                                        </span>
-                                    );
-                                })}
-                            </div>
+                                            {isExpanded ? 'Show less ▲' : 'Read details ▼'}
+                                        </button>
+                                    </div>
+                                </div>
 
-                            {/* Event details */}
-                            <h3 className="text-2xl font-black text-black mb-1">{event.title}</h3>
-                            <div className="text-primary font-black uppercase text-sm mb-3">
-                                📅 {event.date} &nbsp;•&nbsp; 🕒 {event.time}
-                            </div>
-                            
-                            <div className="text-sm font-bold text-gray-700 mb-4 flex items-center">
-                                📍 {event.location}
-                            </div>
-
-                            <p className="text-gray-800 font-medium mb-6 whitespace-pre-wrap leading-relaxed border-l-4 border-black pl-3 bg-gray-50/50 py-2 rounded">
-                                {event.description}
-                            </p>
-
-                            {/* Individual Add buttons */}
-                            <div className="flex flex-wrap gap-3">
-                                <a
-                                    href={getGoogleCalendarUrl(event)}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center bg-brutalYellow text-black font-extrabold uppercase border-2 border-black py-2 px-4 rounded shadow-brutal-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all text-xs"
-                                >
-                                    + Add to Google
-                                </a>
-                                <button
-                                    onClick={() => downloadSingleIcs(event)}
-                                    className="inline-flex items-center justify-center bg-white text-black font-extrabold uppercase border-2 border-black py-2 px-4 rounded shadow-brutal-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all text-xs"
-                                >
-                                    📥 Download ICS (Apple/Outlook)
-                                </button>
-                                {event.url && (
+                                {/* Actions */}
+                                <div className="border-t-2 border-black pt-4 mt-2 flex flex-wrap gap-2">
                                     <a
-                                        href={event.url}
+                                        href={getGoogleCalendarUrl(event)}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center bg-gray-100 text-black font-extrabold uppercase border-2 border-black py-2 px-4 rounded shadow-brutal-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all text-xs"
+                                        className="inline-flex items-center justify-center bg-brutalYellow text-black font-extrabold uppercase border-2 border-black py-1.5 px-3 rounded shadow-brutal-sm hover:translate-x-[0.5px] hover:translate-y-[0.5px] hover:shadow-none transition-all text-[10px]"
                                     >
-                                        🔗 Event Details Page
+                                        + Google Cal
                                     </a>
-                                )}
+                                    <button
+                                        onClick={() => downloadSingleIcs(event)}
+                                        className="inline-flex items-center justify-center bg-white text-black font-extrabold uppercase border-2 border-black py-1.5 px-3 rounded shadow-brutal-sm hover:translate-x-[0.5px] hover:translate-y-[0.5px] hover:shadow-none transition-all text-[10px]"
+                                    >
+                                        🍏 Apple / ICS
+                                    </button>
+                                    {event.url && (
+                                        <a
+                                            href={event.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center bg-gray-100 text-black font-extrabold uppercase border-2 border-black py-1.5 px-3 rounded shadow-brutal-sm hover:translate-x-[0.5px] hover:translate-y-[0.5px] hover:shadow-none transition-all text-[10px]"
+                                        >
+                                            🔗 Link
+                                        </a>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
-                <div className="mt-16 text-center text-sm font-bold text-gray-500">
-                    © 2026 Sunland News • Built for St. Lucie County, Florida
+                <div className="mt-16 text-center text-xs font-bold text-gray-500">
+                    © 2026 Sunland News • St. Lucie County, Florida
                 </div>
 
             </div>
