@@ -5,11 +5,18 @@ import { events } from '@/app/data/events';
 
 export default function CalendarFeedbackPage() {
     const [host, setHost] = useState('');
+    const [userEmail, setUserEmail] = useState('');
     const [expandedEvents, setExpandedEvents] = useState({});
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setHost(window.location.host);
+            // Parse query parameters
+            const params = new URLSearchParams(window.location.search);
+            const email = params.get('email');
+            if (email) {
+                setUserEmail(email);
+            }
         }
     }, []);
 
@@ -20,9 +27,25 @@ export default function CalendarFeedbackPage() {
         }));
     };
 
+    // Logging helper to track clicks
+    const logAction = async (action, eventTitle = '') => {
+        try {
+            await fetch('/api/log-calendar-action', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: userEmail || 'anonymous',
+                    action,
+                    eventTitle
+                })
+            });
+        } catch (e) {
+            console.error('Failed to log action:', e);
+        }
+    };
+
     // Generate URLs for subscription (points to production domain on localhost so testing actually works!)
     const getSubscriptionUrls = () => {
-        // If testing on localhost, use the production domain so Google/Apple servers can resolve the feed
         const targetHost = host && !host.includes('localhost') ? host : 'www.sunlandnews.com';
         const feedUrl = `https://${targetHost}/api/calendar-feed.ics`;
         const webcalUrl = `webcal://${targetHost}/api/calendar-feed.ics`;
@@ -122,6 +145,11 @@ export default function CalendarFeedbackPage() {
                     <p className="text-base font-bold text-gray-700 max-w-xl mx-auto">
                         Sync the weekend's featured local events (June 5 – June 7, 2026) directly to your calendar app.
                     </p>
+                    {userEmail && (
+                        <p className="mt-2 text-xs font-bold text-gray-500 uppercase">
+                            Logged in as: <span className="text-black underline">{userEmail}</span>
+                        </p>
+                    )}
                 </div>
 
                 {/* ADD ALL SECTION */}
@@ -138,7 +166,8 @@ export default function CalendarFeedbackPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <a
                             href={webcalUrl}
-                            className="inline-flex items-center justify-center bg-white text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center animate-pulse-subtle"
+                            onClick={() => logAction('Subscribe Apple Calendar')}
+                            className="inline-flex items-center justify-center bg-white text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                         >
                             🍏 Apple Calendar
                         </a>
@@ -146,12 +175,16 @@ export default function CalendarFeedbackPage() {
                             href={googleUrl}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => logAction('Subscribe Google Calendar')}
                             className="inline-flex items-center justify-center bg-brutalYellow text-black font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                         >
                             📅 Google Calendar
                         </a>
                         <button
-                            onClick={downloadAllIcs}
+                            onClick={() => {
+                                logAction('Download All ICS');
+                                downloadAllIcs();
+                            }}
                             className="inline-flex items-center justify-center bg-brutalBlue text-white font-black text-sm uppercase border-2 border-black py-3 px-4 rounded-lg shadow-brutal hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-brutal-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all text-center"
                         >
                             📥 Download .ICS File
@@ -207,12 +240,16 @@ export default function CalendarFeedbackPage() {
                                         href={getGoogleCalendarUrl(event)}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        onClick={() => logAction('Add Single Event Google', event.title)}
                                         className="inline-flex items-center justify-center bg-brutalYellow text-black font-extrabold uppercase border-2 border-black py-1.5 px-3 rounded shadow-brutal-sm hover:translate-x-[0.5px] hover:translate-y-[0.5px] hover:shadow-none transition-all text-[10px]"
                                     >
                                         + Google Cal
                                     </a>
                                     <button
-                                        onClick={() => downloadSingleIcs(event)}
+                                        onClick={() => {
+                                            logAction('Download Single Event ICS', event.title);
+                                            downloadSingleIcs(event);
+                                        }}
                                         className="inline-flex items-center justify-center bg-white text-black font-extrabold uppercase border-2 border-black py-1.5 px-3 rounded shadow-brutal-sm hover:translate-x-[0.5px] hover:translate-y-[0.5px] hover:shadow-none transition-all text-[10px]"
                                     >
                                         🍏 Apple / ICS
@@ -222,6 +259,7 @@ export default function CalendarFeedbackPage() {
                                             href={event.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            onClick={() => logAction('Click Event Link', event.title)}
                                             className="inline-flex items-center justify-center bg-gray-100 text-black font-extrabold uppercase border-2 border-black py-1.5 px-3 rounded shadow-brutal-sm hover:translate-x-[0.5px] hover:translate-y-[0.5px] hover:shadow-none transition-all text-[10px]"
                                         >
                                             🔗 Link
