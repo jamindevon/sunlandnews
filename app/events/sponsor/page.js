@@ -1,11 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { getCalApi } from "@calcom/embed-react";
 
 export default function EventSponsorPage() {
     const stripeLink = "https://buy.stripe.com/5kQeVe0hYgaJ3S65SgcZa0j";
     const [activeTab, setActiveTab] = useState(0);
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({"namespace":"sunlandnewsadvertisercall"});
+            cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        })();
+    }, []);
 
     const features = [
         {
@@ -485,7 +493,7 @@ export default function EventSponsorPage() {
                         <div className="bg-brutalBg p-6 border-4 border-black rounded-2xl shadow-brutal-sm">
                             <h3 className="text-lg font-black uppercase mb-2">Can I sponsor multiple events?</h3>
                             <p className="text-sm font-bold text-gray-600 leading-relaxed">
-                                Absolutely! Each event requires a separate one-time partnership purchase. For bulk event booking or annual rates, email us directly.
+                                Absolutely! Each event requires a separate one-time partnership purchase. For bulk event booking, annual rates, or custom packages, you can <a href="https://cal.com/sunlandcompany/sunlandnewsadvertisercall" data-cal-link="sunlandcompany/sunlandnewsadvertisercall" data-cal-namespace="sunlandnewsadvertisercall" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">book a call with us</a> directly.
                             </p>
                         </div>
                     </div>

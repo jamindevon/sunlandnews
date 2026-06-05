@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { getCalApi } from "@calcom/embed-react";
 
 export default function SponsorPage() {
     const sponsors = [
@@ -41,6 +43,13 @@ export default function SponsorPage() {
             p: "p-2" 
         }
     ];
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({"namespace":"sunlandnewsadvertisercall"});
+            cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        })();
+    }, []);
 
     return (
         <div className="min-h-screen bg-white font-sans text-black selection:bg-[#ff4365] selection:text-white">
@@ -141,13 +150,18 @@ export default function SponsorPage() {
                     </p>
                     
                     <a 
-                        href="mailto:thesunlandcompany@gmail.com" 
+                        href="https://cal.com/sunlandcompany/sunlandnewsadvertisercall" 
+                        data-cal-link="sunlandcompany/sunlandnewsadvertisercall"
+                        data-cal-namespace="sunlandnewsadvertisercall"
+                        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block px-10 py-6 text-xl md:text-2xl font-black uppercase text-black bg-white border-4 border-brutalYellow rounded-2xl transition-all hover:scale-105 active:scale-95"
                     >
-                        Reach Out About Sponsorship
+                        Book a Call About Sponsorship
                     </a>
                     <p className="text-sm font-bold text-gray-500 text-center mt-6 uppercase tracking-widest">
-                        Direct Access To Our Founders
+                        Book directly on our calendar
                     </p>
                 </div>
             </section>
