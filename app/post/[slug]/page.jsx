@@ -43,9 +43,68 @@ function ShareButton({ platform, url, title }) {
   );
 }
 
+// Video Embed Component for Patreon, YouTube, etc.
+function VideoEmbed({ value }) {
+  const url = value?.url || '';
+  const title = value?.title || 'Watch Full Video Interview';
+
+  // Check if YouTube
+  const ytMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+  const ytId = ytMatch ? ytMatch[1] : null;
+
+  if (ytId) {
+    return (
+      <div className="my-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gray-900 text-white">
+        <div className="relative w-full aspect-video bg-black">
+          <iframe
+            src={`https://www.youtube.com/embed/${ytId}`}
+            title={title}
+            className="absolute top-0 left-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // Clean Patreon Top Banner Link
+  return (
+    <div className="my-6 p-4 rounded-xl border border-orange-200 bg-gradient-to-r from-orange-50 via-amber-50 to-orange-100/60 text-gray-900 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="flex items-center gap-3">
+        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+          🎥
+        </div>
+        <div>
+          <h4 className="font-bold text-gray-900 text-base leading-snug">
+            {title}
+          </h4>
+          <p className="text-xs text-gray-600">
+            Exclusive conversation available on Patreon
+          </p>
+        </div>
+      </div>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-lg shadow transition-all shrink-0 hover:shadow-md"
+      >
+        <span>Watch Video Interview</span>
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7-7 7M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
 // Custom components for the PortableText renderer
 const ptComponents = {
   types: {
+    videoEmbed: ({ value }) => <VideoEmbed value={value} />,
+    patreonEmbed: ({ value }) => <VideoEmbed value={value} />,
+    embed: ({ value }) => <VideoEmbed value={value} />,
     image: ({ value }) => {
       if (!value?.asset) return null;
 
@@ -69,7 +128,14 @@ const ptComponents = {
     h1: ({ children }) => <h1 className="text-3xl font-bold my-5">{children}</h1>,
     h2: ({ children }) => <h2 className="text-2xl font-bold my-4">{children}</h2>,
     h3: ({ children }) => <h3 className="text-xl font-bold my-3">{children}</h3>,
-    normal: ({ children }) => <p className="my-4 text-gray-800">{children}</p>,
+    normal: ({ children, value }) => {
+      // Check if paragraph contains a Patreon video link or start emoji
+      const patreonLink = value?.markDefs?.find(m => m._type === 'link' && m.href?.includes('patreon.com'));
+      if (patreonLink) {
+        return <VideoEmbed value={{ url: patreonLink.href, title: 'Full Video Interview with Numa Saisselin' }} />;
+      }
+      return <p className="my-4 text-gray-800">{children}</p>;
+    },
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-primary pl-4 italic my-6">{children}</blockquote>
     ),
@@ -112,7 +178,12 @@ function ArticleContent({ body }) {
     ...ptComponents,
     block: {
       ...ptComponents.block,
-      normal: ({ children }) => {
+      normal: ({ children, value }) => {
+        const patreonLink = value?.markDefs?.find(m => m._type === 'link' && m.href?.includes('patreon.com'));
+        if (patreonLink) {
+          return <VideoEmbed value={{ url: patreonLink.href, title: 'Full Video Interview with Numa Saisselin' }} />;
+        }
+
         currentParagraph++;
         const shouldShowPrompt = currentParagraph === midPoint && paragraphCount > 3;
 

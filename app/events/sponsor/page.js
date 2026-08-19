@@ -493,7 +493,7 @@ export default function EventSponsorPage() {
                         <div className="bg-brutalBg p-6 border-4 border-black rounded-2xl shadow-brutal-sm">
                             <h3 className="text-lg font-black uppercase mb-2">Can I sponsor multiple events?</h3>
                             <p className="text-sm font-bold text-gray-600 leading-relaxed">
-                                Absolutely! Each event requires a separate one-time partnership purchase. For bulk event booking, annual rates, or custom packages, you can <a href="https://cal.com/sunlandcompany/sunlandnewsadvertisercall" data-cal-link="sunlandcompany/sunlandnewsadvertisercall" data-cal-namespace="sunlandnewsadvertisercall" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">book a call with us</a> directly.
+                                Absolutely! Each event requires a separate one-time partnership purchase. For bulk event booking, annual rates, or custom packages, you can <button type="button" data-cal-link="sunlandcompany/sunlandnewsadvertisercall" data-cal-namespace="sunlandnewsadvertisercall" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' className="underline hover:text-primary transition-colors font-bold inline-block align-baseline bg-transparent border-none p-0 cursor-pointer">book a call with us</button> directly.
                             </p>
                         </div>
                     </div>

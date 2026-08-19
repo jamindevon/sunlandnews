@@ -149,17 +149,15 @@ export default function SponsorPage() {
                         Are you a local business owner looking to reach a deeply engaged audience while supporting real, independent journalism? We strictly cap our sponsorships.
                     </p>
                     
-                    <a 
-                        href="https://cal.com/sunlandcompany/sunlandnewsadvertisercall" 
+                    <button 
+                        type="button"
                         data-cal-link="sunlandcompany/sunlandnewsadvertisercall"
                         data-cal-namespace="sunlandnewsadvertisercall"
                         data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block px-10 py-6 text-xl md:text-2xl font-black uppercase text-black bg-white border-4 border-brutalYellow rounded-2xl transition-all hover:scale-105 active:scale-95"
+                        className="inline-block px-10 py-6 text-xl md:text-2xl font-black uppercase text-black bg-white border-4 border-brutalYellow rounded-2xl transition-all hover:scale-105 active:scale-95 text-center"
                     >
                         Book a Call About Sponsorship
-                    </a>
+                    </button>
                     <p className="text-sm font-bold text-gray-500 text-center mt-6 uppercase tracking-widest">
                         Book directly on our calendar
                     </p>
