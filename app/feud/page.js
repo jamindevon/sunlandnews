@@ -2,14 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 // Easily change these questions to update the entire form and backend
 const FEUD_QUESTIONS = [
-    "If St. Lucie County had a professional sports team, what would the mascot be",
-    "Who is the most famous athlete from St. Lucie County",
-    "Name a sport St. Lucie County has produced the most talent in",
-    "Which non-Florida team has the most fans in St. Lucie County"
+    "Six foods you expect to see at the St. Lucie County Fair.",
+    "Complete the sentence. You know you're arguing with a real Port St. Lucie local when they bring up _____.",
+    "In St. Lucie County, where do you go when you need peace and quiet?",
+    "Somebody says they're about to go to the Treasure Coast Mall. Name something they're going there to do besides shop.",
+    "Someone says they're going out of town to hang out. What town do you think of first?",
+    "Somebody just started a new job in Port St. Lucie. What job might they be talking about?",
+    "If you could build one thing in St. Lucie County that we don't currently have, what would it be?",
+    "Somebody just moved to St. Lucie County. What neighborhood do you think they're talking about?"
 ];
 
 export default function FeudPage() {
@@ -85,13 +88,10 @@ export default function FeudPage() {
             <div 
                 className={`fixed inset-0 z-[100] bg-brutalBlue flex flex-col items-center justify-center p-4 transition-transform duration-700 ease-in-out ${showLoader ? 'translate-y-0' : '-translate-y-[120%]'}`}
             >
-                <div className="bg-white p-6 md:p-10 rounded-3xl shadow-[12px_12px_0px_rgba(0,0,0,1)] border-4 border-black mb-8 transform -rotate-2">
+                <div className="bg-white p-6 md:p-10 rounded-3xl shadow-[12px_12px_0px_rgba(0,0,0,1)] border-4 border-black transform -rotate-2">
                     <h2 className="text-4xl md:text-6xl font-black text-center uppercase tracking-widest text-black animate-pulse">
-                        Loading...
+                        Florida Feud!
                     </h2>
-                </div>
-                <div className="bg-brutalYellow border-4 border-black px-6 py-2 shadow-[4px_4px_0px_rgba(0,0,0,1)] transform rotate-1">
-                    <p className="text-black text-sm md:text-base font-black uppercase tracking-widest">Sponsored by MidFlorida Card Expo</p>
                 </div>
             </div>
 
@@ -102,59 +102,8 @@ export default function FeudPage() {
 
                 {/* Header */}
                 <div className="text-center mb-10 md:mb-16">
-                    <div className="inline-block bg-brutalYellow border-4 border-black px-4 py-1 mb-12 shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-2">
+                    <div className="inline-block bg-brutalYellow border-4 border-black px-4 py-1 mb-6 shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-2">
                         <span className="font-black uppercase tracking-widest text-sm md:text-base">Florida Feud!</span>
-                    </div>
-
-                    {/* Stack of Cards Design */}
-                    <div className="relative flex justify-center mb-16 h-64 md:h-80 w-full max-w-sm mx-auto">
-                        
-                        {/* Background Card (Pokémon Style) */}
-                        <div className="absolute inset-0 bg-yellow-400 p-3 rounded-2xl shadow-[8px_8px_0px_rgba(0,0,0,1)] border-4 border-black transform rotate-6 scale-95 z-10 hover:z-30 transition-all duration-300 md:hover:rotate-12 cursor-pointer outline-none select-none">
-                            <div className="bg-[#f0f0f0] border-4 border-gray-800 rounded-xl p-3 h-full flex flex-col items-center shadow-inner relative">
-                                <div className="w-full flex justify-between items-center mb-2 bg-yellow-200 px-2 rounded border border-gray-400 shadow-sm">
-                                    <span className="font-black text-xs text-gray-800 tracking-tighter">BASE SET POKÉMON</span>
-                                    <span className="font-black text-[#ff4365] text-xs">100 HP</span>
-                                </div>
-                                <div className="relative w-full flex-grow border-4 border-gray-300 rounded bg-[#4b7bff] flex items-center justify-center shadow-[inset_0px_0px_10px_rgba(0,0,0,0.5)]">
-                                     <div className="w-16 h-16 rounded-full bg-yellow-300 shadow-[0_0_15px_rgba(255,255,0,0.8)] opacity-80" />
-                                </div>
-                                <div className="w-full flex justify-between text-[8px] uppercase font-bold text-gray-500 mt-2">
-                                    <span>weakness: none</span>
-                                    <span>resistance: max</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Foreground Card (Sports Style) */}
-                        <div className="absolute inset-0 bg-white p-2 rounded shadow-[12px_12px_0px_rgba(0,0,0,1)] border-4 border-black transform -rotate-3 z-20 hover:scale-105 transition-all duration-300 hover:-rotate-1 cursor-pointer outline-none select-none">
-                             <div className="absolute -top-5 -left-5 z-30">
-                                 <span className="block text-xs font-black uppercase tracking-wider bg-brutalBlue text-white border-4 border-black px-3 py-1 transform -rotate-12 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-                                     Sponsored By
-                                 </span>
-                             </div>
-                             
-                             <div className="border-[6px] border-gray-200 h-full rounded-[4px] flex flex-col pt-3 relative bg-white overflow-hidden shadow-inner">
-                                <div className="absolute top-0 right-0 bg-brutalPink text-white font-black text-[8px] px-2 py-0.5 tracking-widest border-l-2 border-b-2 border-gray-200 z-10">ROOKIE CARD</div>
-                                
-                                <div className="w-full h-3/5 relative z-0 flex items-center justify-center p-2 mt-4 bg-gray-50">
-                                    <Image 
-                                        src="/images/midflorida-card-expo-logo.jpg" 
-                                        alt="MidFlorida Card Expo" 
-                                        fill
-                                        className="object-contain drop-shadow-md z-0"
-                                    />
-                                </div>
-                                
-                                <div className="bg-gradient-to-tr from-gray-900 to-gray-800 w-full h-2/5 absolute bottom-0 flex flex-col justify-center items-center text-white border-t-[3px] border-brutalPink relative overflow-hidden">
-                                     {/* Fake holographic shine */}
-                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10 animate-[shimmer_3s_infinite] -translate-x-full z-0"></div>
-                                    <h3 className="font-black text-lg md:text-xl tracking-widest mb-0.5 italic z-10">MIDFLORIDA</h3>
-                                    <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-gray-300 z-10">Card Expo</span>
-                                </div>
-                             </div>
-                        </div>
-
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-black text-black tracking-tight leading-none mb-6 uppercase">
@@ -226,7 +175,7 @@ export default function FeudPage() {
                             {FEUD_QUESTIONS.map((question, index) => (
                                 <div key={index}>
                                     <label className="block text-lg font-black text-black mb-3">
-                                        {question} <span className="text-[#ff4365]">*</span>
+                                        {index + 1}. {question} <span className="text-[#ff4365]">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -265,3 +214,4 @@ export default function FeudPage() {
         </div>
     );
 }
+
