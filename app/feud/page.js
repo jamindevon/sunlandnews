@@ -149,9 +149,6 @@ export default function FeudPage() {
                                     <label className="block text-sm font-black text-black mb-2 uppercase tracking-wide">
                                         Email <span className="text-gray-400 font-bold ml-1">(Optional)</span>
                                     </label>
-                                    <p className="text-xs font-bold text-gray-600 bg-brutalYellow/40 p-2 rounded-lg border-2 border-black mb-3 shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                                        🎁 Enter your email for a chance to win a <span className="text-brutalPink underline">gift card at a local restaurant!</span> We give away one gift card per episode.
-                                    </p>
                                     <input
                                         type="email"
                                         value={formData.email}
