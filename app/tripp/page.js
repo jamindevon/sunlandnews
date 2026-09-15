@@ -1042,10 +1042,6 @@ export default function TrippPitchPage() {
                                         <h4 className="text-xl font-black text-[#2e401b] mt-2">
                                             Complete Year-Long Ecosystem
                                         </h4>
-                                        <div className="mt-2">
-                                            <span className="text-3xl md:text-4xl font-black text-[#2e401b]">$4,800</span>
-                                            <span className="text-xs font-bold text-slate-500 uppercase ml-1">/ Quarter ($19,200 annual)</span>
-                                        </div>
                                     </div>
 
                                     <div className="space-y-2 text-xs text-slate-700">
@@ -1079,10 +1075,6 @@ export default function TrippPitchPage() {
                                         <h4 className="text-xl font-black text-slate-800 mt-2">
                                             Core Distribution & Placement
                                         </h4>
-                                        <div className="mt-2">
-                                            <span className="text-3xl md:text-4xl font-black text-slate-900">$2,400</span>
-                                            <span className="text-xs font-bold text-slate-500 uppercase ml-1">/ Quarter ($9,600 annual)</span>
-                                        </div>
                                     </div>
 
                                     <div className="space-y-2 text-xs text-slate-700">
