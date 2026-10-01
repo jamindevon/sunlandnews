@@ -9,7 +9,7 @@ export default function ClassOf82Page() {
     const [showFlyerModal, setShowFlyerModal] = useState(false);
 
     const handleCopyZelle = () => {
-        navigator.clipboard.writeText('772-577-1046');
+        navigator.clipboard.writeText('772-577-1048');
         setCopied(true);
         setTimeout(() => setCopied(false), 2500);
     };
@@ -373,21 +373,21 @@ export default function ClassOf82Page() {
                         <div className="space-y-1">
                             <span className="text-xs font-black uppercase tracking-wider text-gray-500 block">Zelle Recipient</span>
                             <div className="text-2xl font-black text-black">Deborah Noble</div>
-                            <div className="text-xl font-black text-brutalPink">772-577-1046</div>
+                            <div className="text-xl font-black text-brutalPink">772-577-1048</div>
                         </div>
 
                         <button
                             onClick={handleCopyZelle}
                             className="w-full bg-black text-white font-black text-sm uppercase py-4 px-6 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:bg-brutalPink hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:shadow-none transition-all"
                         >
-                            {copied ? '✅ Phone Number Copied to Clipboard!' : '📋 Copy Zelle Phone Number (772-577-1046)'}
+                            {copied ? '✅ Phone Number Copied to Clipboard!' : '📋 Copy Zelle Phone Number (772-577-1048)'}
                         </button>
 
                         <div className="text-left text-xs font-bold text-gray-800 bg-brutalBg p-4 border-2 border-black space-y-1">
                             <p className="font-black text-black uppercase">Instructions for Zelle:</p>
                             <ol className="list-decimal pl-4 space-y-1">
                                 <li>Open your bank app and select Zelle.</li>
-                                <li>Send <strong>$100</strong> to <strong>772-577-1046</strong> (Deborah Noble).</li>
+                                <li>Send <strong>$100</strong> to <strong>772-577-1048</strong> (Deborah Noble).</li>
                                 <li>Include your name and &quot;Class of 82 Soiree&quot; in the memo note.</li>
                             </ol>
                         </div>
