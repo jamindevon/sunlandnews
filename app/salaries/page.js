@@ -5,7 +5,7 @@ import salaryData from '@/public/st-lucie-salaries.json';
 
 const POPULAR_SEARCHES = [
     { label: '👑 Top Earners', query: '', org: 'ALL', sort: 'salary-desc' },
-    { label: '🚓 PSL Police', query: 'Police', org: 'Port St. Lucie', sort: 'salary-desc' },
+    { label: '调度 PSL Police', query: 'Police', org: 'Port St. Lucie', sort: 'salary-desc' },
     { label: '🚒 Fire Rescue', query: 'Fire', org: 'St. Lucie County Fire District', sort: 'salary-desc' },
     { label: '🏫 Principals', query: 'Principal', org: 'St. Lucie Public Schools', sort: 'salary-desc' },
     { label: '⚖️ Attorneys', query: 'Attorney', org: 'ALL', sort: 'salary-desc' },
@@ -133,9 +133,17 @@ export default function SalariesPage() {
                     <h1 className="text-3xl sm:text-5xl font-black text-black tracking-tight uppercase mb-2">
                         St. Lucie County <span className="text-[#ff4365] underline decoration-4 underline-offset-4">Salaries</span>
                     </h1>
-                    <p className="text-xs sm:text-base font-bold text-gray-700 max-w-lg mx-auto">
-                        Search all <strong>925 local public employees</strong> earning over $100,000/year.
+                    <p className="text-xs sm:text-base font-bold text-gray-700 max-w-lg mx-auto mb-3">
+                        Public payroll records from local government over the past year ($100,000+ earners).
                     </p>
+
+                    {/* Data Disclaimer / Note */}
+                    <div className="bg-white border border-black/20 rounded-xl p-2.5 text-[11px] sm:text-xs font-bold text-gray-600 max-w-xl mx-auto text-left shadow-sm flex items-start gap-2">
+                        <span className="text-base leading-none">ℹ️</span>
+                        <span>
+                            <strong>Note on data:</strong> This database reflects public payroll records from the past year. Personnel changes occur over time (for example, former County Administrator George Landry and Fort Pierce City Attorney Sara Hedges recently departed their roles).
+                        </span>
+                    </div>
                 </div>
 
                 {/* Main Search & Filter Card */}
@@ -219,7 +227,7 @@ export default function SalariesPage() {
                         </div>
                     </div>
 
-                    {/* Sort Pills Row (Replacing Native Select Dropdown Arrow) */}
+                    {/* Sort Pills Row */}
                     <div className="pt-3 border-t border-gray-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
                             <span className="text-xs font-black uppercase text-gray-700 flex-shrink-0">Sort:</span>
