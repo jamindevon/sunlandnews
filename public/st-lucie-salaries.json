@@ -1,0 +1,7402 @@
+[
+  {
+    "id": 2,
+    "name": "Jesus Merejo",
+    "salary": 321321.26,
+    "salaryFormatted": "$321,321.26",
+    "org": "Port St. Lucie",
+    "job": "City Manager"
+  },
+  {
+    "id": 4,
+    "name": "Katherine Barbieri",
+    "salary": 275000,
+    "salaryFormatted": "$275,000.00",
+    "org": "St. Lucie County",
+    "job": "County Attorney"
+  },
+  {
+    "id": 5,
+    "name": "George Landry",
+    "salary": 275000,
+    "salaryFormatted": "$275,000.00",
+    "org": "St. Lucie County",
+    "job": "County Administrator"
+  },
+  {
+    "id": 8,
+    "name": "Richard Berrios",
+    "salary": 261062.88,
+    "salaryFormatted": "$261,062.88",
+    "org": "Port St. Lucie",
+    "job": "City Attorney"
+  },
+  {
+    "id": 9,
+    "name": "Jon Prince",
+    "salary": 256814,
+    "salaryFormatted": "$256,814.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Superintendent"
+  },
+  {
+    "id": 10,
+    "name": "Richard Del Toro",
+    "salary": 255775,
+    "salaryFormatted": "$255,775.00",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sheriff"
+  },
+  {
+    "id": 13,
+    "name": "Teresa Lamar-Sarno",
+    "salary": 250539.9,
+    "salaryFormatted": "$250,539.90",
+    "org": "Port St. Lucie",
+    "job": "Chief Assistant City Manager"
+  },
+  {
+    "id": 15,
+    "name": "Leon Niemczyk",
+    "salary": 247466.96,
+    "salaryFormatted": "$247,466.96",
+    "org": "Port St. Lucie",
+    "job": "Chief of Police"
+  },
+  {
+    "id": 16,
+    "name": "Jeffery Lee",
+    "salary": 246704.02,
+    "salaryFormatted": "$246,704.02",
+    "org": "St. Lucie County Fire District",
+    "job": "Fire Chief"
+  },
+  {
+    "id": 21,
+    "name": "Kristina Ciuperger",
+    "salary": 230633,
+    "salaryFormatted": "$230,633.00",
+    "org": "Port St. Lucie",
+    "job": "Assistant City Manager"
+  },
+  {
+    "id": 27,
+    "name": "Richard Chess",
+    "salary": 220500,
+    "salaryFormatted": "$220,500.00",
+    "org": "Fort Pierce",
+    "job": "City Manager"
+  },
+  {
+    "id": 28,
+    "name": "Brian Gonzalez",
+    "salary": 220035.92,
+    "salaryFormatted": "$220,035.92",
+    "org": "St. Lucie County Fire District",
+    "job": "Assistant Fire Chief"
+  },
+  {
+    "id": 29,
+    "name": "Kim Sabol",
+    "salary": 220035.92,
+    "salaryFormatted": "$220,035.92",
+    "org": "St. Lucie County Fire District",
+    "job": "General Counsel"
+  },
+  {
+    "id": 30,
+    "name": "Carrie Mast",
+    "salary": 219132.16,
+    "salaryFormatted": "$219,132.16",
+    "org": "St. Lucie County",
+    "job": "Chief Information Officer"
+  },
+  {
+    "id": 35,
+    "name": "Marc Dimeo",
+    "salary": 216043.1,
+    "salaryFormatted": "$216,043.10",
+    "org": "Port St. Lucie",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 36,
+    "name": "Carmine Izzo",
+    "salary": 216043.1,
+    "salaryFormatted": "$216,043.10",
+    "org": "Port St. Lucie",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 38,
+    "name": "Amber Izzo",
+    "salary": 215065.7,
+    "salaryFormatted": "$215,065.70",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Chief Legal Counsel"
+  },
+  {
+    "id": 39,
+    "name": "Gregory Oravec",
+    "salary": 215065.7,
+    "salaryFormatted": "$215,065.70",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Chief Operating Officer"
+  },
+  {
+    "id": 40,
+    "name": "John Bolduc",
+    "salary": 215065.7,
+    "salaryFormatted": "$215,065.70",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Chief Deputy"
+  },
+  {
+    "id": 41,
+    "name": "William Jones",
+    "salary": 212353.96,
+    "salaryFormatted": "$212,353.96",
+    "org": "Port St. Lucie",
+    "job": "Chief Information Officer"
+  },
+  {
+    "id": 42,
+    "name": "Kate Parmelee",
+    "salary": 211611.4,
+    "salaryFormatted": "$211,611.40",
+    "org": "Port St. Lucie",
+    "job": "Deputy City Manager"
+  },
+  {
+    "id": 43,
+    "name": "Colt Schwerdt",
+    "salary": 210000.18,
+    "salaryFormatted": "$210,000.18",
+    "org": "Port St. Lucie",
+    "job": "Director – Public Works"
+  },
+  {
+    "id": 48,
+    "name": "Ada Santamaria",
+    "salary": 206196.22,
+    "salaryFormatted": "$206,196.22",
+    "org": "St. Lucie County",
+    "job": "Deputy County Administrator II"
+  },
+  {
+    "id": 53,
+    "name": "Sara Hedges",
+    "salary": 203962.5,
+    "salaryFormatted": "$203,962.50",
+    "org": "Fort Pierce",
+    "job": "City Attorney"
+  },
+  {
+    "id": 57,
+    "name": "Caroline Sturgis",
+    "salary": 199946.5,
+    "salaryFormatted": "$199,946.50",
+    "org": "Port St. Lucie",
+    "job": "OMB Director"
+  },
+  {
+    "id": 61,
+    "name": "Kevin Matyjaszek",
+    "salary": 199359.16,
+    "salaryFormatted": "$199,359.16",
+    "org": "Port St. Lucie",
+    "job": "Director, USD/Special Assistant City Manager"
+  },
+  {
+    "id": 63,
+    "name": "Timothy Bargeron",
+    "salary": 197691.52,
+    "salaryFormatted": "$197,691.52",
+    "org": "St. Lucie County Fire District",
+    "job": "Clerk‑Treasurer"
+  },
+  {
+    "id": 66,
+    "name": "Stephen Okiye",
+    "salary": 195504.4,
+    "salaryFormatted": "$195,504.40",
+    "org": "Port St. Lucie",
+    "job": "Finance Director"
+  },
+  {
+    "id": 68,
+    "name": "Devoshay Johnson",
+    "salary": 194040.25,
+    "salaryFormatted": "$194,040.25",
+    "org": "Fort Pierce",
+    "job": "Deputy City Manager"
+  },
+  {
+    "id": 70,
+    "name": "Jesse Inigo",
+    "salary": 193946.5,
+    "salaryFormatted": "$193,946.50",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 71,
+    "name": "Mark Cristaldi",
+    "salary": 193760.53,
+    "salaryFormatted": "$193,760.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 72,
+    "name": "Paul Langel",
+    "salary": 193760.53,
+    "salaryFormatted": "$193,760.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 74,
+    "name": "Kacey Donnell",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 75,
+    "name": "Robert Fonteyn",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 76,
+    "name": "Michelle Steele",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 77,
+    "name": "Sheila Lagrega",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 78,
+    "name": "James Howie",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 79,
+    "name": "Brian Kenny",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 80,
+    "name": "Brinton Black",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 81,
+    "name": "Matthew Cuba",
+    "salary": 193516.18,
+    "salaryFormatted": "$193,516.18",
+    "org": "Port St. Lucie",
+    "job": "Captain"
+  },
+  {
+    "id": 83,
+    "name": "David Smith",
+    "salary": 190000,
+    "salaryFormatted": "$190,000.00",
+    "org": "Fort Pierce",
+    "job": "Chief of Police"
+  },
+  {
+    "id": 84,
+    "name": "Jean Stasio",
+    "salary": 190000,
+    "salaryFormatted": "$190,000.00",
+    "org": "St. Lucie County",
+    "job": "Deputy County Attorney"
+  },
+  {
+    "id": 85,
+    "name": "Michael Peter",
+    "salary": 189857.72,
+    "salaryFormatted": "$189,857.72",
+    "org": "Port St. Lucie",
+    "job": "Director/Official, Building"
+  },
+  {
+    "id": 87,
+    "name": "Daniel Segui",
+    "salary": 189176,
+    "salaryFormatted": "$189,176.00",
+    "org": "Port St. Lucie",
+    "job": "Senior Assistant Director"
+  },
+  {
+    "id": 88,
+    "name": "Roger Jacob",
+    "salary": 189078.24,
+    "salaryFormatted": "$189,078.24",
+    "org": "Port St. Lucie",
+    "job": "Construction Project Director"
+  },
+  {
+    "id": 89,
+    "name": "Thomas Carrino",
+    "salary": 189034,
+    "salaryFormatted": "$189,034.00",
+    "org": "St. Lucie County",
+    "job": "Deputy County Administrator I"
+  },
+  {
+    "id": 92,
+    "name": "Jennifer Hill",
+    "salary": 187398.02,
+    "salaryFormatted": "$187,398.02",
+    "org": "St. Lucie County",
+    "job": "Management & Budget Director"
+  },
+  {
+    "id": 93,
+    "name": "Paul Taglieri",
+    "salary": 187013.65,
+    "salaryFormatted": "$187,013.65",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Chief of Staff"
+  },
+  {
+    "id": 94,
+    "name": "David Dyess",
+    "salary": 187013.65,
+    "salaryFormatted": "$187,013.65",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 95,
+    "name": "Michael Beath",
+    "salary": 187013.65,
+    "salaryFormatted": "$187,013.65",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 96,
+    "name": "Michael Swanchak",
+    "salary": 187013.65,
+    "salaryFormatted": "$187,013.65",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 97,
+    "name": "Milo Thornton",
+    "salary": 187013.65,
+    "salaryFormatted": "$187,013.65",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 102,
+    "name": "Natalie Cabrera",
+    "salary": 185313.7,
+    "salaryFormatted": "$185,313.70",
+    "org": "Port St. Lucie",
+    "job": "Director – Human Resources"
+  },
+  {
+    "id": 106,
+    "name": "Helen Wild",
+    "salary": 184512,
+    "salaryFormatted": "$184,512.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Deputy Superintendent"
+  },
+  {
+    "id": 108,
+    "name": "Terence O’Leary",
+    "salary": 184379,
+    "salaryFormatted": "$184,379.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Chief Operations Officer"
+  },
+  {
+    "id": 110,
+    "name": "Donald Stefani",
+    "salary": 183659.42,
+    "salaryFormatted": "$183,659.42",
+    "org": "St. Lucie County Fire District",
+    "job": "Deputy Chief"
+  },
+  {
+    "id": 111,
+    "name": "Jennifer Davis",
+    "salary": 183575.08,
+    "salaryFormatted": "$183,575.08",
+    "org": "Port St. Lucie",
+    "job": "Director of Community and Economic Development"
+  },
+  {
+    "id": 114,
+    "name": "Karen Russell",
+    "salary": 181867.4,
+    "salaryFormatted": "$181,867.40",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – Finance"
+  },
+  {
+    "id": 119,
+    "name": "Laney Southerly",
+    "salary": 179434.84,
+    "salaryFormatted": "$179,434.84",
+    "org": "Port St. Lucie",
+    "job": "Regulatory Division Director"
+  },
+  {
+    "id": 121,
+    "name": "Johnna Morris",
+    "salary": 178631.32,
+    "salaryFormatted": "$178,631.32",
+    "org": "Fort Pierce",
+    "job": "Director, Finance"
+  },
+  {
+    "id": 131,
+    "name": "Patrick Dayan",
+    "salary": 176798.34,
+    "salaryFormatted": "$176,798.34",
+    "org": "St. Lucie County",
+    "job": "Public Works Director"
+  },
+  {
+    "id": 132,
+    "name": "Kevin Perry",
+    "salary": 176369,
+    "salaryFormatted": "$176,369.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant to Superintendent"
+  },
+  {
+    "id": 133,
+    "name": "Barbara Sadaka",
+    "salary": 176369,
+    "salaryFormatted": "$176,369.00",
+    "org": "St. Lucie Public Schools",
+    "job": "General Counsel"
+  },
+  {
+    "id": 134,
+    "name": "Carmen Capezzuto",
+    "salary": 176081.88,
+    "salaryFormatted": "$176,081.88",
+    "org": "Port St. Lucie",
+    "job": "Neighborhood Services Director"
+  },
+  {
+    "id": 135,
+    "name": "Matthew Baum",
+    "salary": 176019.58,
+    "salaryFormatted": "$176,019.58",
+    "org": "St. Lucie County",
+    "job": "Facilities Director"
+  },
+  {
+    "id": 137,
+    "name": "Sarah Prohaska",
+    "salary": 174880.68,
+    "salaryFormatted": "$174,880.68",
+    "org": "Port St. Lucie",
+    "job": "Communications Director"
+  },
+  {
+    "id": 138,
+    "name": "Dane Vachon",
+    "salary": 174540.91,
+    "salaryFormatted": "$174,540.91",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Days"
+  },
+  {
+    "id": 139,
+    "name": "Nicholas Wilson",
+    "salary": 174540.91,
+    "salaryFormatted": "$174,540.91",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Days"
+  },
+  {
+    "id": 140,
+    "name": "Michael Walker",
+    "salary": 174540.91,
+    "salaryFormatted": "$174,540.91",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Days"
+  },
+  {
+    "id": 141,
+    "name": "Wayne Boyer",
+    "salary": 174540.91,
+    "salaryFormatted": "$174,540.91",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Days"
+  },
+  {
+    "id": 149,
+    "name": "Stanley Fidge",
+    "salary": 171278.38,
+    "salaryFormatted": "$171,278.38",
+    "org": "Port St. Lucie",
+    "job": "Information Security Officer"
+  },
+  {
+    "id": 150,
+    "name": "Mary Savage-Dunham",
+    "salary": 171253.16,
+    "salaryFormatted": "$171,253.16",
+    "org": "Port St. Lucie",
+    "job": "Director, Planning & Zoning"
+  },
+  {
+    "id": 151,
+    "name": "Mariana Portinho Feldpausch",
+    "salary": 171253.16,
+    "salaryFormatted": "$171,253.16",
+    "org": "Port St. Lucie",
+    "job": "Director, Solid Waste"
+  },
+  {
+    "id": 153,
+    "name": "Bradley Keen",
+    "salary": 170766.44,
+    "salaryFormatted": "$170,766.44",
+    "org": "Port St. Lucie",
+    "job": "Director – Parks & Recreation"
+  },
+  {
+    "id": 154,
+    "name": "Ivy Ladyko",
+    "salary": 170597.18,
+    "salaryFormatted": "$170,597.18",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director, Budget Division"
+  },
+  {
+    "id": 156,
+    "name": "Christopher Lestrange",
+    "salary": 168739.33,
+    "salaryFormatted": "$168,739.33",
+    "org": "St. Lucie County",
+    "job": "Public Works Assistant Director"
+  },
+  {
+    "id": 159,
+    "name": "Ella Gilbert",
+    "salary": 167861.72,
+    "salaryFormatted": "$167,861.72",
+    "org": "Port St. Lucie",
+    "job": "Director – Risk Management"
+  },
+  {
+    "id": 163,
+    "name": "Joshua Revord",
+    "salary": 166955.78,
+    "salaryFormatted": "$166,955.78",
+    "org": "St. Lucie County",
+    "job": "Port, Inlet & Beaches Director"
+  },
+  {
+    "id": 164,
+    "name": "Sally Walsh",
+    "salary": 166485.28,
+    "salaryFormatted": "$166,485.28",
+    "org": "Port St. Lucie",
+    "job": "City Clerk"
+  },
+  {
+    "id": 165,
+    "name": "John Eason",
+    "salary": 166448.36,
+    "salaryFormatted": "$166,448.36",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – Utilities"
+  },
+  {
+    "id": 166,
+    "name": "Ciara Forbes",
+    "salary": 166400,
+    "salaryFormatted": "$166,400.00",
+    "org": "St. Lucie County",
+    "job": "Assistant County Attorney III"
+  },
+  {
+    "id": 172,
+    "name": "Camille Wallace",
+    "salary": 165000,
+    "salaryFormatted": "$165,000.00",
+    "org": "Fort Pierce",
+    "job": "Deputy City Manager"
+  },
+  {
+    "id": 178,
+    "name": "Elizabeth Hertz",
+    "salary": 163892.82,
+    "salaryFormatted": "$163,892.82",
+    "org": "Port St. Lucie",
+    "job": "Senior Deputy City Attorney"
+  },
+  {
+    "id": 190,
+    "name": "Diana Spriggs",
+    "salary": 163098.26,
+    "salaryFormatted": "$163,098.26",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – Public Works"
+  },
+  {
+    "id": 191,
+    "name": "Craig Sommer",
+    "salary": 163026,
+    "salaryFormatted": "$163,026.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Chief of Schools"
+  },
+  {
+    "id": 194,
+    "name": "Andrew Bolonka",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 195,
+    "name": "Cheryl Davis",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Analysis & Account. Dir"
+  },
+  {
+    "id": 196,
+    "name": "Charles Lumpkin",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 197,
+    "name": "Sandra Jackson",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Finance Director"
+  },
+  {
+    "id": 198,
+    "name": "Renee Major",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Personnel Services Director"
+  },
+  {
+    "id": 199,
+    "name": "William May",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Business Operations Director"
+  },
+  {
+    "id": 200,
+    "name": "Christopher Cousins",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "IT Director"
+  },
+  {
+    "id": 201,
+    "name": "Yulieth Ortiz",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 202,
+    "name": "Perry Sessoms Jr.",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 203,
+    "name": "Byron Harbin",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Acting Captain"
+  },
+  {
+    "id": 204,
+    "name": "Scott Wells",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 205,
+    "name": "Robert Barton",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 206,
+    "name": "James Defonzo",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 207,
+    "name": "Petri Hayes",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 208,
+    "name": "James Willingham Jr.",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 209,
+    "name": "Andrew McIntosh",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 210,
+    "name": "Troy Norman",
+    "salary": 162620.56,
+    "salaryFormatted": "$162,620.56",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Captain"
+  },
+  {
+    "id": 211,
+    "name": "Ryan Jay",
+    "salary": 162524.29,
+    "salaryFormatted": "$162,524.29",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Shift"
+  },
+  {
+    "id": 212,
+    "name": "Ryan Salomon",
+    "salary": 162524.29,
+    "salaryFormatted": "$162,524.29",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Shift"
+  },
+  {
+    "id": 213,
+    "name": "Daniel Mikels",
+    "salary": 162524.29,
+    "salaryFormatted": "$162,524.29",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Shift"
+  },
+  {
+    "id": 214,
+    "name": "Kyle Stirrat",
+    "salary": 162524.29,
+    "salaryFormatted": "$162,524.29",
+    "org": "St. Lucie County Fire District",
+    "job": "Division Chief Shift"
+  },
+  {
+    "id": 220,
+    "name": "Louis Johnson",
+    "salary": 161356.26,
+    "salaryFormatted": "$161,356.26",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – Public Works"
+  },
+  {
+    "id": 221,
+    "name": "Robert Ridle",
+    "salary": 161214.3,
+    "salaryFormatted": "$161,214.30",
+    "org": "Fort Pierce",
+    "job": "Deputy Chief of Police"
+  },
+  {
+    "id": 225,
+    "name": "Keith Boham",
+    "salary": 160076.8,
+    "salaryFormatted": "$160,076.80",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 229,
+    "name": "Caleb Gillette",
+    "salary": 159171.01,
+    "salaryFormatted": "$159,171.01",
+    "org": "Fort Pierce",
+    "job": "Deputy Chief of Police"
+  },
+  {
+    "id": 244,
+    "name": "Rebecca Ventrella",
+    "salary": 158865.41,
+    "salaryFormatted": "$158,865.41",
+    "org": "St. Lucie County",
+    "job": "Public Utilities Director"
+  },
+  {
+    "id": 245,
+    "name": "Benjamin Balcer",
+    "salary": 158735.62,
+    "salaryFormatted": "$158,735.62",
+    "org": "St. Lucie County",
+    "job": "Planning and Dev Svcs Dir"
+  },
+  {
+    "id": 247,
+    "name": "Margaret Carland",
+    "salary": 158227.16,
+    "salaryFormatted": "$158,227.16",
+    "org": "Port St. Lucie",
+    "job": "Senior Deputy City Attorney"
+  },
+  {
+    "id": 254,
+    "name": "Jacunti Ephfrom",
+    "salary": 157050,
+    "salaryFormatted": "$157,050.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Transportation"
+  },
+  {
+    "id": 255,
+    "name": "Michael Jerrahian",
+    "salary": 156936.39,
+    "salaryFormatted": "$156,936.39",
+    "org": "St. Lucie County",
+    "job": "Bldg Code Supv/Bldg Official"
+  },
+  {
+    "id": 257,
+    "name": "David Alfonso",
+    "salary": 156781,
+    "salaryFormatted": "$156,781.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 260,
+    "name": "Thomas Kiernan",
+    "salary": 155792,
+    "salaryFormatted": "$155,792.00",
+    "org": "Port St. Lucie",
+    "job": "City Surveyor"
+  },
+  {
+    "id": 263,
+    "name": "Nathaniel Rubel",
+    "salary": 155543.96,
+    "salaryFormatted": "$155,543.96",
+    "org": "Port St. Lucie",
+    "job": "Procurement Assistant Director"
+  },
+  {
+    "id": 265,
+    "name": "Clyde Cuffy",
+    "salary": 155331.8,
+    "salaryFormatted": "$155,331.80",
+    "org": "Port St. Lucie",
+    "job": "Regulatory Division Director"
+  },
+  {
+    "id": 266,
+    "name": "Lydia Martin",
+    "salary": 155307,
+    "salaryFormatted": "$155,307.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Chief Communications Officer"
+  },
+  {
+    "id": 268,
+    "name": "Abraham Alvarez",
+    "salary": 155002.12,
+    "salaryFormatted": "$155,002.12",
+    "org": "Port St. Lucie",
+    "job": "Division Director, Fiscal Management"
+  },
+  {
+    "id": 291,
+    "name": "Steve Harnage",
+    "salary": 154331.32,
+    "salaryFormatted": "$154,331.32",
+    "org": "Port St. Lucie",
+    "job": "Manager"
+  },
+  {
+    "id": 293,
+    "name": "Alyssa Lunin",
+    "salary": 154234.34,
+    "salaryFormatted": "$154,234.34",
+    "org": "Port St. Lucie",
+    "job": "Senior Deputy City Attorney"
+  },
+  {
+    "id": 294,
+    "name": "Gregory Atkinson",
+    "salary": 154171.26,
+    "salaryFormatted": "$154,171.26",
+    "org": "St. Lucie County",
+    "job": "Asst. Dir. of Public Utilities"
+  },
+  {
+    "id": 296,
+    "name": "Timothy Richards",
+    "salary": 153933.52,
+    "salaryFormatted": "$153,933.52",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director – Utilities"
+  },
+  {
+    "id": 297,
+    "name": "Joyania Hawthorne",
+    "salary": 153362.23,
+    "salaryFormatted": "$153,362.23",
+    "org": "St. Lucie County",
+    "job": "Parks & Recreation Director"
+  },
+  {
+    "id": 313,
+    "name": "Kimberly Butler",
+    "salary": 152121,
+    "salaryFormatted": "$152,121.00",
+    "org": "St. Lucie County",
+    "job": "Human Resources & Risk Mgmt Director"
+  },
+  {
+    "id": 318,
+    "name": "Michelle Thomas",
+    "salary": 151096,
+    "salaryFormatted": "$151,096.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Chief Financial Officer"
+  },
+  {
+    "id": 319,
+    "name": "John Dellacroce",
+    "salary": 150876.96,
+    "salaryFormatted": "$150,876.96",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 321,
+    "name": "Joseph Norkus",
+    "salary": 150384.52,
+    "salaryFormatted": "$150,384.52",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 327,
+    "name": "Erick Gill",
+    "salary": 149498.75,
+    "salaryFormatted": "$149,498.75",
+    "org": "St. Lucie County",
+    "job": "Communications Director"
+  },
+  {
+    "id": 328,
+    "name": "Salvador Garcia",
+    "salary": 149378.58,
+    "salaryFormatted": "$149,378.58",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 329,
+    "name": "Andres Elizondo",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Day"
+  },
+  {
+    "id": 330,
+    "name": "Richard Hall",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Day"
+  },
+  {
+    "id": 331,
+    "name": "Frank Haskell",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 332,
+    "name": "Aaron Shaw",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 333,
+    "name": "Kevin Whitaker",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 334,
+    "name": "Chad Crouse",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 335,
+    "name": "Alexia French",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 336,
+    "name": "Jesus Bayona",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 337,
+    "name": "Keith Bergeron",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 338,
+    "name": "Casey Hogan",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 339,
+    "name": "John Staropoli",
+    "salary": 149260.8,
+    "salaryFormatted": "$149,260.80",
+    "org": "St. Lucie County Fire District",
+    "job": "Batt Chief Shift"
+  },
+  {
+    "id": 340,
+    "name": "David Stonehouse",
+    "salary": 149115.2,
+    "salaryFormatted": "$149,115.20",
+    "org": "Port St. Lucie",
+    "job": "Director, Event Center"
+  },
+  {
+    "id": 341,
+    "name": "Adolfo Covelli",
+    "salary": 149000,
+    "salaryFormatted": "$149,000.00",
+    "org": "St. Lucie County",
+    "job": "Transit Director"
+  },
+  {
+    "id": 342,
+    "name": "Erik Wilson",
+    "salary": 148796.96,
+    "salaryFormatted": "$148,796.96",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 343,
+    "name": "Howard Kubitschek",
+    "salary": 148736.95,
+    "salaryFormatted": "$148,736.95",
+    "org": "Fort Pierce",
+    "job": "Director, Marina"
+  },
+  {
+    "id": 344,
+    "name": "Anne Cox",
+    "salary": 148391.88,
+    "salaryFormatted": "$148,391.88",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – P&Z"
+  },
+  {
+    "id": 347,
+    "name": "Todd Smith",
+    "salary": 147593,
+    "salaryFormatted": "$147,593.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 350,
+    "name": "Bryan Herrington",
+    "salary": 147298.58,
+    "salaryFormatted": "$147,298.58",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 352,
+    "name": "Russell Ward",
+    "salary": 147234.88,
+    "salaryFormatted": "$147,234.88",
+    "org": "Port St. Lucie",
+    "job": "Deputy City Attorney"
+  },
+  {
+    "id": 354,
+    "name": "Lepauleon Thomas",
+    "salary": 146994.12,
+    "salaryFormatted": "$146,994.12",
+    "org": "Fort Pierce",
+    "job": "Building Director/Official"
+  },
+  {
+    "id": 355,
+    "name": "Adrian Ocampo",
+    "salary": 146921,
+    "salaryFormatted": "$146,921.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of Assessment"
+  },
+  {
+    "id": 356,
+    "name": "Zakariya Sherman",
+    "salary": 146858.4,
+    "salaryFormatted": "$146,858.40",
+    "org": "Port St. Lucie",
+    "job": "Interim Director, Facilities Maintenance"
+  },
+  {
+    "id": 357,
+    "name": "Kevin Freeman",
+    "salary": 146764.8,
+    "salaryFormatted": "$146,764.80",
+    "org": "Fort Pierce",
+    "job": "Director of Planning"
+  },
+  {
+    "id": 358,
+    "name": "Adrian Caudell",
+    "salary": 146716.96,
+    "salaryFormatted": "$146,716.96",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 359,
+    "name": "Timothy Bordt",
+    "salary": 146716.96,
+    "salaryFormatted": "$146,716.96",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 363,
+    "name": "Kimberly Albritton",
+    "salary": 146376,
+    "salaryFormatted": "$146,376.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Financial Operations"
+  },
+  {
+    "id": 364,
+    "name": "Michelle Jerger",
+    "salary": 146376,
+    "salaryFormatted": "$146,376.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Student Assignment"
+  },
+  {
+    "id": 365,
+    "name": "Peter May",
+    "salary": 146055,
+    "salaryFormatted": "$146,055.00",
+    "org": "Port St. Lucie",
+    "job": "Executive Project Manager – Stormwater"
+  },
+  {
+    "id": 367,
+    "name": "Frank Amandro",
+    "salary": 145848.96,
+    "salaryFormatted": "$145,848.96",
+    "org": "St. Lucie County",
+    "job": "Criminal Justice Director"
+  },
+  {
+    "id": 368,
+    "name": "Kori Benton",
+    "salary": 145821.31,
+    "salaryFormatted": "$145,821.31",
+    "org": "St. Lucie County",
+    "job": "Planning & Zoning Manager"
+  },
+  {
+    "id": 370,
+    "name": "Diane Leinenbach",
+    "salary": 145779,
+    "salaryFormatted": "$145,779.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of School Renewal"
+  },
+  {
+    "id": 371,
+    "name": "Charlotte Bireley",
+    "salary": 145753.17,
+    "salaryFormatted": "$145,753.17",
+    "org": "St. Lucie County",
+    "job": "Tourism & Venues Director"
+  },
+  {
+    "id": 374,
+    "name": "Sandra Steele",
+    "salary": 145474.16,
+    "salaryFormatted": "$145,474.16",
+    "org": "Port St. Lucie",
+    "job": "Pension Plan Manager"
+  },
+  {
+    "id": 375,
+    "name": "Rangel Guerrero",
+    "salary": 145215.62,
+    "salaryFormatted": "$145,215.62",
+    "org": "St. Lucie County",
+    "job": "Public Safety Director"
+  },
+  {
+    "id": 379,
+    "name": "Shaun Coss",
+    "salary": 145000,
+    "salaryFormatted": "$145,000.00",
+    "org": "Fort Pierce",
+    "job": "Director of Community Response"
+  },
+  {
+    "id": 380,
+    "name": "Linda Cox",
+    "salary": 145000,
+    "salaryFormatted": "$145,000.00",
+    "org": "Fort Pierce",
+    "job": "City Clerk"
+  },
+  {
+    "id": 381,
+    "name": "Joann Riley",
+    "salary": 145000,
+    "salaryFormatted": "$145,000.00",
+    "org": "St. Lucie County",
+    "job": "Property Acquisition Director"
+  },
+  {
+    "id": 384,
+    "name": "Deborah Wuest",
+    "salary": 144854,
+    "salaryFormatted": "$144,854.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Food Service"
+  },
+  {
+    "id": 385,
+    "name": "Michael Santiago",
+    "salary": 144700.92,
+    "salaryFormatted": "$144,700.92",
+    "org": "Fort Pierce",
+    "job": "Police Major"
+  },
+  {
+    "id": 386,
+    "name": "Eric Chan",
+    "salary": 144700.92,
+    "salaryFormatted": "$144,700.92",
+    "org": "Fort Pierce",
+    "job": "Police Major"
+  },
+  {
+    "id": 388,
+    "name": "Denise Rodriguez",
+    "salary": 144638,
+    "salaryFormatted": "$144,638.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of Teaching and Learning"
+  },
+  {
+    "id": 389,
+    "name": "Daniel Zrallack",
+    "salary": 144588.29,
+    "salaryFormatted": "$144,588.29",
+    "org": "St. Lucie County",
+    "job": "County Engineer"
+  },
+  {
+    "id": 392,
+    "name": "Jason Vega",
+    "salary": 143720.2,
+    "salaryFormatted": "$143,720.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 393,
+    "name": "Aaron Martin",
+    "salary": 143720.2,
+    "salaryFormatted": "$143,720.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 394,
+    "name": "Joshua Saffomilla",
+    "salary": 143720.2,
+    "salaryFormatted": "$143,720.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 395,
+    "name": "Matthew Reynolds",
+    "salary": 143720.2,
+    "salaryFormatted": "$143,720.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 397,
+    "name": "Glenn Rustay",
+    "salary": 143334,
+    "salaryFormatted": "$143,334.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 398,
+    "name": "Terry Henkel",
+    "salary": 143138.58,
+    "salaryFormatted": "$143,138.58",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 399,
+    "name": "David Butterworth",
+    "salary": 143138.58,
+    "salaryFormatted": "$143,138.58",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 401,
+    "name": "Tracy Telle",
+    "salary": 142981.02,
+    "salaryFormatted": "$142,981.02",
+    "org": "Fort Pierce",
+    "job": "Engineering Manager"
+  },
+  {
+    "id": 406,
+    "name": "Charles Proulx",
+    "salary": 142602.98,
+    "salaryFormatted": "$142,602.98",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director – Finance"
+  },
+  {
+    "id": 409,
+    "name": "Roderick Natta",
+    "salary": 142358,
+    "salaryFormatted": "$142,358.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of Federal Programs"
+  },
+  {
+    "id": 411,
+    "name": "Ginger Russell",
+    "salary": 141813,
+    "salaryFormatted": "$141,813.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Risk Management"
+  },
+  {
+    "id": 412,
+    "name": "Matthew Weber",
+    "salary": 141813,
+    "salaryFormatted": "$141,813.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Maintenance and Building Services"
+  },
+  {
+    "id": 413,
+    "name": "John Dunton",
+    "salary": 141745.76,
+    "salaryFormatted": "$141,745.76",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director – Public Works"
+  },
+  {
+    "id": 414,
+    "name": "Christopher D'Angelo",
+    "salary": 141640.2,
+    "salaryFormatted": "$141,640.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 415,
+    "name": "Brian Boice",
+    "salary": 141640.2,
+    "salaryFormatted": "$141,640.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 420,
+    "name": "Maegan Richardson",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 421,
+    "name": "Rhonda Wigglesworth",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Assistant Finance Director"
+  },
+  {
+    "id": 422,
+    "name": "Lisa Smith",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Assistant Business Operations Director"
+  },
+  {
+    "id": 423,
+    "name": "Michelle Hernandez",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 424,
+    "name": "Donald Christman",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 425,
+    "name": "Mark Colangelo",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 426,
+    "name": "Angela Flowers",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 427,
+    "name": "John Parow",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 428,
+    "name": "Ryan Register",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 429,
+    "name": "Ronald Wentz",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 430,
+    "name": "James Adams",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 431,
+    "name": "Matthew Briglia",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 432,
+    "name": "Wade Courtemanche",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 433,
+    "name": "Brian Buchko",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 434,
+    "name": "WT Hamilton",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 435,
+    "name": "Clifford Lamm",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 436,
+    "name": "James Mullins",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 437,
+    "name": "Tracey Fitzpatrick",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 438,
+    "name": "Michael O’Brien",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 439,
+    "name": "Jonathan Verna",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 440,
+    "name": "Robert Pettit",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 441,
+    "name": "Deron Brown",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 442,
+    "name": "Andrew Soesbe",
+    "salary": 141409.19,
+    "salaryFormatted": "$141,409.19",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 443,
+    "name": "Darrell Canamas",
+    "salary": 141215,
+    "salaryFormatted": "$141,215.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of Schools"
+  },
+  {
+    "id": 444,
+    "name": "Heather Roland",
+    "salary": 141215,
+    "salaryFormatted": "$141,215.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of Student Services/ESE"
+  },
+  {
+    "id": 445,
+    "name": "Kimberly Sala",
+    "salary": 141023.22,
+    "salaryFormatted": "$141,023.22",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – HR"
+  },
+  {
+    "id": 446,
+    "name": "Jeffrey Meyer",
+    "salary": 140750.74,
+    "salaryFormatted": "$140,750.74",
+    "org": "Port St. Lucie",
+    "job": "IT Infrastructure Division Chief"
+  },
+  {
+    "id": 447,
+    "name": "Felicia Nixon",
+    "salary": 140594,
+    "salaryFormatted": "$140,594.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 449,
+    "name": "Nicole Telese",
+    "salary": 140341,
+    "salaryFormatted": "$140,341.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 456,
+    "name": "Erin Harrigan",
+    "salary": 139856,
+    "salaryFormatted": "$139,856.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant General Counsel"
+  },
+  {
+    "id": 461,
+    "name": "Jamie Mastin",
+    "salary": 139560.2,
+    "salaryFormatted": "$139,560.20",
+    "org": "Port St. Lucie",
+    "job": "Lieutenant"
+  },
+  {
+    "id": 463,
+    "name": "Michael Kohler",
+    "salary": 139272.12,
+    "salaryFormatted": "$139,272.12",
+    "org": "Port St. Lucie",
+    "job": "Principal GIS Architect"
+  },
+  {
+    "id": 464,
+    "name": "Eldrique Gardner",
+    "salary": 139201,
+    "salaryFormatted": "$139,201.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 465,
+    "name": "Antonio Balestrieri",
+    "salary": 139100,
+    "salaryFormatted": "$139,100.00",
+    "org": "Port St. Lucie",
+    "job": "Transportation Engineer"
+  },
+  {
+    "id": 466,
+    "name": "Monarae Miller‑Buchanan",
+    "salary": 138932,
+    "salaryFormatted": "$138,932.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Executive Director of Schools"
+  },
+  {
+    "id": 467,
+    "name": "Matthew Pietrzak",
+    "salary": 138855.34,
+    "salaryFormatted": "$138,855.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 471,
+    "name": "Amy Griffin",
+    "salary": 138379.9,
+    "salaryFormatted": "$138,379.90",
+    "org": "St. Lucie County",
+    "job": "Environmental Resources Director"
+  },
+  {
+    "id": 472,
+    "name": "Kelly Boatwright",
+    "salary": 138321.3,
+    "salaryFormatted": "$138,321.30",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – Parks & Rec"
+  },
+  {
+    "id": 474,
+    "name": "Patrick Walsh",
+    "salary": 137947.26,
+    "salaryFormatted": "$137,947.26",
+    "org": "St. Lucie County",
+    "job": "Utilities Division Director"
+  },
+  {
+    "id": 478,
+    "name": "Cameron Howard",
+    "salary": 137449.73,
+    "salaryFormatted": "$137,449.73",
+    "org": "St. Lucie County",
+    "job": "Airport Director"
+  },
+  {
+    "id": 534,
+    "name": "Michelle Herrington",
+    "salary": 136917,
+    "salaryFormatted": "$136,917.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 535,
+    "name": "Keith Davis",
+    "salary": 136844,
+    "salaryFormatted": "$136,844.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 536,
+    "name": "Latanya Greene",
+    "salary": 136844,
+    "salaryFormatted": "$136,844.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 537,
+    "name": "Kevin Kaminski",
+    "salary": 136775.34,
+    "salaryFormatted": "$136,775.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 538,
+    "name": "Andrew Lawler",
+    "salary": 136775.34,
+    "salaryFormatted": "$136,775.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 539,
+    "name": "Maiga Auguste",
+    "salary": 136775.34,
+    "salaryFormatted": "$136,775.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 540,
+    "name": "Abel Alves",
+    "salary": 136775.34,
+    "salaryFormatted": "$136,775.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 541,
+    "name": "Joseph Alves",
+    "salary": 136775.34,
+    "salaryFormatted": "$136,775.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 543,
+    "name": "Robert Kendrick",
+    "salary": 136431.88,
+    "salaryFormatted": "$136,431.88",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director – Parks"
+  },
+  {
+    "id": 545,
+    "name": "Robert Orton",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Day"
+  },
+  {
+    "id": 546,
+    "name": "Steven Kozac",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Day"
+  },
+  {
+    "id": 547,
+    "name": "Daniel Fontanals",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Day"
+  },
+  {
+    "id": 548,
+    "name": "Wade Tindall",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Day"
+  },
+  {
+    "id": 549,
+    "name": "Jesse Almand",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Day"
+  },
+  {
+    "id": 550,
+    "name": "Ryan Prussing",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Day"
+  },
+  {
+    "id": 551,
+    "name": "Robert Kelly",
+    "salary": 136009.12,
+    "salaryFormatted": "$136,009.12",
+    "org": "St. Lucie County Fire District",
+    "job": "Master Mechanic"
+  },
+  {
+    "id": 552,
+    "name": "Ryan Miller",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 553,
+    "name": "Anthony Fitzpatrick",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 554,
+    "name": "John King Jr.",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 555,
+    "name": "Eric Barnes",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 556,
+    "name": "Joseph Spinosi",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 557,
+    "name": "Salomon Rincon",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 558,
+    "name": "David Eskew",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 559,
+    "name": "Kenneth Lenz",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 560,
+    "name": "Colin Dewar",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 561,
+    "name": "Collin Stanford",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 562,
+    "name": "Sandra Chambers",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 563,
+    "name": "John Craton",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 564,
+    "name": "Grover Cooper IV",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 565,
+    "name": "Christopher Lewis",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 566,
+    "name": "Jason Kershanick",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 567,
+    "name": "Satchelle Peterkin",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 568,
+    "name": "Ryan Bator",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 569,
+    "name": "Trevor Giordano",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 570,
+    "name": "Roman Garcia",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 571,
+    "name": "David Sloat",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 572,
+    "name": "John Calhoun",
+    "salary": 136009.04,
+    "salaryFormatted": "$136,009.04",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Medic Shift"
+  },
+  {
+    "id": 575,
+    "name": "Gerald Earley",
+    "salary": 135777,
+    "salaryFormatted": "$135,777.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 576,
+    "name": "Bradley Lehman",
+    "salary": 135777,
+    "salaryFormatted": "$135,777.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 578,
+    "name": "Andrew Friedman",
+    "salary": 135300.36,
+    "salaryFormatted": "$135,300.36",
+    "org": "Port St. Lucie",
+    "job": "Division Director, Strategic & Analysis"
+  },
+  {
+    "id": 580,
+    "name": "Vincent Montalto",
+    "salary": 135088.2,
+    "salaryFormatted": "$135,088.20",
+    "org": "Port St. Lucie",
+    "job": "Deputy Building Official"
+  },
+  {
+    "id": 584,
+    "name": "Colin Duncombe",
+    "salary": 134695.34,
+    "salaryFormatted": "$134,695.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 585,
+    "name": "Adrian Zamoyski",
+    "salary": 134695.34,
+    "salaryFormatted": "$134,695.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 586,
+    "name": "Alexandra Derrico",
+    "salary": 134695.34,
+    "salaryFormatted": "$134,695.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 588,
+    "name": "Arthur Jamison Jr.",
+    "salary": 134561,
+    "salaryFormatted": "$134,561.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 589,
+    "name": "Henry Sanabria",
+    "salary": 134561,
+    "salaryFormatted": "$134,561.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 590,
+    "name": "Kerri Walukiewicz",
+    "salary": 134561,
+    "salaryFormatted": "$134,561.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 595,
+    "name": "Jay Liss",
+    "salary": 134201.08,
+    "salaryFormatted": "$134,201.08",
+    "org": "Port St. Lucie",
+    "job": "Recreation Administrator"
+  },
+  {
+    "id": 599,
+    "name": "Roger Jacobsen",
+    "salary": 133577.6,
+    "salaryFormatted": "$133,577.60",
+    "org": "St. Lucie County",
+    "job": "Mosquito Control Director"
+  },
+  {
+    "id": 600,
+    "name": "Robyn Saint‑Paen",
+    "salary": 133577.6,
+    "salaryFormatted": "$133,577.60",
+    "org": "St. Lucie County",
+    "job": "Library Services Director"
+  },
+  {
+    "id": 601,
+    "name": "Norah Krushinski",
+    "salary": 133536.52,
+    "salaryFormatted": "$133,536.52",
+    "org": "Port St. Lucie",
+    "job": "Special Events Division Director"
+  },
+  {
+    "id": 603,
+    "name": "Elizabeth Pruitt",
+    "salary": 133418,
+    "salaryFormatted": "$133,418.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Secondary Curriculum"
+  },
+  {
+    "id": 604,
+    "name": "Jeanne Ziemba",
+    "salary": 133418,
+    "salaryFormatted": "$133,418.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 605,
+    "name": "Dawna Guiel",
+    "salary": 133418,
+    "salaryFormatted": "$133,418.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Pupil Personnel Services"
+  },
+  {
+    "id": 607,
+    "name": "Ian Harris",
+    "salary": 133262.48,
+    "salaryFormatted": "$133,262.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 608,
+    "name": "Robert Perkins",
+    "salary": 133262.48,
+    "salaryFormatted": "$133,262.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 609,
+    "name": "Supreet Cheema",
+    "salary": 133262.48,
+    "salaryFormatted": "$133,262.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 615,
+    "name": "Bridget Kean",
+    "salary": 132953.86,
+    "salaryFormatted": "$132,953.86",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director P&Z"
+  },
+  {
+    "id": 616,
+    "name": "David Saylor",
+    "salary": 132693.35,
+    "salaryFormatted": "$132,693.35",
+    "org": "St. Lucie County Fire District",
+    "job": "Captain Shift"
+  },
+  {
+    "id": 617,
+    "name": "Bret Sundblad",
+    "salary": 132692.14,
+    "salaryFormatted": "$132,692.14",
+    "org": "St. Lucie County Fire District",
+    "job": "Chief Information Officer"
+  },
+  {
+    "id": 618,
+    "name": "Erik Levasseur",
+    "salary": 132615.34,
+    "salaryFormatted": "$132,615.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 619,
+    "name": "Dominick Mesiti",
+    "salary": 132615.34,
+    "salaryFormatted": "$132,615.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 620,
+    "name": "Lisa Carrasquillo",
+    "salary": 132615.34,
+    "salaryFormatted": "$132,615.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 621,
+    "name": "Reece Kilner",
+    "salary": 132615.34,
+    "salaryFormatted": "$132,615.34",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 624,
+    "name": "Robert Massa",
+    "salary": 132471,
+    "salaryFormatted": "$132,471.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Building Code Administrator"
+  },
+  {
+    "id": 627,
+    "name": "Jared Sorensen",
+    "salary": 132299.98,
+    "salaryFormatted": "$132,299.98",
+    "org": "Fort Pierce",
+    "job": "HR Manager"
+  },
+  {
+    "id": 628,
+    "name": "Joseph Lezeau",
+    "salary": 132278,
+    "salaryFormatted": "$132,278.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 629,
+    "name": "Esther Rivera",
+    "salary": 132278,
+    "salaryFormatted": "$132,278.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Student Services"
+  },
+  {
+    "id": 630,
+    "name": "Ana Rodriguez‑Oronoz",
+    "salary": 132278,
+    "salaryFormatted": "$132,278.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 631,
+    "name": "James Dunn",
+    "salary": 132206,
+    "salaryFormatted": "$132,206.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Information Technology Services Data Processing Manager"
+  },
+  {
+    "id": 632,
+    "name": "Donald Carter",
+    "salary": 132206,
+    "salaryFormatted": "$132,206.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Transportation Manager"
+  },
+  {
+    "id": 633,
+    "name": "D’Jion Jackson",
+    "salary": 132201,
+    "salaryFormatted": "$132,201.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 639,
+    "name": "William Thompson",
+    "salary": 131827.02,
+    "salaryFormatted": "$131,827.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 641,
+    "name": "Jennifer Hance",
+    "salary": 131414.4,
+    "salaryFormatted": "$131,414.40",
+    "org": "St. Lucie County",
+    "job": "Community Services Director"
+  },
+  {
+    "id": 646,
+    "name": "John Fazio",
+    "salary": 131182.48,
+    "salaryFormatted": "$131,182.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 647,
+    "name": "Carlos Waldron",
+    "salary": 131182.48,
+    "salaryFormatted": "$131,182.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 648,
+    "name": "Daniel Baggett",
+    "salary": 131172.09,
+    "salaryFormatted": "$131,172.09",
+    "org": "St. Lucie County",
+    "job": "Assistant IT Director"
+  },
+  {
+    "id": 649,
+    "name": "Tracy Valure",
+    "salary": 131160.9,
+    "salaryFormatted": "$131,160.90",
+    "org": "Port St. Lucie",
+    "job": "Assistant Director, Building"
+  },
+  {
+    "id": 650,
+    "name": "Marcy Luckey",
+    "salary": 131138,
+    "salaryFormatted": "$131,138.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 651,
+    "name": "Jennifer Ingersoll",
+    "salary": 131138,
+    "salaryFormatted": "$131,138.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 652,
+    "name": "Brie Lamb",
+    "salary": 131138,
+    "salaryFormatted": "$131,138.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 653,
+    "name": "Vashitie Seitz",
+    "salary": 131138,
+    "salaryFormatted": "$131,138.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Career and Technical Education"
+  },
+  {
+    "id": 657,
+    "name": "Courtney Calderone",
+    "salary": 130873.6,
+    "salaryFormatted": "$130,873.60",
+    "org": "St. Lucie County",
+    "job": "Government Relations Director"
+  },
+  {
+    "id": 658,
+    "name": "Derek Moore",
+    "salary": 130784.91,
+    "salaryFormatted": "$130,784.91",
+    "org": "St. Lucie County",
+    "job": "Road & Bridge Division Manager"
+  },
+  {
+    "id": 665,
+    "name": "Felicia Holloman",
+    "salary": 130095.16,
+    "salaryFormatted": "$130,095.16",
+    "org": "Fort Pierce",
+    "job": "Assistant City Attorney"
+  },
+  {
+    "id": 668,
+    "name": "Jessica Bessant",
+    "salary": 129995,
+    "salaryFormatted": "$129,995.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Financial Reporting"
+  },
+  {
+    "id": 669,
+    "name": "Alexandra Laoutas",
+    "salary": 129995,
+    "salaryFormatted": "$129,995.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 681,
+    "name": "Cristina Rosko",
+    "salary": 129747.02,
+    "salaryFormatted": "$129,747.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 682,
+    "name": "Jeremy Lewis",
+    "salary": 129747.02,
+    "salaryFormatted": "$129,747.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 683,
+    "name": "Jean Valentin Bello",
+    "salary": 129747.02,
+    "salaryFormatted": "$129,747.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 693,
+    "name": "Michael Jolly",
+    "salary": 129242.62,
+    "salaryFormatted": "$129,242.62",
+    "org": "Port St. Lucie",
+    "job": "Manager, Wastewater Operations"
+  },
+  {
+    "id": 694,
+    "name": "Tricia Gittens-Wards",
+    "salary": 129102.48,
+    "salaryFormatted": "$129,102.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 695,
+    "name": "Christopher Capozzi",
+    "salary": 129102.48,
+    "salaryFormatted": "$129,102.48",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 696,
+    "name": "Jane Whitaker",
+    "salary": 128856,
+    "salaryFormatted": "$128,856.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 697,
+    "name": "James Graham",
+    "salary": 128808.68,
+    "salaryFormatted": "$128,808.68",
+    "org": "Port St. Lucie",
+    "job": "Civil Engineer (P.E.)"
+  },
+  {
+    "id": 698,
+    "name": "Valarie Jones",
+    "salary": 128779,
+    "salaryFormatted": "$128,779.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 708,
+    "name": "William Weinshank",
+    "salary": 127920.26,
+    "salaryFormatted": "$127,920.26",
+    "org": "Port St. Lucie",
+    "job": "Emergency Operations Division Director"
+  },
+  {
+    "id": 709,
+    "name": "Bryant Harrison",
+    "salary": 127810.28,
+    "salaryFormatted": "$127,810.28",
+    "org": "Port St. Lucie",
+    "job": "Building Inspector, Plans Examiner IV"
+  },
+  {
+    "id": 710,
+    "name": "Loren Hall",
+    "salary": 127810.28,
+    "salaryFormatted": "$127,810.28",
+    "org": "Port St. Lucie",
+    "job": "Building Inspector, Plans Examiner IV"
+  },
+  {
+    "id": 711,
+    "name": "Stephen Lane",
+    "salary": 127810.28,
+    "salaryFormatted": "$127,810.28",
+    "org": "Port St. Lucie",
+    "job": "Building Plans Examiner IV"
+  },
+  {
+    "id": 714,
+    "name": "Heather Bolitho",
+    "salary": 127728,
+    "salaryFormatted": "$127,728.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Elementary Curriculum"
+  },
+  {
+    "id": 715,
+    "name": "Keonisha Bobo",
+    "salary": 127728,
+    "salaryFormatted": "$127,728.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 716,
+    "name": "Jaclyn Lee",
+    "salary": 127728,
+    "salaryFormatted": "$127,728.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 717,
+    "name": "Jesse McInerney",
+    "salary": 127667.02,
+    "salaryFormatted": "$127,667.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 718,
+    "name": "Nelson Ojeda",
+    "salary": 127667.02,
+    "salaryFormatted": "$127,667.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 719,
+    "name": "Brennan Vega",
+    "salary": 127667.02,
+    "salaryFormatted": "$127,667.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 720,
+    "name": "Willis Tumblin",
+    "salary": 127667.02,
+    "salaryFormatted": "$127,667.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 721,
+    "name": "Matthew Reaver",
+    "salary": 127665.46,
+    "salaryFormatted": "$127,665.46",
+    "org": "Port St. Lucie",
+    "job": "Professional Engineer"
+  },
+  {
+    "id": 722,
+    "name": "Kimberly Jay",
+    "salary": 127639,
+    "salaryFormatted": "$127,639.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Administrative Specialist – Assignment"
+  },
+  {
+    "id": 725,
+    "name": "Joseph Presti",
+    "salary": 127391.16,
+    "salaryFormatted": "$127,391.16",
+    "org": "Port St. Lucie",
+    "job": "Manager"
+  },
+  {
+    "id": 726,
+    "name": "Shyanne Harnage",
+    "salary": 127279.49,
+    "salaryFormatted": "$127,279.49",
+    "org": "Fort Pierce",
+    "job": "Community and Economic Development Director"
+  },
+  {
+    "id": 727,
+    "name": "Charles McCaskill",
+    "salary": 127227.36,
+    "salaryFormatted": "$127,227.36",
+    "org": "Port St. Lucie",
+    "job": "Data Center Manager"
+  },
+  {
+    "id": 732,
+    "name": "Desiree Cimino",
+    "salary": 126788.61,
+    "salaryFormatted": "$126,788.61",
+    "org": "St. Lucie County",
+    "job": "Purchasing Manager"
+  },
+  {
+    "id": 733,
+    "name": "Ayesha Boria",
+    "salary": 126569,
+    "salaryFormatted": "$126,569.00",
+    "org": "St. Lucie Public Schools",
+    "job": "High School Principal"
+  },
+  {
+    "id": 735,
+    "name": "Reuben Dye",
+    "salary": 126355.76,
+    "salaryFormatted": "$126,355.76",
+    "org": "St. Lucie County",
+    "job": "GIS Manager"
+  },
+  {
+    "id": 737,
+    "name": "Roberto Santa",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 738,
+    "name": "Mark Elliott",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 739,
+    "name": "Jason Williams",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 740,
+    "name": "Christopher Harris",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 741,
+    "name": "Matthew Resch",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 742,
+    "name": "Jacob Morris",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 743,
+    "name": "Joseph Waters",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 744,
+    "name": "Matthew Coney",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 745,
+    "name": "Ryan Sapp",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 746,
+    "name": "Michael Ascani",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 747,
+    "name": "Matthew Amato",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 748,
+    "name": "Richard Smith III",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 749,
+    "name": "Darrell Chibas",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 750,
+    "name": "Brian Riebe",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 751,
+    "name": "Michael Farrell",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 752,
+    "name": "Brian Sexton",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 753,
+    "name": "Adam Zuccaro",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 754,
+    "name": "Robert Smith Jr.",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 755,
+    "name": "Nicholas Curry",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 756,
+    "name": "Johnny Thornton",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 757,
+    "name": "James Forbis",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 758,
+    "name": "Erin Storey",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 759,
+    "name": "John Wozar",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 760,
+    "name": "Remi Dieujuste",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 761,
+    "name": "Jonathan Fraga",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 762,
+    "name": "Michael Dawson",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 763,
+    "name": "Dorian Jackson",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 764,
+    "name": "Joseph Eassa",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 765,
+    "name": "Fred Griffin",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 766,
+    "name": "Jeremy Rouse",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 767,
+    "name": "Alberto Young",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 768,
+    "name": "Colton Difrancesco",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 769,
+    "name": "Anthony Hood",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 770,
+    "name": "Craig Stolzer",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 771,
+    "name": "Alberto Herrera",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 772,
+    "name": "Irael Gamez",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 773,
+    "name": "Brandon Tedder",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 774,
+    "name": "Michael Battaglia",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 775,
+    "name": "Daniel Ruiz",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 776,
+    "name": "Colton Rudd",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 777,
+    "name": "Dante Hill",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 778,
+    "name": "Andrew Myers",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 779,
+    "name": "Steven Dipalma",
+    "salary": 126165.56,
+    "salaryFormatted": "$126,165.56",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 780,
+    "name": "Bradley Cohen",
+    "salary": 126165.52,
+    "salaryFormatted": "$126,165.52",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Day"
+  },
+  {
+    "id": 781,
+    "name": "Jesus Monaco",
+    "salary": 126165.52,
+    "salaryFormatted": "$126,165.52",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Day"
+  },
+  {
+    "id": 782,
+    "name": "Albert Votinelli",
+    "salary": 126165.52,
+    "salaryFormatted": "$126,165.52",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Day"
+  },
+  {
+    "id": 783,
+    "name": "Oscar Leiva",
+    "salary": 126165.52,
+    "salaryFormatted": "$126,165.52",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Day"
+  },
+  {
+    "id": 784,
+    "name": "Christopher Bickford",
+    "salary": 126165.52,
+    "salaryFormatted": "$126,165.52",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Day"
+  },
+  {
+    "id": 786,
+    "name": "William Miller",
+    "salary": 125963.14,
+    "salaryFormatted": "$125,963.14",
+    "org": "St. Lucie County",
+    "job": "It Manager"
+  },
+  {
+    "id": 792,
+    "name": "Ariel Dailey",
+    "salary": 125587.02,
+    "salaryFormatted": "$125,587.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 793,
+    "name": "Sandra Insuasty",
+    "salary": 125587.02,
+    "salaryFormatted": "$125,587.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 794,
+    "name": "Dominik Savitcheff",
+    "salary": 125587.02,
+    "salaryFormatted": "$125,587.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 795,
+    "name": "Antronyanna Holiday",
+    "salary": 125587.02,
+    "salaryFormatted": "$125,587.02",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 798,
+    "name": "Kathleen Melrose",
+    "salary": 125357,
+    "salaryFormatted": "$125,357.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 799,
+    "name": "Ebony Jarrett",
+    "salary": 125357,
+    "salaryFormatted": "$125,357.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 802,
+    "name": "James Gagliano",
+    "salary": 125000.2,
+    "salaryFormatted": "$125,000.20",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 805,
+    "name": "Sonji Hawkins",
+    "salary": 124816.64,
+    "salaryFormatted": "$124,816.64",
+    "org": "St. Lucie County",
+    "job": "Public Safety Assistant Director"
+  },
+  {
+    "id": 806,
+    "name": "Michael Oliver",
+    "salary": 124804.16,
+    "salaryFormatted": "$124,804.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 835,
+    "name": "Christopher Suneson",
+    "salary": 124425.08,
+    "salaryFormatted": "$124,425.08",
+    "org": "Fort Pierce",
+    "job": "Assistant Director of Planning"
+  },
+  {
+    "id": 839,
+    "name": "Scotty Beaulieu",
+    "salary": 124282.98,
+    "salaryFormatted": "$124,282.98",
+    "org": "St. Lucie County",
+    "job": "Project & Construction Manager"
+  },
+  {
+    "id": 841,
+    "name": "Heather Ricksecker",
+    "salary": 124217,
+    "salaryFormatted": "$124,217.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 845,
+    "name": "John Lamb",
+    "salary": 123920.68,
+    "salaryFormatted": "$123,920.68",
+    "org": "Port St. Lucie",
+    "job": "Wastewater Treatment Operator, Manager"
+  },
+  {
+    "id": 846,
+    "name": "Theresa Iuliucci",
+    "salary": 123816,
+    "salaryFormatted": "$123,816.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Administrative Specialist – Assignment"
+  },
+  {
+    "id": 848,
+    "name": "Brian Macnaught",
+    "salary": 123500,
+    "salaryFormatted": "$123,500.00",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 854,
+    "name": "John Frank",
+    "salary": 123237.5,
+    "salaryFormatted": "$123,237.50",
+    "org": "St. Lucie County",
+    "job": "Assistant Road & Bridge Manager"
+  },
+  {
+    "id": 857,
+    "name": "Chavonn Silas",
+    "salary": 123075,
+    "salaryFormatted": "$123,075.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 858,
+    "name": "Bryan Lloyd",
+    "salary": 123000.28,
+    "salaryFormatted": "$123,000.28",
+    "org": "Port St. Lucie",
+    "job": "Division Director, Animal Control"
+  },
+  {
+    "id": 859,
+    "name": "William Morash",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 860,
+    "name": "Benjamin Cuevas III",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 861,
+    "name": "Anta’Juan Pinkney",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 862,
+    "name": "Charla Harper",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 863,
+    "name": "Shawn Masters",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 864,
+    "name": "Jeffrey Serafini",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 865,
+    "name": "Benjamin Deblieck",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 866,
+    "name": "Matthew Dietrich",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 867,
+    "name": "James Jennings",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 868,
+    "name": "David Blatchford",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 869,
+    "name": "Carlos Betances",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 870,
+    "name": "Tonya Brown",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 871,
+    "name": "Ezell Cooper Jr.",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 872,
+    "name": "Christopher Hazellief",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 873,
+    "name": "Constant Joseph Jr.",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 874,
+    "name": "Jason Livingston",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 875,
+    "name": "Renaldo Miller",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 876,
+    "name": "Mark Phillips",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 877,
+    "name": "Aaron Wintz",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 878,
+    "name": "Timothy Jones",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 879,
+    "name": "Jennifer Keefe",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 880,
+    "name": "Edgar Lebeau III",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 881,
+    "name": "Ronald Messina",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 882,
+    "name": "William Mittwede",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 883,
+    "name": "Luke Sparkman",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 884,
+    "name": "Matthew Brewster",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 885,
+    "name": "Nathan Evans",
+    "salary": 122964.51,
+    "salaryFormatted": "$122,964.51",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 887,
+    "name": "Scott Miller",
+    "salary": 122682.89,
+    "salaryFormatted": "$122,682.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Shift"
+  },
+  {
+    "id": 888,
+    "name": "Jerett Brown",
+    "salary": 122682.89,
+    "salaryFormatted": "$122,682.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Shift"
+  },
+  {
+    "id": 889,
+    "name": "Troy Danner",
+    "salary": 122682.89,
+    "salaryFormatted": "$122,682.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Shift"
+  },
+  {
+    "id": 902,
+    "name": "Boris Arratia",
+    "salary": 122190.38,
+    "salaryFormatted": "$122,190.38",
+    "org": "Port St. Lucie",
+    "job": "Executive Project Manager – S&I"
+  },
+  {
+    "id": 904,
+    "name": "Charles Tyrrell",
+    "salary": 122100.16,
+    "salaryFormatted": "$122,100.16",
+    "org": "Port St. Lucie",
+    "job": "Building Inspector, Plans Examiner IV"
+  },
+  {
+    "id": 905,
+    "name": "Tahirah Gittens-Waldron",
+    "salary": 122075.72,
+    "salaryFormatted": "$122,075.72",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 906,
+    "name": "Kenneth May",
+    "salary": 122009.68,
+    "salaryFormatted": "$122,009.68",
+    "org": "Port St. Lucie",
+    "job": "Telcom Systems Administrator"
+  },
+  {
+    "id": 907,
+    "name": "Martin Ghobrial",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 908,
+    "name": "Scott Marreel",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 909,
+    "name": "John Seeley",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 910,
+    "name": "Robert Voegtlin",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 911,
+    "name": "Joseph Byrne",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 912,
+    "name": "David Goldstein",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 913,
+    "name": "Michael Connor",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 914,
+    "name": "Albert Sohl",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 915,
+    "name": "Peter Chunn",
+    "salary": 121873.44,
+    "salaryFormatted": "$121,873.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 919,
+    "name": "Yvonne Grayson",
+    "salary": 121733.56,
+    "salaryFormatted": "$121,733.56",
+    "org": "Port St. Lucie",
+    "job": "Business Tax Lien Services Manager"
+  },
+  {
+    "id": 923,
+    "name": "Amber Minarchick",
+    "salary": 121134,
+    "salaryFormatted": "$121,134.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Alternative Education"
+  },
+  {
+    "id": 924,
+    "name": "Dawn Tuttle",
+    "salary": 121134,
+    "salaryFormatted": "$121,134.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Director of Exceptional Student Education"
+  },
+  {
+    "id": 926,
+    "name": "Nicole Fogarty",
+    "salary": 120993,
+    "salaryFormatted": "$120,993.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Growth, Management and Land Acquisition"
+  },
+  {
+    "id": 932,
+    "name": "Maryann Verillo",
+    "salary": 120844.36,
+    "salaryFormatted": "$120,844.36",
+    "org": "Port St. Lucie",
+    "job": "Chief Executive Assistant"
+  },
+  {
+    "id": 934,
+    "name": "Matthew Aubert",
+    "salary": 120644.16,
+    "salaryFormatted": "$120,644.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 935,
+    "name": "Adrienne Martella",
+    "salary": 120644.16,
+    "salaryFormatted": "$120,644.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 936,
+    "name": "Joseph Rathnam",
+    "salary": 120644.16,
+    "salaryFormatted": "$120,644.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 937,
+    "name": "Dionis Veras",
+    "salary": 120644.16,
+    "salaryFormatted": "$120,644.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 938,
+    "name": "Randy Ellman",
+    "salary": 120611.4,
+    "salaryFormatted": "$120,611.40",
+    "org": "Port St. Lucie",
+    "job": "Manager – Park Operations"
+  },
+  {
+    "id": 939,
+    "name": "Edmund Bas",
+    "salary": 120533.5,
+    "salaryFormatted": "$120,533.50",
+    "org": "St. Lucie County",
+    "job": "Assistant County Engineer"
+  },
+  {
+    "id": 942,
+    "name": "Daniel Burdett",
+    "salary": 120096.86,
+    "salaryFormatted": "$120,096.86",
+    "org": "Port St. Lucie",
+    "job": "Superintendent, Water Treatment Facility"
+  },
+  {
+    "id": 945,
+    "name": "Eric Sexauer",
+    "salary": 120000.14,
+    "salaryFormatted": "$120,000.14",
+    "org": "Port St. Lucie",
+    "job": "Manager, CIP & Sales Tax Group"
+  },
+  {
+    "id": 955,
+    "name": "Stephen Cullen",
+    "salary": 119588.1,
+    "salaryFormatted": "$119,588.10",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 956,
+    "name": "James McCorkle",
+    "salary": 119588.1,
+    "salaryFormatted": "$119,588.10",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 957,
+    "name": "Grant Chambers",
+    "salary": 119473.54,
+    "salaryFormatted": "$119,473.54",
+    "org": "St. Lucie County",
+    "job": "Senior Project Engineer"
+  },
+  {
+    "id": 958,
+    "name": "Barbara Audette",
+    "salary": 119451,
+    "salaryFormatted": "$119,451.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Payroll Coordinator"
+  },
+  {
+    "id": 959,
+    "name": "Daniel Ramos",
+    "salary": 119387.01,
+    "salaryFormatted": "$119,387.01",
+    "org": "St. Lucie County",
+    "job": "Community Services Assistant Director"
+  },
+  {
+    "id": 960,
+    "name": "Keandrea Davis",
+    "salary": 119374.58,
+    "salaryFormatted": "$119,374.58",
+    "org": "Port St. Lucie",
+    "job": "Deputy City Attorney"
+  },
+  {
+    "id": 964,
+    "name": "Makeda Brome",
+    "salary": 119199,
+    "salaryFormatted": "$119,199.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 965,
+    "name": "Valerie Forman",
+    "salary": 119199,
+    "salaryFormatted": "$119,199.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 966,
+    "name": "Carlos Camacho",
+    "salary": 119155.66,
+    "salaryFormatted": "$119,155.66",
+    "org": "Port St. Lucie",
+    "job": "Professional Engineer"
+  },
+  {
+    "id": 972,
+    "name": "Jodi Cheslock",
+    "salary": 118867.84,
+    "salaryFormatted": "$118,867.84",
+    "org": "St. Lucie County",
+    "job": "Criminal Justice Attorney"
+  },
+  {
+    "id": 974,
+    "name": "Bret Lagrega",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 975,
+    "name": "Darren Lidbetter",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 976,
+    "name": "Gerard Harrington",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 977,
+    "name": "Alexis Corona",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 978,
+    "name": "Richard Giaccone",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 979,
+    "name": "Carl Durbin",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 980,
+    "name": "Russell Jackson",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 981,
+    "name": "William Harris",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 982,
+    "name": "Eugene Gibbins",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 983,
+    "name": "Cory Hulings",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 984,
+    "name": "Joshua Peto",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 985,
+    "name": "Shannon Moreland",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 986,
+    "name": "Steven Camara",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 987,
+    "name": "Albert Riccardi",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 988,
+    "name": "Ryan Lodwick",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 989,
+    "name": "Mitchel Miller",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 990,
+    "name": "James Jones",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 991,
+    "name": "Michael Casey",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 992,
+    "name": "Robert O'Hara",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 993,
+    "name": "Fred Knaggs",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 994,
+    "name": "James Luongo",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 995,
+    "name": "Francisco Rodriguez",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 996,
+    "name": "Alan Ludmerer",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 997,
+    "name": "Suzannie Moore-Fleites",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 998,
+    "name": "Jon Squitieri",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 999,
+    "name": "Jermaine Singleton",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1000,
+    "name": "Dean Herzog",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1001,
+    "name": "Robert Penney",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1002,
+    "name": "Amanda McCarty-Kosinski",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1003,
+    "name": "Michael Bianco",
+    "salary": 118753.44,
+    "salaryFormatted": "$118,753.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1004,
+    "name": "Janet Palmer",
+    "salary": 118753.18,
+    "salaryFormatted": "$118,753.18",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1005,
+    "name": "Constonya Freeman",
+    "salary": 118753.18,
+    "salaryFormatted": "$118,753.18",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1006,
+    "name": "Kristin Meyer",
+    "salary": 118753.18,
+    "salaryFormatted": "$118,753.18",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1007,
+    "name": "Nathanial Penney",
+    "salary": 118753.18,
+    "salaryFormatted": "$118,753.18",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1008,
+    "name": "Neil Schillinger",
+    "salary": 118716.42,
+    "salaryFormatted": "$118,716.42",
+    "org": "St. Lucie County",
+    "job": "Facilities Assistant Director"
+  },
+  {
+    "id": 1012,
+    "name": "Erika Venazio",
+    "salary": 118564.16,
+    "salaryFormatted": "$118,564.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1013,
+    "name": "Timothy Herring",
+    "salary": 118564.16,
+    "salaryFormatted": "$118,564.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1014,
+    "name": "Michael Williams",
+    "salary": 118564.16,
+    "salaryFormatted": "$118,564.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1015,
+    "name": "Buteau Morestant",
+    "salary": 118564.16,
+    "salaryFormatted": "$118,564.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1016,
+    "name": "Edward Griffith",
+    "salary": 118564.16,
+    "salaryFormatted": "$118,564.16",
+    "org": "Port St. Lucie",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1033,
+    "name": "Joseph Cimino",
+    "salary": 118410.56,
+    "salaryFormatted": "$118,410.56",
+    "org": "St. Lucie County",
+    "job": "Senior Network Administrator"
+  },
+  {
+    "id": 1043,
+    "name": "Ja’Net Vercillo",
+    "salary": 118110.72,
+    "salaryFormatted": "$118,110.72",
+    "org": "St. Lucie County",
+    "job": "IT Manager"
+  },
+  {
+    "id": 1045,
+    "name": "Carl Trabulsy",
+    "salary": 117964.5,
+    "salaryFormatted": "$117,964.50",
+    "org": "St. Lucie County Fire District",
+    "job": "Staff Accountant"
+  },
+  {
+    "id": 1047,
+    "name": "R. Frederick Woltjen III",
+    "salary": 117806,
+    "salaryFormatted": "$117,806.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1049,
+    "name": "Timothy Fulston",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1050,
+    "name": "Jeffrey Schoner",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1051,
+    "name": "Lasolomon Archie",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1052,
+    "name": "Marcus Sigmon",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1053,
+    "name": "Daniel Lafleur",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1054,
+    "name": "Matthew Wright",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1055,
+    "name": "Anthony Martens",
+    "salary": 117669.39,
+    "salaryFormatted": "$117,669.39",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1057,
+    "name": "James Knott",
+    "salary": 117601.64,
+    "salaryFormatted": "$117,601.64",
+    "org": "Port St. Lucie",
+    "job": "CRA Executive Project Manager"
+  },
+  {
+    "id": 1062,
+    "name": "Richard Bartholomew",
+    "salary": 117585,
+    "salaryFormatted": "$117,585.00",
+    "org": "Port St. Lucie",
+    "job": "Deputy Building Official"
+  },
+  {
+    "id": 1063,
+    "name": "Rodney Dewson",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1064,
+    "name": "Jose Rosario Jr.",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1065,
+    "name": "Robert Schooley",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1066,
+    "name": "Yvon Paiement",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1067,
+    "name": "Rob Newman",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1068,
+    "name": "Cody Hogan",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1069,
+    "name": "Meradeth Smith",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1070,
+    "name": "Allen Civita",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1071,
+    "name": "Terry Gardner Jr.",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1072,
+    "name": "Eric Wright",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1073,
+    "name": "Bryan Sasso",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1074,
+    "name": "Kenneth Salyers",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1075,
+    "name": "Joseph Del Valle",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1076,
+    "name": "Matthew Johnson",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1077,
+    "name": "Richard Lindsay Jr.",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1078,
+    "name": "Kyle Richard",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1079,
+    "name": "Richard Martyka",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1080,
+    "name": "Douglas Sweeney",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1081,
+    "name": "Jared Rinker",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1082,
+    "name": "Phillip Pool",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1083,
+    "name": "Jared Odom",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1084,
+    "name": "Michael Brandt",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1085,
+    "name": "Eric Ballard",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1086,
+    "name": "Jason Whiteside",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1087,
+    "name": "Edward Doonan",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1088,
+    "name": "Aaron Luther",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1089,
+    "name": "Tat Choi",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1090,
+    "name": "William Crittenden",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1091,
+    "name": "Benn Francoeur",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1092,
+    "name": "Christopher Marton",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1093,
+    "name": "Serge Greene",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1094,
+    "name": "Justin Smith",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1095,
+    "name": "Mitchell Farrell",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1096,
+    "name": "John Moriarty III",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1097,
+    "name": "Cassandra Laing",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1098,
+    "name": "Robert Mancuso",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1099,
+    "name": "Michael Coffey",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1100,
+    "name": "Ryan Lucy",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1101,
+    "name": "Duane Fenn",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1102,
+    "name": "Ryan Maples",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1103,
+    "name": "Lawrence Atwell",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1104,
+    "name": "Soneath Sao",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1105,
+    "name": "Jasper Snead",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1106,
+    "name": "Julie Duco",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1107,
+    "name": "Thomas Maher",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1108,
+    "name": "Jason Alvarez",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1109,
+    "name": "Glenn Wiles",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1110,
+    "name": "Joshua Burns",
+    "salary": 117579.82,
+    "salaryFormatted": "$117,579.82",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1111,
+    "name": "Douglas Wile",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1112,
+    "name": "Chad Gallagher",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1113,
+    "name": "Justin Guercio",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1114,
+    "name": "Eric Senecal",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1115,
+    "name": "Latoya Young",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1116,
+    "name": "Dylan Seifert",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1117,
+    "name": "Michael Rivas",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1118,
+    "name": "Riley Ware",
+    "salary": 117579.7,
+    "salaryFormatted": "$117,579.70",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1119,
+    "name": "Justin Crowe",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1120,
+    "name": "Eric Potter",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1121,
+    "name": "Craig Stokes",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1122,
+    "name": "Edward Hill",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1123,
+    "name": "Travis Owen",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1124,
+    "name": "Justin Center",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1125,
+    "name": "Dan Miller",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1126,
+    "name": "Andrew Fowler",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1127,
+    "name": "Matthew Ernst",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1128,
+    "name": "Robert Thomas",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1129,
+    "name": "Bradley Roberts",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1130,
+    "name": "Steven Harnage",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1131,
+    "name": "Jason Diamond",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1132,
+    "name": "Samuel Greene",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1133,
+    "name": "Joshua Kurth",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1134,
+    "name": "Donald Herchenroder",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1135,
+    "name": "Brandon Varney",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1136,
+    "name": "Sheldon Brister",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1137,
+    "name": "Andrea Irvine",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1138,
+    "name": "Brian Roberts",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1139,
+    "name": "Jason Jamerson",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1140,
+    "name": "Robert Hoffman",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1141,
+    "name": "William Bryant",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1142,
+    "name": "Logan Blake",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1143,
+    "name": "Brian Solberg",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1144,
+    "name": "John Duran",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1145,
+    "name": "Tristen Trefelner",
+    "salary": 117579.07,
+    "salaryFormatted": "$117,579.07",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1147,
+    "name": "Dana Markowitz",
+    "salary": 117474,
+    "salaryFormatted": "$117,474.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 1153,
+    "name": "Andrew Wentz",
+    "salary": 117267.07,
+    "salaryFormatted": "$117,267.07",
+    "org": "St. Lucie County",
+    "job": "Chief Building Inspector"
+  },
+  {
+    "id": 1155,
+    "name": "Lisa Slover",
+    "salary": 117192,
+    "salaryFormatted": "$117,192.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Administrative Specialist"
+  },
+  {
+    "id": 1156,
+    "name": "Tammy Grieve",
+    "salary": 117180.96,
+    "salaryFormatted": "$117,180.96",
+    "org": "Port St. Lucie",
+    "job": "Payroll Division Manager"
+  },
+  {
+    "id": 1157,
+    "name": "Andrea Popwell",
+    "salary": 117165,
+    "salaryFormatted": "$117,165.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1163,
+    "name": "Wesley Armstrong",
+    "salary": 116877.8,
+    "salaryFormatted": "$116,877.80",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director, NSD"
+  },
+  {
+    "id": 1164,
+    "name": "Larue Griffin",
+    "salary": 116877.8,
+    "salaryFormatted": "$116,877.80",
+    "org": "Port St. Lucie",
+    "job": "Utility Systems Tech Operations Manager"
+  },
+  {
+    "id": 1165,
+    "name": "Carly Athanasatos Fabien",
+    "salary": 116851.54,
+    "salaryFormatted": "$116,851.54",
+    "org": "Port St. Lucie",
+    "job": "Deputy City Attorney"
+  },
+  {
+    "id": 1167,
+    "name": "Jennifer Garrity",
+    "salary": 116726.27,
+    "salaryFormatted": "$116,726.27",
+    "org": "St. Lucie County",
+    "job": "Budget Manager"
+  },
+  {
+    "id": 1170,
+    "name": "Matthew Bobier",
+    "salary": 116563.72,
+    "salaryFormatted": "$116,563.72",
+    "org": "Port St. Lucie",
+    "job": "Cloud Services Manager"
+  },
+  {
+    "id": 1171,
+    "name": "Keith Bradshaw",
+    "salary": 116541.1,
+    "salaryFormatted": "$116,541.10",
+    "org": "Port St. Lucie",
+    "job": "Golf Course Administrator"
+  },
+  {
+    "id": 1172,
+    "name": "Robyn Holder",
+    "salary": 116500.54,
+    "salaryFormatted": "$116,500.54",
+    "org": "Port St. Lucie",
+    "job": "Senior Procurement Contracting Officer"
+  },
+  {
+    "id": 1173,
+    "name": "David Cuti",
+    "salary": 116500.02,
+    "salaryFormatted": "$116,500.02",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 1174,
+    "name": "John Fasanello",
+    "salary": 116500.02,
+    "salaryFormatted": "$116,500.02",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 1175,
+    "name": "Kyle Maccarthy",
+    "salary": 116500.02,
+    "salaryFormatted": "$116,500.02",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 1176,
+    "name": "Onese Rene",
+    "salary": 116500.02,
+    "salaryFormatted": "$116,500.02",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 1180,
+    "name": "Dongyu Frankel",
+    "salary": 116199.72,
+    "salaryFormatted": "$116,199.72",
+    "org": "Port St. Lucie",
+    "job": "Cloud Services Administrator"
+  },
+  {
+    "id": 1182,
+    "name": "Thomas Salvador",
+    "salary": 116118.6,
+    "salaryFormatted": "$116,118.60",
+    "org": "Port St. Lucie",
+    "job": "Manager, CIP & Sales Tax Group"
+  },
+  {
+    "id": 1184,
+    "name": "Jaimee Cass",
+    "salary": 116027.34,
+    "salaryFormatted": "$116,027.34",
+    "org": "Port St. Lucie",
+    "job": "Assessment & Property Tax Manager"
+  },
+  {
+    "id": 1187,
+    "name": "Daniel Visconti",
+    "salary": 115944.19,
+    "salaryFormatted": "$115,944.19",
+    "org": "Fort Pierce",
+    "job": "Director, Golf Course"
+  },
+  {
+    "id": 1188,
+    "name": "Bruce Sloan",
+    "salary": 115928.02,
+    "salaryFormatted": "$115,928.02",
+    "org": "Port St. Lucie",
+    "job": "Chief Plant Operator"
+  },
+  {
+    "id": 1189,
+    "name": "Matthew Boettcher",
+    "salary": 115928.02,
+    "salaryFormatted": "$115,928.02",
+    "org": "Port St. Lucie",
+    "job": "Building Construction Inspector II"
+  },
+  {
+    "id": 1191,
+    "name": "Scott Meagher",
+    "salary": 115810.5,
+    "salaryFormatted": "$115,810.50",
+    "org": "Port St. Lucie",
+    "job": "Manager – Electric Systems/Maintenance/Safety – USD"
+  },
+  {
+    "id": 1193,
+    "name": "William Bickley Jr.",
+    "salary": 115695,
+    "salaryFormatted": "$115,695.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 1194,
+    "name": "John Keelor",
+    "salary": 115695,
+    "salaryFormatted": "$115,695.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 1199,
+    "name": "Mark Zrallack",
+    "salary": 115500,
+    "salaryFormatted": "$115,500.00",
+    "org": "Fort Pierce",
+    "job": "City Engineer"
+  },
+  {
+    "id": 1201,
+    "name": "Selena Griffett",
+    "salary": 115485.5,
+    "salaryFormatted": "$115,485.50",
+    "org": "Fort Pierce",
+    "job": "Engineering Project Manager"
+  },
+  {
+    "id": 1208,
+    "name": "David Garland",
+    "salary": 115330.28,
+    "salaryFormatted": "$115,330.28",
+    "org": "Port St. Lucie",
+    "job": "Professional Engineer"
+  },
+  {
+    "id": 1212,
+    "name": "Peter Kaufman",
+    "salary": 115215.87,
+    "salaryFormatted": "$115,215.87",
+    "org": "St. Lucie County",
+    "job": "Chief Plans Examiner"
+  },
+  {
+    "id": 1213,
+    "name": "Diane Astrella",
+    "salary": 115197.94,
+    "salaryFormatted": "$115,197.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1214,
+    "name": "Fatima Barrera",
+    "salary": 115197.94,
+    "salaryFormatted": "$115,197.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1215,
+    "name": "Billy Henson",
+    "salary": 115193,
+    "salaryFormatted": "$115,193.00",
+    "org": "Port St. Lucie",
+    "job": "Executive Project Manager"
+  },
+  {
+    "id": 1216,
+    "name": "Jodi Lyke",
+    "salary": 115030.03,
+    "salaryFormatted": "$115,030.03",
+    "org": "St. Lucie County Fire District",
+    "job": "Telecom Training Supervisor"
+  },
+  {
+    "id": 1217,
+    "name": "Todd Burdick",
+    "salary": 115000.08,
+    "salaryFormatted": "$115,000.08",
+    "org": "Port St. Lucie",
+    "job": "General Operations Manager BMX Track"
+  },
+  {
+    "id": 1219,
+    "name": "Delfanie Tyler",
+    "salary": 115000,
+    "salaryFormatted": "$115,000.00",
+    "org": "St. Lucie County",
+    "job": "Risk Manager"
+  },
+  {
+    "id": 1221,
+    "name": "Eric Henik",
+    "salary": 114887,
+    "salaryFormatted": "$114,887.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Building Services"
+  },
+  {
+    "id": 1222,
+    "name": "Daniel Dalia",
+    "salary": 114762.44,
+    "salaryFormatted": "$114,762.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1224,
+    "name": "Marsha Commond",
+    "salary": 114607.22,
+    "salaryFormatted": "$114,607.22",
+    "org": "Fort Pierce",
+    "job": "Special Projects Coordinator"
+  },
+  {
+    "id": 1229,
+    "name": "Elizabeth Zsoka",
+    "salary": 114255.96,
+    "salaryFormatted": "$114,255.96",
+    "org": "Port St. Lucie",
+    "job": "Executive Project Manager – Community Outreach"
+  },
+  {
+    "id": 1241,
+    "name": "Mitchell Mclaren",
+    "salary": 113426.14,
+    "salaryFormatted": "$113,426.14",
+    "org": "St. Lucie County Fire District",
+    "job": "Network Services & Customer Support"
+  },
+  {
+    "id": 1242,
+    "name": "Derek Nicolette",
+    "salary": 113426.14,
+    "salaryFormatted": "$113,426.14",
+    "org": "St. Lucie County Fire District",
+    "job": "Network Services & Customer Support"
+  },
+  {
+    "id": 1243,
+    "name": "Michael Grace",
+    "salary": 113426.14,
+    "salaryFormatted": "$113,426.14",
+    "org": "St. Lucie County Fire District",
+    "job": "Network Services & Customer Support"
+  },
+  {
+    "id": 1244,
+    "name": "Andrew Willmore",
+    "salary": 113353.59,
+    "salaryFormatted": "$113,353.59",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 1245,
+    "name": "Robert Hall",
+    "salary": 113353.59,
+    "salaryFormatted": "$113,353.59",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 1246,
+    "name": "Trevor Seegott",
+    "salary": 113353.59,
+    "salaryFormatted": "$113,353.59",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 1248,
+    "name": "Vladimir Sidorov",
+    "salary": 113205,
+    "salaryFormatted": "$113,205.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Information Technology Services Network Systems Analyst II"
+  },
+  {
+    "id": 1249,
+    "name": "Gelencia Carter",
+    "salary": 113176.7,
+    "salaryFormatted": "$113,176.70",
+    "org": "Fort Pierce",
+    "job": "Manager, Purchasing"
+  },
+  {
+    "id": 1272,
+    "name": "Alex Oge",
+    "salary": 112604,
+    "salaryFormatted": "$112,604.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1273,
+    "name": "David Dionisio",
+    "salary": 112602.29,
+    "salaryFormatted": "$112,602.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1274,
+    "name": "Christopher Jadin",
+    "salary": 112602.29,
+    "salaryFormatted": "$112,602.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1275,
+    "name": "Luke Crisafi",
+    "salary": 112602.29,
+    "salaryFormatted": "$112,602.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1276,
+    "name": "John Whitaker",
+    "salary": 112602.29,
+    "salaryFormatted": "$112,602.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1277,
+    "name": "Bryan Saliba",
+    "salary": 112602.29,
+    "salaryFormatted": "$112,602.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1278,
+    "name": "Tanya Singley",
+    "salary": 112602.29,
+    "salaryFormatted": "$112,602.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1280,
+    "name": "Diego Combe",
+    "salary": 112499.92,
+    "salaryFormatted": "$112,499.92",
+    "org": "Fort Pierce",
+    "job": "Police Lieutenant"
+  },
+  {
+    "id": 1281,
+    "name": "Brandon Nicklow",
+    "salary": 112483,
+    "salaryFormatted": "$112,483.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Maintenance HVAC Controls Manager"
+  },
+  {
+    "id": 1282,
+    "name": "Karen Logue",
+    "salary": 112481.46,
+    "salaryFormatted": "$112,481.46",
+    "org": "Fort Pierce",
+    "job": "Chief Accountant"
+  },
+  {
+    "id": 1286,
+    "name": "Teah Baker",
+    "salary": 112334.98,
+    "salaryFormatted": "$112,334.98",
+    "org": "St. Lucie County",
+    "job": "Human Resources Manager"
+  },
+  {
+    "id": 1287,
+    "name": "Louisa Saget",
+    "salary": 112308,
+    "salaryFormatted": "$112,308.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Middle/Junior School Principal"
+  },
+  {
+    "id": 1288,
+    "name": "Russell Ader",
+    "salary": 112248,
+    "salaryFormatted": "$112,248.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 1336,
+    "name": "Daniella Margetic",
+    "salary": 111815.08,
+    "salaryFormatted": "$111,815.08",
+    "org": "Port St. Lucie",
+    "job": "Deputy City Attorney"
+  },
+  {
+    "id": 1355,
+    "name": "Robert Brink",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1356,
+    "name": "Robert Maier",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1357,
+    "name": "Clifford Dean",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1358,
+    "name": "Benjamin Gaspar",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1359,
+    "name": "David Petry",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1360,
+    "name": "Benjamin Thayer",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1361,
+    "name": "Kevin O'Hea",
+    "salary": 111642.44,
+    "salaryFormatted": "$111,642.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1362,
+    "name": "Jeffrey Lovett",
+    "salary": 111564.96,
+    "salaryFormatted": "$111,564.96",
+    "org": "Port St. Lucie",
+    "job": "Deputy Director – Operations"
+  },
+  {
+    "id": 1363,
+    "name": "Emma Schambach",
+    "salary": 111564.96,
+    "salaryFormatted": "$111,564.96",
+    "org": "Port St. Lucie",
+    "job": "Deputy City Attorney"
+  },
+  {
+    "id": 1365,
+    "name": "Sean Hollander",
+    "salary": 111449.89,
+    "salaryFormatted": "$111,449.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1366,
+    "name": "Antonio Conte",
+    "salary": 111449.89,
+    "salaryFormatted": "$111,449.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1367,
+    "name": "Edgar Bernier",
+    "salary": 111449.89,
+    "salaryFormatted": "$111,449.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1368,
+    "name": "Robert Demski",
+    "salary": 111449.89,
+    "salaryFormatted": "$111,449.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1369,
+    "name": "Nicholas Yoder",
+    "salary": 111449.89,
+    "salaryFormatted": "$111,449.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1370,
+    "name": "Lauren Barclay",
+    "salary": 111449.89,
+    "salaryFormatted": "$111,449.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1371,
+    "name": "Jason Miller",
+    "salary": 111449.4,
+    "salaryFormatted": "$111,449.40",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1372,
+    "name": "Katherine Kaltenbach",
+    "salary": 111449.4,
+    "salaryFormatted": "$111,449.40",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1373,
+    "name": "Jeffrey Power",
+    "salary": 111424.04,
+    "salaryFormatted": "$111,424.04",
+    "org": "Port St. Lucie",
+    "job": "Safety & Claims Administrator"
+  },
+  {
+    "id": 1374,
+    "name": "Patricia Gascoigne",
+    "salary": 111385,
+    "salaryFormatted": "$111,385.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 1377,
+    "name": "Craig Golucki",
+    "salary": 111280.26,
+    "salaryFormatted": "$111,280.26",
+    "org": "Port St. Lucie",
+    "job": "Digital Forensics Examiner"
+  },
+  {
+    "id": 1380,
+    "name": "Taylor Battistelli",
+    "salary": 111206.94,
+    "salaryFormatted": "$111,206.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1381,
+    "name": "Anthony Lovechio",
+    "salary": 111206.94,
+    "salaryFormatted": "$111,206.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1382,
+    "name": "Joel Smith",
+    "salary": 111193.16,
+    "salaryFormatted": "$111,193.16",
+    "org": "Port St. Lucie",
+    "job": "Crime Scene Unit Manager"
+  },
+  {
+    "id": 1412,
+    "name": "Laura Clersaint",
+    "salary": 110829.68,
+    "salaryFormatted": "$110,829.68",
+    "org": "Port St. Lucie",
+    "job": "Risk Management Administrator"
+  },
+  {
+    "id": 1413,
+    "name": "Megan Maguire",
+    "salary": 110761.3,
+    "salaryFormatted": "$110,761.30",
+    "org": "Port St. Lucie",
+    "job": "Manager, IT Infrastructure"
+  },
+  {
+    "id": 1415,
+    "name": "Daniel Giesey",
+    "salary": 110407.7,
+    "salaryFormatted": "$110,407.70",
+    "org": "Port St. Lucie",
+    "job": "Manager – Public Works"
+  },
+  {
+    "id": 1418,
+    "name": "Aaron Biehl",
+    "salary": 110157.32,
+    "salaryFormatted": "$110,157.32",
+    "org": "Port St. Lucie",
+    "job": "Supervisor – Code Compliance"
+  },
+  {
+    "id": 1419,
+    "name": "Paul Johnson",
+    "salary": 110150.3,
+    "salaryFormatted": "$110,150.30",
+    "org": "Port St. Lucie",
+    "job": "Traffic Administrator PW"
+  },
+  {
+    "id": 1420,
+    "name": "Audria Moore",
+    "salary": 110054.1,
+    "salaryFormatted": "$110,054.10",
+    "org": "Fort Pierce",
+    "job": "Special Projects Coordinator"
+  },
+  {
+    "id": 1421,
+    "name": "Thema Neal",
+    "salary": 110001.84,
+    "salaryFormatted": "$110,001.84",
+    "org": "Port St. Lucie",
+    "job": "HR Operations Manager"
+  },
+  {
+    "id": 1424,
+    "name": "Edward Groenwoldt",
+    "salary": 109774.86,
+    "salaryFormatted": "$109,774.86",
+    "org": "Port St. Lucie",
+    "job": "Senior Chief Plans Examiner"
+  },
+  {
+    "id": 1425,
+    "name": "Kaitlyn Derosa",
+    "salary": 109774.34,
+    "salaryFormatted": "$109,774.34",
+    "org": "Port St. Lucie",
+    "job": "Special Events Administrator"
+  },
+  {
+    "id": 1429,
+    "name": "Robert Ettswold",
+    "salary": 109652.61,
+    "salaryFormatted": "$109,652.61",
+    "org": "St. Lucie County",
+    "job": "Senior Project Manager"
+  },
+  {
+    "id": 1445,
+    "name": "Richard Lucas",
+    "salary": 109406.96,
+    "salaryFormatted": "$109,406.96",
+    "org": "St. Lucie County Fire District",
+    "job": "Mechanic"
+  },
+  {
+    "id": 1446,
+    "name": "Lawrence Noelke",
+    "salary": 109406.96,
+    "salaryFormatted": "$109,406.96",
+    "org": "St. Lucie County Fire District",
+    "job": "Mechanic"
+  },
+  {
+    "id": 1523,
+    "name": "Mary Huffstetter",
+    "salary": 109162,
+    "salaryFormatted": "$109,162.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Early Childhood Program Coordinator"
+  },
+  {
+    "id": 1524,
+    "name": "Nikki Poole",
+    "salary": 109162,
+    "salaryFormatted": "$109,162.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Secondary School Guidance"
+  },
+  {
+    "id": 1525,
+    "name": "Shannon Martin",
+    "salary": 109134.22,
+    "salaryFormatted": "$109,134.22",
+    "org": "Port St. Lucie",
+    "job": "Mayor"
+  },
+  {
+    "id": 1526,
+    "name": "James Clasby",
+    "salary": 109134,
+    "salaryFormatted": "$109,134.00",
+    "org": "St. Lucie County",
+    "job": "County Commissioner"
+  },
+  {
+    "id": 1527,
+    "name": "Jamie Fowler",
+    "salary": 109134,
+    "salaryFormatted": "$109,134.00",
+    "org": "St. Lucie County",
+    "job": "County Commissioner"
+  },
+  {
+    "id": 1528,
+    "name": "Larry Leet",
+    "salary": 109134,
+    "salaryFormatted": "$109,134.00",
+    "org": "St. Lucie County",
+    "job": "County Commissioner"
+  },
+  {
+    "id": 1529,
+    "name": "Erin Lowry",
+    "salary": 109134,
+    "salaryFormatted": "$109,134.00",
+    "org": "St. Lucie County",
+    "job": "County Commissioner"
+  },
+  {
+    "id": 1530,
+    "name": "Cathy Townsend",
+    "salary": 109134,
+    "salaryFormatted": "$109,134.00",
+    "org": "St. Lucie County",
+    "job": "County Commissioner"
+  },
+  {
+    "id": 1531,
+    "name": "Raama Badalo",
+    "salary": 109125.12,
+    "salaryFormatted": "$109,125.12",
+    "org": "Port St. Lucie",
+    "job": "Superintendent"
+  },
+  {
+    "id": 1533,
+    "name": "Joseph Casson",
+    "salary": 109063.55,
+    "salaryFormatted": "$109,063.55",
+    "org": "St. Lucie County Fire District",
+    "job": "Building & Grounds Supervisor"
+  },
+  {
+    "id": 1536,
+    "name": "Graham Kelley",
+    "salary": 108999.8,
+    "salaryFormatted": "$108,999.80",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1537,
+    "name": "Cassandra Davis",
+    "salary": 108999.8,
+    "salaryFormatted": "$108,999.80",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1538,
+    "name": "Charles Donnon",
+    "salary": 108999.8,
+    "salaryFormatted": "$108,999.80",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1539,
+    "name": "John O'Keefe",
+    "salary": 108947.54,
+    "salaryFormatted": "$108,947.54",
+    "org": "Port St. Lucie",
+    "job": "Chief Building Inspector"
+  },
+  {
+    "id": 1546,
+    "name": "Christopher Gamble",
+    "salary": 108765.7,
+    "salaryFormatted": "$108,765.70",
+    "org": "St. Lucie County",
+    "job": "Utility Field Operations Manager"
+  },
+  {
+    "id": 1547,
+    "name": "James Lappert",
+    "salary": 108744.06,
+    "salaryFormatted": "$108,744.06",
+    "org": "St. Lucie County",
+    "job": "Water Quality Div. Director"
+  },
+  {
+    "id": 1548,
+    "name": "Terrill Mincey",
+    "salary": 108708.81,
+    "salaryFormatted": "$108,708.81",
+    "org": "St. Lucie County",
+    "job": "Mosquito Control Manager"
+  },
+  {
+    "id": 1555,
+    "name": "Michael Harvey",
+    "salary": 108333.06,
+    "salaryFormatted": "$108,333.06",
+    "org": "St. Lucie County",
+    "job": "Project Engineer"
+  },
+  {
+    "id": 1572,
+    "name": "Theresa Mee‑Joy",
+    "salary": 108213,
+    "salaryFormatted": "$108,213.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Occupational Therapist"
+  },
+  {
+    "id": 1574,
+    "name": "Daniel Papaleo",
+    "salary": 108086.94,
+    "salaryFormatted": "$108,086.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1575,
+    "name": "James Boyd",
+    "salary": 108086.94,
+    "salaryFormatted": "$108,086.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1576,
+    "name": "Corey Krecic",
+    "salary": 108086.94,
+    "salaryFormatted": "$108,086.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1577,
+    "name": "Charles Green",
+    "salary": 108086.94,
+    "salaryFormatted": "$108,086.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1578,
+    "name": "Lori Bender",
+    "salary": 108078.36,
+    "salaryFormatted": "$108,078.36",
+    "org": "Fort Pierce",
+    "job": "IT GIS Division Manager"
+  },
+  {
+    "id": 1579,
+    "name": "Diego Palacio",
+    "salary": 108000.1,
+    "salaryFormatted": "$108,000.10",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1580,
+    "name": "Tad Lindstadt",
+    "salary": 108000.1,
+    "salaryFormatted": "$108,000.10",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1583,
+    "name": "Peter Dibernardo",
+    "salary": 107889.6,
+    "salaryFormatted": "$107,889.60",
+    "org": "St. Lucie County",
+    "job": "IT Manager"
+  },
+  {
+    "id": 1586,
+    "name": "Majorie Rahming",
+    "salary": 107814.72,
+    "salaryFormatted": "$107,814.72",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Legal Services Civil Manager"
+  },
+  {
+    "id": 1592,
+    "name": "Christopher Smith",
+    "salary": 107753.38,
+    "salaryFormatted": "$107,753.38",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1593,
+    "name": "Justin Jackson",
+    "salary": 107753.38,
+    "salaryFormatted": "$107,753.38",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1594,
+    "name": "Tad Leroy",
+    "salary": 107753.38,
+    "salaryFormatted": "$107,753.38",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1595,
+    "name": "Curtis Sims Jr.",
+    "salary": 107753.38,
+    "salaryFormatted": "$107,753.38",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1599,
+    "name": "William Jarrett",
+    "salary": 107651.44,
+    "salaryFormatted": "$107,651.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1638,
+    "name": "Robert D’Amato",
+    "salary": 107637,
+    "salaryFormatted": "$107,637.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Maintenance Senior Trades Manager"
+  },
+  {
+    "id": 1639,
+    "name": "Derek Gordon",
+    "salary": 107636,
+    "salaryFormatted": "$107,636.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1642,
+    "name": "Nicholas Dibenedetto",
+    "salary": 107512.86,
+    "salaryFormatted": "$107,512.86",
+    "org": "Port St. Lucie",
+    "job": "Assistant Manager Traffic Operations"
+  },
+  {
+    "id": 1643,
+    "name": "Jennifer Grima",
+    "salary": 107444.31,
+    "salaryFormatted": "$107,444.31",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 1646,
+    "name": "Lauren Gieseler",
+    "salary": 107312,
+    "salaryFormatted": "$107,312.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Elementary School Principal"
+  },
+  {
+    "id": 1674,
+    "name": "Jose Capellan",
+    "salary": 107186.56,
+    "salaryFormatted": "$107,186.56",
+    "org": "St. Lucie County",
+    "job": "Veteran Services Manager"
+  },
+  {
+    "id": 1675,
+    "name": "Frank Watanabe",
+    "salary": 107102.09,
+    "salaryFormatted": "$107,102.09",
+    "org": "St. Lucie County",
+    "job": "Capital Projects Engineer"
+  },
+  {
+    "id": 1677,
+    "name": "Jeffrey Wachendorfer",
+    "salary": 106999.88,
+    "salaryFormatted": "$106,999.88",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1682,
+    "name": "Bridgette Hargadine",
+    "salary": 106881,
+    "salaryFormatted": "$106,881.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Strategic Planning"
+  },
+  {
+    "id": 1686,
+    "name": "Scott Ritter",
+    "salary": 106702.7,
+    "salaryFormatted": "$106,702.70",
+    "org": "Port St. Lucie",
+    "job": "Building Construction Inspector II"
+  },
+  {
+    "id": 1687,
+    "name": "Nile Gentry",
+    "salary": 106680,
+    "salaryFormatted": "$106,680.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Information Technology Services Network Infrastructure Organization"
+  },
+  {
+    "id": 1713,
+    "name": "Rachel Knaggs",
+    "salary": 106252.38,
+    "salaryFormatted": "$106,252.38",
+    "org": "Port St. Lucie",
+    "job": "Manager – Code Compliance"
+  },
+  {
+    "id": 1714,
+    "name": "Christina Flores",
+    "salary": 106252.38,
+    "salaryFormatted": "$106,252.38",
+    "org": "Port St. Lucie",
+    "job": "Executive Project Manager"
+  },
+  {
+    "id": 1715,
+    "name": "Rulai Li",
+    "salary": 106252.38,
+    "salaryFormatted": "$106,252.38",
+    "org": "Port St. Lucie",
+    "job": "Principal Data Architect"
+  },
+  {
+    "id": 1716,
+    "name": "Alaina Knofla",
+    "salary": 106252.38,
+    "salaryFormatted": "$106,252.38",
+    "org": "Port St. Lucie",
+    "job": "Procurement Manager"
+  },
+  {
+    "id": 1721,
+    "name": "Stephanie Hardison",
+    "salary": 106091,
+    "salaryFormatted": "$106,091.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Occupational Therapist Department Chair"
+  },
+  {
+    "id": 1726,
+    "name": "Lisa Wilcocks Hannold",
+    "salary": 105990.98,
+    "salaryFormatted": "$105,990.98",
+    "org": "St. Lucie County Fire District",
+    "job": "Ambulance Billing Supervisor"
+  },
+  {
+    "id": 1727,
+    "name": "Ronald Parrish Jr.",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1728,
+    "name": "Michael Brady",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1729,
+    "name": "Donald McDilda Jr.",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1730,
+    "name": "Patrick Obrien",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1731,
+    "name": "Joseph Clanton",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1732,
+    "name": "Brian Phares",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1733,
+    "name": "James Cubbedge",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1734,
+    "name": "Jon Mullins",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1735,
+    "name": "Raymond Reiprecht",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1736,
+    "name": "Eric Rosenquist",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1737,
+    "name": "Brian Fogal",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1738,
+    "name": "Gui Chibas",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1739,
+    "name": "Perry Storey",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1740,
+    "name": "Robert Tedder",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1741,
+    "name": "Patrick Noll",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1742,
+    "name": "Daren Torok",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1743,
+    "name": "Hank Mele",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1744,
+    "name": "Kevin Solomon",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1745,
+    "name": "Revel Thom",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1746,
+    "name": "Jason Dare",
+    "salary": 105990.89,
+    "salaryFormatted": "$105,990.89",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 1751,
+    "name": "Eric Dickinson",
+    "salary": 105753.96,
+    "salaryFormatted": "$105,753.96",
+    "org": "Port St. Lucie",
+    "job": "Chief Plant Operator"
+  },
+  {
+    "id": 1752,
+    "name": "Melanie Gorman",
+    "salary": 105740,
+    "salaryFormatted": "$105,740.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Assessment"
+  },
+  {
+    "id": 1754,
+    "name": "Charles Lockwood",
+    "salary": 105663.67,
+    "salaryFormatted": "$105,663.67",
+    "org": "St. Lucie County",
+    "job": "Library Services Division Manager"
+  },
+  {
+    "id": 1755,
+    "name": "Nicholas Anicito",
+    "salary": 105639.71,
+    "salaryFormatted": "$105,639.71",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1756,
+    "name": "Jeremy French",
+    "salary": 105639.71,
+    "salaryFormatted": "$105,639.71",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1757,
+    "name": "Maria Fernandez",
+    "salary": 105639.71,
+    "salaryFormatted": "$105,639.71",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1758,
+    "name": "Kayla Pedonti",
+    "salary": 105639.71,
+    "salaryFormatted": "$105,639.71",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 1759,
+    "name": "Tanner Selph",
+    "salary": 105639.66,
+    "salaryFormatted": "$105,639.66",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter/Paramedic Days"
+  },
+  {
+    "id": 1760,
+    "name": "William Lyshon",
+    "salary": 105639.21,
+    "salaryFormatted": "$105,639.21",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1761,
+    "name": "Justin Hartley",
+    "salary": 105639.21,
+    "salaryFormatted": "$105,639.21",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1762,
+    "name": "Anthony Macias Lopez",
+    "salary": 105639.21,
+    "salaryFormatted": "$105,639.21",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 1784,
+    "name": "Jennifer L'Heureux",
+    "salary": 105248.26,
+    "salaryFormatted": "$105,248.26",
+    "org": "Port St. Lucie",
+    "job": "Finance Administrator"
+  },
+  {
+    "id": 1785,
+    "name": "Christine Brown",
+    "salary": 105247.48,
+    "salaryFormatted": "$105,247.48",
+    "org": "Port St. Lucie",
+    "job": "Budget Administrator"
+  },
+  {
+    "id": 1786,
+    "name": "Enrique Carmona",
+    "salary": 105165.78,
+    "salaryFormatted": "$105,165.78",
+    "org": "St. Lucie County",
+    "job": "Special Projects Manager"
+  },
+  {
+    "id": 1787,
+    "name": "Tasheeka Ellis",
+    "salary": 105159.6,
+    "salaryFormatted": "$105,159.60",
+    "org": "Port St. Lucie",
+    "job": "Manager Personnel Liaison"
+  },
+  {
+    "id": 1791,
+    "name": "Joseph Sabater",
+    "salary": 105050.4,
+    "salaryFormatted": "$105,050.40",
+    "org": "St. Lucie County",
+    "job": "Assistant Budget Manager"
+  },
+  {
+    "id": 1793,
+    "name": "Ulysse Louigene",
+    "salary": 105031.68,
+    "salaryFormatted": "$105,031.68",
+    "org": "Port St. Lucie",
+    "job": "Software Developer III"
+  },
+  {
+    "id": 1794,
+    "name": "Henry Glass",
+    "salary": 105030.12,
+    "salaryFormatted": "$105,030.12",
+    "org": "Port St. Lucie",
+    "job": "Building Plans Examiner IV"
+  },
+  {
+    "id": 1795,
+    "name": "Flynn Fidgeon",
+    "salary": 105001.73,
+    "salaryFormatted": "$105,001.73",
+    "org": "St. Lucie County",
+    "job": "Communications Division Manager"
+  },
+  {
+    "id": 1799,
+    "name": "Christopher Guadagno",
+    "salary": 104999.96,
+    "salaryFormatted": "$104,999.96",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1800,
+    "name": "Eddie Dove",
+    "salary": 104999.96,
+    "salaryFormatted": "$104,999.96",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1805,
+    "name": "Eric Albritton",
+    "salary": 104876,
+    "salaryFormatted": "$104,876.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Information Technology Services Network Systems Analyst I"
+  },
+  {
+    "id": 1806,
+    "name": "Carmen Kizmann",
+    "salary": 104876,
+    "salaryFormatted": "$104,876.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Information Technology Services Computer Systems Analyst"
+  },
+  {
+    "id": 1807,
+    "name": "Raymond Gorniewicz Jr.",
+    "salary": 104837.44,
+    "salaryFormatted": "$104,837.44",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "IT Analyst"
+  },
+  {
+    "id": 1808,
+    "name": "Troy Walker",
+    "salary": 104837.44,
+    "salaryFormatted": "$104,837.44",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "IT Analyst"
+  },
+  {
+    "id": 1814,
+    "name": "Steven Owens",
+    "salary": 104681.46,
+    "salaryFormatted": "$104,681.46",
+    "org": "Port St. Lucie",
+    "job": "Supervisor – Code Compliance"
+  },
+  {
+    "id": 1816,
+    "name": "Aleida Trinidad",
+    "salary": 104600,
+    "salaryFormatted": "$104,600.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of ELL/Translation Services"
+  },
+  {
+    "id": 1817,
+    "name": "Jesse Perez",
+    "salary": 104546.78,
+    "salaryFormatted": "$104,546.78",
+    "org": "Port St. Lucie",
+    "job": "Assistant City Surveyor – Professional Surveyor & Mapper"
+  },
+  {
+    "id": 1818,
+    "name": "Amy Maloveczky",
+    "salary": 104531.44,
+    "salaryFormatted": "$104,531.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1819,
+    "name": "Kayla Tomlinson",
+    "salary": 104531.44,
+    "salaryFormatted": "$104,531.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1820,
+    "name": "Oliver Adams",
+    "salary": 104531.44,
+    "salaryFormatted": "$104,531.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1821,
+    "name": "Joseph Iannone",
+    "salary": 104531.44,
+    "salaryFormatted": "$104,531.44",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1823,
+    "name": "Annette Newsome",
+    "salary": 104518,
+    "salaryFormatted": "$104,518.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 1824,
+    "name": "Melissa Hutchings",
+    "salary": 104518,
+    "salaryFormatted": "$104,518.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 1825,
+    "name": "Lee Dearlove",
+    "salary": 104502.06,
+    "salaryFormatted": "$104,502.06",
+    "org": "Port St. Lucie",
+    "job": "Fiber Infrastructure Administrator"
+  },
+  {
+    "id": 1827,
+    "name": "Sandra Bogan",
+    "salary": 104439.3,
+    "salaryFormatted": "$104,439.30",
+    "org": "St. Lucie County",
+    "job": "Resilience Navigator"
+  },
+  {
+    "id": 1828,
+    "name": "Anthony Lester",
+    "salary": 104434.2,
+    "salaryFormatted": "$104,434.20",
+    "org": "Port St. Lucie",
+    "job": "Building Inspector, Plans Examiner IV"
+  },
+  {
+    "id": 1830,
+    "name": "Ron Nelson",
+    "salary": 104352.77,
+    "salaryFormatted": "$104,352.77",
+    "org": "St. Lucie County",
+    "job": "Solution Architect"
+  },
+  {
+    "id": 1842,
+    "name": "Jamie Sparks",
+    "salary": 104238.75,
+    "salaryFormatted": "$104,238.75",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Executive Manager"
+  },
+  {
+    "id": 1843,
+    "name": "Myrna Tamar‑Belgraves",
+    "salary": 104212,
+    "salaryFormatted": "$104,212.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1844,
+    "name": "Jo Scott",
+    "salary": 104179.71,
+    "salaryFormatted": "$104,179.71",
+    "org": "St. Lucie County",
+    "job": "Applications Administrator II"
+  },
+  {
+    "id": 1846,
+    "name": "Brian Thompson",
+    "salary": 104095.94,
+    "salaryFormatted": "$104,095.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 1847,
+    "name": "Scott Samples",
+    "salary": 104047.32,
+    "salaryFormatted": "$104,047.32",
+    "org": "Port St. Lucie",
+    "job": "Strategic Communications Team Manager"
+  },
+  {
+    "id": 1848,
+    "name": "Alexey Gilev",
+    "salary": 103920.13,
+    "salaryFormatted": "$103,920.13",
+    "org": "St. Lucie County",
+    "job": "County Surveyor"
+  },
+  {
+    "id": 1849,
+    "name": "Xiaoyu Zheng",
+    "salary": 103913.68,
+    "salaryFormatted": "$103,913.68",
+    "org": "Port St. Lucie",
+    "job": "Civic Designer – CT"
+  },
+  {
+    "id": 1850,
+    "name": "William Durden",
+    "salary": 103876.11,
+    "salaryFormatted": "$103,876.11",
+    "org": "St. Lucie County",
+    "job": "Plans Examiner"
+  },
+  {
+    "id": 1854,
+    "name": "Ryan Harris",
+    "salary": 103703.39,
+    "salaryFormatted": "$103,703.39",
+    "org": "St. Lucie County Fire District",
+    "job": "Mechanic"
+  },
+  {
+    "id": 1855,
+    "name": "Michael Jerome",
+    "salary": 103703.39,
+    "salaryFormatted": "$103,703.39",
+    "org": "St. Lucie County Fire District",
+    "job": "Mechanic"
+  },
+  {
+    "id": 1857,
+    "name": "Robert Cook",
+    "salary": 103508.2,
+    "salaryFormatted": "$103,508.20",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "IT Analyst"
+  },
+  {
+    "id": 1859,
+    "name": "Jimmy Hardison",
+    "salary": 103455,
+    "salaryFormatted": "$103,455.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Transportation"
+  },
+  {
+    "id": 1860,
+    "name": "Andrea Reilly",
+    "salary": 103455,
+    "salaryFormatted": "$103,455.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Assessment"
+  },
+  {
+    "id": 1862,
+    "name": "Tysha Williams",
+    "salary": 103401.48,
+    "salaryFormatted": "$103,401.48",
+    "org": "Fort Pierce",
+    "job": "Manager, Solid Waste Operations"
+  },
+  {
+    "id": 1863,
+    "name": "Jamal Mosley",
+    "salary": 103401.48,
+    "salaryFormatted": "$103,401.48",
+    "org": "Fort Pierce",
+    "job": "IT Systems Analyst II"
+  },
+  {
+    "id": 1865,
+    "name": "Muhammad Ali",
+    "salary": 103357.7,
+    "salaryFormatted": "$103,357.70",
+    "org": "St. Lucie County",
+    "job": "Security Administrator"
+  },
+  {
+    "id": 1866,
+    "name": "Raluca Taylor",
+    "salary": 103191.14,
+    "salaryFormatted": "$103,191.14",
+    "org": "Port St. Lucie",
+    "job": "GIS Developer II"
+  },
+  {
+    "id": 1889,
+    "name": "Steven Jungjohan",
+    "salary": 103135.24,
+    "salaryFormatted": "$103,135.24",
+    "org": "Port St. Lucie",
+    "job": "Administrator PW Drain & Streets"
+  },
+  {
+    "id": 1890,
+    "name": "William Minogue Jr.",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1891,
+    "name": "Edwilky Paulvil",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1892,
+    "name": "Anthony Scuoppo",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1893,
+    "name": "Megan Mangel",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1894,
+    "name": "Jakayra Boldin",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1895,
+    "name": "Estefania Rosales",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1896,
+    "name": "Michael Favale",
+    "salary": 103113.29,
+    "salaryFormatted": "$103,113.29",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1897,
+    "name": "Roxanne Bourbonniere",
+    "salary": 103113,
+    "salaryFormatted": "$103,113.00",
+    "org": "St. Lucie County Sheriff's Office",
+    "job": "Sergeant"
+  },
+  {
+    "id": 1898,
+    "name": "Eddie Robinson Jr.",
+    "salary": 103071,
+    "salaryFormatted": "$103,071.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1899,
+    "name": "Jean Emerson",
+    "salary": 103071,
+    "salaryFormatted": "$103,071.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1905,
+    "name": "James Beams",
+    "salary": 102925.06,
+    "salaryFormatted": "$102,925.06",
+    "org": "St. Lucie County",
+    "job": "Senior Project Manager PIB"
+  },
+  {
+    "id": 1908,
+    "name": "Calleigh Nazario",
+    "salary": 102734.32,
+    "salaryFormatted": "$102,734.32",
+    "org": "Port St. Lucie",
+    "job": "Administrator, City Clerk"
+  },
+  {
+    "id": 1909,
+    "name": "Matthew Morse",
+    "salary": 102659.53,
+    "salaryFormatted": "$102,659.53",
+    "org": "St. Lucie County",
+    "job": "Utilities Project & Construction Manager"
+  },
+  {
+    "id": 1910,
+    "name": "Denise Jackson",
+    "salary": 102640.2,
+    "salaryFormatted": "$102,640.20",
+    "org": "Port St. Lucie",
+    "job": "Accounting Manager"
+  },
+  {
+    "id": 1911,
+    "name": "Emily Seitter",
+    "salary": 102615.24,
+    "salaryFormatted": "$102,615.24",
+    "org": "Port St. Lucie",
+    "job": "Administrator, CIP & Sales Tax Project Group"
+  },
+  {
+    "id": 1914,
+    "name": "Brooke Wigginton",
+    "salary": 102560,
+    "salaryFormatted": "$102,560.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Elementary School Principal"
+  },
+  {
+    "id": 1915,
+    "name": "Fady Boulos",
+    "salary": 102555.18,
+    "salaryFormatted": "$102,555.18",
+    "org": "Port St. Lucie",
+    "job": "Building Inspector, Plans Examiner IV"
+  },
+  {
+    "id": 1926,
+    "name": "Anthony Rake",
+    "salary": 102423,
+    "salaryFormatted": "$102,423.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Facilities Senior Project Manager"
+  },
+  {
+    "id": 1927,
+    "name": "Lawrence Sullivan",
+    "salary": 102321.96,
+    "salaryFormatted": "$102,321.96",
+    "org": "Port St. Lucie",
+    "job": "Building Inspector, Plans Examiner IV"
+  },
+  {
+    "id": 1928,
+    "name": "Blandine Johnson",
+    "salary": 102316,
+    "salaryFormatted": "$102,316.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Quality Instruction"
+  },
+  {
+    "id": 1929,
+    "name": "Tari Archer",
+    "salary": 102236,
+    "salaryFormatted": "$102,236.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 1930,
+    "name": "Vincia Gavoni",
+    "salary": 102236,
+    "salaryFormatted": "$102,236.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 1931,
+    "name": "Samantha Piscopo",
+    "salary": 102236,
+    "salaryFormatted": "$102,236.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 1935,
+    "name": "Tracy Jahn",
+    "salary": 102185.37,
+    "salaryFormatted": "$102,185.37",
+    "org": "St. Lucie County",
+    "job": "Transit Operations Manager"
+  },
+  {
+    "id": 1937,
+    "name": "Quintin Warren",
+    "salary": 102021.14,
+    "salaryFormatted": "$102,021.14",
+    "org": "Port St. Lucie",
+    "job": "Software Developer III"
+  },
+  {
+    "id": 1938,
+    "name": "Steven Sobon",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1939,
+    "name": "Evens Saintilien",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1940,
+    "name": "Joselito Simon",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1941,
+    "name": "Dania Francois‑Brown",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1942,
+    "name": "Candice Kernan‑Fullen",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1943,
+    "name": "Brandy Grecco",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1944,
+    "name": "Troy Carter",
+    "salary": 102000.08,
+    "salaryFormatted": "$102,000.08",
+    "org": "Fort Pierce",
+    "job": "Police Sergeant"
+  },
+  {
+    "id": 1945,
+    "name": "James Golden",
+    "salary": 101948,
+    "salaryFormatted": "$101,948.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Teacher – JROTC, Grades 9–12"
+  },
+  {
+    "id": 1946,
+    "name": "Kathleen Manchester",
+    "salary": 101931,
+    "salaryFormatted": "$101,931.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1947,
+    "name": "Alisha Kennedy",
+    "salary": 101931,
+    "salaryFormatted": "$101,931.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 1949,
+    "name": "Mark Cammarene",
+    "salary": 101865.09,
+    "salaryFormatted": "$101,865.09",
+    "org": "St. Lucie County",
+    "job": "Golf Course Manager"
+  },
+  {
+    "id": 1950,
+    "name": "Jonas Gonzalez",
+    "salary": 101842.79,
+    "salaryFormatted": "$101,842.79",
+    "org": "St. Lucie County Fire District",
+    "job": "Lieutenant Medic Shift"
+  },
+  {
+    "id": 1962,
+    "name": "Venetia Barnes",
+    "salary": 101626.2,
+    "salaryFormatted": "$101,626.20",
+    "org": "Fort Pierce",
+    "job": "Stormwater Engineer Manager"
+  },
+  {
+    "id": 1964,
+    "name": "Bethany Grubbs",
+    "salary": 101613.72,
+    "salaryFormatted": "$101,613.72",
+    "org": "Port St. Lucie",
+    "job": "Senior Planner/Public Art Program"
+  },
+  {
+    "id": 1966,
+    "name": "Randall Young",
+    "salary": 101566.4,
+    "salaryFormatted": "$101,566.40",
+    "org": "St. Lucie County",
+    "job": "Airport Crew Leader"
+  },
+  {
+    "id": 2013,
+    "name": "Michael Camide",
+    "salary": 101200.06,
+    "salaryFormatted": "$101,200.06",
+    "org": "Port St. Lucie",
+    "job": "Software Developer III"
+  },
+  {
+    "id": 2014,
+    "name": "Alexandra Arnett",
+    "salary": 101192.52,
+    "salaryFormatted": "$101,192.52",
+    "org": "Port St. Lucie",
+    "job": "Special Events Administrator"
+  },
+  {
+    "id": 2015,
+    "name": "Craig Haynes",
+    "salary": 101192.26,
+    "salaryFormatted": "$101,192.26",
+    "org": "Port St. Lucie",
+    "job": "Manager, UIS"
+  },
+  {
+    "id": 2018,
+    "name": "Jodie Certosimo",
+    "salary": 101175,
+    "salaryFormatted": "$101,175.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator"
+  },
+  {
+    "id": 2019,
+    "name": "Melissa Brubaker",
+    "salary": 101021.23,
+    "salaryFormatted": "$101,021.23",
+    "org": "St. Lucie County",
+    "job": "Permitting & Code Administration Manager"
+  },
+  {
+    "id": 2020,
+    "name": "Colton Reisinger",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2021,
+    "name": "Camille Marin",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2022,
+    "name": "Fabio Improta",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2023,
+    "name": "Joshua Kirkus",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2024,
+    "name": "Laquesha Kleckley",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2025,
+    "name": "Cory Collier",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2026,
+    "name": "Mark Woodruff",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2027,
+    "name": "Richard Mazzio",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2028,
+    "name": "Carlos Valentin",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2029,
+    "name": "Dennis Harrigan",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2030,
+    "name": "Hiram Nieves",
+    "salary": 100975.94,
+    "salaryFormatted": "$100,975.94",
+    "org": "Port St. Lucie",
+    "job": "Police Officer"
+  },
+  {
+    "id": 2031,
+    "name": "Larry Lankow",
+    "salary": 100962.68,
+    "salaryFormatted": "$100,962.68",
+    "org": "Port St. Lucie",
+    "job": "Recreation Manager"
+  },
+  {
+    "id": 2032,
+    "name": "Meredith Martinez",
+    "salary": 100962.68,
+    "salaryFormatted": "$100,962.68",
+    "org": "Port St. Lucie",
+    "job": "Manager, Admin Operations"
+  },
+  {
+    "id": 2035,
+    "name": "Logan Winn",
+    "salary": 100880,
+    "salaryFormatted": "$100,880.00",
+    "org": "Fort Pierce",
+    "job": "Building Inspector/Investigator"
+  },
+  {
+    "id": 2039,
+    "name": "Daniel Williams",
+    "salary": 100817.6,
+    "salaryFormatted": "$100,817.60",
+    "org": "St. Lucie County",
+    "job": "Plans Examiner"
+  },
+  {
+    "id": 2040,
+    "name": "Kelly Bailer",
+    "salary": 100791,
+    "salaryFormatted": "$100,791.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant Middle/Junior School Principal"
+  },
+  {
+    "id": 2041,
+    "name": "Lucius Chambers Jr.",
+    "salary": 100791,
+    "salaryFormatted": "$100,791.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Assistant High School Principal"
+  },
+  {
+    "id": 2042,
+    "name": "Clothilde Leedom",
+    "salary": 100785.5,
+    "salaryFormatted": "$100,785.50",
+    "org": "St. Lucie County",
+    "job": "Assistant County Attorney I"
+  },
+  {
+    "id": 2044,
+    "name": "Thondra Lanese",
+    "salary": 100696.96,
+    "salaryFormatted": "$100,696.96",
+    "org": "St. Lucie County",
+    "job": "Business Navigator"
+  },
+  {
+    "id": 2050,
+    "name": "Lori Rocky",
+    "salary": 100632.06,
+    "salaryFormatted": "$100,632.06",
+    "org": "St. Lucie County",
+    "job": "Government Relations Division Manager"
+  },
+  {
+    "id": 2057,
+    "name": "Ronald Baechle",
+    "salary": 100534.72,
+    "salaryFormatted": "$100,534.72",
+    "org": "Port St. Lucie",
+    "job": "Cloud Services Administrator"
+  },
+  {
+    "id": 2058,
+    "name": "Marc Holloway",
+    "salary": 100529.52,
+    "salaryFormatted": "$100,529.52",
+    "org": "Port St. Lucie",
+    "job": "Manager – Park Operations"
+  },
+  {
+    "id": 2060,
+    "name": "Justin Baker",
+    "salary": 100465,
+    "salaryFormatted": "$100,465.00",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 2061,
+    "name": "Bryce Doughty",
+    "salary": 100465,
+    "salaryFormatted": "$100,465.00",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Engineer Shift"
+  },
+  {
+    "id": 2062,
+    "name": "Vicki Echazabal",
+    "salary": 100460.26,
+    "salaryFormatted": "$100,460.26",
+    "org": "St. Lucie County Fire District",
+    "job": "Executive Aide"
+  },
+  {
+    "id": 2067,
+    "name": "Jennifer Stanford",
+    "salary": 100307.58,
+    "salaryFormatted": "$100,307.58",
+    "org": "St. Lucie County",
+    "job": "Facilities Administrative Manager"
+  },
+  {
+    "id": 2068,
+    "name": "Noemi Rios",
+    "salary": 100270.3,
+    "salaryFormatted": "$100,270.30",
+    "org": "Fort Pierce",
+    "job": "Risk Manager"
+  },
+  {
+    "id": 2070,
+    "name": "Melissa Yunas",
+    "salary": 100228.7,
+    "salaryFormatted": "$100,228.70",
+    "org": "Port St. Lucie",
+    "job": "Engage & Market Team Manager"
+  },
+  {
+    "id": 2071,
+    "name": "Nicole Pesula",
+    "salary": 100228.44,
+    "salaryFormatted": "$100,228.44",
+    "org": "Port St. Lucie",
+    "job": "Manager, Budget & Util Billing"
+  },
+  {
+    "id": 2072,
+    "name": "Jeffrey Edwards",
+    "salary": 100228.44,
+    "salaryFormatted": "$100,228.44",
+    "org": "Port St. Lucie",
+    "job": "City Comptroller"
+  },
+  {
+    "id": 2073,
+    "name": "Ciaran Reilly",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2074,
+    "name": "Zachary Krueger",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2075,
+    "name": "Kevin Key",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2076,
+    "name": "Edward Ponders",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2077,
+    "name": "Joseph Brandes",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2078,
+    "name": "Leonard Santos",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2079,
+    "name": "Cheyenne Guggeri",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2080,
+    "name": "Mistral Joseph",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2081,
+    "name": "Joshua Meek",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2082,
+    "name": "Austin Hodge",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2083,
+    "name": "Harold Davis",
+    "salary": 100132.53,
+    "salaryFormatted": "$100,132.53",
+    "org": "St. Lucie County Fire District",
+    "job": "Firefighter Paramedic Shift"
+  },
+  {
+    "id": 2084,
+    "name": "Kevin Reilly",
+    "salary": 100132.28,
+    "salaryFormatted": "$100,132.28",
+    "org": "St. Lucie County Fire District",
+    "job": "Paramedic/Engineer Shift"
+  },
+  {
+    "id": 2088,
+    "name": "Kim Reisinger",
+    "salary": 100040.2,
+    "salaryFormatted": "$100,040.20",
+    "org": "Port St. Lucie",
+    "job": "Public SVC Specialist Manager"
+  },
+  {
+    "id": 2089,
+    "name": "Anna Gillard",
+    "salary": 100033,
+    "salaryFormatted": "$100,033.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Mental Health/Psychological Services"
+  },
+  {
+    "id": 2090,
+    "name": "Kandiss Moore",
+    "salary": 100033,
+    "salaryFormatted": "$100,033.00",
+    "org": "St. Lucie Public Schools",
+    "job": "Coordinator of Student Assignment"
+  }
+]
