@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import salaryData from '@/public/st-lucie-salaries.json';
+import NewsletterPrompt from '@/app/post/[slug]/NewsletterPrompt';
 
 const POPULAR_SEARCHES = [
     { label: 'Top Earners', query: '', org: 'ALL', sort: 'salary-desc' },
@@ -43,11 +44,6 @@ export default function SalariesPage() {
     const [visibleCount, setVisibleCount] = useState(15);
     const [selectedEmployee, setSelectedEmployee] = useState(null);
     const [showOptions, setShowOptions] = useState(false);
-
-    // Newsletter Signup State
-    const [emailInput, setEmailInput] = useState('');
-    const [subStatus, setSubStatus] = useState('idle'); // idle, loading, success, error
-    const [subError, setSubError] = useState('');
 
     // Filter and Sort Data
     const filteredData = useMemo(() => {
@@ -97,37 +93,6 @@ export default function SalariesPage() {
         setSelectedRange('ALL');
         setSortBy('salary-desc');
         setVisibleCount(15);
-    };
-
-    // Handle Inline Newsletter Signup
-    const handleInlineSubscribe = async (e) => {
-        e.preventDefault();
-        if (!emailInput || !emailInput.includes('@')) return;
-
-        setSubStatus('loading');
-        setSubError('');
-
-        try {
-            const res = await fetch('/api/subscribe', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email: emailInput,
-                    source: 'salaries_inline'
-                })
-            });
-
-            const data = await res.json();
-            if (res.ok && data.success) {
-                setSubStatus('success');
-            } else {
-                setSubStatus('error');
-                setSubError(data.error || 'Failed to subscribe. Please try again.');
-            }
-        } catch (err) {
-            setSubStatus('error');
-            setSubError('Something went wrong. Please try again.');
-        }
     };
 
     // Download CSV
@@ -180,7 +145,7 @@ export default function SalariesPage() {
                 </div>
 
                 {/* Search & Filter Card */}
-                <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_rgba(0,0,0,1)] mb-6 space-y-4">
+                <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_rgba(0,0,0,1)] mb-8 space-y-4">
 
                     {/* Search Input Box */}
                     <div>
@@ -327,52 +292,9 @@ export default function SalariesPage() {
                     )}
                 </div>
 
-                {/* INLINE NEWSLETTER CALLOUT CARD (Placed naturally between search & results) */}
-                <div className="bg-black text-white border-3 border-black rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_#f9dc5c] mb-6">
-                    {subStatus === 'success' ? (
-                        <div className="text-center py-2">
-                            <h3 className="text-lg font-black uppercase text-[#f9dc5c] mb-1">
-                                You&apos;re Subscribed!
-                            </h3>
-                            <p className="text-xs font-bold text-gray-300">
-                                Thanks for joining Sunland News. Look for local updates in your inbox!
-                            </p>
-                        </div>
-                    ) : (
-                        <div>
-                            <div className="inline-block bg-[#f9dc5c] text-black text-[10px] font-black uppercase px-2.5 py-0.5 rounded mb-2 border border-black">
-                                Free Local Newsletter
-                            </div>
-                            <h3 className="text-base sm:text-lg font-black uppercase tracking-wide mb-1 text-white">
-                                Get St. Lucie News & Pay Updates Daily
-                            </h3>
-                            <p className="text-xs font-bold text-gray-300 mb-3 leading-snug">
-                                Join local residents getting free morning news, event guides, and local government stories 5 days a week.
-                            </p>
-
-                            <form onSubmit={handleInlineSubscribe} className="flex flex-col sm:flex-row gap-2">
-                                <input
-                                    type="email"
-                                    value={emailInput}
-                                    onChange={(e) => setEmailInput(e.target.value)}
-                                    placeholder="Enter your email address..."
-                                    required
-                                    className="flex-1 bg-white border-2 border-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-bold text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f9dc5c]"
-                                />
-                                <button
-                                    type="submit"
-                                    disabled={subStatus === 'loading'}
-                                    className="bg-[#f88600] hover:bg-[#ff4365] text-white font-black uppercase px-5 py-2.5 rounded-xl text-xs border-2 border-white transition-colors cursor-pointer disabled:opacity-50 min-h-[42px]"
-                                >
-                                    {subStatus === 'loading' ? 'Joining...' : 'Subscribe Free'}
-                                </button>
-                            </form>
-
-                            {subStatus === 'error' && (
-                                <p className="text-[11px] font-bold text-[#ff4365] mt-2">{subError}</p>
-                            )}
-                        </div>
-                    )}
+                {/* STANDARD ARTICLE NEWSLETTER PROMPT COMPONENT */}
+                <div className="my-8">
+                    <NewsletterPrompt />
                 </div>
 
                 {/* Status Bar */}
