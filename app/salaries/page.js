@@ -5,7 +5,7 @@ import salaryData from '@/public/st-lucie-salaries.json';
 
 const POPULAR_SEARCHES = [
     { label: '👑 Top Earners', query: '', org: 'ALL', sort: 'salary-desc' },
-    { label: '调度 PSL Police', query: 'Police', org: 'Port St. Lucie', sort: 'salary-desc' },
+    { label: '🚓 PSL Police', query: 'Police', org: 'Port St. Lucie', sort: 'salary-desc' },
     { label: '🚒 Fire Rescue', query: 'Fire', org: 'St. Lucie County Fire District', sort: 'salary-desc' },
     { label: '🏫 Principals', query: 'Principal', org: 'St. Lucie Public Schools', sort: 'salary-desc' },
     { label: '⚖️ Attorneys', query: 'Attorney', org: 'ALL', sort: 'salary-desc' },
@@ -117,14 +117,14 @@ export default function SalariesPage() {
     const visibleItems = filteredData.slice(0, visibleCount);
 
     return (
-        <div className="min-h-screen bg-[#fffdf7] font-sans text-black py-6 sm:py-10 px-3 sm:px-6 relative">
+        <div className="min-h-screen bg-[#fffdf7] font-sans text-black py-6 sm:py-10 px-3 sm:px-6 relative selection:bg-[#ff4365] selection:text-white">
             
-            <div className="max-w-3xl mx-auto relative z-10">
+            <div className="max-w-2xl mx-auto relative z-10">
 
-                {/* Clean Header */}
+                {/* Friendly Hero Header */}
                 <div className="text-center mb-6">
                     <div className="inline-flex items-center gap-2 bg-[#f9dc5c] border-2 border-black px-3 py-1 mb-2.5 rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                        <span className="w-2 h-2 rounded-full bg-black"></span>
+                        <span className="w-2.5 h-2.5 rounded-full bg-black animate-pulse"></span>
                         <span className="font-black uppercase tracking-wider text-[11px] text-black">
                             Sunland Public Pay Database
                         </span>
@@ -137,29 +137,29 @@ export default function SalariesPage() {
                         Public payroll records from local government over the past year ($100,000+ earners).
                     </p>
 
-                    {/* Data Disclaimer / Note */}
-                    <div className="bg-white border border-black/20 rounded-xl p-2.5 text-[11px] sm:text-xs font-bold text-gray-600 max-w-xl mx-auto text-left shadow-sm flex items-start gap-2">
+                    {/* Data Disclaimer Note */}
+                    <div className="bg-white border border-black/20 rounded-xl p-3 text-left shadow-sm flex items-start gap-2.5 text-xs text-gray-600 font-medium leading-relaxed">
                         <span className="text-base leading-none">ℹ️</span>
-                        <span>
-                            <strong>Note on data:</strong> This database reflects public payroll records from the past year. Personnel changes occur over time (for example, former County Administrator George Landry and Fort Pierce City Attorney Sara Hedges recently departed their roles).
-                        </span>
+                        <div>
+                            <strong className="text-black font-bold">Note on data:</strong> Reflects public payroll records from the past year. Personnel changes occur over time (for example, former County Administrator George Landry and Fort Pierce City Attorney Sara Hedges recently departed their roles).
+                        </div>
                     </div>
                 </div>
 
-                {/* Main Search & Filter Card */}
-                <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-6 shadow-[5px_5px_0px_rgba(0,0,0,1)] mb-6 space-y-4">
+                {/* Search & Filter Card */}
+                <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_rgba(0,0,0,1)] mb-6 space-y-4">
 
                     {/* Search Input Box */}
                     <div>
-                        <label className="block text-xs font-black uppercase text-gray-700 mb-1">
-                            Search Employee or Title
+                        <label className="block text-xs font-black uppercase tracking-wider text-black mb-1">
+                            Search Employee or Job Title
                         </label>
                         <div className="relative">
                             <input
                                 type="text"
                                 value={searchTerm}
                                 onChange={(e) => { setSearchTerm(e.target.value); setVisibleCount(15); }}
-                                placeholder="Search name or title..."
+                                placeholder="Search name, title, or agency..."
                                 className="w-full bg-[#fffdf7] border-2 border-black rounded-xl py-3 pl-10 pr-9 text-sm sm:text-base font-bold text-black placeholder-gray-400 focus:outline-none focus:bg-white shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all min-h-[46px]"
                             />
                             <svg className="w-5 h-5 absolute left-3 top-3 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,7 +177,7 @@ export default function SalariesPage() {
                         </div>
                     </div>
 
-                    {/* Quick Search Chips */}
+                    {/* Popular Search Chips */}
                     <div>
                         <div className="text-[11px] font-black uppercase text-gray-500 mb-1.5 tracking-wider">
                             Popular Searches:
@@ -187,7 +187,7 @@ export default function SalariesPage() {
                                 <button
                                     key={idx}
                                     onClick={() => handlePreset(preset)}
-                                    className="bg-gray-100 hover:bg-[#f9dc5c] border border-black px-2.5 py-1 rounded-lg text-xs font-bold text-black transition-all shadow-[1.5px_1.5px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px]"
+                                    className="bg-gray-100 hover:bg-[#f9dc5c] border border-black px-2.5 py-1.5 rounded-lg text-xs font-bold text-black transition-all shadow-[1.5px_1.5px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px]"
                                 >
                                     {preset.label}
                                 </button>
@@ -195,18 +195,18 @@ export default function SalariesPage() {
 
                             <button
                                 onClick={handleRandomSpotlight}
-                                className="bg-[#ff4365] text-white hover:bg-black border border-black px-2.5 py-1 rounded-lg text-xs font-bold transition-all shadow-[1.5px_1.5px_0px_rgba(0,0,0,1)]"
+                                className="bg-[#ff4365] text-white hover:bg-black border border-black px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all shadow-[1.5px_1.5px_0px_rgba(0,0,0,1)]"
                             >
                                 🎲 Surprise Me!
                             </button>
                         </div>
                     </div>
 
-                    {/* Organization Filter Bar */}
+                    {/* Agency Filter Tabs */}
                     <div className="pt-3 border-t border-gray-200">
                         <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-xs font-black uppercase text-gray-700">Filter by Agency</span>
-                            <span className="text-[10px] font-bold text-gray-400">Scroll →</span>
+                            <span className="text-xs font-black uppercase text-black tracking-wider">Filter by Agency</span>
+                            <span className="text-[10px] font-bold text-gray-400">Swipe →</span>
                         </div>
                         <div className="flex gap-2 overflow-x-auto scrollbar-hide py-1 px-0.5">
                             {ORGS.map((org) => {
@@ -227,10 +227,10 @@ export default function SalariesPage() {
                         </div>
                     </div>
 
-                    {/* Sort Pills Row */}
-                    <div className="pt-3 border-t border-gray-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                    {/* Clean Sort Pills (NO dropdown arrow box!) */}
+                    <div className="pt-3 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
-                            <span className="text-xs font-black uppercase text-gray-700 flex-shrink-0">Sort:</span>
+                            <span className="text-xs font-black uppercase text-black tracking-wider flex-shrink-0">Sort:</span>
                             <div className="flex gap-1.5 overflow-x-auto scrollbar-hide py-0.5">
                                 {SORT_OPTIONS.map((opt) => {
                                     const isActive = sortBy === opt.id;
@@ -250,12 +250,12 @@ export default function SalariesPage() {
                             </div>
                         </div>
 
-                        <div className="flex items-center justify-between sm:justify-end gap-3">
+                        <div className="flex items-center gap-3">
                             <button
                                 onClick={() => setShowOptions(!showOptions)}
                                 className="text-xs font-black text-gray-600 hover:text-black uppercase"
                             >
-                                {showOptions ? '▲ Less Options' : '⚙️ Pay Ranges'}
+                                {showOptions ? '▲ Hide Ranges' : '⚙️ Pay Ranges'}
                             </button>
 
                             {(searchTerm || selectedOrg !== 'ALL' || selectedRange !== 'ALL') && (
@@ -272,7 +272,7 @@ export default function SalariesPage() {
                     {/* Collapsible Pay Bracket Options */}
                     {showOptions && (
                         <div className="pt-3 border-t border-gray-200 animate-fade-in">
-                            <div className="text-xs font-black uppercase text-gray-700 mb-1.5">Pay Bracket</div>
+                            <div className="text-xs font-black uppercase text-black mb-1.5 tracking-wider">Pay Bracket</div>
                             <div className="flex flex-wrap gap-1.5">
                                 {SALARY_RANGES.map((range) => {
                                     const isActive = selectedRange === range.id;
@@ -310,12 +310,12 @@ export default function SalariesPage() {
                     <div className="bg-white border-3 border-black rounded-2xl p-6 text-center shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                         <div className="text-3xl mb-2">🔎</div>
                         <h3 className="text-lg font-black uppercase mb-1">No Matches Found</h3>
-                        <p className="text-xs font-bold text-gray-600 mb-3">Try adjusting your search terms.</p>
+                        <p className="text-xs font-bold text-gray-600 mb-3">Try adjusting your search term or clearing filters.</p>
                         <button
                             onClick={handleReset}
                             className="bg-[#f88600] text-white font-black uppercase px-4 py-2 rounded-xl border border-black text-xs shadow-[2px_2px_0px_rgba(0,0,0,1)]"
                         >
-                            Reset Search
+                            Show All Employees
                         </button>
                     </div>
                 ) : (
@@ -332,7 +332,7 @@ export default function SalariesPage() {
                                             {item.org}
                                         </span>
                                     </div>
-                                    <h3 className="font-black text-sm sm:text-base text-black group-hover:text-[#f88600] transition-colors leading-snug truncate">
+                                    <h3 className="font-black text-base sm:text-lg text-black group-hover:text-[#f88600] transition-colors leading-snug truncate">
                                         {item.name}
                                     </h3>
                                     <p className="text-xs font-bold text-gray-600 truncate">{item.job}</p>
@@ -352,7 +352,7 @@ export default function SalariesPage() {
                                     onClick={() => setVisibleCount(prev => prev + 25)}
                                     className="bg-black text-white hover:bg-gray-800 font-black uppercase px-6 py-3 rounded-xl border-2 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)] text-xs transition-all active:translate-x-[1px] active:translate-y-[1px]"
                                 >
-                                    Load More ({filteredData.length - visibleCount} remaining)
+                                    Load More Employees ({filteredData.length - visibleCount} remaining)
                                 </button>
                             </div>
                         )}
