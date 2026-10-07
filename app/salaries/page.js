@@ -4,11 +4,11 @@ import { useState, useMemo } from 'react';
 import salaryData from '@/public/st-lucie-salaries.json';
 
 const POPULAR_SEARCHES = [
-    { label: '👑 Top Earners', query: '', org: 'ALL', sort: 'salary-desc' },
-    { label: '🚓 PSL Police', query: 'Police', org: 'Port St. Lucie', sort: 'salary-desc' },
-    { label: '🚒 Fire Rescue', query: 'Fire', org: 'St. Lucie County Fire District', sort: 'salary-desc' },
-    { label: '🏫 Principals', query: 'Principal', org: 'St. Lucie Public Schools', sort: 'salary-desc' },
-    { label: '⚖️ Attorneys', query: 'Attorney', org: 'ALL', sort: 'salary-desc' },
+    { label: 'Top Earners', query: '', org: 'ALL', sort: 'salary-desc' },
+    { label: 'PSL Police', query: 'Police', org: 'Port St. Lucie', sort: 'salary-desc' },
+    { label: 'Fire Rescue', query: 'Fire', org: 'St. Lucie County Fire District', sort: 'salary-desc' },
+    { label: 'Principals', query: 'Principal', org: 'St. Lucie Public Schools', sort: 'salary-desc' },
+    { label: 'Attorneys', query: 'Attorney', org: 'ALL', sort: 'salary-desc' },
 ];
 
 const ORGS = [
@@ -121,10 +121,10 @@ export default function SalariesPage() {
             
             <div className="max-w-2xl mx-auto relative z-10">
 
-                {/* Friendly Hero Header */}
+                {/* Clean Header */}
                 <div className="text-center mb-6">
                     <div className="inline-flex items-center gap-2 bg-[#f9dc5c] border-2 border-black px-3 py-1 mb-2.5 rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                        <span className="w-2.5 h-2.5 rounded-full bg-black animate-pulse"></span>
+                        <span className="w-2.5 h-2.5 rounded-full bg-black"></span>
                         <span className="font-black uppercase tracking-wider text-[11px] text-black">
                             Sunland Public Pay Database
                         </span>
@@ -138,11 +138,8 @@ export default function SalariesPage() {
                     </p>
 
                     {/* Data Disclaimer Note */}
-                    <div className="bg-white border border-black/20 rounded-xl p-3 text-left shadow-sm flex items-start gap-2.5 text-xs text-gray-600 font-medium leading-relaxed">
-                        <span className="text-base leading-none">ℹ️</span>
-                        <div>
-                            <strong className="text-black font-bold">Note on data:</strong> Reflects public payroll records from the past year. Personnel changes occur over time (for example, former County Administrator George Landry and Fort Pierce City Attorney Sara Hedges recently departed their roles).
-                        </div>
+                    <div className="bg-white border border-black/20 rounded-xl p-3 text-left shadow-sm text-xs text-gray-600 font-medium leading-relaxed">
+                        <strong className="text-black font-bold">Note on data:</strong> Reflects public payroll records from the past year. Personnel changes occur over time (for example, former County Administrator George Landry and Fort Pierce City Attorney Sara Hedges recently departed their roles).
                     </div>
                 </div>
 
@@ -197,7 +194,7 @@ export default function SalariesPage() {
                                 onClick={handleRandomSpotlight}
                                 className="bg-[#ff4365] text-white hover:bg-black border border-black px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all shadow-[1.5px_1.5px_0px_rgba(0,0,0,1)]"
                             >
-                                🎲 Surprise Me!
+                                Random Spotlight
                             </button>
                         </div>
                     </div>
@@ -227,7 +224,7 @@ export default function SalariesPage() {
                         </div>
                     </div>
 
-                    {/* Clean Sort Pills (NO dropdown arrow box!) */}
+                    {/* Clean Sort Pills */}
                     <div className="pt-3 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
                             <span className="text-xs font-black uppercase text-black tracking-wider flex-shrink-0">Sort:</span>
@@ -255,7 +252,7 @@ export default function SalariesPage() {
                                 onClick={() => setShowOptions(!showOptions)}
                                 className="text-xs font-black text-gray-600 hover:text-black uppercase"
                             >
-                                {showOptions ? '▲ Hide Ranges' : '⚙️ Pay Ranges'}
+                                {showOptions ? 'Hide Ranges' : 'Pay Ranges'}
                             </button>
 
                             {(searchTerm || selectedOrg !== 'ALL' || selectedRange !== 'ALL') && (
@@ -308,7 +305,6 @@ export default function SalariesPage() {
                 {/* Employee Cards List */}
                 {filteredData.length === 0 ? (
                     <div className="bg-white border-3 border-black rounded-2xl p-6 text-center shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-                        <div className="text-3xl mb-2">🔎</div>
                         <h3 className="text-lg font-black uppercase mb-1">No Matches Found</h3>
                         <p className="text-xs font-bold text-gray-600 mb-3">Try adjusting your search term or clearing filters.</p>
                         <button
@@ -332,7 +328,7 @@ export default function SalariesPage() {
                                             {item.org}
                                         </span>
                                     </div>
-                                    <h3 className="font-black text-base sm:text-lg text-black group-hover:text-[#f88600] transition-colors leading-snug truncate">
+                                    <h3 className="font-black text-sm sm:text-base text-black group-hover:text-[#f88600] transition-colors leading-snug truncate">
                                         {item.name}
                                     </h3>
                                     <p className="text-xs font-bold text-gray-600 truncate">{item.job}</p>
