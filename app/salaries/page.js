@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import salaryData from '@/public/st-lucie-salaries.json';
-import NewsletterPrompt from '@/app/post/[slug]/NewsletterPrompt';
 
 const POPULAR_SEARCHES = [
     { label: 'Top Earners', query: '', org: 'ALL', sort: 'salary-desc' },
@@ -145,7 +144,7 @@ export default function SalariesPage() {
                 </div>
 
                 {/* Search & Filter Card */}
-                <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_rgba(0,0,0,1)] mb-8 space-y-4">
+                <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_rgba(0,0,0,1)] mb-6 space-y-4">
 
                     {/* Search Input Box */}
                     <div>
@@ -290,11 +289,6 @@ export default function SalariesPage() {
                             </div>
                         </div>
                     )}
-                </div>
-
-                {/* STANDARD ARTICLE NEWSLETTER PROMPT COMPONENT */}
-                <div className="my-8">
-                    <NewsletterPrompt />
                 </div>
 
                 {/* Status Bar */}
