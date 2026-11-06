@@ -42,6 +42,11 @@ const nextConfig = {
         destination: '/619',
         permanent: false,
       },
+      {
+        source: '/garden',
+        destination: 'https://play.sunlandnews.com/garden-sessions',
+        permanent: false,
+      },
     ];
   },
 };
