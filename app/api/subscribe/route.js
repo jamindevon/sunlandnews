@@ -7,10 +7,19 @@ const BEEHIIV_API_URL = 'https://api.beehiiv.com/v2';
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
+const SOURCE_LABELS = {
+  'funnel-homepage': 'Homepage Hero Form',
+  'footer': 'Website Footer Form',
+  'article_page': 'Article Inline Form',
+  'subscribe_page': 'Subscribe Page (/subscribe)',
+  'juneteenth_619': 'Juneteenth 619 RSVP (/619)',
+  'scroll_popup': 'Scroll Popup',
+};
+
 export async function POST(request) {
   try {
     // Parse request body
-    const { email, name, source, isPremium } = await request.json();
+    const { email, name, source, pageUrl, referrer } = await request.json();
 
     if (!email) {
       return NextResponse.json(
@@ -18,6 +27,26 @@ export async function POST(request) {
         { status: 400 }
       );
     }
+
+    const activePageUrl = pageUrl || request.headers.get('referer') || '';
+    let pagePath = '';
+    let utmInfo = '';
+    if (activePageUrl) {
+      try {
+        const parsed = new URL(activePageUrl);
+        pagePath = parsed.pathname || '/';
+        const utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
+          .map((k) => (parsed.searchParams.get(k) ? `${k}=${parsed.searchParams.get(k)}` : null))
+          .filter(Boolean);
+        if (utms.length > 0) {
+          utmInfo = utms.join(', ');
+        }
+      } catch {
+        pagePath = activePageUrl;
+      }
+    }
+
+    const friendlySource = SOURCE_LABELS[source] || source || 'Direct';
 
     // Call Beehiiv API to subscribe the user
     const response = await fetch(`${BEEHIIV_API_URL}/publications/${BEEHIIV_PUBLICATION_ID}/subscriptions`, {
@@ -29,13 +58,7 @@ export async function POST(request) {
       body: JSON.stringify({
         email: email,
         name: name || '',
-        referring_site: 'sunlandnews.com',
-        custom_fields: [
-          {
-            name: 'premium_member',
-            value: isPremium ? 'Yes' : 'No'
-          }
-        ],
+        referring_site: activePageUrl || 'sunlandnews.com',
         utm_source: 'website',
         utm_campaign: 'sunland_signup',
         utm_medium: source || 'direct',
@@ -63,12 +86,14 @@ export async function POST(request) {
         await resend.emails.send({
           from: process.env.EMAIL_FROM || 'onboarding@resend.dev',
           to: ['thesunlandcompany@gmail.com'],
-          subject: 'New Newsletter Signup 🎉',
+          subject: `New Newsletter Signup 🎉 (${friendlySource})`,
           html: `
             <p><strong>New Subscriber!</strong></p>
             <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Source:</strong> ${source || 'direct'}</p>
-            <p><strong>Premium:</strong> ${isPremium ? 'Yes' : 'No'}</p>
+            <p><strong>Form:</strong> ${friendlySource}</p>
+            ${activePageUrl ? `<p><strong>Page:</strong> <a href="${activePageUrl}">${pagePath}</a></p>` : ''}
+            ${referrer ? `<p><strong>Came From (Referrer):</strong> ${referrer}</p>` : ''}
+            ${utmInfo ? `<p><strong>UTM Tags:</strong> ${utmInfo}</p>` : ''}
           `
         });
       } catch (emailError) {

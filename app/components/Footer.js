@@ -27,6 +27,8 @@ export default function Footer() {
         body: JSON.stringify({
           email,
           source: 'footer',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          referrer: typeof document !== 'undefined' ? document.referrer : '',
         }),
       });
 

@@ -21,7 +21,9 @@ export default function RSVPForm() {
         },
         body: JSON.stringify({
           email,
-          source: 'juneteenth_619'
+          source: 'juneteenth_619',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          referrer: typeof document !== 'undefined' ? document.referrer : '',
         }),
       });
       

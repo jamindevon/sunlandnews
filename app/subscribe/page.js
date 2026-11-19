@@ -41,7 +41,8 @@ export default function Subscribe() {
         body: JSON.stringify({
           email,
           source: 'subscribe_page',
-          isPremium: false
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          referrer: typeof document !== 'undefined' ? document.referrer : '',
         }),
       });
 

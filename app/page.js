@@ -42,6 +42,8 @@ export default function HomePage() {
         body: JSON.stringify({
           email,
           source: 'funnel-homepage',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          referrer: typeof document !== 'undefined' ? document.referrer : '',
         }),
       });
 
