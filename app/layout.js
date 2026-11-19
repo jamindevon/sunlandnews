@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import NewsletterScrollPopup from "./components/NewsletterScrollPopup";
 import FacebookPixel from "../components/FacebookPixel";
 import FacebookPixelEvents from "./components/FacebookPixelEvents";
 import { Analytics } from "@vercel/analytics/next";
@@ -64,7 +63,6 @@ export default function RootLayout({ children }) {
           <main className="flex-grow container max-w-6xl mx-auto px-4 py-8">
             {children}
           </main>
-          <NewsletterScrollPopup />
           <Footer />
         </div>
       </body>
