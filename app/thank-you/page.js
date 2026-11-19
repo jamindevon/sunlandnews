@@ -66,13 +66,13 @@ function ThankYouForm() {
     }
 
     // Redirect user depending on their selected interest
-    if (formData.interest === 'Events, things to do, food, and new openings') {
-      const destUrl = prefilledEmail
-        ? `https://calendar.sunlandnews.com/thank-you?email=${encodeURIComponent(prefilledEmail)}`
-        : 'https://calendar.sunlandnews.com/thank-you';
-      window.location.href = destUrl;
+    if (formData.interest === 'Stay informed on local news and breaking alerts') {
+      window.location.href = 'https://www.sunlandnews.com/latest';
     } else {
-      router.push('/support');
+      const destUrl = prefilledEmail
+        ? `https://play.sunlandnews.com/c/sunland-events?email=${encodeURIComponent(prefilledEmail)}`
+        : 'https://play.sunlandnews.com/c/sunland-events';
+      window.location.href = destUrl;
     }
   };
 
