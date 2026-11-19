@@ -8,16 +8,13 @@ import Image from 'next/image';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [newsDropdownOpen, setNewsDropdownOpen] = useState(false);
-  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const newsDropdownRef = useRef(null);
-  const productsDropdownRef = useRef(null);
   const pathname = usePathname();
 
   // Close mobile menu when pathname changes (page navigation)
   useEffect(() => {
     setMobileMenuOpen(false);
     setNewsDropdownOpen(false);
-    setProductsDropdownOpen(false);
   }, [pathname]);
 
   // Close dropdown when clicking outside
@@ -26,15 +23,12 @@ export default function Header() {
       if (newsDropdownRef.current && !newsDropdownRef.current.contains(event.target)) {
         setNewsDropdownOpen(false);
       }
-      if (productsDropdownRef.current && !productsDropdownRef.current.contains(event.target)) {
-        setProductsDropdownOpen(false);
-      }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [newsDropdownRef, productsDropdownRef]);
+  }, [newsDropdownRef]);
 
   // Hide header on calendar sub-pages (dashboard, login, setup)
   // But SHOW it on the main offer page (/calendar)
@@ -50,13 +44,6 @@ export default function Header() {
   const toggleNewsDropdown = (e) => {
     if (e) e.stopPropagation();
     setNewsDropdownOpen(!newsDropdownOpen);
-    setProductsDropdownOpen(false);
-  };
-
-  const toggleProductsDropdown = (e) => {
-    if (e) e.stopPropagation();
-    setProductsDropdownOpen(!productsDropdownOpen);
-    setNewsDropdownOpen(false);
   };
 
   return (
@@ -102,7 +89,6 @@ export default function Header() {
               <li
                 className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group"
                 ref={newsDropdownRef}
-                onMouseEnter={() => setProductsDropdownOpen(false)}
               >
                 <button
                   onClick={toggleNewsDropdown}
@@ -132,36 +118,6 @@ export default function Header() {
                   </Link>
                 </div>
               </li>
-
-              {/* Products Dropdown */}
-              <li
-                className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none relative group"
-                ref={productsDropdownRef}
-                onMouseEnter={() => setNewsDropdownOpen(false)}
-              >
-                <button
-                  onClick={toggleProductsDropdown}
-                  className={`flex items-center w-full lg:w-auto justify-between lg:justify-start text-black font-extrabold text-lg lg:text-sm xl:text-base whitespace-nowrap uppercase transition-all transform hover:-translate-y-0.5 hover:text-primary ${pathname.startsWith('/calendar') ? 'text-primary underline decoration-2 underline-offset-4' : ''}`}
-                >
-                  Products
-                  <svg className={`w-6 h-6 lg:w-4 lg:h-4 ml-1 stroke-[3px] transition-transform duration-200 group-hover:rotate-180 ${productsDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-
-                <div className={`lg:absolute lg:top-full lg:left-0 lg:w-56 bg-white lg:rounded-xl py-3 mt-2 lg:mt-3 lg:border-2 lg:border-black lg:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 z-50 border-l-4 border-black ml-2 px-2 lg:ml-0 lg:px-0 lg:border-l-2 ${productsDropdownOpen ? 'block' : 'hidden lg:group-hover:block'}`}>
-                  <div className="hidden lg:block absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
-
-                  <a
-                    href="https://calendar.sunlandnews.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-5 py-3 text-base lg:text-sm font-bold text-black uppercase whitespace-nowrap hover:bg-brutalYellow hover:pl-6 transition-all border-b-2 border-transparent hover:border-black mx-2 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Calendar Club
-                  </a>
-                </div>
-              </li>
-
 
               <li className="py-4 lg:py-0 border-b-2 border-black/10 lg:border-none">
                 <Link
