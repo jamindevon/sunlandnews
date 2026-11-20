@@ -12,7 +12,7 @@ const supportOptions = [
     description: 'The best way to support the newsletter. Get exclusive podcasts, 20% off all future merch, and help keep Sunland News free forever.',
     bg: 'bg-brutalBlue',
     ctaText: 'Become a Member',
-    href: 'https://www.patreon.com/cw/SunlandCo/membership',
+    href: 'https://www.buymeacoffee.com/sunland/membership',
     available: true
   },
   {
