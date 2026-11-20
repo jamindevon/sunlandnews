@@ -67,7 +67,10 @@ function ThankYouForm() {
 
     // Redirect user depending on their selected interest
     if (formData.interest === 'Stay informed on local news and breaking alerts') {
-      window.location.href = 'https://www.sunlandnews.com/latest';
+      const destUrl = prefilledEmail
+        ? `https://play.sunlandnews.com/civic?email=${encodeURIComponent(prefilledEmail)}`
+        : 'https://play.sunlandnews.com/civic';
+      window.location.href = destUrl;
     } else {
       const destUrl = prefilledEmail
         ? `https://play.sunlandnews.com/c/sunland-events?email=${encodeURIComponent(prefilledEmail)}`
